@@ -59,29 +59,7 @@
     return YES;
 }
 
-- (NSInteger)send:(const NSData *)requestData {
-    return [self send:requestData handler:_handler];
-}
-
-- (NSInteger)send:(const NSData *)requestData handler:(id<SGStarDelegate>)sender {
-    
-    if (!sender) {
-        sender = _handler;
-    }
-    MGMessenger *messenger = [[MGMessenger alloc] initWithData:requestData handler:sender];
-    
-    CGITask *task;
-    task = [[CGITask alloc] initAll:ChannelType_LongConn
-                           AndCmdId:kSendMsgCmdId
-                          AndCGIUri:@"/sendmessage"
-                            AndHost:@"dim.chat"];
-    [[NetworkService sharedInstance] startTask:task ForUI:messenger];
-    return 0;
-}
-
-#pragma mark - UIApplicationDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions {
     
     [NetworkService sharedInstance].delegate = [[NetworkEvent alloc] init];
     [[NetworkService sharedInstance] setCallBack];
@@ -100,19 +78,39 @@
     return YES;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+- (void)enterBackground {
     [[NetworkService sharedInstance] reportEvent_OnForeground:NO];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+- (void)enterForeground {
     [[NetworkService sharedInstance] reportEvent_OnForeground:YES];
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    
+- (void)terminate {
     [[NetworkService sharedInstance] destroyMars];
-    
     appender_close();
+}
+
+#pragma mark -
+
+- (NSInteger)send:(const NSData *)requestData {
+    return [self send:requestData handler:_handler];
+}
+
+- (NSInteger)send:(const NSData *)requestData handler:(id<SGStarDelegate>)sender {
+    
+    if (!sender) {
+        sender = _handler;
+    }
+    MGMessenger *messenger = [[MGMessenger alloc] initWithData:requestData handler:sender];
+    
+    CGITask *task;
+    task = [[CGITask alloc] initAll:ChannelType_LongConn
+                           AndCmdId:kSendMsgCmdId
+                          AndCGIUri:@"/sendmessage"
+                            AndHost:@"dim.chat"];
+    [[NetworkService sharedInstance] startTask:task ForUI:messenger];
+    return 0;
 }
 
 @end

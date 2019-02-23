@@ -26,6 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, nonatomic) NSUInteger port;        // server port
 @property (readonly, nonatomic, getter=isConnected) BOOL connected;
 
+- (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions;
+- (void)terminate;
+
+- (void)enterBackground;
+- (void)enterForeground;
+
 /**
  
  @return 0 on success, -1 on error

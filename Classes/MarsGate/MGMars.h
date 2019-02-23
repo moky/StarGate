@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MGMars : NSObject <SGStar, UIApplicationDelegate>
+@interface MGMars : NSObject <SGStar>
 
 - (instancetype)initWithMessageHandler:(id<SGStarDelegate>)handler
 NS_DESIGNATED_INITIALIZER;

@@ -7,48 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92255942221ACE3006CADEA /* MGPushMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E922556F2221ACE3006CADEA /* MGPushMessageHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E92255952221ACE3006CADEA /* MGMessenger.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255702221ACE3006CADEA /* MGMessenger.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E92255962221ACE3006CADEA /* MGMars.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255712221ACE3006CADEA /* MGMars.mm */; };
+		E92255972221ACE3006CADEA /* MGMars.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255722221ACE3006CADEA /* MGMars.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E92255982221ACE3006CADEA /* app_callback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255742221ACE3006CADEA /* app_callback.mm */; };
+		E92255992221ACE3006CADEA /* shortlink_packer.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255752221ACE3006CADEA /* shortlink_packer.h */; };
+		E922559A2221ACE3006CADEA /* shortlink_packer.cc in Sources */ = {isa = PBXBuildFile; fileRef = E92255762221ACE3006CADEA /* shortlink_packer.cc */; };
+		E922559B2221ACE3006CADEA /* longlink_packer.cc in Sources */ = {isa = PBXBuildFile; fileRef = E92255772221ACE3006CADEA /* longlink_packer.cc */; };
+		E922559C2221ACE3006CADEA /* longlink_packer.cc.rewriteme in Resources */ = {isa = PBXBuildFile; fileRef = E92255782221ACE3006CADEA /* longlink_packer.cc.rewriteme */; };
+		E922559D2221ACE3006CADEA /* stn_callback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255792221ACE3006CADEA /* stn_callback.mm */; };
+		E922559E2221ACE3006CADEA /* stn_callback.h in Headers */ = {isa = PBXBuildFile; fileRef = E922557A2221ACE3006CADEA /* stn_callback.h */; };
+		E922559F2221ACE3006CADEA /* longlink_packer.h in Headers */ = {isa = PBXBuildFile; fileRef = E922557B2221ACE3006CADEA /* longlink_packer.h */; };
+		E92255A02221ACE3006CADEA /* app_callback.h in Headers */ = {isa = PBXBuildFile; fileRef = E922557C2221ACE3006CADEA /* app_callback.h */; };
+		E92255A12221ACE3006CADEA /* shortlink_packer.cc.rewriteme in Resources */ = {isa = PBXBuildFile; fileRef = E922557D2221ACE3006CADEA /* shortlink_packer.cc.rewriteme */; };
+		E92255A22221ACE3006CADEA /* stnproto_logic.h in Headers */ = {isa = PBXBuildFile; fileRef = E922557E2221ACE3006CADEA /* stnproto_logic.h */; };
+		E92255A32221ACE3006CADEA /* LogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255802221ACE3006CADEA /* LogUtil.m */; };
+		E92255A42221ACE3006CADEA /* LogHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255812221ACE3006CADEA /* LogHelper.mm */; };
+		E92255A52221ACE3006CADEA /* LogUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255822221ACE3006CADEA /* LogUtil.h */; };
+		E92255A62221ACE3006CADEA /* LogHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255832221ACE3006CADEA /* LogHelper.h */; };
+		E92255A72221ACE3006CADEA /* NetworkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255852221ACE3006CADEA /* NetworkEvent.m */; };
+		E92255A82221ACE3006CADEA /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255862221ACE3006CADEA /* NetworkService.h */; };
+		E92255A92221ACE3006CADEA /* NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255872221ACE3006CADEA /* NetworkStatus.m */; };
+		E92255AA2221ACE3006CADEA /* NetworkDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255882221ACE3006CADEA /* NetworkDelegate.h */; };
+		E92255AB2221ACE3006CADEA /* UINotifyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255892221ACE3006CADEA /* UINotifyDelegate.h */; };
+		E92255AC2221ACE3006CADEA /* CGITask.mm in Sources */ = {isa = PBXBuildFile; fileRef = E922558A2221ACE3006CADEA /* CGITask.mm */; };
+		E92255AD2221ACE3006CADEA /* CGITask.h in Headers */ = {isa = PBXBuildFile; fileRef = E922558B2221ACE3006CADEA /* CGITask.h */; };
+		E92255AE2221ACE3006CADEA /* CommandID.h in Headers */ = {isa = PBXBuildFile; fileRef = E922558C2221ACE3006CADEA /* CommandID.h */; };
+		E92255AF2221ACE3006CADEA /* NetworkEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E922558D2221ACE3006CADEA /* NetworkEvent.h */; };
+		E92255B02221ACE3006CADEA /* PushNotifyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E922558E2221ACE3006CADEA /* PushNotifyDelegate.h */; };
+		E92255B12221ACE3006CADEA /* NetworkStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E922558F2221ACE3006CADEA /* NetworkStatus.h */; };
+		E92255B22221ACE3006CADEA /* NetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255902221ACE3006CADEA /* NetworkService.mm */; };
+		E92255B32221ACE3006CADEA /* MarsGate.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255912221ACE3006CADEA /* MarsGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E92255B42221ACE3006CADEA /* MGPushMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255922221ACE3006CADEA /* MGPushMessageHandler.m */; };
+		E92255B52221ACE3006CADEA /* MGMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255932221ACE3006CADEA /* MGMessenger.m */; };
 		E9FAF5F2221EAC5F00DB6567 /* MarsGate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF5E8221EAC5F00DB6567 /* MarsGate.framework */; };
 		E9FAF5F7221EAC5F00DB6567 /* MarsGateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF5F6221EAC5F00DB6567 /* MarsGateTests.m */; };
 		E9FAF609221EAD1E00DB6567 /* mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF608221EAD1E00DB6567 /* mars.framework */; };
-		E9FAF666221EAF2F00DB6567 /* LogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF648221EAF2E00DB6567 /* LogUtil.m */; };
-		E9FAF667221EAF2F00DB6567 /* LogHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF649221EAF2E00DB6567 /* LogHelper.mm */; };
-		E9FAF668221EAF2F00DB6567 /* LogUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF64A221EAF2E00DB6567 /* LogUtil.h */; };
-		E9FAF669221EAF2F00DB6567 /* LogHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF64B221EAF2E00DB6567 /* LogHelper.h */; };
-		E9FAF66A221EAF2F00DB6567 /* MarsGate.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF64C221EAF2E00DB6567 /* MarsGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9FAF66B221EAF2F00DB6567 /* NetworkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF64E221EAF2E00DB6567 /* NetworkEvent.m */; };
-		E9FAF66C221EAF2F00DB6567 /* NetworkService.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF64F221EAF2E00DB6567 /* NetworkService.h */; };
-		E9FAF66D221EAF2F00DB6567 /* NetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF650221EAF2E00DB6567 /* NetworkStatus.m */; };
-		E9FAF66E221EAF2F00DB6567 /* NetworkDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF651221EAF2E00DB6567 /* NetworkDelegate.h */; };
-		E9FAF66F221EAF2F00DB6567 /* UINotifyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF652221EAF2E00DB6567 /* UINotifyDelegate.h */; };
-		E9FAF670221EAF2F00DB6567 /* CGITask.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF653221EAF2E00DB6567 /* CGITask.mm */; };
-		E9FAF671221EAF2F00DB6567 /* CGITask.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF654221EAF2E00DB6567 /* CGITask.h */; };
-		E9FAF672221EAF2F00DB6567 /* CommandID.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF655221EAF2E00DB6567 /* CommandID.h */; };
-		E9FAF673221EAF2F00DB6567 /* NetworkEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF656221EAF2E00DB6567 /* NetworkEvent.h */; };
-		E9FAF674221EAF2F00DB6567 /* PushNotifyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF657221EAF2E00DB6567 /* PushNotifyDelegate.h */; };
-		E9FAF675221EAF2F00DB6567 /* NetworkStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF658221EAF2E00DB6567 /* NetworkStatus.h */; };
-		E9FAF676221EAF2F00DB6567 /* NetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF659221EAF2E00DB6567 /* NetworkService.mm */; };
-		E9FAF677221EAF2F00DB6567 /* app_callback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF65B221EAF2E00DB6567 /* app_callback.mm */; };
-		E9FAF678221EAF2F00DB6567 /* shortlink_packer.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF65C221EAF2E00DB6567 /* shortlink_packer.h */; };
-		E9FAF679221EAF2F00DB6567 /* shortlink_packer.cc in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF65D221EAF2E00DB6567 /* shortlink_packer.cc */; };
-		E9FAF67A221EAF2F00DB6567 /* longlink_packer.cc in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF65E221EAF2E00DB6567 /* longlink_packer.cc */; };
-		E9FAF67B221EAF2F00DB6567 /* longlink_packer.cc.rewriteme in Resources */ = {isa = PBXBuildFile; fileRef = E9FAF65F221EAF2E00DB6567 /* longlink_packer.cc.rewriteme */; };
-		E9FAF67C221EAF2F00DB6567 /* stn_callback.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF660221EAF2E00DB6567 /* stn_callback.mm */; };
-		E9FAF67D221EAF2F00DB6567 /* stn_callback.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF661221EAF2E00DB6567 /* stn_callback.h */; };
-		E9FAF67E221EAF2F00DB6567 /* longlink_packer.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF662221EAF2E00DB6567 /* longlink_packer.h */; };
-		E9FAF67F221EAF2F00DB6567 /* app_callback.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF663221EAF2E00DB6567 /* app_callback.h */; };
-		E9FAF680221EAF2F00DB6567 /* shortlink_packer.cc.rewriteme in Resources */ = {isa = PBXBuildFile; fileRef = E9FAF664221EAF2E00DB6567 /* shortlink_packer.cc.rewriteme */; };
-		E9FAF681221EAF2F00DB6567 /* stnproto_logic.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF665221EAF2E00DB6567 /* stnproto_logic.h */; };
 		E9FAF684221EAFD000DB6567 /* StarGate.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF682221EAFD000DB6567 /* StarGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9FAF688221EB15500DB6567 /* MGMars.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF686221EB15500DB6567 /* MGMars.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9FAF689221EB15500DB6567 /* MGMars.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF687221EB15500DB6567 /* MGMars.mm */; };
 		E9FAF68D221EB24400DB6567 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF68C221EB24400DB6567 /* libz.tbd */; };
 		E9FAF68F221EB26600DB6567 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF68E221EB26600DB6567 /* libresolv.9.tbd */; };
 		E9FAF690221EB27B00DB6567 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF68A221EB22D00DB6567 /* CoreTelephony.framework */; };
 		E9FAF692221EB33900DB6567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF691221EB33900DB6567 /* UIKit.framework */; };
-		E9FAF695221EB51200DB6567 /* MGPushMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF693221EB51200DB6567 /* MGPushMessageHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E9FAF696221EB51200DB6567 /* MGPushMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF694221EB51200DB6567 /* MGPushMessageHandler.m */; };
-		E9FAF699221EB6DB00DB6567 /* MGMessenger.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF697221EB6DB00DB6567 /* MGMessenger.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E9FAF69A221EB6DB00DB6567 /* MGMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF698221EB6DB00DB6567 /* MGMessenger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,51 +62,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E922556F2221ACE3006CADEA /* MGPushMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPushMessageHandler.h; sourceTree = "<group>"; };
+		E92255702221ACE3006CADEA /* MGMessenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMessenger.h; sourceTree = "<group>"; };
+		E92255712221ACE3006CADEA /* MGMars.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MGMars.mm; sourceTree = "<group>"; };
+		E92255722221ACE3006CADEA /* MGMars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMars.h; sourceTree = "<group>"; };
+		E92255742221ACE3006CADEA /* app_callback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = app_callback.mm; sourceTree = "<group>"; };
+		E92255752221ACE3006CADEA /* shortlink_packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortlink_packer.h; sourceTree = "<group>"; };
+		E92255762221ACE3006CADEA /* shortlink_packer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shortlink_packer.cc; sourceTree = "<group>"; };
+		E92255772221ACE3006CADEA /* longlink_packer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = longlink_packer.cc; sourceTree = "<group>"; };
+		E92255782221ACE3006CADEA /* longlink_packer.cc.rewriteme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longlink_packer.cc.rewriteme; sourceTree = "<group>"; };
+		E92255792221ACE3006CADEA /* stn_callback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = stn_callback.mm; sourceTree = "<group>"; };
+		E922557A2221ACE3006CADEA /* stn_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stn_callback.h; sourceTree = "<group>"; };
+		E922557B2221ACE3006CADEA /* longlink_packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longlink_packer.h; sourceTree = "<group>"; };
+		E922557C2221ACE3006CADEA /* app_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = app_callback.h; sourceTree = "<group>"; };
+		E922557D2221ACE3006CADEA /* shortlink_packer.cc.rewriteme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shortlink_packer.cc.rewriteme; sourceTree = "<group>"; };
+		E922557E2221ACE3006CADEA /* stnproto_logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stnproto_logic.h; sourceTree = "<group>"; };
+		E92255802221ACE3006CADEA /* LogUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogUtil.m; sourceTree = "<group>"; };
+		E92255812221ACE3006CADEA /* LogHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LogHelper.mm; sourceTree = "<group>"; };
+		E92255822221ACE3006CADEA /* LogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUtil.h; sourceTree = "<group>"; };
+		E92255832221ACE3006CADEA /* LogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHelper.h; sourceTree = "<group>"; };
+		E92255852221ACE3006CADEA /* NetworkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEvent.m; sourceTree = "<group>"; };
+		E92255862221ACE3006CADEA /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
+		E92255872221ACE3006CADEA /* NetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatus.m; sourceTree = "<group>"; };
+		E92255882221ACE3006CADEA /* NetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDelegate.h; sourceTree = "<group>"; };
+		E92255892221ACE3006CADEA /* UINotifyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINotifyDelegate.h; sourceTree = "<group>"; };
+		E922558A2221ACE3006CADEA /* CGITask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CGITask.mm; sourceTree = "<group>"; };
+		E922558B2221ACE3006CADEA /* CGITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGITask.h; sourceTree = "<group>"; };
+		E922558C2221ACE3006CADEA /* CommandID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandID.h; sourceTree = "<group>"; };
+		E922558D2221ACE3006CADEA /* NetworkEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEvent.h; sourceTree = "<group>"; };
+		E922558E2221ACE3006CADEA /* PushNotifyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotifyDelegate.h; sourceTree = "<group>"; };
+		E922558F2221ACE3006CADEA /* NetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatus.h; sourceTree = "<group>"; };
+		E92255902221ACE3006CADEA /* NetworkService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkService.mm; sourceTree = "<group>"; };
+		E92255912221ACE3006CADEA /* MarsGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarsGate.h; sourceTree = "<group>"; };
+		E92255922221ACE3006CADEA /* MGPushMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPushMessageHandler.m; sourceTree = "<group>"; };
+		E92255932221ACE3006CADEA /* MGMessenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMessenger.m; sourceTree = "<group>"; };
 		E9FAF5E8221EAC5F00DB6567 /* MarsGate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarsGate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FAF5EC221EAC5F00DB6567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9FAF5F1221EAC5F00DB6567 /* MarsGateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsGateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FAF5F6221EAC5F00DB6567 /* MarsGateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarsGateTests.m; sourceTree = "<group>"; };
 		E9FAF5F8221EAC5F00DB6567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9FAF608221EAD1E00DB6567 /* mars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mars.framework; sourceTree = "<group>"; };
-		E9FAF648221EAF2E00DB6567 /* LogUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogUtil.m; sourceTree = "<group>"; };
-		E9FAF649221EAF2E00DB6567 /* LogHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LogHelper.mm; sourceTree = "<group>"; };
-		E9FAF64A221EAF2E00DB6567 /* LogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogUtil.h; sourceTree = "<group>"; };
-		E9FAF64B221EAF2E00DB6567 /* LogHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogHelper.h; sourceTree = "<group>"; };
-		E9FAF64C221EAF2E00DB6567 /* MarsGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarsGate.h; sourceTree = "<group>"; };
-		E9FAF64E221EAF2E00DB6567 /* NetworkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEvent.m; sourceTree = "<group>"; };
-		E9FAF64F221EAF2E00DB6567 /* NetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
-		E9FAF650221EAF2E00DB6567 /* NetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatus.m; sourceTree = "<group>"; };
-		E9FAF651221EAF2E00DB6567 /* NetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDelegate.h; sourceTree = "<group>"; };
-		E9FAF652221EAF2E00DB6567 /* UINotifyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINotifyDelegate.h; sourceTree = "<group>"; };
-		E9FAF653221EAF2E00DB6567 /* CGITask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CGITask.mm; sourceTree = "<group>"; };
-		E9FAF654221EAF2E00DB6567 /* CGITask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGITask.h; sourceTree = "<group>"; };
-		E9FAF655221EAF2E00DB6567 /* CommandID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandID.h; sourceTree = "<group>"; };
-		E9FAF656221EAF2E00DB6567 /* NetworkEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEvent.h; sourceTree = "<group>"; };
-		E9FAF657221EAF2E00DB6567 /* PushNotifyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotifyDelegate.h; sourceTree = "<group>"; };
-		E9FAF658221EAF2E00DB6567 /* NetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatus.h; sourceTree = "<group>"; };
-		E9FAF659221EAF2E00DB6567 /* NetworkService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkService.mm; sourceTree = "<group>"; };
-		E9FAF65B221EAF2E00DB6567 /* app_callback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = app_callback.mm; sourceTree = "<group>"; };
-		E9FAF65C221EAF2E00DB6567 /* shortlink_packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shortlink_packer.h; sourceTree = "<group>"; };
-		E9FAF65D221EAF2E00DB6567 /* shortlink_packer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shortlink_packer.cc; sourceTree = "<group>"; };
-		E9FAF65E221EAF2E00DB6567 /* longlink_packer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = longlink_packer.cc; sourceTree = "<group>"; };
-		E9FAF65F221EAF2E00DB6567 /* longlink_packer.cc.rewriteme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longlink_packer.cc.rewriteme; sourceTree = "<group>"; };
-		E9FAF660221EAF2E00DB6567 /* stn_callback.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = stn_callback.mm; sourceTree = "<group>"; };
-		E9FAF661221EAF2E00DB6567 /* stn_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stn_callback.h; sourceTree = "<group>"; };
-		E9FAF662221EAF2E00DB6567 /* longlink_packer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longlink_packer.h; sourceTree = "<group>"; };
-		E9FAF663221EAF2E00DB6567 /* app_callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = app_callback.h; sourceTree = "<group>"; };
-		E9FAF664221EAF2E00DB6567 /* shortlink_packer.cc.rewriteme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shortlink_packer.cc.rewriteme; sourceTree = "<group>"; };
-		E9FAF665221EAF2E00DB6567 /* stnproto_logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stnproto_logic.h; sourceTree = "<group>"; };
 		E9FAF682221EAFD000DB6567 /* StarGate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarGate.h; sourceTree = "<group>"; };
-		E9FAF686221EB15500DB6567 /* MGMars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGMars.h; sourceTree = "<group>"; };
-		E9FAF687221EB15500DB6567 /* MGMars.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MGMars.mm; sourceTree = "<group>"; };
 		E9FAF68A221EB22D00DB6567 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E9FAF68C221EB24400DB6567 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E9FAF68E221EB26600DB6567 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
 		E9FAF691221EB33900DB6567 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E9FAF693221EB51200DB6567 /* MGPushMessageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPushMessageHandler.h; sourceTree = "<group>"; };
-		E9FAF694221EB51200DB6567 /* MGPushMessageHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPushMessageHandler.m; sourceTree = "<group>"; };
-		E9FAF697221EB6DB00DB6567 /* MGMessenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGMessenger.h; sourceTree = "<group>"; };
-		E9FAF698221EB6DB00DB6567 /* MGMessenger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGMessenger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +133,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E922556E2221ACE3006CADEA /* MarsGate */ = {
+			isa = PBXGroup;
+			children = (
+				E92255842221ACE3006CADEA /* Bussiness */,
+				E922557F2221ACE3006CADEA /* Component */,
+				E92255732221ACE3006CADEA /* PublicComponentV2 */,
+				E92255722221ACE3006CADEA /* MGMars.h */,
+				E92255712221ACE3006CADEA /* MGMars.mm */,
+				E92255702221ACE3006CADEA /* MGMessenger.h */,
+				E92255932221ACE3006CADEA /* MGMessenger.m */,
+				E922556F2221ACE3006CADEA /* MGPushMessageHandler.h */,
+				E92255922221ACE3006CADEA /* MGPushMessageHandler.m */,
+				E92255912221ACE3006CADEA /* MarsGate.h */,
+			);
+			path = MarsGate;
+			sourceTree = "<group>";
+		};
+		E92255732221ACE3006CADEA /* PublicComponentV2 */ = {
+			isa = PBXGroup;
+			children = (
+				E922557C2221ACE3006CADEA /* app_callback.h */,
+				E92255742221ACE3006CADEA /* app_callback.mm */,
+				E922557B2221ACE3006CADEA /* longlink_packer.h */,
+				E92255772221ACE3006CADEA /* longlink_packer.cc */,
+				E92255782221ACE3006CADEA /* longlink_packer.cc.rewriteme */,
+				E92255752221ACE3006CADEA /* shortlink_packer.h */,
+				E92255762221ACE3006CADEA /* shortlink_packer.cc */,
+				E922557D2221ACE3006CADEA /* shortlink_packer.cc.rewriteme */,
+				E922557A2221ACE3006CADEA /* stn_callback.h */,
+				E92255792221ACE3006CADEA /* stn_callback.mm */,
+				E922557E2221ACE3006CADEA /* stnproto_logic.h */,
+			);
+			path = PublicComponentV2;
+			sourceTree = "<group>";
+		};
+		E922557F2221ACE3006CADEA /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				E92255832221ACE3006CADEA /* LogHelper.h */,
+				E92255812221ACE3006CADEA /* LogHelper.mm */,
+				E92255822221ACE3006CADEA /* LogUtil.h */,
+				E92255802221ACE3006CADEA /* LogUtil.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E92255842221ACE3006CADEA /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				E922558B2221ACE3006CADEA /* CGITask.h */,
+				E922558A2221ACE3006CADEA /* CGITask.mm */,
+				E922558C2221ACE3006CADEA /* CommandID.h */,
+				E92255882221ACE3006CADEA /* NetworkDelegate.h */,
+				E922558D2221ACE3006CADEA /* NetworkEvent.h */,
+				E92255852221ACE3006CADEA /* NetworkEvent.m */,
+				E92255862221ACE3006CADEA /* NetworkService.h */,
+				E92255902221ACE3006CADEA /* NetworkService.mm */,
+				E922558F2221ACE3006CADEA /* NetworkStatus.h */,
+				E92255872221ACE3006CADEA /* NetworkStatus.m */,
+				E922558E2221ACE3006CADEA /* PushNotifyDelegate.h */,
+				E92255892221ACE3006CADEA /* UINotifyDelegate.h */,
+			);
+			path = Bussiness;
+			sourceTree = "<group>";
+		};
 		E9FAF5DE221EAC5F00DB6567 = {
 			isa = PBXGroup;
 			children = (
@@ -156,16 +221,6 @@
 		E9FAF5EA221EAC5F00DB6567 /* MarsGate */ = {
 			isa = PBXGroup;
 			children = (
-				E9FAF64D221EAF2E00DB6567 /* Bussiness */,
-				E9FAF647221EAF2E00DB6567 /* Component */,
-				E9FAF65A221EAF2E00DB6567 /* PublicComponentV2 */,
-				E9FAF686221EB15500DB6567 /* MGMars.h */,
-				E9FAF687221EB15500DB6567 /* MGMars.mm */,
-				E9FAF697221EB6DB00DB6567 /* MGMessenger.h */,
-				E9FAF698221EB6DB00DB6567 /* MGMessenger.m */,
-				E9FAF693221EB51200DB6567 /* MGPushMessageHandler.h */,
-				E9FAF694221EB51200DB6567 /* MGPushMessageHandler.m */,
-				E9FAF64C221EAF2E00DB6567 /* MarsGate.h */,
 				E9FAF5EC221EAC5F00DB6567 /* Info.plist */,
 			);
 			path = MarsGate;
@@ -183,6 +238,7 @@
 		E9FAF602221EAC9300DB6567 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E922556E2221ACE3006CADEA /* MarsGate */,
 				E9FAF682221EAFD000DB6567 /* StarGate.h */,
 			);
 			name = Classes;
@@ -201,54 +257,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E9FAF647221EAF2E00DB6567 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				E9FAF64B221EAF2E00DB6567 /* LogHelper.h */,
-				E9FAF649221EAF2E00DB6567 /* LogHelper.mm */,
-				E9FAF64A221EAF2E00DB6567 /* LogUtil.h */,
-				E9FAF648221EAF2E00DB6567 /* LogUtil.m */,
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
-		E9FAF64D221EAF2E00DB6567 /* Bussiness */ = {
-			isa = PBXGroup;
-			children = (
-				E9FAF654221EAF2E00DB6567 /* CGITask.h */,
-				E9FAF653221EAF2E00DB6567 /* CGITask.mm */,
-				E9FAF655221EAF2E00DB6567 /* CommandID.h */,
-				E9FAF651221EAF2E00DB6567 /* NetworkDelegate.h */,
-				E9FAF656221EAF2E00DB6567 /* NetworkEvent.h */,
-				E9FAF64E221EAF2E00DB6567 /* NetworkEvent.m */,
-				E9FAF64F221EAF2E00DB6567 /* NetworkService.h */,
-				E9FAF659221EAF2E00DB6567 /* NetworkService.mm */,
-				E9FAF658221EAF2E00DB6567 /* NetworkStatus.h */,
-				E9FAF650221EAF2E00DB6567 /* NetworkStatus.m */,
-				E9FAF657221EAF2E00DB6567 /* PushNotifyDelegate.h */,
-				E9FAF652221EAF2E00DB6567 /* UINotifyDelegate.h */,
-			);
-			path = Bussiness;
-			sourceTree = "<group>";
-		};
-		E9FAF65A221EAF2E00DB6567 /* PublicComponentV2 */ = {
-			isa = PBXGroup;
-			children = (
-				E9FAF663221EAF2E00DB6567 /* app_callback.h */,
-				E9FAF65B221EAF2E00DB6567 /* app_callback.mm */,
-				E9FAF65E221EAF2E00DB6567 /* longlink_packer.cc */,
-				E9FAF65F221EAF2E00DB6567 /* longlink_packer.cc.rewriteme */,
-				E9FAF662221EAF2E00DB6567 /* longlink_packer.h */,
-				E9FAF65D221EAF2E00DB6567 /* shortlink_packer.cc */,
-				E9FAF664221EAF2E00DB6567 /* shortlink_packer.cc.rewriteme */,
-				E9FAF65C221EAF2E00DB6567 /* shortlink_packer.h */,
-				E9FAF661221EAF2E00DB6567 /* stn_callback.h */,
-				E9FAF660221EAF2E00DB6567 /* stn_callback.mm */,
-				E9FAF665221EAF2E00DB6567 /* stnproto_logic.h */,
-			);
-			path = PublicComponentV2;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -257,25 +265,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FAF684221EAFD000DB6567 /* StarGate.h in Headers */,
-				E9FAF688221EB15500DB6567 /* MGMars.h in Headers */,
-				E9FAF66A221EAF2F00DB6567 /* MarsGate.h in Headers */,
-				E9FAF699221EB6DB00DB6567 /* MGMessenger.h in Headers */,
-				E9FAF695221EB51200DB6567 /* MGPushMessageHandler.h in Headers */,
-				E9FAF668221EAF2F00DB6567 /* LogUtil.h in Headers */,
-				E9FAF66C221EAF2F00DB6567 /* NetworkService.h in Headers */,
-				E9FAF67E221EAF2F00DB6567 /* longlink_packer.h in Headers */,
-				E9FAF669221EAF2F00DB6567 /* LogHelper.h in Headers */,
-				E9FAF67F221EAF2F00DB6567 /* app_callback.h in Headers */,
-				E9FAF66E221EAF2F00DB6567 /* NetworkDelegate.h in Headers */,
-				E9FAF675221EAF2F00DB6567 /* NetworkStatus.h in Headers */,
-				E9FAF674221EAF2F00DB6567 /* PushNotifyDelegate.h in Headers */,
-				E9FAF66F221EAF2F00DB6567 /* UINotifyDelegate.h in Headers */,
-				E9FAF678221EAF2F00DB6567 /* shortlink_packer.h in Headers */,
-				E9FAF672221EAF2F00DB6567 /* CommandID.h in Headers */,
-				E9FAF67D221EAF2F00DB6567 /* stn_callback.h in Headers */,
-				E9FAF681221EAF2F00DB6567 /* stnproto_logic.h in Headers */,
-				E9FAF671221EAF2F00DB6567 /* CGITask.h in Headers */,
-				E9FAF673221EAF2F00DB6567 /* NetworkEvent.h in Headers */,
+				E92255972221ACE3006CADEA /* MGMars.h in Headers */,
+				E92255A52221ACE3006CADEA /* LogUtil.h in Headers */,
+				E92255952221ACE3006CADEA /* MGMessenger.h in Headers */,
+				E92255942221ACE3006CADEA /* MGPushMessageHandler.h in Headers */,
+				E92255B32221ACE3006CADEA /* MarsGate.h in Headers */,
+				E92255A62221ACE3006CADEA /* LogHelper.h in Headers */,
+				E92255A02221ACE3006CADEA /* app_callback.h in Headers */,
+				E922559F2221ACE3006CADEA /* longlink_packer.h in Headers */,
+				E92255992221ACE3006CADEA /* shortlink_packer.h in Headers */,
+				E92255A22221ACE3006CADEA /* stnproto_logic.h in Headers */,
+				E922559E2221ACE3006CADEA /* stn_callback.h in Headers */,
+				E92255B02221ACE3006CADEA /* PushNotifyDelegate.h in Headers */,
+				E92255AA2221ACE3006CADEA /* NetworkDelegate.h in Headers */,
+				E92255B12221ACE3006CADEA /* NetworkStatus.h in Headers */,
+				E92255AF2221ACE3006CADEA /* NetworkEvent.h in Headers */,
+				E92255AB2221ACE3006CADEA /* UINotifyDelegate.h in Headers */,
+				E92255A82221ACE3006CADEA /* NetworkService.h in Headers */,
+				E92255AE2221ACE3006CADEA /* CommandID.h in Headers */,
+				E92255AD2221ACE3006CADEA /* CGITask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,8 +366,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9FAF680221EAF2F00DB6567 /* shortlink_packer.cc.rewriteme in Resources */,
-				E9FAF67B221EAF2F00DB6567 /* longlink_packer.cc.rewriteme in Resources */,
+				E92255A12221ACE3006CADEA /* shortlink_packer.cc.rewriteme in Resources */,
+				E922559C2221ACE3006CADEA /* longlink_packer.cc.rewriteme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,19 +385,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9FAF689221EB15500DB6567 /* MGMars.mm in Sources */,
-				E9FAF670221EAF2F00DB6567 /* CGITask.mm in Sources */,
-				E9FAF66D221EAF2F00DB6567 /* NetworkStatus.m in Sources */,
-				E9FAF679221EAF2F00DB6567 /* shortlink_packer.cc in Sources */,
-				E9FAF676221EAF2F00DB6567 /* NetworkService.mm in Sources */,
-				E9FAF696221EB51200DB6567 /* MGPushMessageHandler.m in Sources */,
-				E9FAF66B221EAF2F00DB6567 /* NetworkEvent.m in Sources */,
-				E9FAF677221EAF2F00DB6567 /* app_callback.mm in Sources */,
-				E9FAF69A221EB6DB00DB6567 /* MGMessenger.m in Sources */,
-				E9FAF67A221EAF2F00DB6567 /* longlink_packer.cc in Sources */,
-				E9FAF667221EAF2F00DB6567 /* LogHelper.mm in Sources */,
-				E9FAF67C221EAF2F00DB6567 /* stn_callback.mm in Sources */,
-				E9FAF666221EAF2F00DB6567 /* LogUtil.m in Sources */,
+				E92255AC2221ACE3006CADEA /* CGITask.mm in Sources */,
+				E92255982221ACE3006CADEA /* app_callback.mm in Sources */,
+				E92255A42221ACE3006CADEA /* LogHelper.mm in Sources */,
+				E922559B2221ACE3006CADEA /* longlink_packer.cc in Sources */,
+				E92255A32221ACE3006CADEA /* LogUtil.m in Sources */,
+				E922559A2221ACE3006CADEA /* shortlink_packer.cc in Sources */,
+				E92255B22221ACE3006CADEA /* NetworkService.mm in Sources */,
+				E92255A92221ACE3006CADEA /* NetworkStatus.m in Sources */,
+				E92255B52221ACE3006CADEA /* MGMessenger.m in Sources */,
+				E92255B42221ACE3006CADEA /* MGPushMessageHandler.m in Sources */,
+				E92255A72221ACE3006CADEA /* NetworkEvent.m in Sources */,
+				E922559D2221ACE3006CADEA /* stn_callback.mm in Sources */,
+				E92255962221ACE3006CADEA /* MGMars.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
