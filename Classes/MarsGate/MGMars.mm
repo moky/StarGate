@@ -68,6 +68,7 @@
     
     NSString *address;
     NSNumber *port;
+    // LongLink
     address = [launchOptions objectForKey:@"LongLinkAddress"];
     if (address) {
         longLinkAddress = address;
@@ -76,22 +77,25 @@
     if (port) {
         longLinkPort = [port unsignedShortValue];
     }
+    // ShortLink
     port = [launchOptions objectForKey:@"ShortLinkPort"];
     if (port) {
         shortLinkPort = [port unsignedShortValue];
     }
     
     // OnNewDNS:
-    NSDictionary *DNS = [launchOptions objectForKey:@"DNS"];
-    if (!DNS) {
-        DNS = @{
-                @"dim.chat" : @[@"127.0.0.1"],
-                };
+    NSDictionary *ipTable = [launchOptions objectForKey:@"NewDNS"];
+    if (!ipTable) {
+        ipTable = @{
+                    @"dim.chat": @[
+                            @"127.0.0.1",
+                            ],
+                    };
     }
     
     NetworkEvent *networkEvent = [[NetworkEvent alloc] init];
-    for (NSString *domain in DNS) {
-        [networkEvent setIPList:[DNS objectForKey:domain] forHost:domain];
+    for (NSString *domain in ipTable) {
+        [networkEvent setIPList:[ipTable objectForKey:domain] forHost:domain];
     }
     
     [NetworkService sharedInstance].delegate = networkEvent;
