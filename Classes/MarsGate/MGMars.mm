@@ -61,12 +61,45 @@
 
 - (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions {
     
-    [NetworkService sharedInstance].delegate = [[NetworkEvent alloc] init];
+    UInt32 clientVersion = 200;
+    NSString *longLinkAddress = @"dim.chat";
+    unsigned short longLinkPort = 9394;
+    unsigned short shortLinkPort = 8080;
+    
+    NSString *address;
+    NSNumber *port;
+    address = [launchOptions objectForKey:@"LongLinkAddress"];
+    if (address) {
+        longLinkAddress = address;
+    }
+    port = [launchOptions objectForKey:@"LongLinkPort"];
+    if (port) {
+        longLinkPort = [port unsignedShortValue];
+    }
+    port = [launchOptions objectForKey:@"ShortLinkPort"];
+    if (port) {
+        shortLinkPort = [port unsignedShortValue];
+    }
+    
+    // OnNewDNS:
+    NSDictionary *DNS = [launchOptions objectForKey:@"DNS"];
+    if (!DNS) {
+        DNS = @{
+                @"dim.chat" : @[@"127.0.0.1"],
+                };
+    }
+    
+    NetworkEvent *networkEvent = [[NetworkEvent alloc] init];
+    for (NSString *domain in DNS) {
+        [networkEvent setIPList:[DNS objectForKey:domain] forHost:domain];
+    }
+    
+    [NetworkService sharedInstance].delegate = networkEvent;
     [[NetworkService sharedInstance] setCallBack];
     [[NetworkService sharedInstance] createMars];
-    [[NetworkService sharedInstance] setClientVersion:200];
-    [[NetworkService sharedInstance] setLongLinkAddress:@"dim.chat" port:9394];
-    [[NetworkService sharedInstance] setShortLinkPort:8080];
+    [[NetworkService sharedInstance] setClientVersion:clientVersion];
+    [[NetworkService sharedInstance] setLongLinkAddress:longLinkAddress port:longLinkPort];
+    [[NetworkService sharedInstance] setShortLinkPort:shortLinkPort];
     [[NetworkService sharedInstance] reportEvent_OnForeground:YES];
     [[NetworkService sharedInstance] makesureLongLinkConnect];
     

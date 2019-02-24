@@ -276,11 +276,11 @@
 				E92255992221ACE3006CADEA /* shortlink_packer.h in Headers */,
 				E92255A22221ACE3006CADEA /* stnproto_logic.h in Headers */,
 				E922559E2221ACE3006CADEA /* stn_callback.h in Headers */,
+				E92255AB2221ACE3006CADEA /* UINotifyDelegate.h in Headers */,
 				E92255B02221ACE3006CADEA /* PushNotifyDelegate.h in Headers */,
 				E92255AA2221ACE3006CADEA /* NetworkDelegate.h in Headers */,
-				E92255B12221ACE3006CADEA /* NetworkStatus.h in Headers */,
 				E92255AF2221ACE3006CADEA /* NetworkEvent.h in Headers */,
-				E92255AB2221ACE3006CADEA /* UINotifyDelegate.h in Headers */,
+				E92255B12221ACE3006CADEA /* NetworkStatus.h in Headers */,
 				E92255A82221ACE3006CADEA /* NetworkService.h in Headers */,
 				E92255AE2221ACE3006CADEA /* CommandID.h in Headers */,
 				E92255AD2221ACE3006CADEA /* CGITask.h in Headers */,
@@ -552,6 +552,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MarsGate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -580,6 +581,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = MarsGate/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -23,6 +23,12 @@
 #import "CGITask.h"
 #import "LogUtil.h"
 
+@interface NetworkEvent ()
+
+@property (strong, nonatomic) NSMutableDictionary *ipTable;
+
+@end
+
 @implementation NetworkEvent
 
 - (void)addPushObserver:(id<PushNotifyDelegate>)observer withCmdId:(NSInteger)cmdId {
@@ -44,10 +50,36 @@
         tasks = [[NSMutableDictionary alloc] init];
         controllers = [[NSMutableDictionary alloc] init];
         pushrecvers = [[NSMutableDictionary alloc] init];
+        
+        _ipTable = [[NSMutableDictionary alloc] init];
     }
     
     return self;
 }
+
+- (void)setIPList:(NSArray *)list forHost:(NSString *)domain {
+    if (list.count > 0) {
+        [_ipTable setObject:[list mutableCopy] forKey:domain];
+    } else {
+        [_ipTable removeObjectForKey:domain];
+    }
+}
+
+- (void)addIPAddress:(NSString *)IP forHost:(NSString *)domain {
+    NSMutableArray *list = [_ipTable objectForKey:domain];
+    if (list) {
+        if ([list containsObject:IP]) {
+            NSLog(@"already contains this IP: %@", IP);
+        } else {
+            [list addObject:IP];
+        }
+    } else {
+        list = [[NSMutableArray alloc] initWithObjects:IP, nil];
+        [_ipTable setObject:list forKey:domain];
+    }
+}
+
+#pragma mark - NetworkDelegate
 
 - (BOOL)isAuthed {
     
@@ -55,8 +87,7 @@
 }
 
 - (NSArray *)OnNewDns:(NSString *)address {
-    
-    return NULL;
+    return [_ipTable objectForKey:address];
 }
 
 - (void)OnPushWithCmd:(NSInteger)cid data:(NSData *)data {

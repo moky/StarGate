@@ -32,4 +32,7 @@ static const int SENDMSG = 3;
     NSMutableDictionary* pushrecvers;
 }
 
+- (void)setIPList:(NSArray *)list forHost:(NSString *)domain;
+- (void)addIPAddress:(NSString *)IP forHost:(NSString *)domain;
+
 @end

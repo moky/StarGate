@@ -50,7 +50,14 @@ void StnCallBack::TrafficData(ssize_t _send, ssize_t _recv) {
 std::vector<std::string> StnCallBack::OnNewDns(const std::string& _host) {
     std::vector<std::string> vector;
 //    vector.push_back("118.89.24.72");
-    vector.push_back("127.0.0.1");
+//    vector.push_back("127.0.0.1");
+    
+    NSString *address = [[NSString alloc] initWithCString:_host.c_str() encoding:NSUTF8StringEncoding];
+    NSArray * ipList = [[NetworkService sharedInstance] OnNewDns:address];
+    for (NSString *IP in ipList) {
+        vector.push_back(std::string([IP UTF8String]));
+    }
+    
     return vector;
 }
 
