@@ -40,7 +40,7 @@
 }
 
 - (int)onPostDecode:(NSData*)responseData {
-    return (int)[_handler onReceive:responseData]; // -1 on error
+    return (int)[_handler star:_star onReceive:responseData]; // -1 on error
 }
 
 - (int)onTaskEnd:(uint32_t)tid errType:(uint32_t)errtype errCode:(uint32_t)errcode {

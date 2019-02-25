@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MGPushMessageHandler : NSObject <PushNotifyDelegate>
 
+@property (weak, nonatomic) id<SGStar> star;
+
 - (instancetype)initWithHandler:(id<SGStarDelegate>)receiver
 NS_DESIGNATED_INITIALIZER;
 

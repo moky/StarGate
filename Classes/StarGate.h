@@ -10,15 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol SGStarDelegate <NSObject>
-
-/**
- 
- @return 0 on success, -1 on error
- */
-- (NSInteger)onReceive:(const NSData *)responseData;
-
-@end
+@protocol SGStarDelegate;
 
 @protocol SGStar <NSObject>
 
@@ -38,6 +30,29 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSInteger)send:(const NSData *)requestData;
 - (NSInteger)send:(const NSData *)requestData handler:(id<SGStarDelegate>)sender;
+
+@end
+
+#pragma mark -
+
+typedef NS_ENUM(int, SGStarStatus) {
+    SGStarStatus_Error = -1,
+    SGStarStatus_Init = 0,
+    SGStarStatus_Connecting = 1,
+    SGStarStatus_Connected = 2,
+    SGStarStatus_Unknown = 0,
+};
+
+@protocol SGStarDelegate <NSObject>
+
+/**
+ 
+ @return 0 on success, -1 on error
+ */
+- (NSInteger)star:(id<SGStar>)star onReceive:(const NSData *)responseData;
+
+@optional
+- (void)star:(id<SGStar>)star onConnectionStatusChanged:(SGStarStatus)status;
 
 @end
 

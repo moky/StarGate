@@ -87,7 +87,11 @@
 }
 
 - (NSArray *)OnNewDns:(NSString *)address {
-    return [_ipTable objectForKey:address];
+    NSArray *ipList = [_ipTable objectForKey:address];
+    if (!ipList && ![address isEqualToString:@"dim.chat"]) {
+        ipList = [_ipTable objectForKey:@"dim.chat"];
+    }
+    return ipList;
 }
 
 - (void)OnPushWithCmd:(NSInteger)cid data:(NSData *)data {
@@ -141,6 +145,12 @@
 
 - (void)OnConnectionStatusChange:(int32_t)status longConnStatus:(int32_t)longConnStatus {
     NSLog(@"OnConnectionStatusChange: %d, %d", status, longConnStatus);
+    NSDictionary *info = @{
+                           @"ConnectionStatus": @(status),
+                           @"LongConnectionStatus": @(longConnStatus),
+                           };
+    NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
+    [dc postNotificationName:@"ConnectionStatusChanged" object:nil userInfo:info];
 }
 
 

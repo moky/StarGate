@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MGMessenger : NSObject <UINotifyDelegate>
 
+@property (weak, nonatomic) id<SGStar> star;
+
 - (instancetype)initWithData:(const NSData *)data
                      handler:(id<SGStarDelegate>)sender
 NS_DESIGNATED_INITIALIZER;

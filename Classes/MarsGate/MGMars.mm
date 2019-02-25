@@ -7,6 +7,7 @@
 //
 
 #import <mars/xlog/appender.h>
+#import <mars/stn/stn.h>
 
 #import "CommandID.h"
 #import "CGITask.h"
@@ -18,7 +19,11 @@
 
 #import "MGMars.h"
 
-@interface MGMars ()
+@interface MGMars () {
+    
+    SGStarStatus _longConnectionStatus;
+    SGStarStatus _connectionStatus;
+}
 
 @property (strong, nonatomic) id<SGStarDelegate> handler;
 @property (strong, nonatomic) MGPushMessageHandler *pushHandler;
@@ -35,11 +40,90 @@
 /* designated initializer */
 - (instancetype)initWithMessageHandler:(id<SGStarDelegate>)handler {
     if (self = [super init]) {
+        _longConnectionStatus = SGStarStatus_Init;
+        _connectionStatus = SGStarStatus_Init;
+        
         self.handler = handler;
         
-        self.pushHandler = [[MGPushMessageHandler alloc] initWithHandler:handler];
+        MGPushMessageHandler *pmHandler;
+        pmHandler = [[MGPushMessageHandler alloc] initWithHandler:handler];
+        pmHandler.star = self;
+        self.pushHandler = pmHandler;
+        
+        NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
+        [dc addObserver:self
+               selector:@selector(onConnectionStatusChanged:)
+                   name:@"ConnectionStatusChanged"
+                 object:nil];
     }
     return self;
+}
+
+- (void)onConnectionStatusChanged:(NSNotification *)notification {
+    NSDictionary *info = [notification userInfo];
+    
+    int longlink_status = mars::stn::kNetworkUnkown;
+    int _status = mars::stn::kNetworkUnkown;
+    
+    NSNumber *status;
+    status = [info objectForKey:@"LongConnectionStatus"];
+    if (status) {
+        longlink_status = [status intValue];
+    }
+    status = [info objectForKey:@"ConnectionStatus"];
+    if (status) {
+        _status = [status intValue];
+    }
+    
+    switch (longlink_status) {
+        case mars::stn::kNetworkUnavailable:
+        case mars::stn::kServerFailed:
+        case mars::stn::kServerDown:
+        case mars::stn::kGateWayFailed:
+            _longConnectionStatus = SGStarStatus_Error;
+            NSLog(@"long connection error");
+            break;
+        case mars::stn::kConnecting:
+            _longConnectionStatus = SGStarStatus_Connecting;
+            NSLog(@"long connection connecting");
+            break;
+        case mars::stn::kConnected:
+            _longConnectionStatus = SGStarStatus_Connected;
+            NSLog(@"long connection connected");
+            break;
+        case mars::stn::kNetworkUnkown:
+            //_longConnectionStatus = SGStarStatus_Unknown;
+            break;
+        default:
+            break;
+    }
+    
+    switch (_status) {
+        case mars::stn::kNetworkUnavailable:
+        case mars::stn::kServerFailed:
+        case mars::stn::kServerDown:
+        case mars::stn::kGateWayFailed:
+            _connectionStatus = SGStarStatus_Error;
+            NSLog(@"connection error");
+            break;
+        case mars::stn::kConnecting:
+            _connectionStatus = SGStarStatus_Connecting;
+            NSLog(@"connection connecting");
+            break;
+        case mars::stn::kConnected:
+            _connectionStatus = SGStarStatus_Connected;
+            NSLog(@"connection connected");
+            break;
+        case mars::stn::kNetworkUnkown:
+            //_connectionStatus = SGStarStatus_Unknown;
+            break;
+        default:
+            break;
+    }
+    
+    if ([_handler respondsToSelector:@selector(star:onConnectionStatusChanged:)]) {
+        [_handler star:self onConnectionStatusChanged:_longConnectionStatus];
+    }
 }
 
 #pragma mark - SGStar
@@ -56,7 +140,7 @@
 
 - (BOOL)isConnected {
     // TODO: get status of current connection
-    return YES;
+    return _longConnectionStatus == SGStarStatus_Connected;
 }
 
 - (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions {
@@ -140,6 +224,7 @@
         sender = _handler;
     }
     MGMessenger *messenger = [[MGMessenger alloc] initWithData:requestData handler:sender];
+    messenger.star = self;
     
     CGITask *task;
     task = [[CGITask alloc] initAll:ChannelType_LongConn
