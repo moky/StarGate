@@ -91,6 +91,7 @@
     if (!ipList && ![address isEqualToString:@"dim.chat"]) {
         ipList = [_ipTable objectForKey:@"dim.chat"];
     }
+    NSLog(@"New DNS: %@ -> %@", address, ipList);
     return ipList;
 }
 
@@ -150,7 +151,7 @@
                            @"LongConnectionStatus": @(longConnStatus),
                            };
     NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
-    [dc postNotificationName:@"ConnectionStatusChanged" object:nil userInfo:info];
+    [dc postNotificationName:@"ConnectionStatusChanged" object:self userInfo:info];
 }
 
 

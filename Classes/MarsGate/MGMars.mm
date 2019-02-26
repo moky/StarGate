@@ -49,12 +49,6 @@
         pmHandler = [[MGPushMessageHandler alloc] initWithHandler:handler];
         pmHandler.star = self;
         self.pushHandler = pmHandler;
-        
-        NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
-        [dc addObserver:self
-               selector:@selector(onConnectionStatusChanged:)
-                   name:@"ConnectionStatusChanged"
-                 object:nil];
     }
     return self;
 }
@@ -128,16 +122,6 @@
 
 #pragma mark - SGStar
 
-- (nullable NSString *)IP {
-    // TODO: get current connected server IP
-    return @"127.0.0.1";
-}
-
-- (NSUInteger)port {
-    // TODO: get current connected server port
-    return 9394;
-}
-
 - (BOOL)isConnected {
     // TODO: get status of current connection
     return _longConnectionStatus == SGStarStatus_Connected;
@@ -196,6 +180,13 @@
     [[NetworkService sharedInstance] addPushObserver:_pushHandler withCmdId:kSendMsgCmdId];
     [[NetworkService sharedInstance] addPushObserver:_pushHandler withCmdId:kPushMessageCmdId];
     
+    // listening ConnectionStatusChanged from networkEvent
+    NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
+    [dc addObserver:self
+           selector:@selector(onConnectionStatusChanged:)
+               name:@"ConnectionStatusChanged"
+             object:networkEvent];
+    
     return YES;
 }
 
@@ -208,6 +199,13 @@
 }
 
 - (void)terminate {
+    // remove listening ConnectionStatusChanged from networkEvent
+    NetworkEvent *networkEvent = [NetworkService sharedInstance].delegate;
+    NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
+    [dc removeObserver:self
+                  name:@"ConnectionStatusChanged"
+                object:networkEvent];
+    
     [[NetworkService sharedInstance] destroyMars];
     appender_close();
 }

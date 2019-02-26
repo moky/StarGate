@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SGStar <NSObject>
 
-@property (readonly, nonatomic, nullable) NSString *IP; // server IP
-@property (readonly, nonatomic) NSUInteger port;        // server port
 @property (readonly, nonatomic, getter=isConnected) BOOL connected;
 
 - (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions;
@@ -40,7 +38,7 @@ typedef NS_ENUM(int, SGStarStatus) {
     SGStarStatus_Init = 0,
     SGStarStatus_Connecting = 1,
     SGStarStatus_Connected = 2,
-    SGStarStatus_Unknown = 0,
+    SGStarStatus_Unknown = 110,
 };
 
 @protocol SGStarDelegate <NSObject>
