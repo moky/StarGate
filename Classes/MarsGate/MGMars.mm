@@ -184,7 +184,7 @@
     NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
     [dc addObserver:self
            selector:@selector(onConnectionStatusChanged:)
-               name:@"ConnectionStatusChanged"
+               name:kNotificationName_ConnectionStatusChanged
              object:networkEvent];
     
     return YES;
@@ -203,7 +203,7 @@
     NetworkEvent *networkEvent = [NetworkService sharedInstance].delegate;
     NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
     [dc removeObserver:self
-                  name:@"ConnectionStatusChanged"
+                  name:kNotificationName_ConnectionStatusChanged
                 object:networkEvent];
     
     [[NetworkService sharedInstance] destroyMars];

@@ -151,7 +151,7 @@
                            @"LongConnectionStatus": @(longConnStatus),
                            };
     NSNotificationCenter *dc = [NSNotificationCenter defaultCenter];
-    [dc postNotificationName:@"ConnectionStatusChanged" object:self userInfo:info];
+    [dc postNotificationName:kNotificationName_ConnectionStatusChanged object:self userInfo:info];
 }
 
 
