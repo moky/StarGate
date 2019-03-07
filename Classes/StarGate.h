@@ -10,11 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(int, SGStarStatus) {
+    SGStarStatus_Error = -1,
+    SGStarStatus_Init = 0,
+    SGStarStatus_Connecting = 1,
+    SGStarStatus_Connected = 2,
+};
+
 @protocol SGStarDelegate;
 
 @protocol SGStar <NSObject>
 
-@property (readonly, nonatomic, getter=isConnected) BOOL connected;
+@property (readonly, nonatomic) SGStarStatus status;
 
 - (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions;
 - (void)terminate;
@@ -32,14 +39,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 #pragma mark -
-
-typedef NS_ENUM(int, SGStarStatus) {
-    SGStarStatus_Error = -1,
-    SGStarStatus_Init = 0,
-    SGStarStatus_Connecting = 1,
-    SGStarStatus_Connected = 2,
-    SGStarStatus_Unknown = 110,
-};
 
 @protocol SGStarDelegate <NSObject>
 

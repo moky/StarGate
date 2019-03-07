@@ -53,11 +53,31 @@
     return self;
 }
 
+- (SGStarStatus)status {
+    switch (_longConnectionStatus) {
+        case SGStarStatus_Init:
+            break;
+            
+        case SGStarStatus_Connecting:
+            return _longConnectionStatus;
+            
+        case SGStarStatus_Connected:
+            return _longConnectionStatus;
+            
+        case SGStarStatus_Error:
+            break;
+            
+        default:
+            break;
+    }
+    return _connectionStatus;
+}
+
 - (void)onConnectionStatusChanged:(NSNotification *)notification {
     NSDictionary *info = [notification userInfo];
     
     int longlink_status = mars::stn::kNetworkUnkown;
-    int _status = mars::stn::kNetworkUnkown;
+    int conn_status = mars::stn::kNetworkUnkown;
     
     NSNumber *status;
     status = [info objectForKey:@"LongConnectionStatus"];
@@ -66,7 +86,7 @@
     }
     status = [info objectForKey:@"ConnectionStatus"];
     if (status) {
-        _status = [status intValue];
+        conn_status = [status intValue];
     }
     
     switch (longlink_status) {
@@ -75,57 +95,56 @@
         case mars::stn::kServerDown:
         case mars::stn::kGateWayFailed:
             _longConnectionStatus = SGStarStatus_Error;
-            NSLog(@"long connection error");
+            NSLog(@"Mars: long connection error");
             break;
         case mars::stn::kConnecting:
             _longConnectionStatus = SGStarStatus_Connecting;
-            NSLog(@"long connection connecting");
+            NSLog(@"Mars: long connection connecting");
             break;
         case mars::stn::kConnected:
             _longConnectionStatus = SGStarStatus_Connected;
-            NSLog(@"long connection connected");
+            NSLog(@"Mars: long connection connected");
             break;
         case mars::stn::kNetworkUnkown:
-            //_longConnectionStatus = SGStarStatus_Unknown;
+            _longConnectionStatus = SGStarStatus_Error;
+            NSLog(@"Mars: long connection unknown");
             break;
         default:
+            NSLog(@"Mars: long link status changed to %d", longlink_status);
             break;
     }
     
-    switch (_status) {
+    switch (conn_status) {
         case mars::stn::kNetworkUnavailable:
         case mars::stn::kServerFailed:
         case mars::stn::kServerDown:
         case mars::stn::kGateWayFailed:
             _connectionStatus = SGStarStatus_Error;
-            NSLog(@"connection error");
+            NSLog(@"Mars: connection error");
             break;
         case mars::stn::kConnecting:
             _connectionStatus = SGStarStatus_Connecting;
-            NSLog(@"connection connecting");
+            NSLog(@"Mars: connection connecting");
             break;
         case mars::stn::kConnected:
             _connectionStatus = SGStarStatus_Connected;
-            NSLog(@"connection connected");
+            NSLog(@"Mars: connection connected");
             break;
         case mars::stn::kNetworkUnkown:
-            //_connectionStatus = SGStarStatus_Unknown;
+            _connectionStatus = SGStarStatus_Error;
+            NSLog(@"Mars: connection unknown");
             break;
         default:
+            NSLog(@"Mars: connection status changed to %d", conn_status);
             break;
     }
     
     if ([_handler respondsToSelector:@selector(star:onConnectionStatusChanged:)]) {
-        [_handler star:self onConnectionStatusChanged:_longConnectionStatus];
+        [_handler star:self onConnectionStatusChanged:self.status];
     }
 }
 
 #pragma mark - SGStar
-
-- (BOOL)isConnected {
-    // TODO: get status of current connection
-    return _longConnectionStatus == SGStarStatus_Connected;
-}
 
 - (BOOL)launchWithOptions:(nullable NSDictionary *)launchOptions {
     
