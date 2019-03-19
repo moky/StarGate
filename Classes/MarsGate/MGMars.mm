@@ -235,11 +235,8 @@
     return [self send:requestData handler:_handler];
 }
 
-- (NSInteger)send:(const NSData *)requestData handler:(id<SGStarDelegate>)sender {
+- (NSInteger)send:(const NSData *)requestData handler:(nullable id<SGStarDelegate>)sender {
     
-    if (!sender) {
-        sender = _handler;
-    }
     MGMessenger *messenger = [[MGMessenger alloc] initWithData:requestData handler:sender];
     messenger.star = self;
     

@@ -34,7 +34,7 @@ typedef NS_ENUM(int, SGStarStatus) {
  @return 0 on success, -1 on error
  */
 - (NSInteger)send:(const NSData *)requestData;
-- (NSInteger)send:(const NSData *)requestData handler:(id<SGStarDelegate>)sender;
+- (NSInteger)send:(const NSData *)requestData handler:(nullable id<SGStarDelegate>)sender;
 
 @end
 
@@ -50,6 +50,9 @@ typedef NS_ENUM(int, SGStarStatus) {
 
 @optional
 - (void)star:(id<SGStar>)star onConnectionStatusChanged:(SGStarStatus)status;
+
+// callback for sending data
+- (void)star:(id<SGStar>)star onFinishSend:(const NSData *)requestData withError:(nullable const NSError *)error;
 
 @end
 

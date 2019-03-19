@@ -23,6 +23,8 @@
 #import "CGITask.h"
 #import "LogUtil.h"
 
+NSString *kNotificationName_ConnectionStatusChanged = @"ConnectionStatusChanged";
+
 @interface NetworkEvent ()
 
 @property (strong, nonatomic) NSMutableDictionary *ipTable;

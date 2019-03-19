@@ -22,7 +22,7 @@
 
 #import "NetworkDelegate.h"
 
-static NSString *kNotificationName_ConnectionStatusChanged = @"ConnectionStatusChanged";
+extern NSString *kNotificationName_ConnectionStatusChanged;
 
 static const int SAYHELLO = 1;
 static const int CONVERSATION_LIST = 2;

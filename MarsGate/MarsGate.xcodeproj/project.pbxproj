@@ -40,7 +40,7 @@
 		E92255B22221ACE3006CADEA /* NetworkService.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255902221ACE3006CADEA /* NetworkService.mm */; };
 		E92255B32221ACE3006CADEA /* MarsGate.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255912221ACE3006CADEA /* MarsGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E92255B42221ACE3006CADEA /* MGPushMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255922221ACE3006CADEA /* MGPushMessageHandler.m */; };
-		E92255B52221ACE3006CADEA /* MGMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = E92255932221ACE3006CADEA /* MGMessenger.m */; };
+		E92255B52221ACE3006CADEA /* MGMessenger.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255932221ACE3006CADEA /* MGMessenger.mm */; };
 		E9FAF5F2221EAC5F00DB6567 /* MarsGate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF5E8221EAC5F00DB6567 /* MarsGate.framework */; };
 		E9FAF5F7221EAC5F00DB6567 /* MarsGateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF5F6221EAC5F00DB6567 /* MarsGateTests.m */; };
 		E9FAF609221EAD1E00DB6567 /* mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF608221EAD1E00DB6567 /* mars.framework */; };
@@ -95,7 +95,7 @@
 		E92255902221ACE3006CADEA /* NetworkService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NetworkService.mm; sourceTree = "<group>"; };
 		E92255912221ACE3006CADEA /* MarsGate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarsGate.h; sourceTree = "<group>"; };
 		E92255922221ACE3006CADEA /* MGPushMessageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPushMessageHandler.m; sourceTree = "<group>"; };
-		E92255932221ACE3006CADEA /* MGMessenger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGMessenger.m; sourceTree = "<group>"; };
+		E92255932221ACE3006CADEA /* MGMessenger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MGMessenger.mm; sourceTree = "<group>"; };
 		E9FAF5E8221EAC5F00DB6567 /* MarsGate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarsGate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FAF5EC221EAC5F00DB6567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9FAF5F1221EAC5F00DB6567 /* MarsGateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsGateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +142,7 @@
 				E92255722221ACE3006CADEA /* MGMars.h */,
 				E92255712221ACE3006CADEA /* MGMars.mm */,
 				E92255702221ACE3006CADEA /* MGMessenger.h */,
-				E92255932221ACE3006CADEA /* MGMessenger.m */,
+				E92255932221ACE3006CADEA /* MGMessenger.mm */,
 				E922556F2221ACE3006CADEA /* MGPushMessageHandler.h */,
 				E92255922221ACE3006CADEA /* MGPushMessageHandler.m */,
 				E92255912221ACE3006CADEA /* MarsGate.h */,
@@ -393,7 +393,7 @@
 				E922559A2221ACE3006CADEA /* shortlink_packer.cc in Sources */,
 				E92255B22221ACE3006CADEA /* NetworkService.mm in Sources */,
 				E92255A92221ACE3006CADEA /* NetworkStatus.m in Sources */,
-				E92255B52221ACE3006CADEA /* MGMessenger.m in Sources */,
+				E92255B52221ACE3006CADEA /* MGMessenger.mm in Sources */,
 				E92255B42221ACE3006CADEA /* MGPushMessageHandler.m in Sources */,
 				E92255A72221ACE3006CADEA /* NetworkEvent.m in Sources */,
 				E922559D2221ACE3006CADEA /* stn_callback.mm in Sources */,

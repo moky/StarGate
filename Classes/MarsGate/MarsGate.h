@@ -20,6 +20,8 @@ FOUNDATION_EXPORT const unsigned char MarsGateVersionString[];
 #if !defined(__MARS_GATE__)
 #define __MARS_GATE__ 1
 
+//#import <MarsGate/StarGate.h>
+
 #import <MarsGate/MGMars.h>
 
 #endif /* ! __MARS_GATE__ */
