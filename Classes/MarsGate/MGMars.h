@@ -6,8 +6,6 @@
 //  Copyright © 2019 DIM Group. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "StarGate.h"
 
 NS_ASSUME_NONNULL_BEGIN
