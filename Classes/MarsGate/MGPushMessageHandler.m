@@ -32,10 +32,10 @@
 #pragma mark - PushNotifyDelegate
 
 - (void)notifyPushMessage:(NSData *)pushData withCmdId:(NSInteger)cmdId {
-    NSLog(@"pushData len: %lu, cmd: %ld", pushData.length, cmdId);
+    NSLog(@"pushData len: %lu, cmd: %ld", (unsigned long)pushData.length, (long)cmdId);
     // TODO: receive push message
     NSInteger res = [_handler star:_star onReceive:pushData];
-    NSLog(@"process result: %ld", res);
+    NSLog(@"process result: %ld", (long)res);
 }
 
 @end

@@ -81,11 +81,11 @@
     
     NSNumber *status;
     status = [info objectForKey:@"LongConnectionStatus"];
-    if (status) {
+    if (status != nil) {
         longlink_status = [status intValue];
     }
     status = [info objectForKey:@"ConnectionStatus"];
-    if (status) {
+    if (status != nil) {
         conn_status = [status intValue];
     }
     
@@ -161,12 +161,12 @@
         longLinkAddress = address;
     }
     port = [launchOptions objectForKey:@"LongLinkPort"];
-    if (port) {
+    if (port != nil) {
         longLinkPort = [port unsignedShortValue];
     }
     // ShortLink
     port = [launchOptions objectForKey:@"ShortLinkPort"];
-    if (port) {
+    if (port != nil) {
         shortLinkPort = [port unsignedShortValue];
     }
     

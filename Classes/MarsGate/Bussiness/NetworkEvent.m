@@ -98,7 +98,7 @@ NSString *kNotificationName_ConnectionStatusChanged = @"ConnectionStatusChanged"
 }
 
 - (void)OnPushWithCmd:(NSInteger)cid data:(NSData *)data {
-    id<PushNotifyDelegate> pushObserver = [pushrecvers objectForKey:[NSString stringWithFormat:@"%ld", cid]];
+    id<PushNotifyDelegate> pushObserver = [pushrecvers objectForKey:[NSString stringWithFormat:@"%ld", (long)cid]];
     if (pushObserver != nil) {
         [pushObserver notifyPushMessage:data withCmdId:cid];
     }
