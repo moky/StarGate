@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) id<SGStar> star;
 
-- (instancetype)initWithData:(const NSData *)data
+- (instancetype)initWithData:(NSData *)data
                      handler:(nullable id<SGStarDelegate>)sender
 NS_DESIGNATED_INITIALIZER;
 
