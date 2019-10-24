@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1E938BD5476C46C78995DA67 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				1B72514823844A48B736E95C /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		1C29BDB9D5B445CEADB61655 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5E5EE492EE234570B4463E40 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				0589C74BDF294FF99D05E83F /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				AF55CCA212D144C5968CB315 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		D1F1DE35176D48ECB085E0BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 56A7F07A709C4AF7ACC7A4D1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A7B09034D78448ABA84AE6E0 /* CMake Rules */,
+			);
+			dependencies = (
+				3D57E33B25CA455A9650EEB3 /* PBXTargetDependency */,
+				CFEC1CBC6F994F89B9EE1FA9 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		82F4696555004C1996CB6734 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5322BD9C973249E08EA3036D /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/CMakeLists.txt */; };
+		C9E561E509444762B47478DC /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprj.cc */ = {isa = PBXBuildFile; fileRef = 30C5A1A8756D43429078419C /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprj.cc */; };
+		DD53AAB94FD6412E832ACAF6 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprjevent.cc */ = {isa = PBXBuildFile; fileRef = C36F68EB33ED4334BD0DB1C9 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprjevent.cc */; };
+		E67D82D5938D43239C868823 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/active_logic.cc */ = {isa = PBXBuildFile; fileRef = 34C64876AA30438986C35F2E /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/active_logic.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		05B9B3AE6ECD4BE69B705134 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		5769F1D458E64821A02C998E /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		28FE292CDFF14AE3A796FAC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C05221288A164B9A88EB9427 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F49C16F385C845BAAB052FFD;
+			remoteInfo = baseevent;
+		};
+		6426E20814B6422494FEBA42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C05221288A164B9A88EB9427 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		A6EA79016A024DBDAD3843BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C05221288A164B9A88EB9427 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F1DE35176D48ECB085E0BC;
+			remoteInfo = ALL_BUILD;
+		};
+		BF63A51038F64B2E86DFB129 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C05221288A164B9A88EB9427 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30C5A1A8756D43429078419C /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprj.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = baseprj.cc; path = src/baseprj.cc; sourceTree = SOURCE_ROOT; };
+		34C64876AA30438986C35F2E /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/active_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = active_logic.cc; path = src/active_logic.cc; sourceTree = SOURCE_ROOT; };
+		5322BD9C973249E08EA3036D /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		73BECA80EA134D23B22A8BD6 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		817DCCBF84D04F2B99F394D3 /* baseevent */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libbaseevent.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36F68EB33ED4334BD0DB1C9 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprjevent.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = baseprjevent.cc; path = src/baseprjevent.cc; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		22A916CF3CE3451ABE184E2A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				34C64876AA30438986C35F2E /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/active_logic.cc */,
+				30C5A1A8756D43429078419C /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprj.cc */,
+				C36F68EB33ED4334BD0DB1C9 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprjevent.cc */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		2CF3AE6885A842FA94D95293 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				817DCCBF84D04F2B99F394D3 /* baseevent */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BB3A21A261E45BBB89F3A33 /* baseevent */ = {
+			isa = PBXGroup;
+			children = (
+				22A916CF3CE3451ABE184E2A /* src */,
+				5322BD9C973249E08EA3036D /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/CMakeLists.txt */,
+			);
+			name = baseevent;
+			sourceTree = "<group>";
+		};
+		C22DFC52EF534FA3B0DD291F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		DE08A3BE4AB74692AB4005B5 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				C22DFC52EF534FA3B0DD291F /* CMake Rules */,
+				73BECA80EA134D23B22A8BD6 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F3AE4B1C69364E40B813501A = {
+			isa = PBXGroup;
+			children = (
+				5BB3A21A261E45BBB89F3A33 /* baseevent */,
+				DE08A3BE4AB74692AB4005B5 /* ALL_BUILD */,
+				2CF3AE6885A842FA94D95293 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F49C16F385C845BAAB052FFD /* baseevent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28AAA97565E64C29B0246C48 /* Build configuration list for PBXNativeTarget "baseevent" */;
+			buildPhases = (
+				091F86B50A0941DAA704C440 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F92002D1299410CA1A004BC /* PBXTargetDependency */,
+			);
+			name = baseevent;
+			productName = baseevent;
+			productReference = 817DCCBF84D04F2B99F394D3 /* baseevent */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C05221288A164B9A88EB9427 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = AC109795316442BDAB46FCA9 /* Build configuration list for PBXProject "baseevent" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				05B9B3AE6ECD4BE69B705134 /* Debug */,
+				5769F1D458E64821A02C998E /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = F3AE4B1C69364E40B813501A;
+			projectDirPath = ../../../baseevent;
+			projectRoot = "";
+			targets = (
+				D1F1DE35176D48ECB085E0BC /* ALL_BUILD */,
+				1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */,
+				F49C16F385C845BAAB052FFD /* baseevent */,
+				1C29BDB9D5B445CEADB61655 /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0589C74BDF294FF99D05E83F /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		0CF61CD203174B4098280CFC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		1B72514823844A48B736E95C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		412FB60CA90F4F47AD243140 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		7BAD7D45A0924254A51FB6F0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A7B09034D78448ABA84AE6E0 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091F86B50A0941DAA704C440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E67D82D5938D43239C868823 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/active_logic.cc */,
+				C9E561E509444762B47478DC /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprj.cc */,
+				DD53AAB94FD6412E832ACAF6 /* /Users/john/Documents/workspace/iphone/mars/mars/baseevent/src/baseprjevent.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D57E33B25CA455A9650EEB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F49C16F385C845BAAB052FFD /* baseevent */;
+			targetProxy = 28FE292CDFF14AE3A796FAC9 /* PBXContainerItemProxy */;
+		};
+		4F92002D1299410CA1A004BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = BF63A51038F64B2E86DFB129 /* PBXContainerItemProxy */;
+		};
+		AF55CCA212D144C5968CB315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F1DE35176D48ECB085E0BC /* ALL_BUILD */;
+			targetProxy = A6EA79016A024DBDAD3843BF /* PBXContainerItemProxy */;
+		};
+		CFEC1CBC6F994F89B9EE1FA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = 6426E20814B6422494FEBA42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CA4DBD5AF964BB1829FD22F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		1F97F56F9DB247CF924B8E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::baseevent\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/baseevent/.,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/src,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/..,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../..,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../comm,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../../..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math                          ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = baseevent;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7AAD36908A794665B8AC68AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A1E6096B6C154F3C908111C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A2F1879EFF484700AEC94638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C3C71652BAFD48B3BE6AF751 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent/build;
+			};
+			name = Debug;
+		};
+		D18CE278641446EF880B4582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent/build;
+			};
+			name = Release;
+		};
+		DB63838B884840EDBB80B9C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F615CAB6C45248BA8A2A657B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FB09FADFF1364F65BA31AEF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::baseevent\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/baseevent/.,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/src,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/..,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../..,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../comm,/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../../..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                       -DDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = baseevent;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E938BD5476C46C78995DA67 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F1879EFF484700AEC94638 /* Debug */,
+				F615CAB6C45248BA8A2A657B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		28AAA97565E64C29B0246C48 /* Build configuration list for PBXNativeTarget "baseevent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB09FADFF1364F65BA31AEF5 /* Debug */,
+				1F97F56F9DB247CF924B8E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		56A7F07A709C4AF7ACC7A4D1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CA4DBD5AF964BB1829FD22F /* Debug */,
+				A1E6096B6C154F3C908111C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5E5EE492EE234570B4463E40 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AAD36908A794665B8AC68AD /* Debug */,
+				DB63838B884840EDBB80B9C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AC109795316442BDAB46FCA9 /* Build configuration list for PBXProject "baseevent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C71652BAFD48B3BE6AF751 /* Debug */,
+				D18CE278641446EF880B4582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C05221288A164B9A88EB9427 /* Project object */;
+}

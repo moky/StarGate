@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 692FB288FCDE49B798417AD5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				A2EF940E31204C7EAF09D3A5 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		1C29BDB9D5B445CEADB61655 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8424BFC8EE904551A14422DB /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				444C5C1CF92A4577B753D785 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				0EBFBFD8999145DC8C995729 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		D1F1DE35176D48ECB085E0BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0D5CD3C099F443D29A25C2B4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				75606FE1B93D40E6A01C7077 /* CMake Rules */,
+			);
+			dependencies = (
+				3694BC8B75324EF4B052207B /* PBXTargetDependency */,
+				16947E85B41D41049CFC8050 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		15EDEA6F2FF24E8DA91BE44C /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC_vli.h */ = {isa = PBXBuildFile; fileRef = 37F2520BE3F34A5296296E62 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC_vli.h */; };
+		167957B3E63C432D8A5EA656 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.c */ = {isa = PBXBuildFile; fileRef = 0A15CEC970F0479B948249E2 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.c */; };
+		4DF7D6EE397143DB88DD8620 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.h */ = {isa = PBXBuildFile; fileRef = 97DB7F9EA04D413F8F081838 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.h */; };
+		60AF45A61CE241E2BACFABAD /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/types.h */ = {isa = PBXBuildFile; fileRef = 4ECC4112070747AC8F2FA47F /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/types.h */; };
+		6813627DCA92483E981D6549 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.cc */ = {isa = PBXBuildFile; fileRef = 401F7C2547E74501ADE503BE /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.cc */; };
+		8C24F7558A6E4B0D84707407 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/formater.cc */ = {isa = PBXBuildFile; fileRef = AD59DC339D0745F7A2A4C2C9 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/formater.cc */; };
+		A445655787824367A5E547E7 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.cc */ = {isa = PBXBuildFile; fileRef = C72DD1F94CD842949D88C686 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.cc */; };
+		C551D9A9B03D4432BD541B51 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.h */ = {isa = PBXBuildFile; fileRef = 74D7ACF3B3CF48E7AE6C2310 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.h */; };
+		C9CE0B1897CC4994ADCCF822 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/appender.cc */ = {isa = PBXBuildFile; fileRef = 52ADA4DBB8944E2399211C67 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/appender.cc */; };
+		E7C6C4F4736B497EBF5B5547 /* /Users/john/Documents/workspace/iphone/mars/mars/log/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7955769899A841868FC0EB63 /* /Users/john/Documents/workspace/iphone/mars/mars/log/CMakeLists.txt */; };
+		F77FBDD6737143EEBF6A0763 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.h */ = {isa = PBXBuildFile; fileRef = C5D2DFB397804F4F82E75F25 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		84461657E15E49EB92161ABC /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		A1FEC75E82F14B9497FA3302 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		29126F559C0B4ECB81200BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7D8E0EDC3B4C08A258670C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		3E0F0D71C7AA467E8EA5206F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7D8E0EDC3B4C08A258670C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		87BC54EAE4AF4194A88E7C99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7D8E0EDC3B4C08A258670C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68E360DCF48B43CFAE2A4D01;
+			remoteInfo = xlog;
+		};
+		B948936A8D8447CCABAC7B60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7D8E0EDC3B4C08A258670C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F1DE35176D48ECB085E0BC;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A15CEC970F0479B948249E2 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uECC.c; path = "crypt/micro-ecc-master/uECC.c"; sourceTree = SOURCE_ROOT; };
+		37F2520BE3F34A5296296E62 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC_vli.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = uECC_vli.h; path = "crypt/micro-ecc-master/uECC_vli.h"; sourceTree = SOURCE_ROOT; };
+		401F7C2547E74501ADE503BE /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log_buffer.cc; path = src/log_buffer.cc; sourceTree = SOURCE_ROOT; };
+		4ECC4112070747AC8F2FA47F /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = types.h; path = "crypt/micro-ecc-master/types.h"; sourceTree = SOURCE_ROOT; };
+		52ADA4DBB8944E2399211C67 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/appender.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = appender.cc; path = src/appender.cc; sourceTree = SOURCE_ROOT; };
+		74D7ACF3B3CF48E7AE6C2310 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log_buffer.h; path = src/log_buffer.h; sourceTree = SOURCE_ROOT; };
+		7955769899A841868FC0EB63 /* /Users/john/Documents/workspace/iphone/mars/mars/log/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		821908C9DE92483AA1AA4E88 /* /Users/john/Documents/workspace/iphone/mars/mars/log/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		97DB7F9EA04D413F8F081838 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log_crypt.h; path = crypt/log_crypt.h; sourceTree = SOURCE_ROOT; };
+		AD59DC339D0745F7A2A4C2C9 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/formater.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = formater.cc; path = src/formater.cc; sourceTree = SOURCE_ROOT; };
+		C5D2DFB397804F4F82E75F25 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = uECC.h; path = "crypt/micro-ecc-master/uECC.h"; sourceTree = SOURCE_ROOT; };
+		C6DA0AA3AE8949BD8C28F883 /* xlog */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libxlog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72DD1F94CD842949D88C686 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log_crypt.cc; path = crypt/log_crypt.cc; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		37EE0DD687EB4F42B24B80FA /* crypt */ = {
+			isa = PBXGroup;
+			children = (
+				519CBE2DF0244C98821345FD /* micro-ecc-master */,
+				C72DD1F94CD842949D88C686 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.cc */,
+				97DB7F9EA04D413F8F081838 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.h */,
+			);
+			name = crypt;
+			sourceTree = "<group>";
+		};
+		390D65932DC74269AAB835BF /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4C135AEBAD38466C87C3B237 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				390D65932DC74269AAB835BF /* CMake Rules */,
+				821908C9DE92483AA1AA4E88 /* /Users/john/Documents/workspace/iphone/mars/mars/log/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		519859B56B5C4613BBA9254E /* xlog */ = {
+			isa = PBXGroup;
+			children = (
+				630159C6D699427DAA5B0397 /* src */,
+				37EE0DD687EB4F42B24B80FA /* crypt */,
+				7955769899A841868FC0EB63 /* /Users/john/Documents/workspace/iphone/mars/mars/log/CMakeLists.txt */,
+			);
+			name = xlog;
+			sourceTree = "<group>";
+		};
+		519CBE2DF0244C98821345FD /* micro-ecc-master */ = {
+			isa = PBXGroup;
+			children = (
+				4ECC4112070747AC8F2FA47F /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/types.h */,
+				0A15CEC970F0479B948249E2 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.c */,
+				C5D2DFB397804F4F82E75F25 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.h */,
+				37F2520BE3F34A5296296E62 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC_vli.h */,
+			);
+			name = "micro-ecc-master";
+			sourceTree = "<group>";
+		};
+		630159C6D699427DAA5B0397 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				52ADA4DBB8944E2399211C67 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/appender.cc */,
+				AD59DC339D0745F7A2A4C2C9 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/formater.cc */,
+				401F7C2547E74501ADE503BE /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.cc */,
+				74D7ACF3B3CF48E7AE6C2310 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		6C8559549E074254B9FA0E47 = {
+			isa = PBXGroup;
+			children = (
+				519859B56B5C4613BBA9254E /* xlog */,
+				4C135AEBAD38466C87C3B237 /* ALL_BUILD */,
+				7C9E1ECCABE448ACB58C0926 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C9E1ECCABE448ACB58C0926 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6DA0AA3AE8949BD8C28F883 /* xlog */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68E360DCF48B43CFAE2A4D01 /* xlog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAC8BF42D064D6BACD349B0 /* Build configuration list for PBXNativeTarget "xlog" */;
+			buildPhases = (
+				485B0393F0BF47568CACC605 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6916DDC5D5C0434C9E565BA7 /* PBXTargetDependency */,
+			);
+			name = xlog;
+			productName = xlog;
+			productReference = C6DA0AA3AE8949BD8C28F883 /* xlog */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B7D8E0EDC3B4C08A258670C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = E9174C61E4EA4CB6A2F9ABFA /* Build configuration list for PBXProject "xlog" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				A1FEC75E82F14B9497FA3302 /* Debug */,
+				84461657E15E49EB92161ABC /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 6C8559549E074254B9FA0E47;
+			projectDirPath = ../../../log;
+			projectRoot = "";
+			targets = (
+				D1F1DE35176D48ECB085E0BC /* ALL_BUILD */,
+				1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */,
+				1C29BDB9D5B445CEADB61655 /* install */,
+				68E360DCF48B43CFAE2A4D01 /* xlog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		444C5C1CF92A4577B753D785 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		55D7C99453F24377BDBDDF85 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		6AC6EE932A894D4DB460B4CA = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		75606FE1B93D40E6A01C7077 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		A2EF940E31204C7EAF09D3A5 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		D8BD595E39FC4439B23CAA67 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		485B0393F0BF47568CACC605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A445655787824367A5E547E7 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/log_crypt.cc */,
+				167957B3E63C432D8A5EA656 /* /Users/john/Documents/workspace/iphone/mars/mars/log/crypt/micro-ecc-master/uECC.c */,
+				C9CE0B1897CC4994ADCCF822 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/appender.cc */,
+				8C24F7558A6E4B0D84707407 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/formater.cc */,
+				6813627DCA92483E981D6549 /* /Users/john/Documents/workspace/iphone/mars/mars/log/src/log_buffer.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EBFBFD8999145DC8C995729 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F1DE35176D48ECB085E0BC /* ALL_BUILD */;
+			targetProxy = B948936A8D8447CCABAC7B60 /* PBXContainerItemProxy */;
+		};
+		16947E85B41D41049CFC8050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = 3E0F0D71C7AA467E8EA5206F /* PBXContainerItemProxy */;
+		};
+		3694BC8B75324EF4B052207B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68E360DCF48B43CFAE2A4D01 /* xlog */;
+			targetProxy = 87BC54EAE4AF4194A88E7C99 /* PBXContainerItemProxy */;
+		};
+		6916DDC5D5C0434C9E565BA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = 29126F559C0B4ECB81200BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		36EEBF0ADE6349BE829A609E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3E06ABD975A14AA5AAB306FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		5FCFD8B6AE6A420A93EB64DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		61CCB61595D54278A0EFD32C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::xlog\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/log/.,/Users/john/Documents/workspace/iphone/mars/mars/log/src,/Users/john/Documents/workspace/iphone/mars/mars/log/..,/Users/john/Documents/workspace/iphone/mars/mars/log/../..,/Users/john/Documents/workspace/iphone/mars/mars/log/../comm,/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt,/Users/john/Documents/workspace/iphone/mars/mars/log/../../..,"/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt/micro-ecc-master");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc      ";
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                       -DDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xlog;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		67A0D356EAE04E6B9F9AB964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog/build;
+			};
+			name = Release;
+		};
+		67E7F36C34EA47B798A08EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6AB9B170FA82466BB406C120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B56829646F3243BD94B0B7ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		DF05058E48AA49A48DB764F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::xlog\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/log/.,/Users/john/Documents/workspace/iphone/mars/mars/log/src,/Users/john/Documents/workspace/iphone/mars/mars/log/..,/Users/john/Documents/workspace/iphone/mars/mars/log/../..,/Users/john/Documents/workspace/iphone/mars/mars/log/../comm,/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt,/Users/john/Documents/workspace/iphone/mars/mars/log/../../..,"/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt/micro-ecc-master");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc      -DNDEBUG   ";
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math                         -gline-tables-only  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xlog;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		FDD79393ABE14486AA8DC1BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog/build;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D5CD3C099F443D29A25C2B4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36EEBF0ADE6349BE829A609E /* Debug */,
+				3E06ABD975A14AA5AAB306FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3DAC8BF42D064D6BACD349B0 /* Build configuration list for PBXNativeTarget "xlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61CCB61595D54278A0EFD32C /* Debug */,
+				DF05058E48AA49A48DB764F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		692FB288FCDE49B798417AD5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56829646F3243BD94B0B7ED /* Debug */,
+				5FCFD8B6AE6A420A93EB64DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8424BFC8EE904551A14422DB /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AB9B170FA82466BB406C120 /* Debug */,
+				67E7F36C34EA47B798A08EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E9174C61E4EA4CB6A2F9ABFA /* Build configuration list for PBXProject "xlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDD79393ABE14486AA8DC1BC /* Debug */,
+				67A0D356EAE04E6B9F9AB964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B7D8E0EDC3B4C08A258670C /* Project object */;
+}

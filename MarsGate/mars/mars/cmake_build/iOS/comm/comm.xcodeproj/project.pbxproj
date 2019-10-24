@@ -1,0 +1,1131 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C306EEDF08604E928D0D5BD7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				987B21D0D4454CF1AEC90513 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		1C29BDB9D5B445CEADB61655 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8FA14B8816A849ADA82E12FD /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				C6F98FBD8C09417282F2D7AF /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				B97DB7474E394ED789E2A0FC /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		D1F1DE35176D48ECB085E0BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 43219C7238B34A60BAA9DB42 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				53204F341AF14FF4BAE2398E /* CMake Rules */,
+			);
+			dependencies = (
+				6345520E262545CFA8BAA0A3 /* PBXTargetDependency */,
+				F9C5483272A0484F9466E1FE /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01A78933A1624406B0346C4D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.h */ = {isa = PBXBuildFile; fileRef = 81887552BC464077BAB9403B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.h */; };
+		05330008400D465B9C704292 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.h */ = {isa = PBXBuildFile; fileRef = 747C024ACC524CCDAC9E45CC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.h */; };
+		05F2D93B0EB844A28E790702 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.cc */ = {isa = PBXBuildFile; fileRef = D432A507B31D4BE0937C4E8C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.cc */; };
+		0702E97119A94DA8B59A7781 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.h */ = {isa = PBXBuildFile; fileRef = 042A2B7F25E2416D8192A482 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.h */; };
+		088EF175EE7A47A58191DF64 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.h */ = {isa = PBXBuildFile; fileRef = CCEF7A72DF724086A7837379 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.h */; };
+		08A1CCD5A7834C40BF28AB2D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.cc */ = {isa = PBXBuildFile; fileRef = 5CC5668661EB44A9900AFD85 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.cc */; };
+		09562761291D44E3950FDEC8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.cc */ = {isa = PBXBuildFile; fileRef = 1C249DDB40A442DAB271F8CF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.cc */; };
+		0F87529C18F54691BFC9AAC9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.c */ = {isa = PBXBuildFile; fileRef = 3597626E580E495A84C21D7F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.c */; };
+		11758A091CC64BC98BFDE8A0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.h */ = {isa = PBXBuildFile; fileRef = E97F26A1F45145368AA7E1F8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.h */; };
+		184A346AF8C04B408E42FB6F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.cc */ = {isa = PBXBuildFile; fileRef = 45DB1315E6994393A358E310 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.cc */; };
+		188BABC0D8B04CBA80938BC2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.h */ = {isa = PBXBuildFile; fileRef = 90B3A93F2EF84F198A6840A0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.h */; };
+		194500866FF84B3D8AF43D9E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/xlogger_threadinfo.mm */ = {isa = PBXBuildFile; fileRef = 1705369728B54336B701D2A2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/xlogger_threadinfo.mm */; };
+		1DB078300C714DC884BDCE44 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.h */ = {isa = PBXBuildFile; fileRef = F0DF93C9AE9C4C6E876381B8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.h */; };
+		1DCC153D3CC04E4285589F9A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcp_fsm_handler.h */ = {isa = PBXBuildFile; fileRef = 4C22DC675A8E4228AA7AE1C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcp_fsm_handler.h */; };
+		1E9FAAECC00B4E47ABF4F01F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.h */ = {isa = PBXBuildFile; fileRef = 18714A1CD7FF40749211FB9C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.h */; };
+		1F5CB3B787CD4FE8A909C5AC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.cc */ = {isa = PBXBuildFile; fileRef = 2FA3BFEA565E4B63B9CAE482 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.cc */; };
+		2129A65AC6D047449BCFC64D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.c */ = {isa = PBXBuildFile; fileRef = 17935488D9594A71896E46A3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.c */; };
+		212D21C4018F42618B53325C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.h */ = {isa = PBXBuildFile; fileRef = 211E0FE0A3BB4A3D982B400A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.h */; };
+		25662DD1A666473E807FF429 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.mm */ = {isa = PBXBuildFile; fileRef = 278BFDBB2F6F4C7FA593F3C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.mm */; };
+		25996404A4C34A9FA74738B5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ip_icmp.h */ = {isa = PBXBuildFile; fileRef = 2D6688BCB5B644FFB714D133 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ip_icmp.h */; };
+		26A9C7078A6D473D97D5A9E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.h */ = {isa = PBXBuildFile; fileRef = C7622CA3D2BB47B58A2ED1D0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.h */; };
+		26F8BACEF4464AA78E960B31 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketbreaker.h */ = {isa = PBXBuildFile; fileRef = 8E2A346C00F54D039462769C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketbreaker.h */; };
+		2BBBE491D1024019B6CC6F15 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketpoll.h */ = {isa = PBXBuildFile; fileRef = AE659127754A4923A2C3A6FD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketpoll.h */; };
+		2C7848808549426381AF421A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.h */ = {isa = PBXBuildFile; fileRef = 2CFC17D42B524BB48C6A991E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.h */; };
+		2CBF07123DBF48A1AC18B46C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.h */ = {isa = PBXBuildFile; fileRef = DF1DF84666A1471F93CF3EF5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.h */; };
+		2FF4EECC84CC43688CAEAA44 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.cc */ = {isa = PBXBuildFile; fileRef = DCCCB08D6D844CB2870E8F2F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.cc */; };
+		30E6C0576E7B46FA9CA8CFEC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.h */ = {isa = PBXBuildFile; fileRef = D5BA9C3CD6EC48958534F2F9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.h */; };
+		315F41B607B74625B96C8EE9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.h */ = {isa = PBXBuildFile; fileRef = 362965168C9D4773A490495A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.h */; };
+		31E455B2BD5840CD939A62D7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.h */ = {isa = PBXBuildFile; fileRef = 58214356BCA34EC1A10AF97F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.h */; };
+		321B8435316C42C48E93B80D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.h */ = {isa = PBXBuildFile; fileRef = EA13979D85E9409A95D591D1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.h */; };
+		33D0DA97F07F476883EEB21E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.cc */ = {isa = PBXBuildFile; fileRef = A4D74597458C474ABB91B9AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.cc */; };
+		347969B97CC74FDB8F320989 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.cc */ = {isa = PBXBuildFile; fileRef = A043425F61F6408E84EB4147 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.cc */; };
+		37F0A999BBC7412A94D6F4E4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.cc */ = {isa = PBXBuildFile; fileRef = D11AB8219CFA4373B48A7A62 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.cc */; };
+		3AD0DB7964B44FC397CE08B5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/service_base.h */ = {isa = PBXBuildFile; fileRef = EBB8977E8BCA4AF2B91BC604 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/service_base.h */; };
+		3BE6BE9055F9493485C8E719 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.cc */ = {isa = PBXBuildFile; fileRef = 7044C8F8E586432C91B5A1E1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.cc */; };
+		3EAE7172656E481C970AA55B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.cc */ = {isa = PBXBuildFile; fileRef = CD6479EB3928451A8FFD4AAD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.cc */; };
+		4184960AD16245B089D1CBAB /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.h */ = {isa = PBXBuildFile; fileRef = E6975A81C9604AB6B5C00BF6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.h */; };
+		420BDE632FD74B82A6106FBC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ini.h */ = {isa = PBXBuildFile; fileRef = 0F477B0E459B4E31B0993600 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ini.h */; };
+		4216A251BE7A4D439CEA9568 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.cc */ = {isa = PBXBuildFile; fileRef = C9286E8274D4405BB125AF5A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.cc */; };
+		43FFF27A00F0480CB24976F8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.h */ = {isa = PBXBuildFile; fileRef = 3C6BD541118E443DB6701389 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.h */; };
+		44FA76F2ABDC4DAB908A13D5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.h */ = {isa = PBXBuildFile; fileRef = B130C68762384A77B5DD6E34 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.h */; };
+		45C58CED7A33478E992DE199 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.mm */ = {isa = PBXBuildFile; fileRef = A1EF68EC579F4924BB2B02DD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.mm */; };
+		4654B9B6A7144A9EA64DFEB6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.h */ = {isa = PBXBuildFile; fileRef = 4ED4403AEA634C87BFA16C39 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.h */; };
+		46D2BB44E7A7464A851ED400 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.h */ = {isa = PBXBuildFile; fileRef = 00BB08563661403FB450914C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.h */; };
+		4722E173A062475490817350 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.h */ = {isa = PBXBuildFile; fileRef = 0021D09C0EE84B2393A68A08 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.h */; };
+		4793DC023C164E81866D7B2E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.h */ = {isa = PBXBuildFile; fileRef = 28369CAE79824F47A30DBFF0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.h */; };
+		491DB19753994F629C3D4960 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.cc */ = {isa = PBXBuildFile; fileRef = B9B3059F8EEB4AE79AB30528 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.cc */; };
+		4B488B897DB04255A4375DC9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_data.h */ = {isa = PBXBuildFile; fileRef = 75390F6F4FA344E99E5FDC7B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_data.h */; };
+		4E9489DFA2F5403296B5F21A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.cc */ = {isa = PBXBuildFile; fileRef = FEEBB3459D974868A6D368BC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.cc */; };
+		4EDB3DF6AC33420484FACD4A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.cc */ = {isa = PBXBuildFile; fileRef = 28818598AC754617B58DDF50 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.cc */; };
+		5233A297FA2F4053B442212E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/preprocessor.h */ = {isa = PBXBuildFile; fileRef = 7B473F6C3731474BB4DBD9C4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/preprocessor.h */; };
+		5253438053BA44E2B7EAFC76 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.cc */ = {isa = PBXBuildFile; fileRef = F4D0B76BB31B43818E843219 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.cc */; };
+		5362176974F6472A99B46AC1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.h */ = {isa = PBXBuildFile; fileRef = 018DF92A4CE84C638E969E93 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.h */; };
+		57CD6D51FC3A4919BC815AAE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/platform_comm.h */ = {isa = PBXBuildFile; fileRef = 50FC827ED0824D1BBF9D4D1D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/platform_comm.h */; };
+		580AF90AE70B44AC91559688 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.h */ = {isa = PBXBuildFile; fileRef = 269E5187314A442197B73CFC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.h */; };
+		5B39DEAE1C004A1BB17DFDE4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.h */ = {isa = PBXBuildFile; fileRef = 52262DE0FDAC4AA48EF04CDD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.h */; };
+		5C5BD47FC10F44249CB014AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.cc */ = {isa = PBXBuildFile; fileRef = F3DFD7CB4CF644D8910315CE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.cc */; };
+		5CA0106395D94EB08F4773F5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/move_wrapper.h */ = {isa = PBXBuildFile; fileRef = 01E84789C3EF452E86869FC8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/move_wrapper.h */; };
+		62487B47776A4001AEF0200F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.mm */ = {isa = PBXBuildFile; fileRef = 123262D8671D4E5BB0A72D2A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.mm */; };
+		6310EE821B5C432D9A64D43D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/string_cast.h */ = {isa = PBXBuildFile; fileRef = E229FBD4EDF5457AB1B04E1E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/string_cast.h */; };
+		642665B1541E44308F41ED53 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/ipv6_address_utils.h */ = {isa = PBXBuildFile; fileRef = F1551DCA18D541F8BA25C82C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/ipv6_address_utils.h */; };
+		6464A39C4C9E4E6FA03782E4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.h */ = {isa = PBXBuildFile; fileRef = 443006F468C04C59BC3ED9B0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.h */; };
+		6512B06E787042F0896A8C99 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.h */ = {isa = PBXBuildFile; fileRef = DAE3A4B6403D4E62A7F31953 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.h */; };
+		65DED485C4CA4C1EAD71732D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.cc */ = {isa = PBXBuildFile; fileRef = 5E42E113D31747218E6EDFF8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.cc */; };
+		673BF34326FF4CBB910AC39A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/scope_recursion_limit.h */ = {isa = PBXBuildFile; fileRef = 7B1F642CE73E44A2A734078F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/scope_recursion_limit.h */; };
+		6C6BA698E7494D05BDA02CD1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.cc */ = {isa = PBXBuildFile; fileRef = 4ACB854970674EA4BBBF0E9A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.cc */; };
+		6E644074D51F462487E083A4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.h */ = {isa = PBXBuildFile; fileRef = 3DC76F643EDE4524BA8A2401 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.h */; };
+		6EC4F6EFB72A4559AD19CCE8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/callback.h */ = {isa = PBXBuildFile; fileRef = 15D5052BC1454927B31BDE97 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/callback.h */; };
+		71C0B71139A54D8DA8816CD4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.h */ = {isa = PBXBuildFile; fileRef = AA4FBD1C403444B0B99B3657 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.h */; };
+		7360C8EE1F1545B3A7B9E9B6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.h */ = {isa = PBXBuildFile; fileRef = 91F6A52968BC4019B980FA5A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.h */; };
+		75BE7AF260A84CBE8B682CBC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/android_xlog.h */ = {isa = PBXBuildFile; fileRef = 65889BABBF114567801CEE23 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/android_xlog.h */; };
+		7750D7D674CE4762B6A8B613 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.h */ = {isa = PBXBuildFile; fileRef = A42624829E524869B5E510CE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.h */; };
+		79D5EB3E13334EB6B2A8961C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/debugger/debugger_utils.c */ = {isa = PBXBuildFile; fileRef = A374C2C4D6C549B2BCE5BBE2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/debugger/debugger_utils.c */; };
+		7B6508DFE568471B84053256 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.h */ = {isa = PBXBuildFile; fileRef = 4EF8015BB5564EA48725B09F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.h */; };
+		7F15B9A35A794811A31892A9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.cc */ = {isa = PBXBuildFile; fileRef = 75D6A8797E5C4524BCF511B9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.cc */; };
+		80E4D4FF48754EF0B4A9CA73 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xlogger.h */ = {isa = PBXBuildFile; fileRef = E274E24953884D16820620BC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xlogger.h */; };
+		810BAFB7F6904419B5F0F938 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.h */ = {isa = PBXBuildFile; fileRef = 889289C922A24157ADF801E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.h */; };
+		855C0F2DCEC94F9AB7048A44 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.h */ = {isa = PBXBuildFile; fileRef = CA7654E1E7584DBCBA2714DF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.h */; };
+		85762BAF3550441E925B3EE4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.c */ = {isa = PBXBuildFile; fileRef = 4560EBF8E0944BB5B2EB8F5C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.c */; };
+		86897D9862974A728306279E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.h */ = {isa = PBXBuildFile; fileRef = DACA9E493A05489788002FF1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.h */; };
+		8843A798956E47BFB33BBF6F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.cc */ = {isa = PBXBuildFile; fileRef = 1BDA6CB3F3574A738FEEDE94 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.cc */; };
+		8FCF177051F54E4A9EF8DB64 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.cc */ = {isa = PBXBuildFile; fileRef = AF476DE398C44A5782A45ED6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.cc */; };
+		9805BBE9D9B44FC0BF34D05D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.h */ = {isa = PBXBuildFile; fileRef = 116826AB143D431196D05DEC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.h */; };
+		99DBC51FB3CF43E4910D6261 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.cc */ = {isa = PBXBuildFile; fileRef = A131ECE80C0C418B8B3703E5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.cc */; };
+		9C2BE6763DF949AFB8A6CCA7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.cc */ = {isa = PBXBuildFile; fileRef = FAF77AFDDBFC479684ABFE55 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.cc */; };
+		9DEA1C2C4D5444888603CD04 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.cc */ = {isa = PBXBuildFile; fileRef = 6740B8163D204652A7BF72AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.cc */; };
+		9EAAA312ED364FCFBC6F286C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.h */ = {isa = PBXBuildFile; fileRef = D9DCB9F69B544CC99021958B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.h */; };
+		9FA806073B4F4E108779E135 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.cc */ = {isa = PBXBuildFile; fileRef = 39B7C4ED254446F292D3F43B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.cc */; };
+		9FF51708B67F42EAB7F22995 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/route.h */ = {isa = PBXBuildFile; fileRef = 6C97A7E42C214EFA9A5EEEF4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/route.h */; };
+		A37FFF487E7349F4A501E01C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.cc */ = {isa = PBXBuildFile; fileRef = 7E3B3CC449394D80BFDC1947 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.cc */; };
+		AA4E2146B73E4EEC9A7EC8C0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.h */ = {isa = PBXBuildFile; fileRef = 5BEA80A21B314695ACFE4A98 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.h */; };
+		AB6281F16AFA4358958986AE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootregister.h */ = {isa = PBXBuildFile; fileRef = A64127DC55424BAFB2E81C53 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootregister.h */; };
+		B2B4C8B6DC1445D3B50E4FF9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.c */ = {isa = PBXBuildFile; fileRef = C39B7DB035374B6C895801A1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.c */; };
+		B2BDFBA506914823ACAD42D7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.c */ = {isa = PBXBuildFile; fileRef = AFAF23F9E4A74F8484F9D3F3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.c */; };
+		B755C523B96148EABDDD591D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.cc */ = {isa = PBXBuildFile; fileRef = 85E2AE0315EB4BC29A4093FE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.cc */; };
+		B82017BDC0744561AC5D253E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.h */ = {isa = PBXBuildFile; fileRef = 33F0FE4FC1494879A0A209FE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.h */; };
+		BA0E28BD134B436FB9AE62FD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.c */ = {isa = PBXBuildFile; fileRef = DE9A8BF7085546EDBCD119E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.c */; };
+		BC1D81F141534A9986FFF875 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.h */ = {isa = PBXBuildFile; fileRef = 00BAC18772C143E9925ED152 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.h */; };
+		BCC7B60CACE44CE9AB506A19 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/has_member.h */ = {isa = PBXBuildFile; fileRef = BB3564A83A2D45478A3FE66E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/has_member.h */; };
+		BDADF6638A51405C85A74C7E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.cc */ = {isa = PBXBuildFile; fileRef = 1D49F9E81A3D45D789F7864B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.cc */; };
+		BFC6B95DD4CF439DAAA165D9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootrun.h */ = {isa = PBXBuildFile; fileRef = 9CDE0D5BFCD14748BA3BC40B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootrun.h */; };
+		C33E8057C3084BE8ADCE1D78 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.cc */ = {isa = PBXBuildFile; fileRef = AB7C66831D1C47908AA1C89D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.cc */; };
+		C603FD77C0F84D679DE428B0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/platform_comm.mm */ = {isa = PBXBuildFile; fileRef = F2FE4FDD065B44FD84369924 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/platform_comm.mm */; };
+		C64A907F18554465B6D28569 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.cc */ = {isa = PBXBuildFile; fileRef = B3EC0A1697BA47A5BC3BD7E4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.cc */; };
+		CC5A182D061349C78107068D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.h */ = {isa = PBXBuildFile; fileRef = 8E1972EEB1BF4A2C8807AA58 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.h */; };
+		CEAA3951E1CB4A6AA77AAF1F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.mm */ = {isa = PBXBuildFile; fileRef = B9EDF74A23FE42E9852719C9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.mm */; };
+		CF4B6521B0114E1385E723A4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.h */ = {isa = PBXBuildFile; fileRef = 76676A1E7E034E03AB7B227F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.h */; };
+		CFE53CD7DB52444C9AE7AFED /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.cc */ = {isa = PBXBuildFile; fileRef = 0F4E4457CFC94D31860009E7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.cc */; };
+		D19852B6E93D44DEB47BC57D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/projdef.h */ = {isa = PBXBuildFile; fileRef = 7C64BCDD0CFF4F11B8C92ECB /* /Users/john/Documents/workspace/iphone/mars/mars/comm/projdef.h */; };
+		D280FA79E764427CB638CEAD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/marcotoolkit.h */ = {isa = PBXBuildFile; fileRef = 23BC567D55274C46863495BE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/marcotoolkit.h */; };
+		D4C7C5B8A6F7450196A6DF00 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.h */ = {isa = PBXBuildFile; fileRef = 3AE95FA8828944368FB91168 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.h */; };
+		D6C52775FF16422A865F2DFF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.cc */ = {isa = PBXBuildFile; fileRef = C99B4827207B4F87AA9208C9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.cc */; };
+		DB78A4E57BAC42EAB9C1C8CF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/compiler_util.h */ = {isa = PBXBuildFile; fileRef = 9897148A06A74C69A0253E6A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/compiler_util.h */; };
+		DBA4B131C998432ABB32EFCC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.h */ = {isa = PBXBuildFile; fileRef = 26FD85093CDD4011872FACFC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.h */; };
+		E0438CCBAECC484A8BC1C452 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7E502452F60848FAB7F1FA65 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/CMakeLists.txt */; };
+		E1938EAED04947E59FB5E1E6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.cc */ = {isa = PBXBuildFile; fileRef = CA22CE2B57684363B8294842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.cc */; };
+		E5125FEF7EF54A1EBCFD09CF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/verinfo.h */ = {isa = PBXBuildFile; fileRef = DDF31F7168DE44E4B7F5AC90 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/verinfo.h */; };
+		E84082A8D3DA40A5A7260504 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.c */ = {isa = PBXBuildFile; fileRef = 249554EFAE42426083A2F30D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.c */; };
+		E904B5C87B58470FB1A932D7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.cc */ = {isa = PBXBuildFile; fileRef = 818BFC125EB84444AC7EC397 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.cc */; };
+		E98B537609A74B3F89153B14 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketselect.h */ = {isa = PBXBuildFile; fileRef = 452350A1DF1C467880206A2F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketselect.h */; };
+		EA6D340B6A0545B380E1970D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.c */ = {isa = PBXBuildFile; fileRef = E7B7721E4227491792387842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.c */; };
+		EAC8F1D0D1EF4F3EAD0A7C94 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.cc */ = {isa = PBXBuildFile; fileRef = 1BAC30FDFDA246799E772A81 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.cc */; };
+		EC1958EECD0444AE8106530C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.h */ = {isa = PBXBuildFile; fileRef = AE53F2EE8F164DFEBCA47A04 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.h */; };
+		EDD12EE096C34F658F2902B4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.h */ = {isa = PBXBuildFile; fileRef = 9A95438CE3D341D2BE3DA08D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.h */; };
+		F51CFE9305FA41F1ADFD57E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.h */ = {isa = PBXBuildFile; fileRef = B1346EA541A64B888441168E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.h */; };
+		F7084752BBAE4C9CB0C0F842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.h */ = {isa = PBXBuildFile; fileRef = 57C449EC87624E37A5B19DD5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.h */; };
+		F81CCD6D4B384C03BD10BC7F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/boost_exception.cc */ = {isa = PBXBuildFile; fileRef = 3075B258D4314EAC9E5DECF8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/boost_exception.cc */; };
+		FB372E8E643E4BA2801132B5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.cc */ = {isa = PBXBuildFile; fileRef = A3A8900EE13346E48DFE53C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.cc */; };
+		FBD8ED8379FC4582A409F38A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.cc */ = {isa = PBXBuildFile; fileRef = 5624AB161A1240B89F39C473 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.cc */; };
+		FCE1E49EFF1C4CC98361104F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.mm */ = {isa = PBXBuildFile; fileRef = 5905CC8B0D74419788AA6CB3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.mm */; };
+		FFD7FD03331146569308CBB5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.h */ = {isa = PBXBuildFile; fileRef = F53261EEA63C48958F28A75F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.h */; };
+		FFE2EF7E31D043E4874EFA81 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.h */ = {isa = PBXBuildFile; fileRef = F86372E5307940499EE44F5B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		CDF72A3BE3594080BF9A32D3 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		D66E53FAE94B4629914058CD /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		534E7FE6D04347D0AFBC01AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5C5732C40D4908BD07463F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 553CEF7F57F049B196B7779E;
+			remoteInfo = comm;
+		};
+		68682FA2D8004C24A0D40111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5C5732C40D4908BD07463F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F1DE35176D48ECB085E0BC;
+			remoteInfo = ALL_BUILD;
+		};
+		C6150D1BC4404B7492982DB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5C5732C40D4908BD07463F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		EE1FE93120914D288FB75A72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B5C5732C40D4908BD07463F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0021D09C0EE84B2393A68A08 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = udpclient.h; path = socket/udpclient.h; sourceTree = SOURCE_ROOT; };
+		00BAC18772C143E9925ED152 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netinfo_util.h; path = network/netinfo_util.h; sourceTree = SOURCE_ROOT; };
+		00BB08563661403FB450914C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = complexconnect.h; path = socket/complexconnect.h; sourceTree = SOURCE_ROOT; };
+		018DF92A4CE84C638E969E93 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nat64_prefix_util.h; path = socket/nat64_prefix_util.h; sourceTree = SOURCE_ROOT; };
+		01E84789C3EF452E86869FC8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/move_wrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = move_wrapper.h; path = move_wrapper.h; sourceTree = SOURCE_ROOT; };
+		042A2B7F25E2416D8192A482 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = anr.h; path = anr.h; sourceTree = SOURCE_ROOT; };
+		0F477B0E459B4E31B0993600 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ini.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ini.h; path = ini.h; sourceTree = SOURCE_ROOT; };
+		0F4E4457CFC94D31860009E7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = autobuffer.cc; path = autobuffer.cc; sourceTree = SOURCE_ROOT; };
+		116826AB143D431196D05DEC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alarm.h; path = alarm.h; sourceTree = SOURCE_ROOT; };
+		123262D8671D4E5BB0A72D2A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Reachability.mm; path = objc/Reachability.mm; sourceTree = SOURCE_ROOT; };
+		15D5052BC1454927B31BDE97 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = callback.h; path = messagequeue/callback.h; sourceTree = SOURCE_ROOT; };
+		1705369728B54336B701D2A2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/xlogger_threadinfo.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = xlogger_threadinfo.mm; path = objc/xlogger_threadinfo.mm; sourceTree = SOURCE_ROOT; };
+		17935488D9594A71896E46A3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = md5.c; path = md5.c; sourceTree = SOURCE_ROOT; };
+		18714A1CD7FF40749211FB9C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_socket.h; path = socket/block_socket.h; sourceTree = SOURCE_ROOT; };
+		1BAC30FDFDA246799E772A81 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = udpclient.cc; path = socket/udpclient.cc; sourceTree = SOURCE_ROOT; };
+		1BDA6CB3F3574A738FEEDE94 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getifaddrs.cc; path = network/getifaddrs.cc; sourceTree = SOURCE_ROOT; };
+		1C249DDB40A442DAB271F8CF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = local_ipstack.cc; path = socket/local_ipstack.cc; sourceTree = SOURCE_ROOT; };
+		1D49F9E81A3D45D789F7864B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = coreservice_base.cc; path = corepattern/coreservice_base.cc; sourceTree = SOURCE_ROOT; };
+		211E0FE0A3BB4A3D982B400A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = adler32.h; path = adler32.h; sourceTree = SOURCE_ROOT; };
+		23BC567D55274C46863495BE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/marcotoolkit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = marcotoolkit.h; path = marcotoolkit.h; sourceTree = SOURCE_ROOT; };
+		249554EFAE42426083A2F30D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = time_utils.c; path = time_utils.c; sourceTree = SOURCE_ROOT; };
+		269E5187314A442197B73CFC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = local_routetable.h; path = network/local_routetable.h; sourceTree = SOURCE_ROOT; };
+		26FD85093CDD4011872FACFC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getsocktcpinfo.h; path = socket/getsocktcpinfo.h; sourceTree = SOURCE_ROOT; };
+		278BFDBB2F6F4C7FA593F3C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = objc_timer.mm; path = objc/objc_timer.mm; sourceTree = SOURCE_ROOT; };
+		28369CAE79824F47A30DBFF0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = local_ipstack.h; path = socket/local_ipstack.h; sourceTree = SOURCE_ROOT; };
+		28818598AC754617B58DDF50 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getdnssvraddrs.cc; path = network/getdnssvraddrs.cc; sourceTree = SOURCE_ROOT; };
+		2CFC17D42B524BB48C6A991E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = memdbg.h; path = memdbg.h; sourceTree = SOURCE_ROOT; };
+		2D6688BCB5B644FFB714D133 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ip_icmp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ip_icmp.h; path = objc/ip_icmp.h; sourceTree = SOURCE_ROOT; };
+		2FA3BFEA565E4B63B9CAE482 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketpoll.cc; path = unix/socket/socketpoll.cc; sourceTree = SOURCE_ROOT; };
+		3075B258D4314EAC9E5DECF8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/boost_exception.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = boost_exception.cc; path = boost_exception.cc; sourceTree = SOURCE_ROOT; };
+		33F0FE4FC1494879A0A209FE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ibase64.h; path = crypt/ibase64.h; sourceTree = SOURCE_ROOT; };
+		3597626E580E495A84C21D7F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = loginfo_extract.c; path = xlogger/loginfo_extract.c; sourceTree = SOURCE_ROOT; };
+		362965168C9D4773A490495A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dns.h; path = dns/dns.h; sourceTree = SOURCE_ROOT; };
+		39B7C4ED254446F292D3F43B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = strutil.cc; path = strutil.cc; sourceTree = SOURCE_ROOT; };
+		3A5CCA49261144B6BC560422 /* comm */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcomm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AE95FA8828944368FB91168 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = strutil.h; path = strutil.h; sourceTree = SOURCE_ROOT; };
+		3C6BD541118E443DB6701389 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = data_protect_attr.h; path = objc/data_protect_attr.h; sourceTree = SOURCE_ROOT; };
+		3DC76F643EDE4524BA8A2401 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getaddrinfo_with_timeout.h; path = network/getaddrinfo_with_timeout.h; sourceTree = SOURCE_ROOT; };
+		443006F468C04C59BC3ED9B0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time_utils.h; path = time_utils.h; sourceTree = SOURCE_ROOT; };
+		452350A1DF1C467880206A2F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = socket/socketselect.h; sourceTree = SOURCE_ROOT; };
+		4560EBF8E0944BB5B2EB8F5C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xloggerbase.c; path = xlogger/xloggerbase.c; sourceTree = SOURCE_ROOT; };
+		45DB1315E6994393A358E310 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mmap_util.cc; path = mmap_util.cc; sourceTree = SOURCE_ROOT; };
+		4ACB854970674EA4BBBF0E9A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = singleton.cc; path = singleton.cc; sourceTree = SOURCE_ROOT; };
+		4C22DC675A8E4228AA7AE1C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcp_fsm_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcp_fsm_handler.h; path = socket/tcp_fsm_handler.h; sourceTree = SOURCE_ROOT; };
+		4ED4403AEA634C87BFA16C39 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basepacker.h; path = basepacker.h; sourceTree = SOURCE_ROOT; };
+		4EF8015BB5564EA48725B09F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = udpserver.h; path = socket/udpserver.h; sourceTree = SOURCE_ROOT; };
+		50FC827ED0824D1BBF9D4D1D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/platform_comm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = platform_comm.h; path = platform_comm.h; sourceTree = SOURCE_ROOT; };
+		52262DE0FDAC4AA48EF04CDD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = loginfo_extract.h; path = xlogger/loginfo_extract.h; sourceTree = SOURCE_ROOT; };
+		5624AB161A1240B89F39C473 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpserver.cc; path = socket/tcpserver.cc; sourceTree = SOURCE_ROOT; };
+		57C449EC87624E37A5B19DD5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = unix/socket/socketpoll.h; sourceTree = SOURCE_ROOT; };
+		58214356BCA34EC1A10AF97F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpserver_fsm.h; path = socket/tcpserver_fsm.h; sourceTree = SOURCE_ROOT; };
+		5905CC8B0D74419788AA6CB3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ThreadOperationQueue.mm; path = objc/ThreadOperationQueue.mm; sourceTree = SOURCE_ROOT; };
+		5BEA80A21B314695ACFE4A98 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpclient.h; path = socket/tcpclient.h; sourceTree = SOURCE_ROOT; };
+		5CC5668661EB44A9900AFD85 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketbreaker.cc; path = unix/socket/socketbreaker.cc; sourceTree = SOURCE_ROOT; };
+		5E42E113D31747218E6EDFF8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = udpserver.cc; path = socket/udpserver.cc; sourceTree = SOURCE_ROOT; };
+		65889BABBF114567801CEE23 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/android_xlog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = android_xlog.h; path = xlogger/android_xlog.h; sourceTree = SOURCE_ROOT; };
+		6740B8163D204652A7BF72AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = anr.cc; path = anr.cc; sourceTree = SOURCE_ROOT; };
+		6C97A7E42C214EFA9A5EEEF4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/route.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = route.h; path = objc/route.h; sourceTree = SOURCE_ROOT; };
+		7044C8F8E586432C91B5A1E1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complexconnect.cc; path = socket/complexconnect.cc; sourceTree = SOURCE_ROOT; };
+		747C024ACC524CCDAC9E45CC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getdnssvraddrs.h; path = network/getdnssvraddrs.h; sourceTree = SOURCE_ROOT; };
+		75390F6F4FA344E99E5FDC7B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_data.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = comm_data.h; path = comm_data.h; sourceTree = SOURCE_ROOT; };
+		75D491EE11A8482898BB05EE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		75D6A8797E5C4524BCF511B9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socket_address.cc; path = socket/socket_address.cc; sourceTree = SOURCE_ROOT; };
+		76676A1E7E034E03AB7B227F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ptrbuffer.h; path = ptrbuffer.h; sourceTree = SOURCE_ROOT; };
+		7B1F642CE73E44A2A734078F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/scope_recursion_limit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scope_recursion_limit.h; path = scope_recursion_limit.h; sourceTree = SOURCE_ROOT; };
+		7B473F6C3731474BB4DBD9C4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/preprocessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = preprocessor.h; path = xlogger/preprocessor.h; sourceTree = SOURCE_ROOT; };
+		7C64BCDD0CFF4F11B8C92ECB /* /Users/john/Documents/workspace/iphone/mars/mars/comm/projdef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = projdef.h; path = projdef.h; sourceTree = SOURCE_ROOT; };
+		7E3B3CC449394D80BFDC1947 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = http.cc; path = http.cc; sourceTree = SOURCE_ROOT; };
+		7E502452F60848FAB7F1FA65 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		81887552BC464077BAB9403B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getgateway.h; path = network/getgateway.h; sourceTree = SOURCE_ROOT; };
+		818BFC125EB84444AC7EC397 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = netinfo_util.cc; path = network/netinfo_util.cc; sourceTree = SOURCE_ROOT; };
+		85E2AE0315EB4BC29A4093FE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_socket.cc; path = socket/block_socket.cc; sourceTree = SOURCE_ROOT; };
+		889289C922A24157ADF801E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autobuffer.h; path = autobuffer.h; sourceTree = SOURCE_ROOT; };
+		8E1972EEB1BF4A2C8807AA58 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = message_queue.h; path = messagequeue/message_queue.h; sourceTree = SOURCE_ROOT; };
+		8E2A346C00F54D039462769C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = socket/socketbreaker.h; sourceTree = SOURCE_ROOT; };
+		90B3A93F2EF84F198A6840A0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pkcs7_padding.h; path = crypt/pkcs7_padding.h; sourceTree = SOURCE_ROOT; };
+		91F6A52968BC4019B980FA5A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scope_autoreleasepool.h; path = objc/scope_autoreleasepool.h; sourceTree = SOURCE_ROOT; };
+		9897148A06A74C69A0253E6A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/compiler_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler_util.h; path = compiler_util.h; sourceTree = SOURCE_ROOT; };
+		9A95438CE3D341D2BE3DA08D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = coreservice_base.h; path = corepattern/coreservice_base.h; sourceTree = SOURCE_ROOT; };
+		9CDE0D5BFCD14748BA3BC40B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootrun.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bootrun.h; path = bootrun.h; sourceTree = SOURCE_ROOT; };
+		A043425F61F6408E84EB4147 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alarm.cc; path = alarm.cc; sourceTree = SOURCE_ROOT; };
+		A131ECE80C0C418B8B3703E5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = message_queue.cc; path = messagequeue/message_queue.cc; sourceTree = SOURCE_ROOT; };
+		A1EF68EC579F4924BB2B02DD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = data_protect_attr.mm; path = objc/data_protect_attr.mm; sourceTree = SOURCE_ROOT; };
+		A374C2C4D6C549B2BCE5BBE2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/debugger/debugger_utils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = debugger_utils.c; path = debugger/debugger_utils.c; sourceTree = SOURCE_ROOT; };
+		A3A8900EE13346E48DFE53C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = nat64_prefix_util.cc; path = socket/nat64_prefix_util.cc; sourceTree = SOURCE_ROOT; };
+		A42624829E524869B5E510CE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = http.h; path = http.h; sourceTree = SOURCE_ROOT; };
+		A4D74597458C474ABB91B9AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cc; path = tinyxml2.cc; sourceTree = SOURCE_ROOT; };
+		A64127DC55424BAFB2E81C53 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootregister.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bootregister.h; path = bootregister.h; sourceTree = SOURCE_ROOT; };
+		AA4FBD1C403444B0B99B3657 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = unix/socket/socketbreaker.h; sourceTree = SOURCE_ROOT; };
+		AB7C66831D1C47908AA1C89D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpclient_fsm.cc; path = socket/tcpclient_fsm.cc; sourceTree = SOURCE_ROOT; };
+		AE53F2EE8F164DFEBCA47A04 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getifaddrs.h; path = network/getifaddrs.h; sourceTree = SOURCE_ROOT; };
+		AE659127754A4923A2C3A6FD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = socket/socketpoll.h; sourceTree = SOURCE_ROOT; };
+		AF476DE398C44A5782A45ED6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ptrbuffer.cc; path = ptrbuffer.cc; sourceTree = SOURCE_ROOT; };
+		AFAF23F9E4A74F8484F9D3F3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pkcs7_padding.c; path = crypt/pkcs7_padding.c; sourceTree = SOURCE_ROOT; };
+		B130C68762384A77B5DD6E34 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpserver.h; path = socket/tcpserver.h; sourceTree = SOURCE_ROOT; };
+		B1346EA541A64B888441168E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = singleton.h; path = singleton.h; sourceTree = SOURCE_ROOT; };
+		B3EC0A1697BA47A5BC3BD7E4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = basepacker.cc; path = basepacker.cc; sourceTree = SOURCE_ROOT; };
+		B9B3059F8EEB4AE79AB30528 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dns.cc; path = dns/dns.cc; sourceTree = SOURCE_ROOT; };
+		B9EDF74A23FE42E9852719C9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = scope_autoreleasepool.mm; path = objc/scope_autoreleasepool.mm; sourceTree = SOURCE_ROOT; };
+		BB3564A83A2D45478A3FE66E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/has_member.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = has_member.h; path = has_member.h; sourceTree = SOURCE_ROOT; };
+		C39B7DB035374B6C895801A1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = __assert.c; path = assert/__assert.c; sourceTree = SOURCE_ROOT; };
+		C7622CA3D2BB47B58A2ED1D0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mmap_util.h; path = mmap_util.h; sourceTree = SOURCE_ROOT; };
+		C9286E8274D4405BB125AF5A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = local_routetable.cc; path = network/local_routetable.cc; sourceTree = SOURCE_ROOT; };
+		C99B4827207B4F87AA9208C9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = comm_frequency_limit.cc; path = comm_frequency_limit.cc; sourceTree = SOURCE_ROOT; };
+		CA22CE2B57684363B8294842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = memdbg.cc; path = memdbg.cc; sourceTree = SOURCE_ROOT; };
+		CA7654E1E7584DBCBA2714DF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xloggerbase.h; path = xlogger/xloggerbase.h; sourceTree = SOURCE_ROOT; };
+		CCEF7A72DF724086A7837379 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tickcount.h; path = tickcount.h; sourceTree = SOURCE_ROOT; };
+		CD6479EB3928451A8FFD4AAD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketselect.cc; path = unix/socket/socketselect.cc; sourceTree = SOURCE_ROOT; };
+		D11AB8219CFA4373B48A7A62 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ibase64.cc; path = crypt/ibase64.cc; sourceTree = SOURCE_ROOT; };
+		D432A507B31D4BE0937C4E8C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpserver_fsm.cc; path = socket/tcpserver_fsm.cc; sourceTree = SOURCE_ROOT; };
+		D5BA9C3CD6EC48958534F2F9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = comm_frequency_limit.h; path = comm_frequency_limit.h; sourceTree = SOURCE_ROOT; };
+		D9DCB9F69B544CC99021958B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tinyxml2.h; path = tinyxml2.h; sourceTree = SOURCE_ROOT; };
+		DACA9E493A05489788002FF1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ThreadOperationQueue.h; path = objc/ThreadOperationQueue.h; sourceTree = SOURCE_ROOT; };
+		DAE3A4B6403D4E62A7F31953 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = objc_timer.h; path = objc/objc_timer.h; sourceTree = SOURCE_ROOT; };
+		DCCCB08D6D844CB2870E8F2F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getaddrinfo_with_timeout.cc; path = network/getaddrinfo_with_timeout.cc; sourceTree = SOURCE_ROOT; };
+		DDF31F7168DE44E4B7F5AC90 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/verinfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = verinfo.h; path = verinfo.h; sourceTree = SOURCE_ROOT; };
+		DE9A8BF7085546EDBCD119E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = getgateway.c; path = network/getgateway.c; sourceTree = SOURCE_ROOT; };
+		DF1DF84666A1471F93CF3EF5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_address.h; path = socket/socket_address.h; sourceTree = SOURCE_ROOT; };
+		E229FBD4EDF5457AB1B04E1E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/string_cast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = string_cast.h; path = string_cast.h; sourceTree = SOURCE_ROOT; };
+		E274E24953884D16820620BC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xlogger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xlogger.h; path = xlogger/xlogger.h; sourceTree = SOURCE_ROOT; };
+		E6975A81C9604AB6B5C00BF6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Reachability.h; path = objc/Reachability.h; sourceTree = SOURCE_ROOT; };
+		E7B7721E4227491792387842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adler32.c; path = adler32.c; sourceTree = SOURCE_ROOT; };
+		E97F26A1F45145368AA7E1F8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = unix/socket/socketselect.h; sourceTree = SOURCE_ROOT; };
+		EA13979D85E9409A95D591D1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpclient_fsm.h; path = socket/tcpclient_fsm.h; sourceTree = SOURCE_ROOT; };
+		EBB8977E8BCA4AF2B91BC604 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/service_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = service_base.h; path = corepattern/service_base.h; sourceTree = SOURCE_ROOT; };
+		F0DF93C9AE9C4C6E876381B8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = __assert.h; path = assert/__assert.h; sourceTree = SOURCE_ROOT; };
+		F1551DCA18D541F8BA25C82C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/ipv6_address_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ipv6_address_utils.h; path = socket/ipv6_address_utils.h; sourceTree = SOURCE_ROOT; };
+		F2FE4FDD065B44FD84369924 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/platform_comm.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = platform_comm.mm; path = objc/platform_comm.mm; sourceTree = SOURCE_ROOT; };
+		F3DFD7CB4CF644D8910315CE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tickcount.cc; path = tickcount.cc; sourceTree = SOURCE_ROOT; };
+		F4D0B76BB31B43818E843219 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unix_socket.cc; path = socket/unix_socket.cc; sourceTree = SOURCE_ROOT; };
+		F53261EEA63C48958F28A75F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = unix_socket.h; path = socket/unix_socket.h; sourceTree = SOURCE_ROOT; };
+		F86372E5307940499EE44F5B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md5.h; path = md5.h; sourceTree = SOURCE_ROOT; };
+		FAF77AFDDBFC479684ABFE55 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getsocktcpinfo.cc; path = socket/getsocktcpinfo.cc; sourceTree = SOURCE_ROOT; };
+		FEEBB3459D974868A6D368BC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpclient.cc; path = socket/tcpclient.cc; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0DBF7ADD08164DEFA15A43D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A5CCA49261144B6BC560422 /* comm */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BDB739E45A645B1B857A1B3 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				2F375F55E221483F9ACB2169 /* CMake Rules */,
+				75D491EE11A8482898BB05EE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		21468898E8414694B26EDAB2 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5668661EB44A9900AFD85 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.cc */,
+				AA4FBD1C403444B0B99B3657 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.h */,
+				2FA3BFEA565E4B63B9CAE482 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.cc */,
+				57C449EC87624E37A5B19DD5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.h */,
+				CD6479EB3928451A8FFD4AAD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.cc */,
+				E97F26A1F45145368AA7E1F8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.h */,
+			);
+			name = socket;
+			sourceTree = "<group>";
+		};
+		228E6E538BBF468181BA1009 /* messagequeue */ = {
+			isa = PBXGroup;
+			children = (
+				15D5052BC1454927B31BDE97 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/callback.h */,
+				A131ECE80C0C418B8B3703E5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.cc */,
+				8E1972EEB1BF4A2C8807AA58 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.h */,
+			);
+			name = messagequeue;
+			sourceTree = "<group>";
+		};
+		2F375F55E221483F9ACB2169 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		3F703FB8F0DE46E78FEF05F3 /* comm */ = {
+			isa = PBXGroup;
+			children = (
+				D9F7683293D645DAB966294F /* Source Files */,
+				9A28243EC43249F2B33121B4 /* Header Files */,
+				B3B5C605A091422D9742B4DB /* assert */,
+				E529AD5069F14F0792454A14 /* crypt */,
+				EC70055CA4E74162887B51E4 /* network */,
+				AC48420AA65D47439653C003 /* socket */,
+				B93FEAE4B915494C9F3BD3F9 /* xlogger */,
+				E5102D309ECD4650AC1C3E14 /* corepattern */,
+				96B0931474A64FD18F6D5226 /* dns */,
+				228E6E538BBF468181BA1009 /* messagequeue */,
+				7A633F57C03C4C1D83F444B9 /* unix */,
+				ADAF7057F39E49529A08C00E /* objc */,
+				7E502452F60848FAB7F1FA65 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/CMakeLists.txt */,
+			);
+			name = comm;
+			sourceTree = "<group>";
+		};
+		7A633F57C03C4C1D83F444B9 /* unix */ = {
+			isa = PBXGroup;
+			children = (
+				21468898E8414694B26EDAB2 /* socket */,
+			);
+			name = unix;
+			sourceTree = "<group>";
+		};
+		96B0931474A64FD18F6D5226 /* dns */ = {
+			isa = PBXGroup;
+			children = (
+				B9B3059F8EEB4AE79AB30528 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.cc */,
+				362965168C9D4773A490495A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.h */,
+			);
+			name = dns;
+			sourceTree = "<group>";
+		};
+		9A28243EC43249F2B33121B4 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				211E0FE0A3BB4A3D982B400A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.h */,
+				116826AB143D431196D05DEC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.h */,
+				042A2B7F25E2416D8192A482 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.h */,
+				889289C922A24157ADF801E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.h */,
+				4ED4403AEA634C87BFA16C39 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.h */,
+				A64127DC55424BAFB2E81C53 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootregister.h */,
+				9CDE0D5BFCD14748BA3BC40B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/bootrun.h */,
+				75390F6F4FA344E99E5FDC7B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_data.h */,
+				D5BA9C3CD6EC48958534F2F9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.h */,
+				9897148A06A74C69A0253E6A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/compiler_util.h */,
+				BB3564A83A2D45478A3FE66E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/has_member.h */,
+				A42624829E524869B5E510CE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.h */,
+				0F477B0E459B4E31B0993600 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ini.h */,
+				23BC567D55274C46863495BE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/marcotoolkit.h */,
+				F86372E5307940499EE44F5B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.h */,
+				2CFC17D42B524BB48C6A991E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.h */,
+				C7622CA3D2BB47B58A2ED1D0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.h */,
+				01E84789C3EF452E86869FC8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/move_wrapper.h */,
+				50FC827ED0824D1BBF9D4D1D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/platform_comm.h */,
+				7C64BCDD0CFF4F11B8C92ECB /* /Users/john/Documents/workspace/iphone/mars/mars/comm/projdef.h */,
+				76676A1E7E034E03AB7B227F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.h */,
+				7B1F642CE73E44A2A734078F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/scope_recursion_limit.h */,
+				B1346EA541A64B888441168E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.h */,
+				E229FBD4EDF5457AB1B04E1E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/string_cast.h */,
+				3AE95FA8828944368FB91168 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.h */,
+				CCEF7A72DF724086A7837379 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.h */,
+				443006F468C04C59BC3ED9B0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.h */,
+				D9DCB9F69B544CC99021958B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.h */,
+				DDF31F7168DE44E4B7F5AC90 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/verinfo.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		AC48420AA65D47439653C003 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				85E2AE0315EB4BC29A4093FE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.cc */,
+				18714A1CD7FF40749211FB9C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.h */,
+				7044C8F8E586432C91B5A1E1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.cc */,
+				00BB08563661403FB450914C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.h */,
+				FAF77AFDDBFC479684ABFE55 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.cc */,
+				26FD85093CDD4011872FACFC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.h */,
+				F1551DCA18D541F8BA25C82C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/ipv6_address_utils.h */,
+				1C249DDB40A442DAB271F8CF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.cc */,
+				28369CAE79824F47A30DBFF0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.h */,
+				A3A8900EE13346E48DFE53C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.cc */,
+				018DF92A4CE84C638E969E93 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.h */,
+				75D6A8797E5C4524BCF511B9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.cc */,
+				DF1DF84666A1471F93CF3EF5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.h */,
+				8E2A346C00F54D039462769C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketbreaker.h */,
+				AE659127754A4923A2C3A6FD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketpoll.h */,
+				452350A1DF1C467880206A2F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socketselect.h */,
+				4C22DC675A8E4228AA7AE1C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcp_fsm_handler.h */,
+				FEEBB3459D974868A6D368BC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.cc */,
+				5BEA80A21B314695ACFE4A98 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.h */,
+				AB7C66831D1C47908AA1C89D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.cc */,
+				EA13979D85E9409A95D591D1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.h */,
+				5624AB161A1240B89F39C473 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.cc */,
+				B130C68762384A77B5DD6E34 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.h */,
+				D432A507B31D4BE0937C4E8C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.cc */,
+				58214356BCA34EC1A10AF97F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.h */,
+				1BAC30FDFDA246799E772A81 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.cc */,
+				0021D09C0EE84B2393A68A08 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.h */,
+				5E42E113D31747218E6EDFF8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.cc */,
+				4EF8015BB5564EA48725B09F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.h */,
+				F4D0B76BB31B43818E843219 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.cc */,
+				F53261EEA63C48958F28A75F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.h */,
+			);
+			name = socket;
+			sourceTree = "<group>";
+		};
+		ADAF7057F39E49529A08C00E /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				E6975A81C9604AB6B5C00BF6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.h */,
+				123262D8671D4E5BB0A72D2A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.mm */,
+				DACA9E493A05489788002FF1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.h */,
+				5905CC8B0D74419788AA6CB3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.mm */,
+				3C6BD541118E443DB6701389 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.h */,
+				A1EF68EC579F4924BB2B02DD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.mm */,
+				2D6688BCB5B644FFB714D133 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ip_icmp.h */,
+				DAE3A4B6403D4E62A7F31953 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.h */,
+				278BFDBB2F6F4C7FA593F3C3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.mm */,
+				F2FE4FDD065B44FD84369924 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/platform_comm.mm */,
+				6C97A7E42C214EFA9A5EEEF4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/route.h */,
+				91F6A52968BC4019B980FA5A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.h */,
+				B9EDF74A23FE42E9852719C9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.mm */,
+				1705369728B54336B701D2A2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/xlogger_threadinfo.mm */,
+			);
+			name = objc;
+			sourceTree = "<group>";
+		};
+		B3B5C605A091422D9742B4DB /* assert */ = {
+			isa = PBXGroup;
+			children = (
+				C39B7DB035374B6C895801A1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.c */,
+				F0DF93C9AE9C4C6E876381B8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.h */,
+			);
+			name = assert;
+			sourceTree = "<group>";
+		};
+		B93FEAE4B915494C9F3BD3F9 /* xlogger */ = {
+			isa = PBXGroup;
+			children = (
+				65889BABBF114567801CEE23 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/android_xlog.h */,
+				3597626E580E495A84C21D7F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.c */,
+				52262DE0FDAC4AA48EF04CDD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.h */,
+				7B473F6C3731474BB4DBD9C4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/preprocessor.h */,
+				E274E24953884D16820620BC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xlogger.h */,
+				4560EBF8E0944BB5B2EB8F5C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.c */,
+				CA7654E1E7584DBCBA2714DF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.h */,
+			);
+			name = xlogger;
+			sourceTree = "<group>";
+		};
+		CCC8ECD89716404C83FD0DAB = {
+			isa = PBXGroup;
+			children = (
+				3F703FB8F0DE46E78FEF05F3 /* comm */,
+				1BDB739E45A645B1B857A1B3 /* ALL_BUILD */,
+				0DBF7ADD08164DEFA15A43D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F7683293D645DAB966294F /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7B7721E4227491792387842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.c */,
+				A043425F61F6408E84EB4147 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.cc */,
+				6740B8163D204652A7BF72AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.cc */,
+				0F4E4457CFC94D31860009E7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.cc */,
+				B3EC0A1697BA47A5BC3BD7E4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.cc */,
+				3075B258D4314EAC9E5DECF8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/boost_exception.cc */,
+				C99B4827207B4F87AA9208C9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.cc */,
+				A374C2C4D6C549B2BCE5BBE2 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/debugger/debugger_utils.c */,
+				7E3B3CC449394D80BFDC1947 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.cc */,
+				17935488D9594A71896E46A3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.c */,
+				CA22CE2B57684363B8294842 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.cc */,
+				45DB1315E6994393A358E310 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.cc */,
+				AF476DE398C44A5782A45ED6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.cc */,
+				4ACB854970674EA4BBBF0E9A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.cc */,
+				39B7C4ED254446F292D3F43B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.cc */,
+				F3DFD7CB4CF644D8910315CE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.cc */,
+				249554EFAE42426083A2F30D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.c */,
+				A4D74597458C474ABB91B9AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E5102D309ECD4650AC1C3E14 /* corepattern */ = {
+			isa = PBXGroup;
+			children = (
+				1D49F9E81A3D45D789F7864B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.cc */,
+				9A95438CE3D341D2BE3DA08D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.h */,
+				EBB8977E8BCA4AF2B91BC604 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/service_base.h */,
+			);
+			name = corepattern;
+			sourceTree = "<group>";
+		};
+		E529AD5069F14F0792454A14 /* crypt */ = {
+			isa = PBXGroup;
+			children = (
+				D11AB8219CFA4373B48A7A62 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.cc */,
+				33F0FE4FC1494879A0A209FE /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.h */,
+				AFAF23F9E4A74F8484F9D3F3 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.c */,
+				90B3A93F2EF84F198A6840A0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.h */,
+			);
+			name = crypt;
+			sourceTree = "<group>";
+		};
+		EC70055CA4E74162887B51E4 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				DCCCB08D6D844CB2870E8F2F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.cc */,
+				3DC76F643EDE4524BA8A2401 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.h */,
+				28818598AC754617B58DDF50 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.cc */,
+				747C024ACC524CCDAC9E45CC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.h */,
+				DE9A8BF7085546EDBCD119E8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.c */,
+				81887552BC464077BAB9403B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.h */,
+				1BDA6CB3F3574A738FEEDE94 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.cc */,
+				AE53F2EE8F164DFEBCA47A04 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.h */,
+				C9286E8274D4405BB125AF5A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.cc */,
+				269E5187314A442197B73CFC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.h */,
+				818BFC125EB84444AC7EC397 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.cc */,
+				00BAC18772C143E9925ED152 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.h */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		553CEF7F57F049B196B7779E /* comm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76874D9C3151489DA3A89226 /* Build configuration list for PBXNativeTarget "comm" */;
+			buildPhases = (
+				8B381484F6AD4769B9BDC198 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D46365CC3F449D1B5C74BBA /* PBXTargetDependency */,
+			);
+			name = comm;
+			productName = comm;
+			productReference = 3A5CCA49261144B6BC560422 /* comm */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B5C5732C40D4908BD07463F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 700715A259E843FE8F2CD5A4 /* Build configuration list for PBXProject "comm" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				D66E53FAE94B4629914058CD /* Debug */,
+				CDF72A3BE3594080BF9A32D3 /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = CCC8ECD89716404C83FD0DAB;
+			projectDirPath = ../../../comm;
+			projectRoot = "";
+			targets = (
+				D1F1DE35176D48ECB085E0BC /* ALL_BUILD */,
+				1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */,
+				553CEF7F57F049B196B7779E /* comm */,
+				1C29BDB9D5B445CEADB61655 /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		173FA2525A684736B98AFF8F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		53204F341AF14FF4BAE2398E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		6071604A217E435DA6A8FB6B = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		7FEE42ACE1A34137B966003A = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		987B21D0D4454CF1AEC90513 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		C6F98FBD8C09417282F2D7AF /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B381484F6AD4769B9BDC198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6D340B6A0545B380E1970D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/adler32.c */,
+				347969B97CC74FDB8F320989 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/alarm.cc */,
+				9DEA1C2C4D5444888603CD04 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/anr.cc */,
+				B2B4C8B6DC1445D3B50E4FF9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/assert/__assert.c */,
+				CFE53CD7DB52444C9AE7AFED /* /Users/john/Documents/workspace/iphone/mars/mars/comm/autobuffer.cc */,
+				C64A907F18554465B6D28569 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/basepacker.cc */,
+				F81CCD6D4B384C03BD10BC7F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/boost_exception.cc */,
+				D6C52775FF16422A865F2DFF /* /Users/john/Documents/workspace/iphone/mars/mars/comm/comm_frequency_limit.cc */,
+				BDADF6638A51405C85A74C7E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern/coreservice_base.cc */,
+				37F0A999BBC7412A94D6F4E4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/ibase64.cc */,
+				B2BDFBA506914823ACAD42D7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/crypt/pkcs7_padding.c */,
+				79D5EB3E13334EB6B2A8961C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/debugger/debugger_utils.c */,
+				491DB19753994F629C3D4960 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/dns/dns.cc */,
+				A37FFF487E7349F4A501E01C /* /Users/john/Documents/workspace/iphone/mars/mars/comm/http.cc */,
+				2129A65AC6D047449BCFC64D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/md5.c */,
+				E1938EAED04947E59FB5E1E6 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/memdbg.cc */,
+				99DBC51FB3CF43E4910D6261 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue/message_queue.cc */,
+				184A346AF8C04B408E42FB6F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/mmap_util.cc */,
+				2FF4EECC84CC43688CAEAA44 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getaddrinfo_with_timeout.cc */,
+				4EDB3DF6AC33420484FACD4A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getdnssvraddrs.cc */,
+				BA0E28BD134B436FB9AE62FD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getgateway.c */,
+				8843A798956E47BFB33BBF6F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/getifaddrs.cc */,
+				4216A251BE7A4D439CEA9568 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/local_routetable.cc */,
+				E904B5C87B58470FB1A932D7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/network/netinfo_util.cc */,
+				62487B47776A4001AEF0200F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/Reachability.mm */,
+				FCE1E49EFF1C4CC98361104F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/ThreadOperationQueue.mm */,
+				45C58CED7A33478E992DE199 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/data_protect_attr.mm */,
+				25662DD1A666473E807FF429 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/objc_timer.mm */,
+				C603FD77C0F84D679DE428B0 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/platform_comm.mm */,
+				CEAA3951E1CB4A6AA77AAF1F /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/scope_autoreleasepool.mm */,
+				194500866FF84B3D8AF43D9E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/objc/xlogger_threadinfo.mm */,
+				8FCF177051F54E4A9EF8DB64 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/ptrbuffer.cc */,
+				6C6BA698E7494D05BDA02CD1 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/singleton.cc */,
+				B755C523B96148EABDDD591D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/block_socket.cc */,
+				3BE6BE9055F9493485C8E719 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/complexconnect.cc */,
+				9C2BE6763DF949AFB8A6CCA7 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/getsocktcpinfo.cc */,
+				09562761291D44E3950FDEC8 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/local_ipstack.cc */,
+				FB372E8E643E4BA2801132B5 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/nat64_prefix_util.cc */,
+				7F15B9A35A794811A31892A9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/socket_address.cc */,
+				4E9489DFA2F5403296B5F21A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient.cc */,
+				C33E8057C3084BE8ADCE1D78 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpclient_fsm.cc */,
+				FBD8ED8379FC4582A409F38A /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver.cc */,
+				05F2D93B0EB844A28E790702 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/tcpserver_fsm.cc */,
+				EAC8F1D0D1EF4F3EAD0A7C94 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpclient.cc */,
+				65DED485C4CA4C1EAD71732D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/udpserver.cc */,
+				5253438053BA44E2B7EAFC76 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/socket/unix_socket.cc */,
+				9FA806073B4F4E108779E135 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/strutil.cc */,
+				5C5BD47FC10F44249CB014AD /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tickcount.cc */,
+				E84082A8D3DA40A5A7260504 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/time_utils.c */,
+				33D0DA97F07F476883EEB21E /* /Users/john/Documents/workspace/iphone/mars/mars/comm/tinyxml2.cc */,
+				08A1CCD5A7834C40BF28AB2D /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketbreaker.cc */,
+				1F5CB3B787CD4FE8A909C5AC /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketpoll.cc */,
+				3EAE7172656E481C970AA55B /* /Users/john/Documents/workspace/iphone/mars/mars/comm/unix/socket/socketselect.cc */,
+				0F87529C18F54691BFC9AAC9 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/loginfo_extract.c */,
+				85762BAF3550441E925B3EE4 /* /Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger/xloggerbase.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D46365CC3F449D1B5C74BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = C6150D1BC4404B7492982DB2 /* PBXContainerItemProxy */;
+		};
+		6345520E262545CFA8BAA0A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 553CEF7F57F049B196B7779E /* comm */;
+			targetProxy = 534E7FE6D04347D0AFBC01AD /* PBXContainerItemProxy */;
+		};
+		B97DB7474E394ED789E2A0FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F1DE35176D48ECB085E0BC /* ALL_BUILD */;
+			targetProxy = 68682FA2D8004C24A0D40111 /* PBXContainerItemProxy */;
+		};
+		F9C5483272A0484F9466E1FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = EE1FE93120914D288FB75A72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14B62BBB553748D9A1C81015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		1B31AB0A591C47FBA31F728B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::comm\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/comm/.,/Users/john/Documents/workspace/iphone/mars/mars/comm/..,/Users/john/Documents/workspace/iphone/mars/mars/comm/../..,/Users/john/Documents/workspace/iphone/mars/mars/comm/assert,/Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern,/Users/john/Documents/workspace/iphone/mars/mars/comm/crypt,/Users/john/Documents/workspace/iphone/mars/mars/comm/debugger,/Users/john/Documents/workspace/iphone/mars/mars/comm/dns,/Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue,/Users/john/Documents/workspace/iphone/mars/mars/comm/network,/Users/john/Documents/workspace/iphone/mars/mars/comm/socket,/Users/john/Documents/workspace/iphone/mars/mars/comm/thread,/Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc      ";
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                       -DDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = comm;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2CB18C1848B442FFB9830A28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6839DA0707034B85991877FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		812A668D8B8E4EF8A1746DA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		971289C521D54946A147D60C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm/build;
+			};
+			name = Debug;
+		};
+		9F970239517B47D6950E8F93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		BEFAF7F51CA44E449C134D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::comm\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/comm/.,/Users/john/Documents/workspace/iphone/mars/mars/comm/..,/Users/john/Documents/workspace/iphone/mars/mars/comm/../..,/Users/john/Documents/workspace/iphone/mars/mars/comm/assert,/Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern,/Users/john/Documents/workspace/iphone/mars/mars/comm/crypt,/Users/john/Documents/workspace/iphone/mars/mars/comm/debugger,/Users/john/Documents/workspace/iphone/mars/mars/comm/dns,/Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue,/Users/john/Documents/workspace/iphone/mars/mars/comm/network,/Users/john/Documents/workspace/iphone/mars/mars/comm/socket,/Users/john/Documents/workspace/iphone/mars/mars/comm/thread,/Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0  -fobjc-abi-version=2 -fno-objc-arc      -DNDEBUG   ";
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math                         -gline-tables-only  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = comm;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D5F572BCDE654D8F8971F136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm/build;
+			};
+			name = Release;
+		};
+		FD89D31A01034C8C8E7A51BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43219C7238B34A60BAA9DB42 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812A668D8B8E4EF8A1746DA9 /* Debug */,
+				14B62BBB553748D9A1C81015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		700715A259E843FE8F2CD5A4 /* Build configuration list for PBXProject "comm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				971289C521D54946A147D60C /* Debug */,
+				D5F572BCDE654D8F8971F136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		76874D9C3151489DA3A89226 /* Build configuration list for PBXNativeTarget "comm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B31AB0A591C47FBA31F728B /* Debug */,
+				BEFAF7F51CA44E449C134D72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8FA14B8816A849ADA82E12FD /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD89D31A01034C8C8E7A51BE /* Debug */,
+				6839DA0707034B85991877FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C306EEDF08604E928D0D5BD7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB18C1848B442FFB9830A28 /* Debug */,
+				9F970239517B47D6950E8F93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B5C5732C40D4908BD07463F /* Project object */;
+}

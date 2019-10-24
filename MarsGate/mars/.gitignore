@@ -111,7 +111,5 @@ mars/Win32/Debug
 *.dir
 *.out
 Debug-iphonesimulator
-*.xcodeproj
 *.build
-cmake_build
 

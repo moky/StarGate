@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2B9AECBFA2A74E68824F64DA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F19597B501AB4A10B6D33E5C /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		1C29BDB9D5B445CEADB61655 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A101F3A9AA0A423D817CBAEF /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				3CFA81903FAA4C49983A9883 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				D54A52814A0147E5941EC4B1 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		D1F1DE35176D48ECB085E0BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E074EA348A9048D78CB37E48 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				6327A5FA2CF84F25AE8A2878 /* CMake Rules */,
+			);
+			dependencies = (
+				3CAE19AEABEE4B7685A2AEA9 /* PBXTargetDependency */,
+				682052A6B4634D21A3E30E9B /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		054D98328D0A48B9AEB7CA3E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.h */ = {isa = PBXBuildFile; fileRef = A2DFB55BE4CB45D487C7A2D9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.h */; };
+		0ABC717D18F042D2A5077C31 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.h */ = {isa = PBXBuildFile; fileRef = 71E6CBFD695741CAA99638C7 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.h */; };
+		0D58BBFCB7F84271B4EE5D04 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.cc */ = {isa = PBXBuildFile; fileRef = A1E47FF30CD94E08B2F08EC5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.cc */; };
+		11E826C1722C4FE5B889C2B3 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.cc */ = {isa = PBXBuildFile; fileRef = 0F7E78D8D27D4748A67E9B71 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.cc */; };
+		14A098A5CDAE4518A3DCB365 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.cc */ = {isa = PBXBuildFile; fileRef = 49BC4F87BD5E4D289F71003E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.cc */; };
+		15AD6E2746C941E3A9588D10 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.h */ = {isa = PBXBuildFile; fileRef = 177C23F8CA8543A492B87FE8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.h */; };
+		1892ADD63DDB4B5E9684523B /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.h */ = {isa = PBXBuildFile; fileRef = 8A035C7BB86541D98BF7D7C5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.h */; };
+		1ED4CF61570840DBB220D661 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.cc */ = {isa = PBXBuildFile; fileRef = 53AE7EF1D9D646E088D29C11 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.cc */; };
+		2D1DC0732F5148459410DE09 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/netchecker_profile.h */ = {isa = PBXBuildFile; fileRef = DB5EE53EC4884F6D877BE759 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/netchecker_profile.h */; };
+		3A1FEBEC965941BC9E9D90A4 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_url_parser.h */ = {isa = PBXBuildFile; fileRef = DF5A6427EC5741AAB7C80306 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_url_parser.h */; };
+		4198A00E46094B5EA8B49BC8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.cc */ = {isa = PBXBuildFile; fileRef = 0084AEE4DA944F44A7633CC6 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.cc */; };
+		51AD23FCAA50481383AC5B81 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.cc */ = {isa = PBXBuildFile; fileRef = 94B09227B82D4DB294A5676A /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.cc */; };
+		5937F782F04648C883958145 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.h */ = {isa = PBXBuildFile; fileRef = 1DE658FDB7C2417CB2B8BE57 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.h */; };
+		6340C92620EC488B95C94FFB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.h */ = {isa = PBXBuildFile; fileRef = 72EF12A4C4634411AAFCF142 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.h */; };
+		666FBAB5927A4B4BAEA08BD9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.cc */ = {isa = PBXBuildFile; fileRef = 9CEB9C2E009446A7A5B25BCB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.cc */; };
+		6B30142EAFFC4E439BD7570C /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.h */ = {isa = PBXBuildFile; fileRef = 822512A4CF8E426BA84C8217 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.h */; };
+		6DB47A71AF6247D58E15BFE3 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.h */ = {isa = PBXBuildFile; fileRef = EB74B027C1624F9EA977F9D8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.h */; };
+		6EB7E4E576CE4505B82F17CC /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.h */ = {isa = PBXBuildFile; fileRef = 3C6057B8E15F438FB589085B /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.h */; };
+		7D33C8662AE14B82BDE5C13F /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.cc */ = {isa = PBXBuildFile; fileRef = 4D9B776D899C497B950D6636 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.cc */; };
+		8CF09526124B45D9BEF97549 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.cc */ = {isa = PBXBuildFile; fileRef = FEE29599FD064538AB94BB46 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.cc */; };
+		8F2ACAA98CE94A54BB37F678 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/compiler_util.h */ = {isa = PBXBuildFile; fileRef = 36E81415C86E47CC80EA2C00 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/compiler_util.h */; };
+		93DFCD9E69DE4F8F82538D71 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.h */ = {isa = PBXBuildFile; fileRef = E78B4C57D5F5456083A6F38C /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.h */; };
+		95355B8EB6F0413C947BB3AC /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.h */ = {isa = PBXBuildFile; fileRef = 947872E4470E439DBA075446 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.h */; };
+		95370D7673FD41C78B645F24 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.cc */ = {isa = PBXBuildFile; fileRef = ACB1F18E7D0A48CEAE59B641 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.cc */; };
+		BAC0301171894A869241812C /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = DE11293728FE42229ADBAFDB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/CMakeLists.txt */; };
+		BEA2E360928A43FA9DFA86EF /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.cc */ = {isa = PBXBuildFile; fileRef = 043FC712EEC349C08DD9BF79 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.cc */; };
+		C57254D2BAC34739AB640D03 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt.h */ = {isa = PBXBuildFile; fileRef = 844FBDFD8AC34ACAB35CD856 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt.h */; };
+		CBD28CF66EBC4814A80DEDFC /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/constants.h */ = {isa = PBXBuildFile; fileRef = 16564C9C533A42D58A40EBE5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/constants.h */; };
+		CD1F4DE4236E477183141423 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.cc */ = {isa = PBXBuildFile; fileRef = 14ECD06A2B314E8AB5F93C96 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.cc */; };
+		D4E75F8BB8324B7A8A4EDDF8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.h */ = {isa = PBXBuildFile; fileRef = 805C0A456DD2446C8AA6DE9F /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.h */; };
+		DE2A6BB292654768BE042A51 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.h */ = {isa = PBXBuildFile; fileRef = 046D0F1684D2417DBC895E61 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.h */; };
+		E344624D6FF54616A9C5DAA9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.cc */ = {isa = PBXBuildFile; fileRef = 91BCE650FFB643B5B3A5EC08 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.cc */; };
+		F9E5CD42DCD0414EBBB28086 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.cc */ = {isa = PBXBuildFile; fileRef = EF615CF3701340F2B1AB033A /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.cc */; };
+		FD5E3F41BB73475696630773 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.h */ = {isa = PBXBuildFile; fileRef = 0F65F720B45B41D4967E046E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		133296909BCD49E1B6AD6227 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		932B7BB3072A4390BA29293B /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		173D89ED1C34426A88E6F9F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B583C6923C749F293BE951C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F1DE35176D48ECB085E0BC;
+			remoteInfo = ALL_BUILD;
+		};
+		3221C3823D2341F5BD547855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B583C6923C749F293BE951C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		9B446C2F91A448A9898AE9A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B583C6923C749F293BE951C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		AB44E310389941E580D2D727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B583C6923C749F293BE951C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99EE27A96CBD48DBBC7F6A31;
+			remoteInfo = sdt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0084AEE4DA944F44A7633CC6 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pingchecker.cc; path = src/activecheck/pingchecker.cc; sourceTree = SOURCE_ROOT; };
+		043FC712EEC349C08DD9BF79 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpchecker.cc; path = src/activecheck/tcpchecker.cc; sourceTree = SOURCE_ROOT; };
+		046D0F1684D2417DBC895E61 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = httpquery.h; path = src/checkimpl/httpquery.h; sourceTree = SOURCE_ROOT; };
+		0F65F720B45B41D4967E046E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pingquery.h; path = src/checkimpl/pingquery.h; sourceTree = SOURCE_ROOT; };
+		0F7E78D8D27D4748A67E9B71 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pingquery.cc; path = src/checkimpl/pingquery.cc; sourceTree = SOURCE_ROOT; };
+		14ECD06A2B314E8AB5F93C96 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dnschecker.cc; path = src/activecheck/dnschecker.cc; sourceTree = SOURCE_ROOT; };
+		16564C9C533A42D58A40EBE5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = constants.h; path = constants.h; sourceTree = SOURCE_ROOT; };
+		177C23F8CA8543A492B87FE8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpchecker.h; path = src/activecheck/tcpchecker.h; sourceTree = SOURCE_ROOT; };
+		1BAB2A594BAF4017A4E76F69 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		1DE658FDB7C2417CB2B8BE57 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpquery.h; path = src/checkimpl/tcpquery.h; sourceTree = SOURCE_ROOT; };
+		36E81415C86E47CC80EA2C00 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/compiler_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler_util.h; path = compiler_util.h; sourceTree = SOURCE_ROOT; };
+		3C6057B8E15F438FB589085B /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dnsquery.h; path = src/checkimpl/dnsquery.h; sourceTree = SOURCE_ROOT; };
+		49BC4F87BD5E4D289F71003E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base_netinfo_query.cc; path = src/checkimpl/base_netinfo_query.cc; sourceTree = SOURCE_ROOT; };
+		4D9B776D899C497B950D6636 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = netchecker_trafficmonitor.cc; path = src/tools/netchecker_trafficmonitor.cc; sourceTree = SOURCE_ROOT; };
+		53AE7EF1D9D646E088D29C11 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpquery.cc; path = src/checkimpl/tcpquery.cc; sourceTree = SOURCE_ROOT; };
+		71E6CBFD695741CAA99638C7 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sdt_core.h; path = src/sdt_core.h; sourceTree = SOURCE_ROOT; };
+		72EF12A4C4634411AAFCF142 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = httpchecker.h; path = src/activecheck/httpchecker.h; sourceTree = SOURCE_ROOT; };
+		805C0A456DD2446C8AA6DE9F /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pingchecker.h; path = src/activecheck/pingchecker.h; sourceTree = SOURCE_ROOT; };
+		822512A4CF8E426BA84C8217 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sdt_logic.h; path = sdt_logic.h; sourceTree = SOURCE_ROOT; };
+		844FBDFD8AC34ACAB35CD856 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sdt.h; path = sdt.h; sourceTree = SOURCE_ROOT; };
+		8A035C7BB86541D98BF7D7C5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basechecker.h; path = src/activecheck/basechecker.h; sourceTree = SOURCE_ROOT; };
+		91BCE650FFB643B5B3A5EC08 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = httpquery.cc; path = src/checkimpl/httpquery.cc; sourceTree = SOURCE_ROOT; };
+		947872E4470E439DBA075446 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base_netinfo_query.h; path = src/checkimpl/base_netinfo_query.h; sourceTree = SOURCE_ROOT; };
+		94B09227B82D4DB294A5676A /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = basechecker.cc; path = src/activecheck/basechecker.cc; sourceTree = SOURCE_ROOT; };
+		9CEB9C2E009446A7A5B25BCB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sdt_logic.cc; path = sdt_logic.cc; sourceTree = SOURCE_ROOT; };
+		9FD3F172655B4B73AA1EB3A5 /* sdt */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsdt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E47FF30CD94E08B2F08EC5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = http_detector.cc; path = src/checkimpl/http_detector.cc; sourceTree = SOURCE_ROOT; };
+		A2DFB55BE4CB45D487C7A2D9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = http_detector.h; path = src/checkimpl/http_detector.h; sourceTree = SOURCE_ROOT; };
+		ACB1F18E7D0A48CEAE59B641 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = httpchecker.cc; path = src/activecheck/httpchecker.cc; sourceTree = SOURCE_ROOT; };
+		DB5EE53EC4884F6D877BE759 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/netchecker_profile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netchecker_profile.h; path = netchecker_profile.h; sourceTree = SOURCE_ROOT; };
+		DE11293728FE42229ADBAFDB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DF5A6427EC5741AAB7C80306 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_url_parser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = http_url_parser.h; path = src/checkimpl/http_url_parser.h; sourceTree = SOURCE_ROOT; };
+		E78B4C57D5F5456083A6F38C /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netchecker_trafficmonitor.h; path = src/tools/netchecker_trafficmonitor.h; sourceTree = SOURCE_ROOT; };
+		EB74B027C1624F9EA977F9D8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dnschecker.h; path = src/activecheck/dnschecker.h; sourceTree = SOURCE_ROOT; };
+		EF615CF3701340F2B1AB033A /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sdt_core.cc; path = src/sdt_core.cc; sourceTree = SOURCE_ROOT; };
+		FEE29599FD064538AB94BB46 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dnsquery.cc; path = src/checkimpl/dnsquery.cc; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		02AA12C7EBA54408B8AE3818 /* sdt */ = {
+			isa = PBXGroup;
+			children = (
+				7E42E0C6055840BDB322E894 /* Header Files */,
+				DF2C3732CA034F26895707B6 /* Source Files */,
+				56BD589DF8B0426B8DE164D4 /* src */,
+				DE11293728FE42229ADBAFDB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/CMakeLists.txt */,
+			);
+			name = sdt;
+			sourceTree = "<group>";
+		};
+		223F7250D5C5430FA4459662 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		489909E7C696479A865F7CA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FD3F172655B4B73AA1EB3A5 /* sdt */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56BD589DF8B0426B8DE164D4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DA3A4B54ADB4454A9D0418C6 /* activecheck */,
+				DD1463B6ACC64810B3B92973 /* checkimpl */,
+				BAC5F855B9D94F199B5C6F0F /* tools */,
+				EF615CF3701340F2B1AB033A /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.cc */,
+				71E6CBFD695741CAA99638C7 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		7E42E0C6055840BDB322E894 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				36E81415C86E47CC80EA2C00 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/compiler_util.h */,
+				16564C9C533A42D58A40EBE5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/constants.h */,
+				DB5EE53EC4884F6D877BE759 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/netchecker_profile.h */,
+				844FBDFD8AC34ACAB35CD856 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt.h */,
+				822512A4CF8E426BA84C8217 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B3A0ECBF73934BE9B28148B3 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				223F7250D5C5430FA4459662 /* CMake Rules */,
+				1BAB2A594BAF4017A4E76F69 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		BAC5F855B9D94F199B5C6F0F /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				4D9B776D899C497B950D6636 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.cc */,
+				E78B4C57D5F5456083A6F38C /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.h */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		DA3A4B54ADB4454A9D0418C6 /* activecheck */ = {
+			isa = PBXGroup;
+			children = (
+				94B09227B82D4DB294A5676A /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.cc */,
+				8A035C7BB86541D98BF7D7C5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.h */,
+				14ECD06A2B314E8AB5F93C96 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.cc */,
+				EB74B027C1624F9EA977F9D8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.h */,
+				ACB1F18E7D0A48CEAE59B641 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.cc */,
+				72EF12A4C4634411AAFCF142 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.h */,
+				0084AEE4DA944F44A7633CC6 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.cc */,
+				805C0A456DD2446C8AA6DE9F /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.h */,
+				043FC712EEC349C08DD9BF79 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.cc */,
+				177C23F8CA8543A492B87FE8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.h */,
+			);
+			name = activecheck;
+			sourceTree = "<group>";
+		};
+		DD1463B6ACC64810B3B92973 /* checkimpl */ = {
+			isa = PBXGroup;
+			children = (
+				49BC4F87BD5E4D289F71003E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.cc */,
+				947872E4470E439DBA075446 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.h */,
+				FEE29599FD064538AB94BB46 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.cc */,
+				3C6057B8E15F438FB589085B /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.h */,
+				A1E47FF30CD94E08B2F08EC5 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.cc */,
+				A2DFB55BE4CB45D487C7A2D9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.h */,
+				DF5A6427EC5741AAB7C80306 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_url_parser.h */,
+				91BCE650FFB643B5B3A5EC08 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.cc */,
+				046D0F1684D2417DBC895E61 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.h */,
+				0F7E78D8D27D4748A67E9B71 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.cc */,
+				0F65F720B45B41D4967E046E /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.h */,
+				53AE7EF1D9D646E088D29C11 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.cc */,
+				1DE658FDB7C2417CB2B8BE57 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.h */,
+			);
+			name = checkimpl;
+			sourceTree = "<group>";
+		};
+		DF2C3732CA034F26895707B6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CEB9C2E009446A7A5B25BCB /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		EF45A828DF884DB1BF8929E1 = {
+			isa = PBXGroup;
+			children = (
+				02AA12C7EBA54408B8AE3818 /* sdt */,
+				B3A0ECBF73934BE9B28148B3 /* ALL_BUILD */,
+				489909E7C696479A865F7CA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99EE27A96CBD48DBBC7F6A31 /* sdt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347661B79C1948E0853D0E77 /* Build configuration list for PBXNativeTarget "sdt" */;
+			buildPhases = (
+				EE5FAA8BC55E4E758DF6F52D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B47BB79965A54A059C6F8427 /* PBXTargetDependency */,
+			);
+			name = sdt;
+			productName = sdt;
+			productReference = 9FD3F172655B4B73AA1EB3A5 /* sdt */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B583C6923C749F293BE951C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = F03D95242B7E4C8AB0C8DA5D /* Build configuration list for PBXProject "sdt" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				932B7BB3072A4390BA29293B /* Debug */,
+				133296909BCD49E1B6AD6227 /* Release */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = EF45A828DF884DB1BF8929E1;
+			projectDirPath = ../../../sdt;
+			projectRoot = "";
+			targets = (
+				D1F1DE35176D48ECB085E0BC /* ALL_BUILD */,
+				1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */,
+				1C29BDB9D5B445CEADB61655 /* install */,
+				99EE27A96CBD48DBBC7F6A31 /* sdt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CFA81903FAA4C49983A9883 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		61436A9D967641FCA4797699 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		6327A5FA2CF84F25AE8A2878 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		8E6D5DA25E0C4FB497614831 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		DC170B0E3CD54779ABE09953 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F19597B501AB4A10B6D33E5C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE5FAA8BC55E4E758DF6F52D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666FBAB5927A4B4BAEA08BD9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/sdt_logic.cc */,
+				51AD23FCAA50481383AC5B81 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/basechecker.cc */,
+				CD1F4DE4236E477183141423 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/dnschecker.cc */,
+				95370D7673FD41C78B645F24 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/httpchecker.cc */,
+				4198A00E46094B5EA8B49BC8 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/pingchecker.cc */,
+				BEA2E360928A43FA9DFA86EF /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/activecheck/tcpchecker.cc */,
+				14A098A5CDAE4518A3DCB365 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/base_netinfo_query.cc */,
+				8CF09526124B45D9BEF97549 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/dnsquery.cc */,
+				0D58BBFCB7F84271B4EE5D04 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/http_detector.cc */,
+				E344624D6FF54616A9C5DAA9 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/httpquery.cc */,
+				11E826C1722C4FE5B889C2B3 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/pingquery.cc */,
+				1ED4CF61570840DBB220D661 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/checkimpl/tcpquery.cc */,
+				F9E5CD42DCD0414EBBB28086 /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/sdt_core.cc */,
+				7D33C8662AE14B82BDE5C13F /* /Users/john/Documents/workspace/iphone/mars/mars/sdt/src/tools/netchecker_trafficmonitor.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CAE19AEABEE4B7685A2AEA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99EE27A96CBD48DBBC7F6A31 /* sdt */;
+			targetProxy = AB44E310389941E580D2D727 /* PBXContainerItemProxy */;
+		};
+		682052A6B4634D21A3E30E9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = 9B446C2F91A448A9898AE9A2 /* PBXContainerItemProxy */;
+		};
+		B47BB79965A54A059C6F8427 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = 3221C3823D2341F5BD547855 /* PBXContainerItemProxy */;
+		};
+		D54A52814A0147E5941EC4B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F1DE35176D48ECB085E0BC /* ALL_BUILD */;
+			targetProxy = 173D89ED1C34426A88E6F9F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		002946F38D2949148A586561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		14DF372E626E4782AC026E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2C3B303F3FC448D19292CC36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt/build;
+			};
+			name = Release;
+		};
+		7A9875596EEA4EC79B87B20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A13058514A694A93B41655B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A78C833F877D41AA9F06627E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::sdt\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/sdt/.,/Users/john/Documents/workspace/iphone/mars/mars/sdt/src,/Users/john/Documents/workspace/iphone/mars/mars/sdt/tools,/Users/john/Documents/workspace/iphone/mars/mars/sdt/activecheck,/Users/john/Documents/workspace/iphone/mars/mars/sdt/checkimpl,/Users/john/Documents/workspace/iphone/mars/mars/sdt/..,/Users/john/Documents/workspace/iphone/mars/mars/sdt/../..,/Users/john/Documents/workspace/iphone/mars/mars/sdt/../comm,/Users/john/Documents/workspace/iphone/mars/mars/sdt/../../..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math  -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -DNDEBUG     -ffast-math                          ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sdt;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		BB95E238897F41F3AD308981 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DAE58164CBD643FBAAC14CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (armv7,arm64);
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'XLOGGER_TAG=\"mars::sdt\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/john/Documents/workspace/iphone/mars/mars/sdt/.,/Users/john/Documents/workspace/iphone/mars/mars/sdt/src,/Users/john/Documents/workspace/iphone/mars/mars/sdt/tools,/Users/john/Documents/workspace/iphone/mars/mars/sdt/activecheck,/Users/john/Documents/workspace/iphone/mars/mars/sdt/checkimpl,/Users/john/Documents/workspace/iphone/mars/mars/sdt/..,/Users/john/Documents/workspace/iphone/mars/mars/sdt/../..,/Users/john/Documents/workspace/iphone/mars/mars/sdt/../comm,/Users/john/Documents/workspace/iphone/mars/mars/sdt/../../..);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc -miphoneos-version-min=8.0   -fvisibility-inlines-hidden -fobjc-abi-version=2 -fno-objc-arc  -fno-exceptions -std=gnu++14                       -DDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sdt;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E3632CBCBC9B4AEE8ED10342 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "armv7 arm64";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt/build;
+			};
+			name = Debug;
+		};
+		EC96EA83ADD84E8FA30DBC1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B9AECBFA2A74E68824F64DA /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002946F38D2949148A586561 /* Debug */,
+				A13058514A694A93B41655B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		347661B79C1948E0853D0E77 /* Build configuration list for PBXNativeTarget "sdt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE58164CBD643FBAAC14CF1 /* Debug */,
+				A78C833F877D41AA9F06627E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A101F3A9AA0A423D817CBAEF /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DF372E626E4782AC026E54 /* Debug */,
+				BB95E238897F41F3AD308981 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E074EA348A9048D78CB37E48 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A9875596EEA4EC79B87B20E /* Debug */,
+				EC96EA83ADD84E8FA30DBC1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F03D95242B7E4C8AB0C8DA5D /* Build configuration list for PBXProject "sdt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3632CBCBC9B4AEE8ED10342 /* Debug */,
+				2C3B303F3FC448D19292CC36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B583C6923C749F293BE951C /* Project object */;
+}

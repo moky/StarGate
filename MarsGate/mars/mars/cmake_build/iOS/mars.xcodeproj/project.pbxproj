@@ -1,0 +1,3499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D3DF6D9F633E465FB4708246 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				7AB1593FBC484396A7012280 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		1C29BDB9D5B445CEADB61655 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 748EC4F4E2B34603AD0F78BC /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				B5A4F3BB4CE24E088299A084 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				E0E7CDEFFC2E409F83D22ABF /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		D1F1DE35176D48ECB085E0BC /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5D1E5598145845E5A41E8019 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				7AFFD11688B743B88B3E0B02 /* CMake Rules */,
+			);
+			dependencies = (
+				3B7CCE3338D9423984284E69 /* PBXTargetDependency */,
+				0854B297FA414D06AB4ABA13 /* PBXTargetDependency */,
+				C38F8ADD75D4408AA08BB8CC /* PBXTargetDependency */,
+				E3658A63762846B69C45BD2A /* PBXTargetDependency */,
+				5B66E05F62D640BFBC5BC28B /* PBXTargetDependency */,
+				7BBDDB4F134347E89D0BDD78 /* PBXTargetDependency */,
+				9CEFCAA83DA04D39B85A1736 /* PBXTargetDependency */,
+				FDFAA7FF8F0042FEA9B24426 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0209BB98FB48448A9A250B9F /* message_queue.cc in Sources */ = {isa = PBXBuildFile; fileRef = D84D50D0542D48E7A7DDDDDE /* message_queue.cc */; };
+		02B5FEDA6FAD4923941FDCF4 /* signalling_keeper.cc in Sources */ = {isa = PBXBuildFile; fileRef = EE9B1D2FD83B4BB8A3D08391 /* signalling_keeper.cc */; };
+		071D709269494AF39FA75D5E /* httpquery.cc in Sources */ = {isa = PBXBuildFile; fileRef = 33EFB905D7734476B201035E /* httpquery.cc */; };
+		086903FA06334D6A99A0FDED /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = 07A29543B5664C59B719D58F /* adler32.c */; };
+		0BD7AE4FEEC34A68AA0F066A /* lockpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 803A22E9D05D4B17AD6E5313 /* lockpool.cpp */; };
+		0C787D5904654A14880C4F40 /* dns.cc in Sources */ = {isa = PBXBuildFile; fileRef = B6C854CF99744C67918013AE /* dns.cc */; };
+		0C86F7CAFCA247AEBBD4D8FF /* sp_collector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B90F5E2B046E41CBA0B55003 /* sp_collector.cpp */; };
+		0DF2C4CA64FB45D2AA316338 /* date_generators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCFED3AE419345C2BA48C398 /* date_generators.cpp */; };
+		101610E2AB954ED9BEC79EAF /* net_channel_factory.cc in Sources */ = {isa = PBXBuildFile; fileRef = B0051C1C13A74864BD7B4340 /* net_channel_factory.cc */; };
+		118DAFAF3F3A45AEA2DEAE43 /* uECC.c in Sources */ = {isa = PBXBuildFile; fileRef = C0D9FFE12B384A21BC930D00 /* uECC.c */; };
+		14F68E7AD94F4B1E919B7C09 /* http_detector.cc in Sources */ = {isa = PBXBuildFile; fileRef = 54820A30648240E692D01613 /* http_detector.cc */; };
+		159906045D204D4CAA98EBDC /* unix_socket.cc in Sources */ = {isa = PBXBuildFile; fileRef = D29C6B8C182F46EEB59275BB /* unix_socket.cc */; };
+		1599E620DF0C4367A58536CD /* basepacker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 93DCFEDF88EF4D53835E28D8 /* basepacker.cc */; };
+		1A754EF9B25D415B91F48965 /* posix_time_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76A32D5FA0D24F1DB9159E2D /* posix_time_types.cpp */; };
+		1D2E275E199B48E0BB7F4E7D /* httpchecker.cc in Sources */ = {isa = PBXBuildFile; fileRef = A322C546FFF840769F21A8B5 /* httpchecker.cc */; };
+		21D2B66F035040418FE19AF8 /* strutil.cc in Sources */ = {isa = PBXBuildFile; fileRef = BCA33B8283194AB384269842 /* strutil.cc */; };
+		23CAD03EDDF641209E6799A4 /* smart_heartbeat.cc in Sources */ = {isa = PBXBuildFile; fileRef = E4A03C6E26334280B7E52437 /* smart_heartbeat.cc */; };
+		2804AA9906C24E328DA2024C /* tickcount.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9EC23DA7B1D24B8395EA9081 /* tickcount.cc */; };
+		2CD8C8C598B744C2A8A36791 /* socketbreaker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 384578E62C6347E9BEFB9BD9 /* socketbreaker.cc */; };
+		2CF98290067B4823BAAB7D9A /* longlink_identify_checker.cc in Sources */ = {isa = PBXBuildFile; fileRef = A91E391811E44F6683EDC2BE /* longlink_identify_checker.cc */; };
+		2D4B057E32914CFF93C3BBE1 /* nat64_prefix_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = 780B837C88E8473084CF1C82 /* nat64_prefix_util.cc */; };
+		2F39F68F5F1E40FABB596F8B /* tcpserver_fsm.cc in Sources */ = {isa = PBXBuildFile; fileRef = AFDC291ED1564422B502A83F /* tcpserver_fsm.cc */; };
+		3215BB6D921341158E8B545B /* sdt_logic.cc in Sources */ = {isa = PBXBuildFile; fileRef = BB2EC417E7A547CF92A4CD94 /* sdt_logic.cc */; };
+		36F1F80DDEFA4E0888D52637 /* simple_ipport_sort.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0CD34EAC9B824654AD5D275E /* simple_ipport_sort.cc */; };
+		38131F53092F41328E3545B5 /* netinfo_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBBBE54B586A4A579FF8EF88 /* netinfo_util.cc */; };
+		38751F591C10469A8DDEDD02 /* gregorian_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFB96C98E394CB7B2AAA67C /* gregorian_types.cpp */; };
+		3B32498EBD4649A7BB867BFB /* greg_weekday.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE1E5336402B4BB993545927 /* greg_weekday.cpp */; };
+		3CA175D5D4764835B7D9FDE6 /* getaddrinfo_with_timeout.cc in Sources */ = {isa = PBXBuildFile; fileRef = DB4C42B32F1E47C7A7529285 /* getaddrinfo_with_timeout.cc */; };
+		3F0BE17614F1420AAD4091FE /* windows_file_codecvt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 662150D38EF14FCABD1BA146 /* windows_file_codecvt.cpp */; };
+		3F1D4775182C475F8C944EB4 /* ptrbuffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 612EEE21AF034E0F90BEA28F /* ptrbuffer.cc */; };
+		3F47F7BCCEA343F9947C5680 /* tcpserver.cc in Sources */ = {isa = PBXBuildFile; fileRef = A45C9EA83A5B427D944DE9F4 /* tcpserver.cc */; };
+		4255CC5CC9904959A26E6906 /* file_descriptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B2583614384203A38A1835 /* file_descriptor.cpp */; };
+		43762AD2C4D54D51BBFF6543 /* anr.cc in Sources */ = {isa = PBXBuildFile; fileRef = D19F92465388459C8EE86187 /* anr.cc */; };
+		43F6C8D11B2642A88109E69A /* __assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 02AEFA57A24D4E7B849FD6E6 /* __assert.c */; };
+		4861A44720E7441E9C10984B /* memdbg.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA09F54BE343B98F9BEF6D /* memdbg.cc */; };
+		4D03D2C4E0074DE99FB80ED2 /* baseprj.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5A34EEE21C34494EA93F7CD4 /* baseprj.cc */; };
+		4D3D8545EA014855B99055A7 /* coreservice_base.cc in Sources */ = {isa = PBXBuildFile; fileRef = D299E66BBDE647A1B5EA5E48 /* coreservice_base.cc */; };
+		4E5F296DC4C74FB08F9C8504 /* longlink_connect_monitor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3F84DA573A9248E7864A29C2 /* longlink_connect_monitor.cc */; };
+		4F4D9456E33949EEA4D8747E /* dnsquery.cc in Sources */ = {isa = PBXBuildFile; fileRef = ECA42F662A714F4FA2525BFA /* dnsquery.cc */; };
+		525A9C0B6F814425B97657B8 /* objc_timer.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACEA3EDA473C4135A07E8474 /* objc_timer.mm */; };
+		52F26914035B43AA8E226AFA /* pkcs7_padding.c in Sources */ = {isa = PBXBuildFile; fileRef = C6B10B25B5324598A53B78FC /* pkcs7_padding.c */; };
+		531FAC188B6D4F29A4E44681 /* getifaddrs.cc in Sources */ = {isa = PBXBuildFile; fileRef = B64BBE2579CC4B8C8643E493 /* getifaddrs.cc */; };
+		556F5CB19C734329B41F0411 /* task_profile.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90FE7D2FF86549A78468DF9A /* task_profile.cc */; };
+		586586CB4AAD4AE78FEBB52F /* greg_month.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCBEAD0082464A848B01FB52 /* greg_month.cpp */; };
+		5BDA8A91B5C44E8F88EF6F6F /* formater.cc in Sources */ = {isa = PBXBuildFile; fileRef = E7A005D4E8124DB492132483 /* formater.cc */; };
+		5F9D28778F064F17A917DB94 /* tcpclient.cc in Sources */ = {isa = PBXBuildFile; fileRef = DBE978D3A3524A99B262995D /* tcpclient.cc */; };
+		601270D8CEC64C51B4CB5EEC /* dnschecker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5A3902AC9C93489789F58CE5 /* dnschecker.cc */; };
+		612FBF0D0F3D4A96931CCDA8 /* alarm.cc in Sources */ = {isa = PBXBuildFile; fileRef = FDAAAC9B600F4D1AA7CB6EAB /* alarm.cc */; };
+		6353EB9B8CCB43AFAA46113A /* sdt_core.cc in Sources */ = {isa = PBXBuildFile; fileRef = 217C1AC4E32548E48A58D8F7 /* sdt_core.cc */; };
+		64398AD1A8B140419FF7A74D /* codecvt_error_category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE54A50B1F4C87A2B3C989 /* codecvt_error_category.cpp */; };
+		64983016990B4EF990C1CFDE /* longlink_speed_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = D73C815C2ECF44698810B203 /* longlink_speed_test.cc */; };
+		662E5BAC23E349F3A0197203 /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76EFC43FCE17417F8390347F /* path.cpp */; };
+		6E04661014DF4F67B506E64E /* comm_frequency_limit.cc in Sources */ = {isa = PBXBuildFile; fileRef = AE0DA92529C24200B6FDBCDB /* comm_frequency_limit.cc */; };
+		6E39C8372EB348379700E967 /* complexconnect.cc in Sources */ = {isa = PBXBuildFile; fileRef = 70CA1B936DCF410393C9999C /* complexconnect.cc */; };
+		6E91B1582A1846A0953B91E7 /* socketpoll.cc in Sources */ = {isa = PBXBuildFile; fileRef = AE861F7903184233AEEB016E /* socketpoll.cc */; };
+		6ED3E5F310FE4C10A1829D78 /* frequency_limit.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2388266C22C548AD8BA9DC9A /* frequency_limit.cc */; };
+		6F8C63630D694D2387CD0244 /* Reachability.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7479E5482CB1473A9181514B /* Reachability.mm */; };
+		71A7F25C5757493AB139806C /* zombie_task_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4754A9D0D232421CA727D8A3 /* zombie_task_manager.cc */; };
+		739353DB6EB14378A049852F /* netsource_timercheck.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8B81A2BA0899409882291C5A /* netsource_timercheck.cc */; };
+		764C79B380B442E9BE18F04B /* longlink_task_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4436557561554706A51620E2 /* longlink_task_manager.cc */; };
+		7E28E9D483AB4898B1A63501 /* base_netinfo_query.cc in Sources */ = {isa = PBXBuildFile; fileRef = F55F1D4BBFD444469AB4E6F9 /* base_netinfo_query.cc */; };
+		7F723C16A2A24B50A4423B92 /* time_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D20ABE75A65B4329920F2694 /* time_utils.c */; };
+		8126C6573FE34BB29E9922FE /* anti_avalanche.cc in Sources */ = {isa = PBXBuildFile; fileRef = 19CAE0EEF5E54E428A423228 /* anti_avalanche.cc */; };
+		8225A38EE989436480C8E694 /* pingquery.cc in Sources */ = {isa = PBXBuildFile; fileRef = 62B726BF02E248FB97454B2B /* pingquery.cc */; };
+		8420FB6B0C8B40EC842ACF11 /* traffic_statistics.cc in Sources */ = {isa = PBXBuildFile; fileRef = F3CF864EEB9C4E9B9D702F2B /* traffic_statistics.cc */; };
+		84675D8C59AA4165B5FB41F5 /* net_source.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5AE735FA67B54E89B03956D2 /* net_source.cc */; };
+		85D0EB75D4EC4CCAB5C48A23 /* basechecker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8117D6B604404C429F1484EB /* basechecker.cc */; };
+		8987E07010B24B2FBF8CDB6E /* local_routetable.cc in Sources */ = {isa = PBXBuildFile; fileRef = DBFD8BE1FE89445EADF29BB3 /* local_routetable.cc */; };
+		8EAD58DA7BE54A339C9FBD1C /* socket_address.cc in Sources */ = {isa = PBXBuildFile; fileRef = F435692E67AF48C3975954E9 /* socket_address.cc */; };
+		90B9DF118D7E42D5A0B36B93 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = AB9A31AFE7DB45CBAD312861 /* getgateway.c */; };
+		920A2E9B91A84A63AD324BE6 /* ThreadOperationQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E33780DA160479A9D90703A /* ThreadOperationQueue.mm */; };
+		93971C0407A2486595BA36C2 /* loginfo_extract.c in Sources */ = {isa = PBXBuildFile; fileRef = 5ABA93DEBCCD4D87945A5BE3 /* loginfo_extract.c */; };
+		9399EEA9A4BD4C879A151E1D /* local_ipstack.cc in Sources */ = {isa = PBXBuildFile; fileRef = 161CACB86EE64F0B8F005F6A /* local_ipstack.cc */; };
+		95DA0C0413B645A9BFFD60C4 /* udpclient.cc in Sources */ = {isa = PBXBuildFile; fileRef = 231584BBEA7244FAACA75F27 /* udpclient.cc */; };
+		969649FF0742484C9ED1CEFA /* future.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A594903D84084939821EBF39 /* future.cpp */; };
+		9A9E0DBDEAAA46FAA683ED1D /* xloggerbase.c in Sources */ = {isa = PBXBuildFile; fileRef = AFE3BA6535DB475D893F0961 /* xloggerbase.c */; };
+		9C38E0DC278D41AF9A9C7766 /* getdnssvraddrs.cc in Sources */ = {isa = PBXBuildFile; fileRef = FE8C4E25D62947898F146E00 /* getdnssvraddrs.cc */; };
+		9C3DE534EA2947609E01329C /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 814FC990F0824F1994E5DC96 /* tinyxml2.cc */; };
+		9CB823E7FCFE43DF96B64637 /* http.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F50B717444209AC816B91 /* http.cc */; };
+		A182C8A4F03A467A92785181 /* dynamic_timeout.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE6CEECAD34B6BB569CFB3 /* dynamic_timeout.cc */; };
+		A75B71DAAD7D471E9E9FB3CB /* pingchecker.cc in Sources */ = {isa = PBXBuildFile; fileRef = AC2D516F312A451AA5939069 /* pingchecker.cc */; };
+		A7CA551058E7439EB0B4D22F /* tcpquery.cc in Sources */ = {isa = PBXBuildFile; fileRef = FA63CD87AE7B41B6AD4DFD21 /* tcpquery.cc */; };
+		A809CA2B4F9841D3B2F3F231 /* weak_network_logic.cc in Sources */ = {isa = PBXBuildFile; fileRef = 2CA837E26F7748F8B57B72D6 /* weak_network_logic.cc */; };
+		AEB0B6CE05B04584ADFDD5F3 /* longlink.cc in Sources */ = {isa = PBXBuildFile; fileRef = D018C52E0FC14A359AE2EE34 /* longlink.cc */; };
+		B119A1071AFC4D0F98DE20DC /* platform_comm.mm in Sources */ = {isa = PBXBuildFile; fileRef = C290E5E3D6DF4F9F9B615A1D /* platform_comm.mm */; };
+		B2A001BA430C4FD1A4C160F4 /* scope_autoreleasepool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07FF280DBB544E6B8AC6B541 /* scope_autoreleasepool.mm */; };
+		B5AF66E119224DA6B5B6D682 /* stn_logic.cc in Sources */ = {isa = PBXBuildFile; fileRef = 5C0BF71B19D24A1A90C2AABD /* stn_logic.cc */; };
+		B94AD77679194E8E86C9506A /* timing_sync.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9E7C28A2E9264C55875DFA4B /* timing_sync.cc */; };
+		B9CB00790C8E490CBB4E8B47 /* data_protect_attr.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9B73709835EC409D9BA33963 /* data_protect_attr.mm */; };
+		BAB13816947F42FEA506CEA0 /* debugger_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = E500BB025D084F9E989C5ECD /* debugger_utils.c */; };
+		BAE087176E6E456884E40E37 /* baseprjevent.cc in Sources */ = {isa = PBXBuildFile; fileRef = C66F56503ABC4191BABBEC42 /* baseprjevent.cc */; };
+		C5BE2DA5B4E240568CE1D968 /* net_check_logic.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0557650095CC4415A609F557 /* net_check_logic.cc */; };
+		C623D30D1F804A2CBB74A2A1 /* stn.cc in Sources */ = {isa = PBXBuildFile; fileRef = 134C488E907C4472B1C62D2D /* stn.cc */; };
+		C67091512F254873AF81299D /* udpserver.cc in Sources */ = {isa = PBXBuildFile; fileRef = 37FF8D437CDC4874BE9B0C0B /* udpserver.cc */; };
+		C84D111B733748558F22B446 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D503D818DD14F1F96155F09 /* md5.c */; };
+		CAB751C646B2437CB6CB24BE /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D452DD40FBED41409CA3CF3C /* utf8_codecvt_facet.cpp */; };
+		CCC81B64925046FB96A8E5D6 /* sp_debug_hooks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82A647516490402288E9FAC6 /* sp_debug_hooks.cpp */; };
+		CE6C6E7E68074CEDA0ED89AE /* tcpchecker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8B3D3899B69B45BE8FF9F303 /* tcpchecker.cc */; };
+		D0C4FFAD32DD40B3BB9C146B /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845A69BD089F47F3864C057A /* operations.cpp */; };
+		D172CECE378540CFA5A872D8 /* netchecker_trafficmonitor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9DBEC83C5BF94F1891C8DFF7 /* netchecker_trafficmonitor.cc */; };
+		D64E2CAABB9E454A9A0F848D /* getsocktcpinfo.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4725911CB6214062A20A271C /* getsocktcpinfo.cc */; };
+		D68BE98A97A0461DA8B8303F /* log_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 302D6B57D1684AD1BB5172D5 /* log_buffer.cc */; };
+		DC8CE617BEA24B7E892CF24D /* boost_exception.cc in Sources */ = {isa = PBXBuildFile; fileRef = D47CA330759E4CD0B182F46D /* boost_exception.cc */; };
+		DCA56230CDB64A6DAB28A6D3 /* proxy_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = DD6327A0D73B403BA59ED36F /* proxy_test.cc */; };
+		DD9CF134329E4513A08B47A3 /* clone_current_exception_non_intrusive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C52374BC72CA488CA1244747 /* clone_current_exception_non_intrusive.cpp */; };
+		DED20073139C48A789DF947B /* flow_limit.cc in Sources */ = {isa = PBXBuildFile; fileRef = 931013341ED2494BBD29D307 /* flow_limit.cc */; };
+		DF48B94F168E4B168B980F9B /* appender.cc in Sources */ = {isa = PBXBuildFile; fileRef = 452A0462697D43189998A21F /* appender.cc */; };
+		DF5B8D8327024481920BA4E4 /* app_logic.cc in Sources */ = {isa = PBXBuildFile; fileRef = 47C770319EA54A29A710F490 /* app_logic.cc */; };
+		E200488CAB5A40AB920CE5DB /* tcpclient_fsm.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2AACC47175C438995B2D0E6 /* tcpclient_fsm.cc */; };
+		E30F8B68DD2A4454947A6E0E /* path_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5680ADCC4FF749079A2DA572 /* path_traits.cpp */; };
+		E37CB1A3D8984EB187EA4333 /* xlogger_threadinfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = A87DDAF96A00425F81324D58 /* xlogger_threadinfo.mm */; };
+		E551F36B5A6749A68C72EC40 /* mmap_util.cc in Sources */ = {isa = PBXBuildFile; fileRef = E2635BAA54AA41AAB958BBC1 /* mmap_util.cc */; };
+		EB51C9B8501B4AE2A9CDE86F /* singleton.cc in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F1F5BB5CA400AB61EF2BC /* singleton.cc */; };
+		EDCFCF6070404CCC917CB794 /* active_logic.cc in Sources */ = {isa = PBXBuildFile; fileRef = AEDCA9CED5DC4C86813642E5 /* active_logic.cc */; };
+		F067794F47124237A6BC5D51 /* mapped_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F3747C42BAF414BAA642A5C /* mapped_file.cpp */; };
+		F0D84F50D3384F74A66BD0C1 /* shortlink.cc in Sources */ = {isa = PBXBuildFile; fileRef = 467A20904538442EBBFDAE2E /* shortlink.cc */; };
+		F22291C5466A41269C890A7A /* ibase64.cc in Sources */ = {isa = PBXBuildFile; fileRef = 08D09C5C609E4C7982BDF3B9 /* ibase64.cc */; };
+		F3560F43ED1149CA840DD4DC /* socketselect.cc in Sources */ = {isa = PBXBuildFile; fileRef = 13C358241DF94B62B3C3EB43 /* socketselect.cc */; };
+		F36D5326BEFD4EE2BD1CCA2F /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 159DF3170CB740FF8396DE97 /* portability.cpp */; };
+		F660DCCBFA424BD389BA32BB /* block_socket.cc in Sources */ = {isa = PBXBuildFile; fileRef = A9670B26AB474409BD58F032 /* block_socket.cc */; };
+		F69B9F01C57A4B7C93F80ADE /* autobuffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = A1E7F5E514574959A47CDC77 /* autobuffer.cc */; };
+		F7D152BE0B8247CB85B7DBDF /* log_crypt.cc in Sources */ = {isa = PBXBuildFile; fileRef = D18281719E604B97A8F88D83 /* log_crypt.cc */; };
+		F943D109B0A34F3F840EEC2F /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A108512FF5444578D01C1C3 /* error_code.cpp */; };
+		F9544646E5544329BF159DBE /* unique_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A1B2B98588644EC82C63BD9 /* unique_path.cpp */; };
+		F99645669DC04EB1834FA582 /* shortlink_task_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 39737F3B7A054D4F89C11307 /* shortlink_task_manager.cc */; };
+		F9FB94AE5C12427D96A7B800 /* net_core.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8DF7BD46E72142D583603998 /* net_core.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A56356C1B6D4D3BA061E6F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C6D7FF7318491A867FA9D7;
+			remoteInfo = "mars-boost";
+		};
+		84A9F9458F5245BD8260A773 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87896CEC5E51412DB1CA335B;
+			remoteInfo = stn;
+		};
+		9F4326F1A32E4272A8411528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F49C16F385C845BAAB052FFD;
+			remoteInfo = baseevent;
+		};
+		A4D7F5BCE88840ECB28AB511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68E360DCF48B43CFAE2A4D01;
+			remoteInfo = xlog;
+		};
+		D4138B48802E4A0FA1A36845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99EE27A96CBD48DBBC7F6A31;
+			remoteInfo = sdt;
+		};
+		D703A0BF7D5A448B837D2C85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A37BD136BBA41FEA0E6E0B3;
+			remoteInfo = ZERO_CHECK;
+		};
+		E694ECE3916C400FAA1FB8F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 553CEF7F57F049B196B7779E;
+			remoteInfo = comm;
+		};
+		FE065A63A2E445D4A3D97CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1F1DE35176D48ECB085E0BC;
+			remoteInfo = ALL_BUILD;
+		};
+		FE3D3EB689FE41AB93273B48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 359E8573BF294D758B1B938B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3993DC6CA66C4B7FA0E7726D;
+			remoteInfo = app;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B1A1765CC343DEB8D14DCA /* shortlink_interface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = shortlink_interface.h; path = stn/src/shortlink_interface.h; sourceTree = SOURCE_ROOT; };
+		0226C10E82EA4143B15A441A /* tickcount.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tickcount.h; path = comm/tickcount.h; sourceTree = SOURCE_ROOT; };
+		02AEFA57A24D4E7B849FD6E6 /* __assert.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = __assert.c; path = comm/assert/__assert.c; sourceTree = SOURCE_ROOT; };
+		044C6CBBE95F4ED985EC5E19 /* sdt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sdt.h; path = sdt/sdt.h; sourceTree = SOURCE_ROOT; };
+		045AB06AA9654E9CA2D74C18 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = stn/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		04BC51937E8343A587834B09 /* app.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = app.h; path = app/app.h; sourceTree = SOURCE_ROOT; };
+		0557650095CC4415A609F557 /* net_check_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = net_check_logic.cc; path = stn/src/net_check_logic.cc; sourceTree = SOURCE_ROOT; };
+		06852C0E3D024BC9AC2632A6 /* basechecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basechecker.h; path = sdt/src/activecheck/basechecker.h; sourceTree = SOURCE_ROOT; };
+		071535C66C0F45D98A869BED /* callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = callback.h; path = comm/messagequeue/callback.h; sourceTree = SOURCE_ROOT; };
+		07A29543B5664C59B719D58F /* adler32.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adler32.c; path = comm/adler32.c; sourceTree = SOURCE_ROOT; };
+		07FF280DBB544E6B8AC6B541 /* scope_autoreleasepool.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = scope_autoreleasepool.mm; path = comm/objc/scope_autoreleasepool.mm; sourceTree = SOURCE_ROOT; };
+		08D09C5C609E4C7982BDF3B9 /* ibase64.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ibase64.cc; path = comm/crypt/ibase64.cc; sourceTree = SOURCE_ROOT; };
+		0A35572FECCD49789A9C7126 /* tcpserver_fsm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpserver_fsm.h; path = comm/socket/tcpserver_fsm.h; sourceTree = SOURCE_ROOT; };
+		0CD34EAC9B824654AD5D275E /* simple_ipport_sort.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = simple_ipport_sort.cc; path = stn/src/simple_ipport_sort.cc; sourceTree = SOURCE_ROOT; };
+		0D503D818DD14F1F96155F09 /* md5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = md5.c; path = comm/md5.c; sourceTree = SOURCE_ROOT; };
+		134C488E907C4472B1C62D2D /* stn.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stn.cc; path = stn/stn.cc; sourceTree = SOURCE_ROOT; };
+		13C358241DF94B62B3C3EB43 /* socketselect.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketselect.cc; path = comm/unix/socket/socketselect.cc; sourceTree = SOURCE_ROOT; };
+		14B2583614384203A38A1835 /* file_descriptor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = file_descriptor.cpp; path = boost/libs/iostreams/src/file_descriptor.cpp; sourceTree = SOURCE_ROOT; };
+		159DF3170CB740FF8396DE97 /* portability.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = portability.cpp; path = boost/libs/filesystem/src/portability.cpp; sourceTree = SOURCE_ROOT; };
+		161CACB86EE64F0B8F005F6A /* local_ipstack.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = local_ipstack.cc; path = comm/socket/local_ipstack.cc; sourceTree = SOURCE_ROOT; };
+		171A076181F94556AD7D1F7E /* socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = comm/unix/socket/socketbreaker.h; sourceTree = SOURCE_ROOT; };
+		188F0B2EA09B4D6D86F11A12 /* ThreadOperationQueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ThreadOperationQueue.h; path = comm/objc/ThreadOperationQueue.h; sourceTree = SOURCE_ROOT; };
+		19CAE0EEF5E54E428A423228 /* anti_avalanche.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = anti_avalanche.cc; path = stn/src/anti_avalanche.cc; sourceTree = SOURCE_ROOT; };
+		1A103C04E4784A51987B8736 /* frequency_limit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = frequency_limit.h; path = stn/src/frequency_limit.h; sourceTree = SOURCE_ROOT; };
+		1ADE54A50B1F4C87A2B3C989 /* codecvt_error_category.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = codecvt_error_category.cpp; path = boost/libs/filesystem/src/codecvt_error_category.cpp; sourceTree = SOURCE_ROOT; };
+		1D0887398C1C4FDE89ADAAFE /* nat64_prefix_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nat64_prefix_util.h; path = comm/socket/nat64_prefix_util.h; sourceTree = SOURCE_ROOT; };
+		1F4BB4FB7255434AB6BE9B8A /* constants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = constants.h; path = sdt/constants.h; sourceTree = SOURCE_ROOT; };
+		217C1AC4E32548E48A58D8F7 /* sdt_core.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sdt_core.cc; path = sdt/src/sdt_core.cc; sourceTree = SOURCE_ROOT; };
+		231584BBEA7244FAACA75F27 /* udpclient.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = udpclient.cc; path = comm/socket/udpclient.cc; sourceTree = SOURCE_ROOT; };
+		2388266C22C548AD8BA9DC9A /* frequency_limit.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = frequency_limit.cc; path = stn/src/frequency_limit.cc; sourceTree = SOURCE_ROOT; };
+		2407B7352C0C4B08A16CAD9D /* singleton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = singleton.h; path = comm/singleton.h; sourceTree = SOURCE_ROOT; };
+		241363488D914A499C1C844C /* bootrun.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bootrun.h; path = comm/bootrun.h; sourceTree = SOURCE_ROOT; };
+		26033CE6A45E4A45B555D054 /* compiler_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler_util.h; path = stn/compiler_util.h; sourceTree = SOURCE_ROOT; };
+		27068213F4A449C79BB3E365 /* special_ini.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = special_ini.h; path = stn/src/special_ini.h; sourceTree = SOURCE_ROOT; };
+		27FFB8C2992B4E3CA6E838FA /* shortlink_task_manager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = shortlink_task_manager.h; path = stn/src/shortlink_task_manager.h; sourceTree = SOURCE_ROOT; };
+		29181685F142456E968C3F2D /* complexconnect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = complexconnect.h; path = comm/socket/complexconnect.h; sourceTree = SOURCE_ROOT; };
+		29E7A308DAAB46ECBB68060D /* getgateway.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getgateway.h; path = comm/network/getgateway.h; sourceTree = SOURCE_ROOT; };
+		2A6B9CB5FDE348418BE5736F /* pingquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pingquery.h; path = sdt/src/checkimpl/pingquery.h; sourceTree = SOURCE_ROOT; };
+		2CA837E26F7748F8B57B72D6 /* weak_network_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = weak_network_logic.cc; path = stn/src/weak_network_logic.cc; sourceTree = SOURCE_ROOT; };
+		2E33780DA160479A9D90703A /* ThreadOperationQueue.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ThreadOperationQueue.mm; path = comm/objc/ThreadOperationQueue.mm; sourceTree = SOURCE_ROOT; };
+		2E6469A71557478998A63255 /* Reachability.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Reachability.h; path = comm/objc/Reachability.h; sourceTree = SOURCE_ROOT; };
+		2EB070EA94F348ABA4B45A2B /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = comm/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		302D6B57D1684AD1BB5172D5 /* log_buffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log_buffer.cc; path = log/src/log_buffer.cc; sourceTree = SOURCE_ROOT; };
+		30B8FA8D6D69427E8144BF13 /* bootregister.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bootregister.h; path = comm/bootregister.h; sourceTree = SOURCE_ROOT; };
+		326DCDAA7BAE4F1D8F3B9868 /* comm_frequency_limit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = comm_frequency_limit.h; path = comm/comm_frequency_limit.h; sourceTree = SOURCE_ROOT; };
+		33D226F4BDA647AFB5B3E367 /* route.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = route.h; path = comm/objc/route.h; sourceTree = SOURCE_ROOT; };
+		33DC8850999143ABA056AF9A /* local_ipstack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = local_ipstack.h; path = comm/socket/local_ipstack.h; sourceTree = SOURCE_ROOT; };
+		33EFB905D7734476B201035E /* httpquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = httpquery.cc; path = sdt/src/checkimpl/httpquery.cc; sourceTree = SOURCE_ROOT; };
+		34FE965FA4A54B8297940D1D /* anr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = anr.h; path = comm/anr.h; sourceTree = SOURCE_ROOT; };
+		350B09C981F645C79CF6F1BB /* task_profile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = task_profile.h; path = stn/task_profile.h; sourceTree = SOURCE_ROOT; };
+		35265AA00C6A488AA8EC70E2 /* __assert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = __assert.h; path = comm/assert/__assert.h; sourceTree = SOURCE_ROOT; };
+		366EEE4A4F9440F288D7A879 /* udpserver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = udpserver.h; path = comm/socket/udpserver.h; sourceTree = SOURCE_ROOT; };
+		37FF8D437CDC4874BE9B0C0B /* udpserver.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = udpserver.cc; path = comm/socket/udpserver.cc; sourceTree = SOURCE_ROOT; };
+		384578E62C6347E9BEFB9BD9 /* socketbreaker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketbreaker.cc; path = comm/unix/socket/socketbreaker.cc; sourceTree = SOURCE_ROOT; };
+		39737F3B7A054D4F89C11307 /* shortlink_task_manager.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shortlink_task_manager.cc; path = stn/src/shortlink_task_manager.cc; sourceTree = SOURCE_ROOT; };
+		3A108512FF5444578D01C1C3 /* error_code.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = error_code.cpp; path = boost/libs/system/src/error_code.cpp; sourceTree = SOURCE_ROOT; };
+		3A1B2B98588644EC82C63BD9 /* unique_path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unique_path.cpp; path = boost/libs/filesystem/src/unique_path.cpp; sourceTree = SOURCE_ROOT; };
+		3ACC9C136D1F47269D8DB8C0 /* android_xlog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = android_xlog.h; path = comm/xlogger/android_xlog.h; sourceTree = SOURCE_ROOT; };
+		3C43458BAB014083B6114511 /* socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = comm/unix/socket/socketpoll.h; sourceTree = SOURCE_ROOT; };
+		3DAE6CEECAD34B6BB569CFB3 /* dynamic_timeout.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dynamic_timeout.cc; path = stn/src/dynamic_timeout.cc; sourceTree = SOURCE_ROOT; };
+		3F635D4096704E49BBC26AB3 /* stn_logic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stn_logic.h; path = stn/stn_logic.h; sourceTree = SOURCE_ROOT; };
+		3F84DA573A9248E7864A29C2 /* longlink_connect_monitor.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = longlink_connect_monitor.cc; path = stn/src/longlink_connect_monitor.cc; sourceTree = SOURCE_ROOT; };
+		3FAA09F54BE343B98F9BEF6D /* memdbg.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = memdbg.cc; path = comm/memdbg.cc; sourceTree = SOURCE_ROOT; };
+		4436557561554706A51620E2 /* longlink_task_manager.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = longlink_task_manager.cc; path = stn/src/longlink_task_manager.cc; sourceTree = SOURCE_ROOT; };
+		44DB14F0A51B4889B93B4C6E /* unix_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = unix_socket.h; path = comm/socket/unix_socket.h; sourceTree = SOURCE_ROOT; };
+		452A0462697D43189998A21F /* appender.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = appender.cc; path = log/src/appender.cc; sourceTree = SOURCE_ROOT; };
+		467A20904538442EBBFDAE2E /* shortlink.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shortlink.cc; path = stn/src/shortlink.cc; sourceTree = SOURCE_ROOT; };
+		46BDA67848C8457592432380 /* getaddrinfo_with_timeout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getaddrinfo_with_timeout.h; path = comm/network/getaddrinfo_with_timeout.h; sourceTree = SOURCE_ROOT; };
+		4725911CB6214062A20A271C /* getsocktcpinfo.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getsocktcpinfo.cc; path = comm/socket/getsocktcpinfo.cc; sourceTree = SOURCE_ROOT; };
+		4754A9D0D232421CA727D8A3 /* zombie_task_manager.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = zombie_task_manager.cc; path = stn/src/zombie_task_manager.cc; sourceTree = SOURCE_ROOT; };
+		47C770319EA54A29A710F490 /* app_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = app_logic.cc; path = app/app_logic.cc; sourceTree = SOURCE_ROOT; };
+		47DE0A73BA7E44E38EF6E4E6 /* libstn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libstn.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		47E6BAF66E2849D4832987CD /* strutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = strutil.h; path = comm/strutil.h; sourceTree = SOURCE_ROOT; };
+		47F2579C2DAE415988EA8DBD /* ipv6_address_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ipv6_address_utils.h; path = comm/socket/ipv6_address_utils.h; sourceTree = SOURCE_ROOT; };
+		490BBB76A9E147F4B136EFA6 /* scope_autoreleasepool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scope_autoreleasepool.h; path = comm/objc/scope_autoreleasepool.h; sourceTree = SOURCE_ROOT; };
+		4BF4974BAE7249C0B57BD36F /* httpchecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = httpchecker.h; path = sdt/src/activecheck/httpchecker.h; sourceTree = SOURCE_ROOT; };
+		4E9745613F9A4D5B9D7903B8 /* dns_profile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dns_profile.h; path = stn/dns_profile.h; sourceTree = SOURCE_ROOT; };
+		4EE7508062D44799ADA33704 /* dnsquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dnsquery.h; path = sdt/src/checkimpl/dnsquery.h; sourceTree = SOURCE_ROOT; };
+		4EF7F554B11C4808926E8E5C /* sdt_logic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sdt_logic.h; path = sdt/sdt_logic.h; sourceTree = SOURCE_ROOT; };
+		4F183719F8854A7D934E449B /* string_cast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = string_cast.h; path = comm/string_cast.h; sourceTree = SOURCE_ROOT; };
+		4F36751DB56146E68AEFDBBD /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = boost/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4F3747C42BAF414BAA642A5C /* mapped_file.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mapped_file.cpp; path = boost/libs/iostreams/src/mapped_file.cpp; sourceTree = SOURCE_ROOT; };
+		5097DB16C7B64089B0D53718 /* tinyxml2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tinyxml2.h; path = comm/tinyxml2.h; sourceTree = SOURCE_ROOT; };
+		514BA0F1033A474EA434FEE5 /* message_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = message_queue.h; path = comm/messagequeue/message_queue.h; sourceTree = SOURCE_ROOT; };
+		54820A30648240E692D01613 /* http_detector.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = http_detector.cc; path = sdt/src/checkimpl/http_detector.cc; sourceTree = SOURCE_ROOT; };
+		556C2AE2AB1C4463A51E5CB9 /* timing_sync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timing_sync.h; path = stn/src/timing_sync.h; sourceTree = SOURCE_ROOT; };
+		55BE662178364E6AA2D86DAB /* flow_limit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = flow_limit.h; path = stn/src/flow_limit.h; sourceTree = SOURCE_ROOT; };
+		562DC7566EB645C89EA46E69 /* weak_network_logic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = weak_network_logic.h; path = stn/src/weak_network_logic.h; sourceTree = SOURCE_ROOT; };
+		5680ADCC4FF749079A2DA572 /* path_traits.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path_traits.cpp; path = boost/libs/filesystem/src/path_traits.cpp; sourceTree = SOURCE_ROOT; };
+		5A01A06A944248A48650982C /* libmars-boost.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libmars-boost.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A34EEE21C34494EA93F7CD4 /* baseprj.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = baseprj.cc; path = baseevent/src/baseprj.cc; sourceTree = SOURCE_ROOT; };
+		5A3902AC9C93489789F58CE5 /* dnschecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dnschecker.cc; path = sdt/src/activecheck/dnschecker.cc; sourceTree = SOURCE_ROOT; };
+		5ABA93DEBCCD4D87945A5BE3 /* loginfo_extract.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = loginfo_extract.c; path = comm/xlogger/loginfo_extract.c; sourceTree = SOURCE_ROOT; };
+		5AE735FA67B54E89B03956D2 /* net_source.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = net_source.cc; path = stn/src/net_source.cc; sourceTree = SOURCE_ROOT; };
+		5B57735011834E95AE853E79 /* anti_avalanche.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = anti_avalanche.h; path = stn/src/anti_avalanche.h; sourceTree = SOURCE_ROOT; };
+		5B781F9640B8439BAD455593 /* proxy_test.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = proxy_test.h; path = stn/src/proxy_test.h; sourceTree = SOURCE_ROOT; };
+		5C0BF71B19D24A1A90C2AABD /* stn_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stn_logic.cc; path = stn/stn_logic.cc; sourceTree = SOURCE_ROOT; };
+		5CECD28B133B408C96D03ECD /* dynamic_timeout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dynamic_timeout.h; path = stn/src/dynamic_timeout.h; sourceTree = SOURCE_ROOT; };
+		5DCE6343FC4F4FAEADCFEF0B /* zombie_task_manager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zombie_task_manager.h; path = stn/src/zombie_task_manager.h; sourceTree = SOURCE_ROOT; };
+		5F1415DDB0A9465CAC15B263 /* autobuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autobuffer.h; path = comm/autobuffer.h; sourceTree = SOURCE_ROOT; };
+		612EEE21AF034E0F90BEA28F /* ptrbuffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ptrbuffer.cc; path = comm/ptrbuffer.cc; sourceTree = SOURCE_ROOT; };
+		61F8A66577BB439AA2CFD2B6 /* platform_comm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = platform_comm.h; path = comm/platform_comm.h; sourceTree = SOURCE_ROOT; };
+		62B726BF02E248FB97454B2B /* pingquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pingquery.cc; path = sdt/src/checkimpl/pingquery.cc; sourceTree = SOURCE_ROOT; };
+		63C4CD0C16E9403C8E7295AF /* netsource_timercheck.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netsource_timercheck.h; path = stn/src/netsource_timercheck.h; sourceTree = SOURCE_ROOT; };
+		65A47DAD0EDE44A2A6EEF5C3 /* pingchecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pingchecker.h; path = sdt/src/activecheck/pingchecker.h; sourceTree = SOURCE_ROOT; };
+		662150D38EF14FCABD1BA146 /* windows_file_codecvt.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = windows_file_codecvt.cpp; path = boost/libs/filesystem/src/windows_file_codecvt.cpp; sourceTree = SOURCE_ROOT; };
+		689605CE790040F9BA84094B /* memdbg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = memdbg.h; path = comm/memdbg.h; sourceTree = SOURCE_ROOT; };
+		6912EB851DB1479FB2893C9B /* sdt_core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sdt_core.h; path = sdt/src/sdt_core.h; sourceTree = SOURCE_ROOT; };
+		6BE73ED8C4644E1A92A448A6 /* net_source.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = net_source.h; path = stn/src/net_source.h; sourceTree = SOURCE_ROOT; };
+		70CA1B936DCF410393C9999C /* complexconnect.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complexconnect.cc; path = comm/socket/complexconnect.cc; sourceTree = SOURCE_ROOT; };
+		730D9B056D0F4074B4FA7B3F /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = log/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		73DF46FE686740BE97072B9B /* has_member.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = has_member.h; path = comm/has_member.h; sourceTree = SOURCE_ROOT; };
+		745B9B8158B8460AACA7C6E3 /* base_netinfo_query.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base_netinfo_query.h; path = sdt/src/checkimpl/base_netinfo_query.h; sourceTree = SOURCE_ROOT; };
+		7479E5482CB1473A9181514B /* Reachability.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Reachability.mm; path = comm/objc/Reachability.mm; sourceTree = SOURCE_ROOT; };
+		769D9F61914A43C7A77C5F9F /* net_check_logic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = net_check_logic.h; path = stn/src/net_check_logic.h; sourceTree = SOURCE_ROOT; };
+		76A32D5FA0D24F1DB9159E2D /* posix_time_types.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = posix_time_types.cpp; path = boost/libs/date_time/src/posix_time/posix_time_types.cpp; sourceTree = SOURCE_ROOT; };
+		76EFC43FCE17417F8390347F /* path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path.cpp; path = boost/libs/filesystem/src/path.cpp; sourceTree = SOURCE_ROOT; };
+		773A6D74A173417595250992 /* dnschecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dnschecker.h; path = sdt/src/activecheck/dnschecker.h; sourceTree = SOURCE_ROOT; };
+		780B837C88E8473084CF1C82 /* nat64_prefix_util.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = nat64_prefix_util.cc; path = comm/socket/nat64_prefix_util.cc; sourceTree = SOURCE_ROOT; };
+		78DD8EDEB1DC45418D754577 /* shortlink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = shortlink.h; path = stn/src/shortlink.h; sourceTree = SOURCE_ROOT; };
+		7EA5F2202F694473989C8030 /* libsdt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libsdt.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		803A22E9D05D4B17AD6E5313 /* lockpool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lockpool.cpp; path = boost/libs/atomic/src/lockpool.cpp; sourceTree = SOURCE_ROOT; };
+		8041C8AEBD5F490E985FB092 /* http_detector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = http_detector.h; path = sdt/src/checkimpl/http_detector.h; sourceTree = SOURCE_ROOT; };
+		811357AE4BFE42C4915CF617 /* tcpquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpquery.h; path = sdt/src/checkimpl/tcpquery.h; sourceTree = SOURCE_ROOT; };
+		8117D6B604404C429F1484EB /* basechecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = basechecker.cc; path = sdt/src/activecheck/basechecker.cc; sourceTree = SOURCE_ROOT; };
+		812A008CFF26436191C1FD18 /* tcpclient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpclient.h; path = comm/socket/tcpclient.h; sourceTree = SOURCE_ROOT; };
+		814FC990F0824F1994E5DC96 /* tinyxml2.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cc; path = comm/tinyxml2.cc; sourceTree = SOURCE_ROOT; };
+		81B3EC02A7554818B83BCC7E /* uECC_vli.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = uECC_vli.h; path = "log/crypt/micro-ecc-master/uECC_vli.h"; sourceTree = SOURCE_ROOT; };
+		8222A02D2F164B0EBD88DA9C /* getifaddrs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getifaddrs.h; path = comm/network/getifaddrs.h; sourceTree = SOURCE_ROOT; };
+		82A647516490402288E9FAC6 /* sp_debug_hooks.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sp_debug_hooks.cpp; path = boost/libs/smart_ptr/src/sp_debug_hooks.cpp; sourceTree = SOURCE_ROOT; };
+		82CB61434DB34C0DAE8661ED /* block_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_socket.h; path = comm/socket/block_socket.h; sourceTree = SOURCE_ROOT; };
+		845A69BD089F47F3864C057A /* operations.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = operations.cpp; path = boost/libs/filesystem/src/operations.cpp; sourceTree = SOURCE_ROOT; };
+		854F0E09B8A54C46BCF91AA4 /* socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = comm/socket/socketbreaker.h; sourceTree = SOURCE_ROOT; };
+		878703E5B99D4852896E7C05 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		87C7F757A4534F5C9693EE68 /* local_routetable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = local_routetable.h; path = comm/network/local_routetable.h; sourceTree = SOURCE_ROOT; };
+		87F6419E23C1478A889187F5 /* objc_timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = objc_timer.h; path = comm/objc/objc_timer.h; sourceTree = SOURCE_ROOT; };
+		8A3D90E40D2F4DC4A30BB3A4 /* netinfo_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netinfo_util.h; path = comm/network/netinfo_util.h; sourceTree = SOURCE_ROOT; };
+		8B3D3899B69B45BE8FF9F303 /* tcpchecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpchecker.cc; path = sdt/src/activecheck/tcpchecker.cc; sourceTree = SOURCE_ROOT; };
+		8B81A2BA0899409882291C5A /* netsource_timercheck.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = netsource_timercheck.cc; path = stn/src/netsource_timercheck.cc; sourceTree = SOURCE_ROOT; };
+		8BA2DCAA6CF04CA789A18C2F /* service_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = service_base.h; path = comm/corepattern/service_base.h; sourceTree = SOURCE_ROOT; };
+		8BCCD003BFFA4DBA96DB012E /* socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = comm/socket/socketselect.h; sourceTree = SOURCE_ROOT; };
+		8D5F50B717444209AC816B91 /* http.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = http.cc; path = comm/http.cc; sourceTree = SOURCE_ROOT; };
+		8D980F4D7F9C4C5A9BC5801B /* tcpclient_fsm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpclient_fsm.h; path = comm/socket/tcpclient_fsm.h; sourceTree = SOURCE_ROOT; };
+		8DF7BD46E72142D583603998 /* net_core.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = net_core.cc; path = stn/src/net_core.cc; sourceTree = SOURCE_ROOT; };
+		90FE7D2FF86549A78468DF9A /* task_profile.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = task_profile.cc; path = stn/src/task_profile.cc; sourceTree = SOURCE_ROOT; };
+		910E8766326F42FFBAD82807 /* libxlog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libxlog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		931013341ED2494BBD29D307 /* flow_limit.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = flow_limit.cc; path = stn/src/flow_limit.cc; sourceTree = SOURCE_ROOT; };
+		93384895700247B69B80A161 /* xlogger.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xlogger.h; path = comm/xlogger/xlogger.h; sourceTree = SOURCE_ROOT; };
+		93DCFEDF88EF4D53835E28D8 /* basepacker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = basepacker.cc; path = comm/basepacker.cc; sourceTree = SOURCE_ROOT; };
+		93F2609FFC914186BE383780 /* log_crypt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log_crypt.h; path = log/crypt/log_crypt.h; sourceTree = SOURCE_ROOT; };
+		946587BEF32A45FBA8C9F562 /* verinfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = verinfo.h; path = comm/verinfo.h; sourceTree = SOURCE_ROOT; };
+		94BDEE57E7844954B5012A9C /* httpquery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = httpquery.h; path = sdt/src/checkimpl/httpquery.h; sourceTree = SOURCE_ROOT; };
+		95EC956A7C19438DA3458E97 /* tcpchecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpchecker.h; path = sdt/src/activecheck/tcpchecker.h; sourceTree = SOURCE_ROOT; };
+		987DA1AF0533401688828533 /* net_channel_factory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = net_channel_factory.h; path = stn/src/net_channel_factory.h; sourceTree = SOURCE_ROOT; };
+		9955014525964DC784DC0338 /* pkcs7_padding.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pkcs7_padding.h; path = comm/crypt/pkcs7_padding.h; sourceTree = SOURCE_ROOT; };
+		99F8CC4F90914467BD941926 /* preprocessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = preprocessor.h; path = comm/xlogger/preprocessor.h; sourceTree = SOURCE_ROOT; };
+		9A2F1F5BB5CA400AB61EF2BC /* singleton.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = singleton.cc; path = comm/singleton.cc; sourceTree = SOURCE_ROOT; };
+		9A3CB0819959492A8BE93A6C /* netchecker_profile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netchecker_profile.h; path = sdt/netchecker_profile.h; sourceTree = SOURCE_ROOT; };
+		9B73709835EC409D9BA33963 /* data_protect_attr.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = data_protect_attr.mm; path = comm/objc/data_protect_attr.mm; sourceTree = SOURCE_ROOT; };
+		9BD3E2F691014557A1C82D2F /* compiler_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler_util.h; path = app/compiler_util.h; sourceTree = SOURCE_ROOT; };
+		9BE756F7F50F4A96B0FFB9E6 /* xloggerbase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xloggerbase.h; path = comm/xlogger/xloggerbase.h; sourceTree = SOURCE_ROOT; };
+		9D536770A24C414F8029873C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = app/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9DBEC83C5BF94F1891C8DFF7 /* netchecker_trafficmonitor.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = netchecker_trafficmonitor.cc; path = sdt/src/tools/netchecker_trafficmonitor.cc; sourceTree = SOURCE_ROOT; };
+		9E7C28A2E9264C55875DFA4B /* timing_sync.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timing_sync.cc; path = stn/src/timing_sync.cc; sourceTree = SOURCE_ROOT; };
+		9EC23DA7B1D24B8395EA9081 /* tickcount.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tickcount.cc; path = comm/tickcount.cc; sourceTree = SOURCE_ROOT; };
+		A1E7F5E514574959A47CDC77 /* autobuffer.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = autobuffer.cc; path = comm/autobuffer.cc; sourceTree = SOURCE_ROOT; };
+		A2D69B5BDFE547ABA9276361 /* ptrbuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ptrbuffer.h; path = comm/ptrbuffer.h; sourceTree = SOURCE_ROOT; };
+		A322C546FFF840769F21A8B5 /* httpchecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = httpchecker.cc; path = sdt/src/activecheck/httpchecker.cc; sourceTree = SOURCE_ROOT; };
+		A45C9EA83A5B427D944DE9F4 /* tcpserver.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpserver.cc; path = comm/socket/tcpserver.cc; sourceTree = SOURCE_ROOT; };
+		A56A112DE54B47F3A9733CA1 /* alarm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = alarm.h; path = comm/alarm.h; sourceTree = SOURCE_ROOT; };
+		A594903D84084939821EBF39 /* future.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = future.cpp; path = boost/libs/thread/src/future.cpp; sourceTree = SOURCE_ROOT; };
+		A77862F551F24B0692A3997A /* move_wrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = move_wrapper.h; path = comm/move_wrapper.h; sourceTree = SOURCE_ROOT; };
+		A805BDE4CFD247FE873281BF /* app_logic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = app_logic.h; path = app/app_logic.h; sourceTree = SOURCE_ROOT; };
+		A87DDAF96A00425F81324D58 /* xlogger_threadinfo.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = xlogger_threadinfo.mm; path = comm/objc/xlogger_threadinfo.mm; sourceTree = SOURCE_ROOT; };
+		A91E391811E44F6683EDC2BE /* longlink_identify_checker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = longlink_identify_checker.cc; path = stn/src/longlink_identify_checker.cc; sourceTree = SOURCE_ROOT; };
+		A9670B26AB474409BD58F032 /* block_socket.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_socket.cc; path = comm/socket/block_socket.cc; sourceTree = SOURCE_ROOT; };
+		A99E6370AE684555BD9DB4B5 /* socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = comm/socket/socketpoll.h; sourceTree = SOURCE_ROOT; };
+		AAC24FBC78114BE08722EDB9 /* getdnssvraddrs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getdnssvraddrs.h; path = comm/network/getdnssvraddrs.h; sourceTree = SOURCE_ROOT; };
+		AB9A31AFE7DB45CBAD312861 /* getgateway.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = getgateway.c; path = comm/network/getgateway.c; sourceTree = SOURCE_ROOT; };
+		AC2D516F312A451AA5939069 /* pingchecker.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = pingchecker.cc; path = sdt/src/activecheck/pingchecker.cc; sourceTree = SOURCE_ROOT; };
+		ACEA3EDA473C4135A07E8474 /* objc_timer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = objc_timer.mm; path = comm/objc/objc_timer.mm; sourceTree = SOURCE_ROOT; };
+		ADBE2D0DC15C4CFBBE3F4E27 /* libbaseevent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libbaseevent.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE0DA92529C24200B6FDBCDB /* comm_frequency_limit.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = comm_frequency_limit.cc; path = comm/comm_frequency_limit.cc; sourceTree = SOURCE_ROOT; };
+		AE861F7903184233AEEB016E /* socketpoll.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketpoll.cc; path = comm/unix/socket/socketpoll.cc; sourceTree = SOURCE_ROOT; };
+		AEA1817C9F3F404FBD099662 /* tcpserver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcpserver.h; path = comm/socket/tcpserver.h; sourceTree = SOURCE_ROOT; };
+		AEDCA9CED5DC4C86813642E5 /* active_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = active_logic.cc; path = baseevent/src/active_logic.cc; sourceTree = SOURCE_ROOT; };
+		AFDC291ED1564422B502A83F /* tcpserver_fsm.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpserver_fsm.cc; path = comm/socket/tcpserver_fsm.cc; sourceTree = SOURCE_ROOT; };
+		AFE3BA6535DB475D893F0961 /* xloggerbase.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xloggerbase.c; path = comm/xlogger/xloggerbase.c; sourceTree = SOURCE_ROOT; };
+		B0051C1C13A74864BD7B4340 /* net_channel_factory.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = net_channel_factory.cc; path = stn/src/net_channel_factory.cc; sourceTree = SOURCE_ROOT; };
+		B267CCCE2C1E489985722C86 /* scope_recursion_limit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scope_recursion_limit.h; path = comm/scope_recursion_limit.h; sourceTree = SOURCE_ROOT; };
+		B41F90BCE9F44A63BD0083AE /* config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = config.h; path = stn/config.h; sourceTree = SOURCE_ROOT; };
+		B6119B05312A4035B894F201 /* compiler_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler_util.h; path = sdt/compiler_util.h; sourceTree = SOURCE_ROOT; };
+		B64BBE2579CC4B8C8643E493 /* getifaddrs.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getifaddrs.cc; path = comm/network/getifaddrs.cc; sourceTree = SOURCE_ROOT; };
+		B6C854CF99744C67918013AE /* dns.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dns.cc; path = comm/dns/dns.cc; sourceTree = SOURCE_ROOT; };
+		B79CB031B4054D11A4CCF25C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = baseevent/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B8F1DCB35C1B46D0BDA18726 /* udpclient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = udpclient.h; path = comm/socket/udpclient.h; sourceTree = SOURCE_ROOT; };
+		B90F5E2B046E41CBA0B55003 /* sp_collector.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sp_collector.cpp; path = boost/libs/smart_ptr/src/sp_collector.cpp; sourceTree = SOURCE_ROOT; };
+		B9500C841BE445998BE032D2 /* longlink_speed_test.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = longlink_speed_test.h; path = stn/src/longlink_speed_test.h; sourceTree = SOURCE_ROOT; };
+		BA8EE7A90BCD4BC8AFE0331F /* traffic_statistics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = traffic_statistics.h; path = app/src/traffic_statistics.h; sourceTree = SOURCE_ROOT; };
+		BB2EC417E7A547CF92A4CD94 /* sdt_logic.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sdt_logic.cc; path = sdt/sdt_logic.cc; sourceTree = SOURCE_ROOT; };
+		BCA33B8283194AB384269842 /* strutil.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = strutil.cc; path = comm/strutil.cc; sourceTree = SOURCE_ROOT; };
+		BE45102E0DD44F5EB18EF718 /* coreservice_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = coreservice_base.h; path = comm/corepattern/coreservice_base.h; sourceTree = SOURCE_ROOT; };
+		BF4F85871E514116830C339E /* socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = comm/unix/socket/socketselect.h; sourceTree = SOURCE_ROOT; };
+		BF8DC31A1A5148908A9B9207 /* compiler_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler_util.h; path = comm/compiler_util.h; sourceTree = SOURCE_ROOT; };
+		C073A9D512084A9F9B98B0A2 /* signalling_keeper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signalling_keeper.h; path = stn/src/signalling_keeper.h; sourceTree = SOURCE_ROOT; };
+		C0D9FFE12B384A21BC930D00 /* uECC.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uECC.c; path = "log/crypt/micro-ecc-master/uECC.c"; sourceTree = SOURCE_ROOT; };
+		C290E5E3D6DF4F9F9B615A1D /* platform_comm.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = platform_comm.mm; path = comm/objc/platform_comm.mm; sourceTree = SOURCE_ROOT; };
+		C52374BC72CA488CA1244747 /* clone_current_exception_non_intrusive.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = clone_current_exception_non_intrusive.cpp; path = boost/libs/exception/src/clone_current_exception_non_intrusive.cpp; sourceTree = SOURCE_ROOT; };
+		C66F56503ABC4191BABBEC42 /* baseprjevent.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = baseprjevent.cc; path = baseevent/src/baseprjevent.cc; sourceTree = SOURCE_ROOT; };
+		C6B10B25B5324598A53B78FC /* pkcs7_padding.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pkcs7_padding.c; path = comm/crypt/pkcs7_padding.c; sourceTree = SOURCE_ROOT; };
+		C6C022794C0E40508FD51D53 /* simple_ipport_sort.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = simple_ipport_sort.h; path = stn/src/simple_ipport_sort.h; sourceTree = SOURCE_ROOT; };
+		C6EC965ABCD84D4E8AFD1C76 /* stn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stn.h; path = stn/stn.h; sourceTree = SOURCE_ROOT; };
+		C6FACC75E8D84181981B4060 /* ibase64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ibase64.h; path = comm/crypt/ibase64.h; sourceTree = SOURCE_ROOT; };
+		C7CA757AC5AC442CA50A67B2 /* http_url_parser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = http_url_parser.h; path = sdt/src/checkimpl/http_url_parser.h; sourceTree = SOURCE_ROOT; };
+		C921E33BB2D142A49C7BB0DA /* uECC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = uECC.h; path = "log/crypt/micro-ecc-master/uECC.h"; sourceTree = SOURCE_ROOT; };
+		CC19A616B98D47A183353ADC /* log_buffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log_buffer.h; path = log/src/log_buffer.h; sourceTree = SOURCE_ROOT; };
+		CCF3955D9D5140599A114A44 /* types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = types.h; path = "log/crypt/micro-ecc-master/types.h"; sourceTree = SOURCE_ROOT; };
+		CD030082D1C643E785F6B4FA /* libcomm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcomm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D018C52E0FC14A359AE2EE34 /* longlink.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = longlink.cc; path = stn/src/longlink.cc; sourceTree = SOURCE_ROOT; };
+		D084018DB3504EC4816BE973 /* loginfo_extract.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = loginfo_extract.h; path = comm/xlogger/loginfo_extract.h; sourceTree = SOURCE_ROOT; };
+		D18281719E604B97A8F88D83 /* log_crypt.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log_crypt.cc; path = log/crypt/log_crypt.cc; sourceTree = SOURCE_ROOT; };
+		D18FDB9DE735474BA0AF9D2D /* ini.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ini.h; path = comm/ini.h; sourceTree = SOURCE_ROOT; };
+		D19F92465388459C8EE86187 /* anr.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = anr.cc; path = comm/anr.cc; sourceTree = SOURCE_ROOT; };
+		D1C559AAC49749C2A2A344D2 /* marcotoolkit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = marcotoolkit.h; path = comm/marcotoolkit.h; sourceTree = SOURCE_ROOT; };
+		D20ABE75A65B4329920F2694 /* time_utils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = time_utils.c; path = comm/time_utils.c; sourceTree = SOURCE_ROOT; };
+		D299E66BBDE647A1B5EA5E48 /* coreservice_base.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = coreservice_base.cc; path = comm/corepattern/coreservice_base.cc; sourceTree = SOURCE_ROOT; };
+		D29C6B8C182F46EEB59275BB /* unix_socket.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unix_socket.cc; path = comm/socket/unix_socket.cc; sourceTree = SOURCE_ROOT; };
+		D2AACC47175C438995B2D0E6 /* tcpclient_fsm.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpclient_fsm.cc; path = comm/socket/tcpclient_fsm.cc; sourceTree = SOURCE_ROOT; };
+		D452DD40FBED41409CA3CF3C /* utf8_codecvt_facet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = utf8_codecvt_facet.cpp; path = boost/libs/filesystem/src/utf8_codecvt_facet.cpp; sourceTree = SOURCE_ROOT; };
+		D47CA330759E4CD0B182F46D /* boost_exception.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = boost_exception.cc; path = comm/boost_exception.cc; sourceTree = SOURCE_ROOT; };
+		D73C815C2ECF44698810B203 /* longlink_speed_test.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = longlink_speed_test.cc; path = stn/src/longlink_speed_test.cc; sourceTree = SOURCE_ROOT; };
+		D83A50A172FE4697BDEE8FDD /* smart_heartbeat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = smart_heartbeat.h; path = stn/src/smart_heartbeat.h; sourceTree = SOURCE_ROOT; };
+		D84D50D0542D48E7A7DDDDDE /* message_queue.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = message_queue.cc; path = comm/messagequeue/message_queue.cc; sourceTree = SOURCE_ROOT; };
+		D86C3492FEC2460FA7078C24 /* longlink_connect_monitor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = longlink_connect_monitor.h; path = stn/src/longlink_connect_monitor.h; sourceTree = SOURCE_ROOT; };
+		D9E36B1078724AFB921E45D4 /* libapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libapp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB01F253945B491995C94E92 /* getsocktcpinfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = getsocktcpinfo.h; path = comm/socket/getsocktcpinfo.h; sourceTree = SOURCE_ROOT; };
+		DB4C42B32F1E47C7A7529285 /* getaddrinfo_with_timeout.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getaddrinfo_with_timeout.cc; path = comm/network/getaddrinfo_with_timeout.cc; sourceTree = SOURCE_ROOT; };
+		DBA2DAD84E45443DBC033B3C /* tcp_fsm_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tcp_fsm_handler.h; path = comm/socket/tcp_fsm_handler.h; sourceTree = SOURCE_ROOT; };
+		DBE978D3A3524A99B262995D /* tcpclient.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpclient.cc; path = comm/socket/tcpclient.cc; sourceTree = SOURCE_ROOT; };
+		DBFD8BE1FE89445EADF29BB3 /* local_routetable.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = local_routetable.cc; path = comm/network/local_routetable.cc; sourceTree = SOURCE_ROOT; };
+		DCBEAD0082464A848B01FB52 /* greg_month.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = greg_month.cpp; path = boost/libs/date_time/src/gregorian/greg_month.cpp; sourceTree = SOURCE_ROOT; };
+		DCC5BEDFEFC24AB9A1DC1E96 /* http.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = http.h; path = comm/http.h; sourceTree = SOURCE_ROOT; };
+		DD2AB54A200542C89C8EE517 /* mmap_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mmap_util.h; path = comm/mmap_util.h; sourceTree = SOURCE_ROOT; };
+		DD6327A0D73B403BA59ED36F /* proxy_test.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = proxy_test.cc; path = stn/src/proxy_test.cc; sourceTree = SOURCE_ROOT; };
+		DE1E5336402B4BB993545927 /* greg_weekday.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = greg_weekday.cpp; path = boost/libs/date_time/src/gregorian/greg_weekday.cpp; sourceTree = SOURCE_ROOT; };
+		DF0C25E468774C558DEF4C2F /* basepacker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basepacker.h; path = comm/basepacker.h; sourceTree = SOURCE_ROOT; };
+		E0979A44AB3247498275D4E4 /* socket_address.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_address.h; path = comm/socket/socket_address.h; sourceTree = SOURCE_ROOT; };
+		E1BBC10135BD4BC7B8C844F7 /* longlink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = longlink.h; path = stn/src/longlink.h; sourceTree = SOURCE_ROOT; };
+		E2635BAA54AA41AAB958BBC1 /* mmap_util.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mmap_util.cc; path = comm/mmap_util.cc; sourceTree = SOURCE_ROOT; };
+		E334A657846740F18E915A19 /* net_core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = net_core.h; path = stn/src/net_core.h; sourceTree = SOURCE_ROOT; };
+		E4051DB3BF854E12A6BD1E06 /* adler32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = adler32.h; path = comm/adler32.h; sourceTree = SOURCE_ROOT; };
+		E4A03C6E26334280B7E52437 /* smart_heartbeat.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = smart_heartbeat.cc; path = stn/src/smart_heartbeat.cc; sourceTree = SOURCE_ROOT; };
+		E500BB025D084F9E989C5ECD /* debugger_utils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = debugger_utils.c; path = comm/debugger/debugger_utils.c; sourceTree = SOURCE_ROOT; };
+		E54786DCE89D4A798B54FB33 /* comm_data.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = comm_data.h; path = comm/comm_data.h; sourceTree = SOURCE_ROOT; };
+		E741141EFEDF4ED39AD11600 /* projdef.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = projdef.h; path = comm/projdef.h; sourceTree = SOURCE_ROOT; };
+		E797F7D9A66E4FAFADE1022D /* longlink_identify_checker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = longlink_identify_checker.h; path = stn/src/longlink_identify_checker.h; sourceTree = SOURCE_ROOT; };
+		E7A005D4E8124DB492132483 /* formater.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = formater.cc; path = log/src/formater.cc; sourceTree = SOURCE_ROOT; };
+		E8036C379AAE4D48844D1B7E /* md5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md5.h; path = comm/md5.h; sourceTree = SOURCE_ROOT; };
+		E825B1FF07794A2BAEE9603D /* netchecker_trafficmonitor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = netchecker_trafficmonitor.h; path = sdt/src/tools/netchecker_trafficmonitor.h; sourceTree = SOURCE_ROOT; };
+		E87ACD05073547AE827DA3D9 /* dns.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = dns.h; path = comm/dns/dns.h; sourceTree = SOURCE_ROOT; };
+		EAAE7D642BD64D77B83D9F17 /* time_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time_utils.h; path = comm/time_utils.h; sourceTree = SOURCE_ROOT; };
+		EBBBE54B586A4A579FF8EF88 /* netinfo_util.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = netinfo_util.cc; path = comm/network/netinfo_util.cc; sourceTree = SOURCE_ROOT; };
+		ECA42F662A714F4FA2525BFA /* dnsquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = dnsquery.cc; path = sdt/src/checkimpl/dnsquery.cc; sourceTree = SOURCE_ROOT; };
+		EDFB96C98E394CB7B2AAA67C /* gregorian_types.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gregorian_types.cpp; path = boost/libs/date_time/src/gregorian/gregorian_types.cpp; sourceTree = SOURCE_ROOT; };
+		EE9B1D2FD83B4BB8A3D08391 /* signalling_keeper.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = signalling_keeper.cc; path = stn/src/signalling_keeper.cc; sourceTree = SOURCE_ROOT; };
+		F3CF864EEB9C4E9B9D702F2B /* traffic_statistics.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = traffic_statistics.cc; path = app/src/traffic_statistics.cc; sourceTree = SOURCE_ROOT; };
+		F435692E67AF48C3975954E9 /* socket_address.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socket_address.cc; path = comm/socket/socket_address.cc; sourceTree = SOURCE_ROOT; };
+		F55F1D4BBFD444469AB4E6F9 /* base_netinfo_query.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base_netinfo_query.cc; path = sdt/src/checkimpl/base_netinfo_query.cc; sourceTree = SOURCE_ROOT; };
+		F5F6C5B18F684F08B352510B /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = sdt/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FA63CD87AE7B41B6AD4DFD21 /* tcpquery.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tcpquery.cc; path = sdt/src/checkimpl/tcpquery.cc; sourceTree = SOURCE_ROOT; };
+		FAC50A5D84C14140BC8DB982 /* ip_icmp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ip_icmp.h; path = comm/objc/ip_icmp.h; sourceTree = SOURCE_ROOT; };
+		FC175A56CE004542BAA294E6 /* data_protect_attr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = data_protect_attr.h; path = comm/objc/data_protect_attr.h; sourceTree = SOURCE_ROOT; };
+		FCFED3AE419345C2BA48C398 /* date_generators.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = date_generators.cpp; path = boost/libs/date_time/src/gregorian/date_generators.cpp; sourceTree = SOURCE_ROOT; };
+		FDAAAC9B600F4D1AA7CB6EAB /* alarm.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = alarm.cc; path = comm/alarm.cc; sourceTree = SOURCE_ROOT; };
+		FE8C4E25D62947898F146E00 /* getdnssvraddrs.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = getdnssvraddrs.cc; path = comm/network/getdnssvraddrs.cc; sourceTree = SOURCE_ROOT; };
+		FF7BD22E1F8D42C5B3491F24 /* longlink_task_manager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = longlink_task_manager.h; path = stn/src/longlink_task_manager.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05DFF50C8AEE49ADB9B50C7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9E36B1078724AFB921E45D4 /* libapp.a */,
+				ADBE2D0DC15C4CFBBE3F4E27 /* libbaseevent.a */,
+				CD030082D1C643E785F6B4FA /* libcomm.a */,
+				5A01A06A944248A48650982C /* libmars-boost.a */,
+				7EA5F2202F694473989C8030 /* libsdt.a */,
+				47DE0A73BA7E44E38EF6E4E6 /* libstn.a */,
+				910E8766326F42FFBAD82807 /* libxlog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FBC45C4436F47FD9DB82608 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				26033CE6A45E4A45B555D054 /* compiler_util.h */,
+				B41F90BCE9F44A63BD0083AE /* config.h */,
+				4E9745613F9A4D5B9D7903B8 /* dns_profile.h */,
+				C6EC965ABCD84D4E8AFD1C76 /* stn.h */,
+				3F635D4096704E49BBC26AB3 /* stn_logic.h */,
+				350B09C981F645C79CF6F1BB /* task_profile.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		11BB254D29154E38B56B3347 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				E0378B2ACAFD4574989A42FB /* Header Files */,
+				AA307A7463F449CCA2449DA6 /* Source Files */,
+				A1B8D618BFC74322AD47BC00 /* src */,
+				9D536770A24C414F8029873C /* CMakeLists.txt */,
+			);
+			name = app;
+			sourceTree = "<group>";
+		};
+		1671DEA45FC1468093C7CC40 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		1BE1DB0F17E04E0BB65BDA79 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				384578E62C6347E9BEFB9BD9 /* socketbreaker.cc */,
+				171A076181F94556AD7D1F7E /* socketbreaker.h */,
+				AE861F7903184233AEEB016E /* socketpoll.cc */,
+				3C43458BAB014083B6114511 /* socketpoll.h */,
+				13C358241DF94B62B3C3EB43 /* socketselect.cc */,
+				BF4F85871E514116830C339E /* socketselect.h */,
+			);
+			name = socket;
+			sourceTree = "<group>";
+		};
+		299C5C78915F4374B75AE9F2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				803A22E9D05D4B17AD6E5313 /* lockpool.cpp */,
+				FCFED3AE419345C2BA48C398 /* date_generators.cpp */,
+				DCBEAD0082464A848B01FB52 /* greg_month.cpp */,
+				DE1E5336402B4BB993545927 /* greg_weekday.cpp */,
+				EDFB96C98E394CB7B2AAA67C /* gregorian_types.cpp */,
+				76A32D5FA0D24F1DB9159E2D /* posix_time_types.cpp */,
+				C52374BC72CA488CA1244747 /* clone_current_exception_non_intrusive.cpp */,
+				1ADE54A50B1F4C87A2B3C989 /* codecvt_error_category.cpp */,
+				845A69BD089F47F3864C057A /* operations.cpp */,
+				76EFC43FCE17417F8390347F /* path.cpp */,
+				5680ADCC4FF749079A2DA572 /* path_traits.cpp */,
+				159DF3170CB740FF8396DE97 /* portability.cpp */,
+				3A1B2B98588644EC82C63BD9 /* unique_path.cpp */,
+				D452DD40FBED41409CA3CF3C /* utf8_codecvt_facet.cpp */,
+				662150D38EF14FCABD1BA146 /* windows_file_codecvt.cpp */,
+				14B2583614384203A38A1835 /* file_descriptor.cpp */,
+				4F3747C42BAF414BAA642A5C /* mapped_file.cpp */,
+				B90F5E2B046E41CBA0B55003 /* sp_collector.cpp */,
+				82A647516490402288E9FAC6 /* sp_debug_hooks.cpp */,
+				3A108512FF5444578D01C1C3 /* error_code.cpp */,
+				A594903D84084939821EBF39 /* future.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		403F0144A7814BDEA1DD5B74 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6119B05312A4035B894F201 /* compiler_util.h */,
+				1F4BB4FB7255434AB6BE9B8A /* constants.h */,
+				9A3CB0819959492A8BE93A6C /* netchecker_profile.h */,
+				044C6CBBE95F4ED985EC5E19 /* sdt.h */,
+				4EF7F554B11C4808926E8E5C /* sdt_logic.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		41843F59B6CA4BC7986BD052 /* micro-ecc-master */ = {
+			isa = PBXGroup;
+			children = (
+				CCF3955D9D5140599A114A44 /* types.h */,
+				C0D9FFE12B384A21BC930D00 /* uECC.c */,
+				C921E33BB2D142A49C7BB0DA /* uECC.h */,
+				81B3EC02A7554818B83BCC7E /* uECC_vli.h */,
+			);
+			name = "micro-ecc-master";
+			sourceTree = "<group>";
+		};
+		42311AC093914464BAC241AF /* messagequeue */ = {
+			isa = PBXGroup;
+			children = (
+				071535C66C0F45D98A869BED /* callback.h */,
+				D84D50D0542D48E7A7DDDDDE /* message_queue.cc */,
+				514BA0F1033A474EA434FEE5 /* message_queue.h */,
+			);
+			name = messagequeue;
+			sourceTree = "<group>";
+		};
+		4DE8D4C7C684418983E9CE1F /* unix */ = {
+			isa = PBXGroup;
+			children = (
+				1BE1DB0F17E04E0BB65BDA79 /* socket */,
+			);
+			name = unix;
+			sourceTree = "<group>";
+		};
+		58D0B569709F46AB8C79BBE0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				452A0462697D43189998A21F /* appender.cc */,
+				E7A005D4E8124DB492132483 /* formater.cc */,
+				302D6B57D1684AD1BB5172D5 /* log_buffer.cc */,
+				CC19A616B98D47A183353ADC /* log_buffer.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		5968153AED0C4D8DA0F35AD9 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				9DBEC83C5BF94F1891C8DFF7 /* netchecker_trafficmonitor.cc */,
+				E825B1FF07794A2BAEE9603D /* netchecker_trafficmonitor.h */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		6271D1A58CF842B48367A0D3 /* xlog */ = {
+			isa = PBXGroup;
+			children = (
+				58D0B569709F46AB8C79BBE0 /* src */,
+				93C37E2A595A4BBB9F40BA35 /* crypt */,
+				730D9B056D0F4074B4FA7B3F /* CMakeLists.txt */,
+			);
+			name = xlog;
+			sourceTree = "<group>";
+		};
+		717109D49A814F76ABFDAE48 /* xlogger */ = {
+			isa = PBXGroup;
+			children = (
+				3ACC9C136D1F47269D8DB8C0 /* android_xlog.h */,
+				5ABA93DEBCCD4D87945A5BE3 /* loginfo_extract.c */,
+				D084018DB3504EC4816BE973 /* loginfo_extract.h */,
+				99F8CC4F90914467BD941926 /* preprocessor.h */,
+				93384895700247B69B80A161 /* xlogger.h */,
+				AFE3BA6535DB475D893F0961 /* xloggerbase.c */,
+				9BE756F7F50F4A96B0FFB9E6 /* xloggerbase.h */,
+			);
+			name = xlogger;
+			sourceTree = "<group>";
+		};
+		72243564B21D481DA7DC7F69 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				1671DEA45FC1468093C7CC40 /* CMake Rules */,
+				878703E5B99D4852896E7C05 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		726B3D3783BF462E92ED9E19 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4051DB3BF854E12A6BD1E06 /* adler32.h */,
+				A56A112DE54B47F3A9733CA1 /* alarm.h */,
+				34FE965FA4A54B8297940D1D /* anr.h */,
+				5F1415DDB0A9465CAC15B263 /* autobuffer.h */,
+				DF0C25E468774C558DEF4C2F /* basepacker.h */,
+				30B8FA8D6D69427E8144BF13 /* bootregister.h */,
+				241363488D914A499C1C844C /* bootrun.h */,
+				E54786DCE89D4A798B54FB33 /* comm_data.h */,
+				326DCDAA7BAE4F1D8F3B9868 /* comm_frequency_limit.h */,
+				BF8DC31A1A5148908A9B9207 /* compiler_util.h */,
+				73DF46FE686740BE97072B9B /* has_member.h */,
+				DCC5BEDFEFC24AB9A1DC1E96 /* http.h */,
+				D18FDB9DE735474BA0AF9D2D /* ini.h */,
+				D1C559AAC49749C2A2A344D2 /* marcotoolkit.h */,
+				E8036C379AAE4D48844D1B7E /* md5.h */,
+				689605CE790040F9BA84094B /* memdbg.h */,
+				DD2AB54A200542C89C8EE517 /* mmap_util.h */,
+				A77862F551F24B0692A3997A /* move_wrapper.h */,
+				61F8A66577BB439AA2CFD2B6 /* platform_comm.h */,
+				E741141EFEDF4ED39AD11600 /* projdef.h */,
+				A2D69B5BDFE547ABA9276361 /* ptrbuffer.h */,
+				B267CCCE2C1E489985722C86 /* scope_recursion_limit.h */,
+				2407B7352C0C4B08A16CAD9D /* singleton.h */,
+				4F183719F8854A7D934E449B /* string_cast.h */,
+				47E6BAF66E2849D4832987CD /* strutil.h */,
+				0226C10E82EA4143B15A441A /* tickcount.h */,
+				EAAE7D642BD64D77B83D9F17 /* time_utils.h */,
+				5097DB16C7B64089B0D53718 /* tinyxml2.h */,
+				946587BEF32A45FBA8C9F562 /* verinfo.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		74DDB97154454261AA19813D /* assert */ = {
+			isa = PBXGroup;
+			children = (
+				02AEFA57A24D4E7B849FD6E6 /* __assert.c */,
+				35265AA00C6A488AA8EC70E2 /* __assert.h */,
+			);
+			name = assert;
+			sourceTree = "<group>";
+		};
+		8BF6EED738444572809042C6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D4CA9C7376BF498E9881C4EB /* activecheck */,
+				D7CE74FEA123414E8AE18CA0 /* checkimpl */,
+				5968153AED0C4D8DA0F35AD9 /* tools */,
+				217C1AC4E32548E48A58D8F7 /* sdt_core.cc */,
+				6912EB851DB1479FB2893C9B /* sdt_core.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		8EC68FE01D2049FBBC173FF6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				07A29543B5664C59B719D58F /* adler32.c */,
+				FDAAAC9B600F4D1AA7CB6EAB /* alarm.cc */,
+				D19F92465388459C8EE86187 /* anr.cc */,
+				A1E7F5E514574959A47CDC77 /* autobuffer.cc */,
+				93DCFEDF88EF4D53835E28D8 /* basepacker.cc */,
+				D47CA330759E4CD0B182F46D /* boost_exception.cc */,
+				AE0DA92529C24200B6FDBCDB /* comm_frequency_limit.cc */,
+				E500BB025D084F9E989C5ECD /* debugger_utils.c */,
+				8D5F50B717444209AC816B91 /* http.cc */,
+				0D503D818DD14F1F96155F09 /* md5.c */,
+				3FAA09F54BE343B98F9BEF6D /* memdbg.cc */,
+				E2635BAA54AA41AAB958BBC1 /* mmap_util.cc */,
+				612EEE21AF034E0F90BEA28F /* ptrbuffer.cc */,
+				9A2F1F5BB5CA400AB61EF2BC /* singleton.cc */,
+				BCA33B8283194AB384269842 /* strutil.cc */,
+				9EC23DA7B1D24B8395EA9081 /* tickcount.cc */,
+				D20ABE75A65B4329920F2694 /* time_utils.c */,
+				814FC990F0824F1994E5DC96 /* tinyxml2.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		93C37E2A595A4BBB9F40BA35 /* crypt */ = {
+			isa = PBXGroup;
+			children = (
+				41843F59B6CA4BC7986BD052 /* micro-ecc-master */,
+				D18281719E604B97A8F88D83 /* log_crypt.cc */,
+				93F2609FFC914186BE383780 /* log_crypt.h */,
+			);
+			name = crypt;
+			sourceTree = "<group>";
+		};
+		9464C2FF486B4ED5B6FE1551 /* comm */ = {
+			isa = PBXGroup;
+			children = (
+				8EC68FE01D2049FBBC173FF6 /* Source Files */,
+				726B3D3783BF462E92ED9E19 /* Header Files */,
+				74DDB97154454261AA19813D /* assert */,
+				C263CB3CB6B24E55A80ADCF0 /* crypt */,
+				C470DE8BB54A4EB0BF38A250 /* network */,
+				B141E94B29FB436FBF5DE528 /* socket */,
+				717109D49A814F76ABFDAE48 /* xlogger */,
+				DD1F6F93404E4A2CA8E0CB7F /* corepattern */,
+				9544865586AF492FA56CA875 /* dns */,
+				42311AC093914464BAC241AF /* messagequeue */,
+				4DE8D4C7C684418983E9CE1F /* unix */,
+				E9DC69EBF33F446ABDEB7ECD /* objc */,
+				2EB070EA94F348ABA4B45A2B /* CMakeLists.txt */,
+			);
+			name = comm;
+			sourceTree = "<group>";
+		};
+		9544865586AF492FA56CA875 /* dns */ = {
+			isa = PBXGroup;
+			children = (
+				B6C854CF99744C67918013AE /* dns.cc */,
+				E87ACD05073547AE827DA3D9 /* dns.h */,
+			);
+			name = dns;
+			sourceTree = "<group>";
+		};
+		9BFACCB81B9C45C488097956 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				19CAE0EEF5E54E428A423228 /* anti_avalanche.cc */,
+				5B57735011834E95AE853E79 /* anti_avalanche.h */,
+				3DAE6CEECAD34B6BB569CFB3 /* dynamic_timeout.cc */,
+				5CECD28B133B408C96D03ECD /* dynamic_timeout.h */,
+				931013341ED2494BBD29D307 /* flow_limit.cc */,
+				55BE662178364E6AA2D86DAB /* flow_limit.h */,
+				2388266C22C548AD8BA9DC9A /* frequency_limit.cc */,
+				1A103C04E4784A51987B8736 /* frequency_limit.h */,
+				D018C52E0FC14A359AE2EE34 /* longlink.cc */,
+				E1BBC10135BD4BC7B8C844F7 /* longlink.h */,
+				3F84DA573A9248E7864A29C2 /* longlink_connect_monitor.cc */,
+				D86C3492FEC2460FA7078C24 /* longlink_connect_monitor.h */,
+				A91E391811E44F6683EDC2BE /* longlink_identify_checker.cc */,
+				E797F7D9A66E4FAFADE1022D /* longlink_identify_checker.h */,
+				D73C815C2ECF44698810B203 /* longlink_speed_test.cc */,
+				B9500C841BE445998BE032D2 /* longlink_speed_test.h */,
+				4436557561554706A51620E2 /* longlink_task_manager.cc */,
+				FF7BD22E1F8D42C5B3491F24 /* longlink_task_manager.h */,
+				B0051C1C13A74864BD7B4340 /* net_channel_factory.cc */,
+				987DA1AF0533401688828533 /* net_channel_factory.h */,
+				0557650095CC4415A609F557 /* net_check_logic.cc */,
+				769D9F61914A43C7A77C5F9F /* net_check_logic.h */,
+				8DF7BD46E72142D583603998 /* net_core.cc */,
+				E334A657846740F18E915A19 /* net_core.h */,
+				5AE735FA67B54E89B03956D2 /* net_source.cc */,
+				6BE73ED8C4644E1A92A448A6 /* net_source.h */,
+				8B81A2BA0899409882291C5A /* netsource_timercheck.cc */,
+				63C4CD0C16E9403C8E7295AF /* netsource_timercheck.h */,
+				DD6327A0D73B403BA59ED36F /* proxy_test.cc */,
+				5B781F9640B8439BAD455593 /* proxy_test.h */,
+				467A20904538442EBBFDAE2E /* shortlink.cc */,
+				78DD8EDEB1DC45418D754577 /* shortlink.h */,
+				00B1A1765CC343DEB8D14DCA /* shortlink_interface.h */,
+				39737F3B7A054D4F89C11307 /* shortlink_task_manager.cc */,
+				27FFB8C2992B4E3CA6E838FA /* shortlink_task_manager.h */,
+				EE9B1D2FD83B4BB8A3D08391 /* signalling_keeper.cc */,
+				C073A9D512084A9F9B98B0A2 /* signalling_keeper.h */,
+				0CD34EAC9B824654AD5D275E /* simple_ipport_sort.cc */,
+				C6C022794C0E40508FD51D53 /* simple_ipport_sort.h */,
+				E4A03C6E26334280B7E52437 /* smart_heartbeat.cc */,
+				D83A50A172FE4697BDEE8FDD /* smart_heartbeat.h */,
+				27068213F4A449C79BB3E365 /* special_ini.h */,
+				90FE7D2FF86549A78468DF9A /* task_profile.cc */,
+				9E7C28A2E9264C55875DFA4B /* timing_sync.cc */,
+				556C2AE2AB1C4463A51E5CB9 /* timing_sync.h */,
+				2CA837E26F7748F8B57B72D6 /* weak_network_logic.cc */,
+				562DC7566EB645C89EA46E69 /* weak_network_logic.h */,
+				4754A9D0D232421CA727D8A3 /* zombie_task_manager.cc */,
+				5DCE6343FC4F4FAEADCFEF0B /* zombie_task_manager.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A1B8D618BFC74322AD47BC00 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF864EEB9C4E9B9D702F2B /* traffic_statistics.cc */,
+				BA8EE7A90BCD4BC8AFE0331F /* traffic_statistics.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		AA307A7463F449CCA2449DA6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				47C770319EA54A29A710F490 /* app_logic.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		ABBBF91181E34131B004978D /* baseevent */ = {
+			isa = PBXGroup;
+			children = (
+				E6265A308EE14A4F9929F6FA /* src */,
+				B79CB031B4054D11A4CCF25C /* CMakeLists.txt */,
+			);
+			name = baseevent;
+			sourceTree = "<group>";
+		};
+		B141E94B29FB436FBF5DE528 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				A9670B26AB474409BD58F032 /* block_socket.cc */,
+				82CB61434DB34C0DAE8661ED /* block_socket.h */,
+				70CA1B936DCF410393C9999C /* complexconnect.cc */,
+				29181685F142456E968C3F2D /* complexconnect.h */,
+				4725911CB6214062A20A271C /* getsocktcpinfo.cc */,
+				DB01F253945B491995C94E92 /* getsocktcpinfo.h */,
+				47F2579C2DAE415988EA8DBD /* ipv6_address_utils.h */,
+				161CACB86EE64F0B8F005F6A /* local_ipstack.cc */,
+				33DC8850999143ABA056AF9A /* local_ipstack.h */,
+				780B837C88E8473084CF1C82 /* nat64_prefix_util.cc */,
+				1D0887398C1C4FDE89ADAAFE /* nat64_prefix_util.h */,
+				F435692E67AF48C3975954E9 /* socket_address.cc */,
+				E0979A44AB3247498275D4E4 /* socket_address.h */,
+				854F0E09B8A54C46BCF91AA4 /* socketbreaker.h */,
+				A99E6370AE684555BD9DB4B5 /* socketpoll.h */,
+				8BCCD003BFFA4DBA96DB012E /* socketselect.h */,
+				DBA2DAD84E45443DBC033B3C /* tcp_fsm_handler.h */,
+				DBE978D3A3524A99B262995D /* tcpclient.cc */,
+				812A008CFF26436191C1FD18 /* tcpclient.h */,
+				D2AACC47175C438995B2D0E6 /* tcpclient_fsm.cc */,
+				8D980F4D7F9C4C5A9BC5801B /* tcpclient_fsm.h */,
+				A45C9EA83A5B427D944DE9F4 /* tcpserver.cc */,
+				AEA1817C9F3F404FBD099662 /* tcpserver.h */,
+				AFDC291ED1564422B502A83F /* tcpserver_fsm.cc */,
+				0A35572FECCD49789A9C7126 /* tcpserver_fsm.h */,
+				231584BBEA7244FAACA75F27 /* udpclient.cc */,
+				B8F1DCB35C1B46D0BDA18726 /* udpclient.h */,
+				37FF8D437CDC4874BE9B0C0B /* udpserver.cc */,
+				366EEE4A4F9440F288D7A879 /* udpserver.h */,
+				D29C6B8C182F46EEB59275BB /* unix_socket.cc */,
+				44DB14F0A51B4889B93B4C6E /* unix_socket.h */,
+			);
+			name = socket;
+			sourceTree = "<group>";
+		};
+		B2E02F889E6248A0B13D89A4 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				134C488E907C4472B1C62D2D /* stn.cc */,
+				5C0BF71B19D24A1A90C2AABD /* stn_logic.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B4461AE172B4482395F516A9 /* mars-boost */ = {
+			isa = PBXGroup;
+			children = (
+				299C5C78915F4374B75AE9F2 /* Source Files */,
+				4F36751DB56146E68AEFDBBD /* CMakeLists.txt */,
+			);
+			name = "mars-boost";
+			sourceTree = "<group>";
+		};
+		C263CB3CB6B24E55A80ADCF0 /* crypt */ = {
+			isa = PBXGroup;
+			children = (
+				08D09C5C609E4C7982BDF3B9 /* ibase64.cc */,
+				C6FACC75E8D84181981B4060 /* ibase64.h */,
+				C6B10B25B5324598A53B78FC /* pkcs7_padding.c */,
+				9955014525964DC784DC0338 /* pkcs7_padding.h */,
+			);
+			name = crypt;
+			sourceTree = "<group>";
+		};
+		C43BA248E803429C8343FEED /* stn */ = {
+			isa = PBXGroup;
+			children = (
+				9BFACCB81B9C45C488097956 /* src */,
+				0FBC45C4436F47FD9DB82608 /* Header Files */,
+				B2E02F889E6248A0B13D89A4 /* Source Files */,
+				045AB06AA9654E9CA2D74C18 /* CMakeLists.txt */,
+			);
+			name = stn;
+			sourceTree = "<group>";
+		};
+		C470DE8BB54A4EB0BF38A250 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				DB4C42B32F1E47C7A7529285 /* getaddrinfo_with_timeout.cc */,
+				46BDA67848C8457592432380 /* getaddrinfo_with_timeout.h */,
+				FE8C4E25D62947898F146E00 /* getdnssvraddrs.cc */,
+				AAC24FBC78114BE08722EDB9 /* getdnssvraddrs.h */,
+				AB9A31AFE7DB45CBAD312861 /* getgateway.c */,
+				29E7A308DAAB46ECBB68060D /* getgateway.h */,
+				B64BBE2579CC4B8C8643E493 /* getifaddrs.cc */,
+				8222A02D2F164B0EBD88DA9C /* getifaddrs.h */,
+				DBFD8BE1FE89445EADF29BB3 /* local_routetable.cc */,
+				87C7F757A4534F5C9693EE68 /* local_routetable.h */,
+				EBBBE54B586A4A579FF8EF88 /* netinfo_util.cc */,
+				8A3D90E40D2F4DC4A30BB3A4 /* netinfo_util.h */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		C8D7BC7380DA43FAB557A398 = {
+			isa = PBXGroup;
+			children = (
+				72243564B21D481DA7DC7F69 /* ALL_BUILD */,
+				9464C2FF486B4ED5B6FE1551 /* comm */,
+				B4461AE172B4482395F516A9 /* mars-boost */,
+				11BB254D29154E38B56B3347 /* app */,
+				ABBBF91181E34131B004978D /* baseevent */,
+				6271D1A58CF842B48367A0D3 /* xlog */,
+				CFF94FD2A4E241E5AD531913 /* sdt */,
+				C43BA248E803429C8343FEED /* stn */,
+				05DFF50C8AEE49ADB9B50C7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFF94FD2A4E241E5AD531913 /* sdt */ = {
+			isa = PBXGroup;
+			children = (
+				403F0144A7814BDEA1DD5B74 /* Header Files */,
+				EDA7B79F4DCF4A1AB6F44B57 /* Source Files */,
+				8BF6EED738444572809042C6 /* src */,
+				F5F6C5B18F684F08B352510B /* CMakeLists.txt */,
+			);
+			name = sdt;
+			sourceTree = "<group>";
+		};
+		D4CA9C7376BF498E9881C4EB /* activecheck */ = {
+			isa = PBXGroup;
+			children = (
+				8117D6B604404C429F1484EB /* basechecker.cc */,
+				06852C0E3D024BC9AC2632A6 /* basechecker.h */,
+				5A3902AC9C93489789F58CE5 /* dnschecker.cc */,
+				773A6D74A173417595250992 /* dnschecker.h */,
+				A322C546FFF840769F21A8B5 /* httpchecker.cc */,
+				4BF4974BAE7249C0B57BD36F /* httpchecker.h */,
+				AC2D516F312A451AA5939069 /* pingchecker.cc */,
+				65A47DAD0EDE44A2A6EEF5C3 /* pingchecker.h */,
+				8B3D3899B69B45BE8FF9F303 /* tcpchecker.cc */,
+				95EC956A7C19438DA3458E97 /* tcpchecker.h */,
+			);
+			name = activecheck;
+			sourceTree = "<group>";
+		};
+		D7CE74FEA123414E8AE18CA0 /* checkimpl */ = {
+			isa = PBXGroup;
+			children = (
+				F55F1D4BBFD444469AB4E6F9 /* base_netinfo_query.cc */,
+				745B9B8158B8460AACA7C6E3 /* base_netinfo_query.h */,
+				ECA42F662A714F4FA2525BFA /* dnsquery.cc */,
+				4EE7508062D44799ADA33704 /* dnsquery.h */,
+				54820A30648240E692D01613 /* http_detector.cc */,
+				8041C8AEBD5F490E985FB092 /* http_detector.h */,
+				C7CA757AC5AC442CA50A67B2 /* http_url_parser.h */,
+				33EFB905D7734476B201035E /* httpquery.cc */,
+				94BDEE57E7844954B5012A9C /* httpquery.h */,
+				62B726BF02E248FB97454B2B /* pingquery.cc */,
+				2A6B9CB5FDE348418BE5736F /* pingquery.h */,
+				FA63CD87AE7B41B6AD4DFD21 /* tcpquery.cc */,
+				811357AE4BFE42C4915CF617 /* tcpquery.h */,
+			);
+			name = checkimpl;
+			sourceTree = "<group>";
+		};
+		DD1F6F93404E4A2CA8E0CB7F /* corepattern */ = {
+			isa = PBXGroup;
+			children = (
+				D299E66BBDE647A1B5EA5E48 /* coreservice_base.cc */,
+				BE45102E0DD44F5EB18EF718 /* coreservice_base.h */,
+				8BA2DCAA6CF04CA789A18C2F /* service_base.h */,
+			);
+			name = corepattern;
+			sourceTree = "<group>";
+		};
+		E0378B2ACAFD4574989A42FB /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				04BC51937E8343A587834B09 /* app.h */,
+				A805BDE4CFD247FE873281BF /* app_logic.h */,
+				9BD3E2F691014557A1C82D2F /* compiler_util.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		E6265A308EE14A4F9929F6FA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AEDCA9CED5DC4C86813642E5 /* active_logic.cc */,
+				5A34EEE21C34494EA93F7CD4 /* baseprj.cc */,
+				C66F56503ABC4191BABBEC42 /* baseprjevent.cc */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		E9DC69EBF33F446ABDEB7ECD /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				2E6469A71557478998A63255 /* Reachability.h */,
+				7479E5482CB1473A9181514B /* Reachability.mm */,
+				188F0B2EA09B4D6D86F11A12 /* ThreadOperationQueue.h */,
+				2E33780DA160479A9D90703A /* ThreadOperationQueue.mm */,
+				FC175A56CE004542BAA294E6 /* data_protect_attr.h */,
+				9B73709835EC409D9BA33963 /* data_protect_attr.mm */,
+				FAC50A5D84C14140BC8DB982 /* ip_icmp.h */,
+				87F6419E23C1478A889187F5 /* objc_timer.h */,
+				ACEA3EDA473C4135A07E8474 /* objc_timer.mm */,
+				C290E5E3D6DF4F9F9B615A1D /* platform_comm.mm */,
+				33D226F4BDA647AFB5B3E367 /* route.h */,
+				490BBB76A9E147F4B136EFA6 /* scope_autoreleasepool.h */,
+				07FF280DBB544E6B8AC6B541 /* scope_autoreleasepool.mm */,
+				A87DDAF96A00425F81324D58 /* xlogger_threadinfo.mm */,
+			);
+			name = objc;
+			sourceTree = "<group>";
+		};
+		EDA7B79F4DCF4A1AB6F44B57 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB2EC417E7A547CF92A4CD94 /* sdt_logic.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3993DC6CA66C4B7FA0E7726D /* app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A1CDBAD5C8E43F2B680C834 /* Build configuration list for PBXNativeTarget "app" */;
+			buildPhases = (
+				650EE29CBBAD4D7D95871FAE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = app;
+			productName = app;
+			productReference = D9E36B1078724AFB921E45D4 /* libapp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		48C6D7FF7318491A867FA9D7 /* mars-boost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 432D27648A5F48A9B6EF99FE /* Build configuration list for PBXNativeTarget "mars-boost" */;
+			buildPhases = (
+				4D0DE29A3CAD46C08902955E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mars-boost";
+			productName = "mars-boost";
+			productReference = 5A01A06A944248A48650982C /* libmars-boost.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		553CEF7F57F049B196B7779E /* comm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4179EB00E5D24B948F74D111 /* Build configuration list for PBXNativeTarget "comm" */;
+			buildPhases = (
+				1B968E1642064259A9FAC34B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = comm;
+			productName = comm;
+			productReference = CD030082D1C643E785F6B4FA /* libcomm.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		68E360DCF48B43CFAE2A4D01 /* xlog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB66418AF1C040329F40E1FC /* Build configuration list for PBXNativeTarget "xlog" */;
+			buildPhases = (
+				FBE1313E12A3489AB9D09C51 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xlog;
+			productName = xlog;
+			productReference = 910E8766326F42FFBAD82807 /* libxlog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		87896CEC5E51412DB1CA335B /* stn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C17A6F4331F94A72A9FA29DB /* Build configuration list for PBXNativeTarget "stn" */;
+			buildPhases = (
+				663DE37580754F7EA95CDDC7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stn;
+			productName = stn;
+			productReference = 47DE0A73BA7E44E38EF6E4E6 /* libstn.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		99EE27A96CBD48DBBC7F6A31 /* sdt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AADBC8A419B47569BDA6E38 /* Build configuration list for PBXNativeTarget "sdt" */;
+			buildPhases = (
+				87AA69DE7ADA4595A72B7E3C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sdt;
+			productName = sdt;
+			productReference = 7EA5F2202F694473989C8030 /* libsdt.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F49C16F385C845BAAB052FFD /* baseevent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69AF85B5E18E48299D7E673E /* Build configuration list for PBXNativeTarget "baseevent" */;
+			buildPhases = (
+				3D72132BF41C46EA92F14AA7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = baseevent;
+			productName = baseevent;
+			productReference = ADBE2D0DC15C4CFBBE3F4E27 /* libbaseevent.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		359E8573BF294D758B1B938B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 7790B10164FA4010A77C41E3 /* Build configuration list for PBXProject "mars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8D7BC7380DA43FAB557A398;
+			projectDirPath = ../../;
+			projectRoot = "";
+			targets = (
+				D1F1DE35176D48ECB085E0BC /* ALL_BUILD */,
+				1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */,
+				3993DC6CA66C4B7FA0E7726D /* app */,
+				F49C16F385C845BAAB052FFD /* baseevent */,
+				553CEF7F57F049B196B7779E /* comm */,
+				1C29BDB9D5B445CEADB61655 /* install */,
+				48C6D7FF7318491A867FA9D7 /* mars-boost */,
+				99EE27A96CBD48DBBC7F6A31 /* sdt */,
+				87896CEC5E51412DB1CA335B /* stn */,
+				68E360DCF48B43CFAE2A4D01 /* xlog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AB1593FBC484396A7012280 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		7AFFD11688B743B88B3E0B02 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		B5A4F3BB4CE24E088299A084 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B968E1642064259A9FAC34B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				086903FA06334D6A99A0FDED /* adler32.c in Sources */,
+				612FBF0D0F3D4A96931CCDA8 /* alarm.cc in Sources */,
+				43762AD2C4D54D51BBFF6543 /* anr.cc in Sources */,
+				43F6C8D11B2642A88109E69A /* __assert.c in Sources */,
+				F69B9F01C57A4B7C93F80ADE /* autobuffer.cc in Sources */,
+				1599E620DF0C4367A58536CD /* basepacker.cc in Sources */,
+				DC8CE617BEA24B7E892CF24D /* boost_exception.cc in Sources */,
+				6E04661014DF4F67B506E64E /* comm_frequency_limit.cc in Sources */,
+				4D3D8545EA014855B99055A7 /* coreservice_base.cc in Sources */,
+				F22291C5466A41269C890A7A /* ibase64.cc in Sources */,
+				52F26914035B43AA8E226AFA /* pkcs7_padding.c in Sources */,
+				BAB13816947F42FEA506CEA0 /* debugger_utils.c in Sources */,
+				0C787D5904654A14880C4F40 /* dns.cc in Sources */,
+				9CB823E7FCFE43DF96B64637 /* http.cc in Sources */,
+				C84D111B733748558F22B446 /* md5.c in Sources */,
+				4861A44720E7441E9C10984B /* memdbg.cc in Sources */,
+				0209BB98FB48448A9A250B9F /* message_queue.cc in Sources */,
+				E551F36B5A6749A68C72EC40 /* mmap_util.cc in Sources */,
+				3CA175D5D4764835B7D9FDE6 /* getaddrinfo_with_timeout.cc in Sources */,
+				9C38E0DC278D41AF9A9C7766 /* getdnssvraddrs.cc in Sources */,
+				90B9DF118D7E42D5A0B36B93 /* getgateway.c in Sources */,
+				531FAC188B6D4F29A4E44681 /* getifaddrs.cc in Sources */,
+				8987E07010B24B2FBF8CDB6E /* local_routetable.cc in Sources */,
+				38131F53092F41328E3545B5 /* netinfo_util.cc in Sources */,
+				6F8C63630D694D2387CD0244 /* Reachability.mm in Sources */,
+				920A2E9B91A84A63AD324BE6 /* ThreadOperationQueue.mm in Sources */,
+				B9CB00790C8E490CBB4E8B47 /* data_protect_attr.mm in Sources */,
+				525A9C0B6F814425B97657B8 /* objc_timer.mm in Sources */,
+				B119A1071AFC4D0F98DE20DC /* platform_comm.mm in Sources */,
+				B2A001BA430C4FD1A4C160F4 /* scope_autoreleasepool.mm in Sources */,
+				E37CB1A3D8984EB187EA4333 /* xlogger_threadinfo.mm in Sources */,
+				3F1D4775182C475F8C944EB4 /* ptrbuffer.cc in Sources */,
+				EB51C9B8501B4AE2A9CDE86F /* singleton.cc in Sources */,
+				F660DCCBFA424BD389BA32BB /* block_socket.cc in Sources */,
+				6E39C8372EB348379700E967 /* complexconnect.cc in Sources */,
+				D64E2CAABB9E454A9A0F848D /* getsocktcpinfo.cc in Sources */,
+				9399EEA9A4BD4C879A151E1D /* local_ipstack.cc in Sources */,
+				2D4B057E32914CFF93C3BBE1 /* nat64_prefix_util.cc in Sources */,
+				8EAD58DA7BE54A339C9FBD1C /* socket_address.cc in Sources */,
+				5F9D28778F064F17A917DB94 /* tcpclient.cc in Sources */,
+				E200488CAB5A40AB920CE5DB /* tcpclient_fsm.cc in Sources */,
+				3F47F7BCCEA343F9947C5680 /* tcpserver.cc in Sources */,
+				2F39F68F5F1E40FABB596F8B /* tcpserver_fsm.cc in Sources */,
+				95DA0C0413B645A9BFFD60C4 /* udpclient.cc in Sources */,
+				C67091512F254873AF81299D /* udpserver.cc in Sources */,
+				159906045D204D4CAA98EBDC /* unix_socket.cc in Sources */,
+				21D2B66F035040418FE19AF8 /* strutil.cc in Sources */,
+				2804AA9906C24E328DA2024C /* tickcount.cc in Sources */,
+				7F723C16A2A24B50A4423B92 /* time_utils.c in Sources */,
+				9C3DE534EA2947609E01329C /* tinyxml2.cc in Sources */,
+				2CD8C8C598B744C2A8A36791 /* socketbreaker.cc in Sources */,
+				6E91B1582A1846A0953B91E7 /* socketpoll.cc in Sources */,
+				F3560F43ED1149CA840DD4DC /* socketselect.cc in Sources */,
+				93971C0407A2486595BA36C2 /* loginfo_extract.c in Sources */,
+				9A9E0DBDEAAA46FAA683ED1D /* xloggerbase.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D72132BF41C46EA92F14AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCFCF6070404CCC917CB794 /* active_logic.cc in Sources */,
+				4D03D2C4E0074DE99FB80ED2 /* baseprj.cc in Sources */,
+				BAE087176E6E456884E40E37 /* baseprjevent.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D0DE29A3CAD46C08902955E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BD7AE4FEEC34A68AA0F066A /* lockpool.cpp in Sources */,
+				0DF2C4CA64FB45D2AA316338 /* date_generators.cpp in Sources */,
+				586586CB4AAD4AE78FEBB52F /* greg_month.cpp in Sources */,
+				3B32498EBD4649A7BB867BFB /* greg_weekday.cpp in Sources */,
+				38751F591C10469A8DDEDD02 /* gregorian_types.cpp in Sources */,
+				1A754EF9B25D415B91F48965 /* posix_time_types.cpp in Sources */,
+				DD9CF134329E4513A08B47A3 /* clone_current_exception_non_intrusive.cpp in Sources */,
+				64398AD1A8B140419FF7A74D /* codecvt_error_category.cpp in Sources */,
+				D0C4FFAD32DD40B3BB9C146B /* operations.cpp in Sources */,
+				662E5BAC23E349F3A0197203 /* path.cpp in Sources */,
+				E30F8B68DD2A4454947A6E0E /* path_traits.cpp in Sources */,
+				F36D5326BEFD4EE2BD1CCA2F /* portability.cpp in Sources */,
+				F9544646E5544329BF159DBE /* unique_path.cpp in Sources */,
+				CAB751C646B2437CB6CB24BE /* utf8_codecvt_facet.cpp in Sources */,
+				3F0BE17614F1420AAD4091FE /* windows_file_codecvt.cpp in Sources */,
+				4255CC5CC9904959A26E6906 /* file_descriptor.cpp in Sources */,
+				F067794F47124237A6BC5D51 /* mapped_file.cpp in Sources */,
+				0C86F7CAFCA247AEBBD4D8FF /* sp_collector.cpp in Sources */,
+				CCC81B64925046FB96A8E5D6 /* sp_debug_hooks.cpp in Sources */,
+				F943D109B0A34F3F840EEC2F /* error_code.cpp in Sources */,
+				969649FF0742484C9ED1CEFA /* future.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650EE29CBBAD4D7D95871FAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF5B8D8327024481920BA4E4 /* app_logic.cc in Sources */,
+				8420FB6B0C8B40EC842ACF11 /* traffic_statistics.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663DE37580754F7EA95CDDC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8126C6573FE34BB29E9922FE /* anti_avalanche.cc in Sources */,
+				A182C8A4F03A467A92785181 /* dynamic_timeout.cc in Sources */,
+				DED20073139C48A789DF947B /* flow_limit.cc in Sources */,
+				6ED3E5F310FE4C10A1829D78 /* frequency_limit.cc in Sources */,
+				AEB0B6CE05B04584ADFDD5F3 /* longlink.cc in Sources */,
+				4E5F296DC4C74FB08F9C8504 /* longlink_connect_monitor.cc in Sources */,
+				2CF98290067B4823BAAB7D9A /* longlink_identify_checker.cc in Sources */,
+				64983016990B4EF990C1CFDE /* longlink_speed_test.cc in Sources */,
+				764C79B380B442E9BE18F04B /* longlink_task_manager.cc in Sources */,
+				101610E2AB954ED9BEC79EAF /* net_channel_factory.cc in Sources */,
+				C5BE2DA5B4E240568CE1D968 /* net_check_logic.cc in Sources */,
+				F9FB94AE5C12427D96A7B800 /* net_core.cc in Sources */,
+				84675D8C59AA4165B5FB41F5 /* net_source.cc in Sources */,
+				739353DB6EB14378A049852F /* netsource_timercheck.cc in Sources */,
+				DCA56230CDB64A6DAB28A6D3 /* proxy_test.cc in Sources */,
+				F0D84F50D3384F74A66BD0C1 /* shortlink.cc in Sources */,
+				F99645669DC04EB1834FA582 /* shortlink_task_manager.cc in Sources */,
+				02B5FEDA6FAD4923941FDCF4 /* signalling_keeper.cc in Sources */,
+				36F1F80DDEFA4E0888D52637 /* simple_ipport_sort.cc in Sources */,
+				23CAD03EDDF641209E6799A4 /* smart_heartbeat.cc in Sources */,
+				556F5CB19C734329B41F0411 /* task_profile.cc in Sources */,
+				B94AD77679194E8E86C9506A /* timing_sync.cc in Sources */,
+				A809CA2B4F9841D3B2F3F231 /* weak_network_logic.cc in Sources */,
+				71A7F25C5757493AB139806C /* zombie_task_manager.cc in Sources */,
+				C623D30D1F804A2CBB74A2A1 /* stn.cc in Sources */,
+				B5AF66E119224DA6B5B6D682 /* stn_logic.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87AA69DE7ADA4595A72B7E3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3215BB6D921341158E8B545B /* sdt_logic.cc in Sources */,
+				85D0EB75D4EC4CCAB5C48A23 /* basechecker.cc in Sources */,
+				601270D8CEC64C51B4CB5EEC /* dnschecker.cc in Sources */,
+				1D2E275E199B48E0BB7F4E7D /* httpchecker.cc in Sources */,
+				A75B71DAAD7D471E9E9FB3CB /* pingchecker.cc in Sources */,
+				CE6C6E7E68074CEDA0ED89AE /* tcpchecker.cc in Sources */,
+				7E28E9D483AB4898B1A63501 /* base_netinfo_query.cc in Sources */,
+				4F4D9456E33949EEA4D8747E /* dnsquery.cc in Sources */,
+				14F68E7AD94F4B1E919B7C09 /* http_detector.cc in Sources */,
+				071D709269494AF39FA75D5E /* httpquery.cc in Sources */,
+				8225A38EE989436480C8E694 /* pingquery.cc in Sources */,
+				A7CA551058E7439EB0B4D22F /* tcpquery.cc in Sources */,
+				6353EB9B8CCB43AFAA46113A /* sdt_core.cc in Sources */,
+				D172CECE378540CFA5A872D8 /* netchecker_trafficmonitor.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBE1313E12A3489AB9D09C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D152BE0B8247CB85B7DBDF /* log_crypt.cc in Sources */,
+				118DAFAF3F3A45AEA2DEAE43 /* uECC.c in Sources */,
+				DF48B94F168E4B168B980F9B /* appender.cc in Sources */,
+				5BDA8A91B5C44E8F88EF6F6F /* formater.cc in Sources */,
+				D68BE98A97A0461DA8B8303F /* log_buffer.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0854B297FA414D06AB4ABA13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48C6D7FF7318491A867FA9D7 /* mars-boost */;
+			targetProxy = 2A56356C1B6D4D3BA061E6F5 /* PBXContainerItemProxy */;
+		};
+		3B7CCE3338D9423984284E69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 553CEF7F57F049B196B7779E /* comm */;
+			targetProxy = E694ECE3916C400FAA1FB8F2 /* PBXContainerItemProxy */;
+		};
+		5B66E05F62D640BFBC5BC28B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68E360DCF48B43CFAE2A4D01 /* xlog */;
+			targetProxy = A4D7F5BCE88840ECB28AB511 /* PBXContainerItemProxy */;
+		};
+		7BBDDB4F134347E89D0BDD78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99EE27A96CBD48DBBC7F6A31 /* sdt */;
+			targetProxy = D4138B48802E4A0FA1A36845 /* PBXContainerItemProxy */;
+		};
+		9CEFCAA83DA04D39B85A1736 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87896CEC5E51412DB1CA335B /* stn */;
+			targetProxy = 84A9F9458F5245BD8260A773 /* PBXContainerItemProxy */;
+		};
+		C38F8ADD75D4408AA08BB8CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3993DC6CA66C4B7FA0E7726D /* app */;
+			targetProxy = FE3D3EB689FE41AB93273B48 /* PBXContainerItemProxy */;
+		};
+		E0E7CDEFFC2E409F83D22ABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1F1DE35176D48ECB085E0BC /* ALL_BUILD */;
+			targetProxy = FE065A63A2E445D4A3D97CD1 /* PBXContainerItemProxy */;
+		};
+		E3658A63762846B69C45BD2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F49C16F385C845BAAB052FFD /* baseevent */;
+			targetProxy = 9F4326F1A32E4272A8411528 /* PBXContainerItemProxy */;
+		};
+		FDFAA7FF8F0042FEA9B24426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A37BD136BBA41FEA0E6E0B3 /* ZERO_CHECK */;
+			targetProxy = D703A0BF7D5A448B837D2C85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CB9931A757429AA7CFB3B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/build;
+			};
+			name = Debug;
+		};
+		063B39933D5C4AD489BA2497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::stn\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = stn;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/stn;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		1BF138B549914B279581D875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		20F72739E7CA40288B73E931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::app\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/app/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = app;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/app;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		2756EAD82C604797A4F8CED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		2C57DCFCCA4D4E99A73F607F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		32AE4034DB694CFFB086B43F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		487817F6F60543D5926185D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		7585E97C6220424B8AA4C992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::xlog\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/log/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../../..,
+					"/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt/micro-ecc-master",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xlog;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		83F6FF620B2047B2804CC4EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::baseevent\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = baseevent;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		8B0CA77FFC874DF7AEBA2C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
+				STRIP_STYLE = all;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/build;
+			};
+			name = Release;
+		};
+		8F0196BCCBFB47E8A6A564A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::mars-boost\"'",
+					BOOST_NO_EXCEPTIONS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/boost/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/boost/..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mars-boost";
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/boost;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		B8E65B15F36149D4B9F59858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::baseevent\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = baseevent;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B96CAFCAB81148BB815EC6E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		C5CBDB16DD6542DEAE4DC573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::app\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/app/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/app/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = app;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/app;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		E40C8779A36945F6B9B248D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::sdt\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/tools,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/activecheck,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/checkimpl,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sdt;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		E4842548178F4A4D86FE8059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::sdt\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/tools,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/activecheck,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/checkimpl,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sdt;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		E5AF383C834D426789295319 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::comm\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/assert,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/crypt,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/debugger,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/dns,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/network,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/socket,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/thread,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-DDEBUG",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = comm;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		E5EFDCA09B644DC4B6F19F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::stn\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/stn/../../..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = stn;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/stn;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		F8D20DE99834497D9A42B737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::xlog\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/log/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/src,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../comm,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt,
+					/Users/john/Documents/workspace/iphone/mars/mars/log/../../..,
+					"/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt/micro-ecc-master",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-gline-tables-only",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xlog;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		FA978D85F5714B94AAB3B0ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::comm\"'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/..,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/../..,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/assert,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/crypt,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/debugger,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/dns,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/network,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/socket,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/thread,
+					/Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-gline-tables-only",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = comm;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		FF2979BECF49488D8065D5F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'XLOGGER_TAG=\"mars::mars-boost\"'",
+					BOOST_NO_EXCEPTIONS,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/john/Documents/workspace/iphone/mars/mars/boost/.,
+					/Users/john/Documents/workspace/iphone/mars/mars/boost/..,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-fno-exceptions",
+					"-std=gnu++14",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+					"-miphoneos-version-min=8.0",
+					"-fvisibility-inlines-hidden",
+					"-fobjc-abi-version=2",
+					"-fno-objc-arc",
+					"-DNDEBUG",
+					"-ffast-math",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mars-boost";
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				STRIP_STYLE = debugging;
+				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/boost;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2AADBC8A419B47569BDA6E38 /* Build configuration list for PBXNativeTarget "sdt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4842548178F4A4D86FE8059 /* Debug */,
+				E40C8779A36945F6B9B248D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4179EB00E5D24B948F74D111 /* Build configuration list for PBXNativeTarget "comm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5AF383C834D426789295319 /* Debug */,
+				FA978D85F5714B94AAB3B0ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		432D27648A5F48A9B6EF99FE /* Build configuration list for PBXNativeTarget "mars-boost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0196BCCBFB47E8A6A564A1 /* Debug */,
+				FF2979BECF49488D8065D5F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5D1E5598145845E5A41E8019 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96CAFCAB81148BB815EC6E3 /* Debug */,
+				2C57DCFCCA4D4E99A73F607F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		69AF85B5E18E48299D7E673E /* Build configuration list for PBXNativeTarget "baseevent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F6FF620B2047B2804CC4EA /* Debug */,
+				B8E65B15F36149D4B9F59858 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		748EC4F4E2B34603AD0F78BC /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2756EAD82C604797A4F8CED9 /* Debug */,
+				1BF138B549914B279581D875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7790B10164FA4010A77C41E3 /* Build configuration list for PBXProject "mars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03CB9931A757429AA7CFB3B7 /* Debug */,
+				8B0CA77FFC874DF7AEBA2C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7A1CDBAD5C8E43F2B680C834 /* Build configuration list for PBXNativeTarget "app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20F72739E7CA40288B73E931 /* Debug */,
+				C5CBDB16DD6542DEAE4DC573 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C17A6F4331F94A72A9FA29DB /* Build configuration list for PBXNativeTarget "stn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				063B39933D5C4AD489BA2497 /* Debug */,
+				E5EFDCA09B644DC4B6F19F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D3DF6D9F633E465FB4708246 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				487817F6F60543D5926185D5 /* Debug */,
+				32AE4034DB694CFFB086B43F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EB66418AF1C040329F40E1FC /* Build configuration list for PBXNativeTarget "xlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7585E97C6220424B8AA4C992 /* Debug */,
+				F8D20DE99834497D9A42B737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 359E8573BF294D758B1B938B /* Project object */;
+}
