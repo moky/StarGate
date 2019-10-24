@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52B51BA22351EA3B00F54744 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B51BA02351EA3A00F54744 /* libcrypto.a */; };
+		52B51BA32351EA3B00F54744 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B51BA12351EA3B00F54744 /* libssl.a */; };
+		52F3642C23615C2F00A9B505 /* libapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3641F23615C2100A9B505 /* libapp.a */; };
+		52F3642D23615C2F00A9B505 /* libbaseevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3642123615C2100A9B505 /* libbaseevent.a */; };
+		52F3642E23615C2F00A9B505 /* libcomm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3642323615C2100A9B505 /* libcomm.a */; };
+		52F3642F23615C2F00A9B505 /* libmars-boost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3642523615C2100A9B505 /* libmars-boost.a */; };
+		52F3643023615C2F00A9B505 /* libsdt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3642723615C2100A9B505 /* libsdt.a */; };
+		52F3643123615C2F00A9B505 /* libstn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3642923615C2100A9B505 /* libstn.a */; };
+		52F3643223615C2F00A9B505 /* libxlog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F3642B23615C2100A9B505 /* libxlog.a */; };
 		E92255942221ACE3006CADEA /* MGPushMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E922556F2221ACE3006CADEA /* MGPushMessageHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E92255952221ACE3006CADEA /* MGMessenger.h in Headers */ = {isa = PBXBuildFile; fileRef = E92255702221ACE3006CADEA /* MGMessenger.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E92255962221ACE3006CADEA /* MGMars.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255712221ACE3006CADEA /* MGMars.mm */; };
@@ -43,7 +52,6 @@
 		E92255B52221ACE3006CADEA /* MGMessenger.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92255932221ACE3006CADEA /* MGMessenger.mm */; };
 		E9FAF5F2221EAC5F00DB6567 /* MarsGate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF5E8221EAC5F00DB6567 /* MarsGate.framework */; };
 		E9FAF5F7221EAC5F00DB6567 /* MarsGateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FAF5F6221EAC5F00DB6567 /* MarsGateTests.m */; };
-		E9FAF609221EAD1E00DB6567 /* mars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF608221EAD1E00DB6567 /* mars.framework */; };
 		E9FAF684221EAFD000DB6567 /* StarGate.h in Headers */ = {isa = PBXBuildFile; fileRef = E9FAF682221EAFD000DB6567 /* StarGate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9FAF68D221EB24400DB6567 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF68C221EB24400DB6567 /* libz.tbd */; };
 		E9FAF68F221EB26600DB6567 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E9FAF68E221EB26600DB6567 /* libresolv.9.tbd */; };
@@ -52,6 +60,104 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		52F3641E23615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9E36B1078724AFB921E45D4;
+			remoteInfo = app;
+		};
+		52F3642023615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ADBE2D0DC15C4CFBBE3F4E27;
+			remoteInfo = baseevent;
+		};
+		52F3642223615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CD030082D1C643E785F6B4FA;
+			remoteInfo = comm;
+		};
+		52F3642423615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A01A06A944248A48650982C;
+			remoteInfo = "mars-boost";
+		};
+		52F3642623615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7EA5F2202F694473989C8030;
+			remoteInfo = sdt;
+		};
+		52F3642823615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 47DE0A73BA7E44E38EF6E4E6;
+			remoteInfo = stn;
+		};
+		52F3642A23615C2100A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 910E8766326F42FFBAD82807;
+			remoteInfo = xlog;
+		};
+		52F3643323615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3993DC6CA66C4B7FA0E7726D;
+			remoteInfo = app;
+		};
+		52F3643523615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F49C16F385C845BAAB052FFD;
+			remoteInfo = baseevent;
+		};
+		52F3643723615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 553CEF7F57F049B196B7779E;
+			remoteInfo = comm;
+		};
+		52F3643923615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 48C6D7FF7318491A867FA9D7;
+			remoteInfo = "mars-boost";
+		};
+		52F3643B23615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 99EE27A96CBD48DBBC7F6A31;
+			remoteInfo = sdt;
+		};
+		52F3643D23615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 87896CEC5E51412DB1CA335B;
+			remoteInfo = stn;
+		};
+		52F3643F23615C5B00A9B505 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 68E360DCF48B43CFAE2A4D01;
+			remoteInfo = xlog;
+		};
 		E9FAF5F3221EAC5F00DB6567 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9FAF5DF221EAC5F00DB6567 /* Project object */;
@@ -62,6 +168,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52B51BA02351EA3A00F54744 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		52B51BA12351EA3B00F54744 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		52C7412723615B100009E814 /* mars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mars.framework; sourceTree = "<group>"; };
+		52F3641123615C2100A9B505 /* mars.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mars.xcodeproj; path = mars/mars/cmake_build/iOS/mars.xcodeproj; sourceTree = "<group>"; };
 		E922556F2221ACE3006CADEA /* MGPushMessageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPushMessageHandler.h; sourceTree = "<group>"; };
 		E92255702221ACE3006CADEA /* MGMessenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGMessenger.h; sourceTree = "<group>"; };
 		E92255712221ACE3006CADEA /* MGMars.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MGMars.mm; sourceTree = "<group>"; };
@@ -101,7 +211,6 @@
 		E9FAF5F1221EAC5F00DB6567 /* MarsGateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsGateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FAF5F6221EAC5F00DB6567 /* MarsGateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarsGateTests.m; sourceTree = "<group>"; };
 		E9FAF5F8221EAC5F00DB6567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9FAF608221EAD1E00DB6567 /* mars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = mars.framework; sourceTree = "<group>"; };
 		E9FAF682221EAFD000DB6567 /* StarGate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarGate.h; sourceTree = "<group>"; };
 		E9FAF68A221EB22D00DB6567 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E9FAF68C221EB24400DB6567 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -114,11 +223,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9FAF609221EAD1E00DB6567 /* mars.framework in Frameworks */,
 				E9FAF692221EB33900DB6567 /* UIKit.framework in Frameworks */,
+				52F3642D23615C2F00A9B505 /* libbaseevent.a in Frameworks */,
+				52F3642F23615C2F00A9B505 /* libmars-boost.a in Frameworks */,
+				52F3642E23615C2F00A9B505 /* libcomm.a in Frameworks */,
+				52F3643223615C2F00A9B505 /* libxlog.a in Frameworks */,
 				E9FAF690221EB27B00DB6567 /* CoreTelephony.framework in Frameworks */,
+				52B51BA22351EA3B00F54744 /* libcrypto.a in Frameworks */,
 				E9FAF68F221EB26600DB6567 /* libresolv.9.tbd in Frameworks */,
+				52F3643123615C2F00A9B505 /* libstn.a in Frameworks */,
+				52F3643023615C2F00A9B505 /* libsdt.a in Frameworks */,
+				52F3642C23615C2F00A9B505 /* libapp.a in Frameworks */,
 				E9FAF68D221EB24400DB6567 /* libz.tbd in Frameworks */,
+				52B51BA32351EA3B00F54744 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +250,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52F3641223615C2100A9B505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52F3641F23615C2100A9B505 /* libapp.a */,
+				52F3642123615C2100A9B505 /* libbaseevent.a */,
+				52F3642323615C2100A9B505 /* libcomm.a */,
+				52F3642523615C2100A9B505 /* libmars-boost.a */,
+				52F3642723615C2100A9B505 /* libsdt.a */,
+				52F3642923615C2100A9B505 /* libstn.a */,
+				52F3642B23615C2100A9B505 /* libxlog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E922556E2221ACE3006CADEA /* MarsGate */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +332,9 @@
 		E9FAF5DE221EAC5F00DB6567 = {
 			isa = PBXGroup;
 			children = (
+				52F3641123615C2100A9B505 /* mars.xcodeproj */,
+				52B51BA02351EA3A00F54744 /* libcrypto.a */,
+				52B51BA12351EA3B00F54744 /* libssl.a */,
 				E9FAF602221EAC9300DB6567 /* Classes */,
 				E9FAF5EA221EAC5F00DB6567 /* MarsGate */,
 				E9FAF5F5221EAC5F00DB6567 /* MarsGateTests */,
@@ -248,11 +382,11 @@
 		E9FAF605221EAD1300DB6567 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52C7412723615B100009E814 /* mars.framework */,
 				E9FAF691221EB33900DB6567 /* UIKit.framework */,
 				E9FAF68E221EB26600DB6567 /* libresolv.9.tbd */,
 				E9FAF68C221EB24400DB6567 /* libz.tbd */,
 				E9FAF68A221EB22D00DB6567 /* CoreTelephony.framework */,
-				E9FAF608221EAD1E00DB6567 /* mars.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,6 +436,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				52F3643423615C5B00A9B505 /* PBXTargetDependency */,
+				52F3643623615C5B00A9B505 /* PBXTargetDependency */,
+				52F3643823615C5B00A9B505 /* PBXTargetDependency */,
+				52F3643A23615C5B00A9B505 /* PBXTargetDependency */,
+				52F3643C23615C5B00A9B505 /* PBXTargetDependency */,
+				52F3643E23615C5B00A9B505 /* PBXTargetDependency */,
+				52F3644023615C5B00A9B505 /* PBXTargetDependency */,
 			);
 			name = MarsGate;
 			productName = MarsGate;
@@ -354,6 +495,12 @@
 			mainGroup = E9FAF5DE221EAC5F00DB6567;
 			productRefGroup = E9FAF5E9221EAC5F00DB6567 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52F3641223615C2100A9B505 /* Products */;
+					ProjectRef = 52F3641123615C2100A9B505 /* mars.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E9FAF5E7221EAC5F00DB6567 /* MarsGate */,
@@ -361,6 +508,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52F3641F23615C2100A9B505 /* libapp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libapp.a;
+			remoteRef = 52F3641E23615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F3642123615C2100A9B505 /* libbaseevent.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbaseevent.a;
+			remoteRef = 52F3642023615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F3642323615C2100A9B505 /* libcomm.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcomm.a;
+			remoteRef = 52F3642223615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F3642523615C2100A9B505 /* libmars-boost.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libmars-boost.a";
+			remoteRef = 52F3642423615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F3642723615C2100A9B505 /* libsdt.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsdt.a;
+			remoteRef = 52F3642623615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F3642923615C2100A9B505 /* libstn.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libstn.a;
+			remoteRef = 52F3642823615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F3642B23615C2100A9B505 /* libxlog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libxlog.a;
+			remoteRef = 52F3642A23615C2100A9B505 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E9FAF5E6221EAC5F00DB6567 /* Resources */ = {
@@ -413,6 +612,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		52F3643423615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app;
+			targetProxy = 52F3643323615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
+		52F3643623615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = baseevent;
+			targetProxy = 52F3643523615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
+		52F3643823615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = comm;
+			targetProxy = 52F3643723615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
+		52F3643A23615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "mars-boost";
+			targetProxy = 52F3643923615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
+		52F3643C23615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sdt;
+			targetProxy = 52F3643B23615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
+		52F3643E23615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = stn;
+			targetProxy = 52F3643D23615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
+		52F3644023615C5B00A9B505 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = xlog;
+			targetProxy = 52F3643F23615C5B00A9B505 /* PBXContainerItemProxy */;
+		};
 		E9FAF5F4221EAC5F00DB6567 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E9FAF5E7221EAC5F00DB6567 /* MarsGate */;
@@ -563,6 +797,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = DIM.MarsGate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -593,6 +831,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DIM.MarsGate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

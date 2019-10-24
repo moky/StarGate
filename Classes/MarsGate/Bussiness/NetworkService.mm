@@ -44,21 +44,18 @@ using namespace mars::stn;
 
 @implementation NetworkService
 
-static NetworkService * sharedSingleton = nil;
-
-
 + (NetworkService*)sharedInstance {
-    @synchronized (self) {
-        if (sharedSingleton == nil) {
-            sharedSingleton = [[NetworkService alloc] init];
-        }
-    }
-
-    return sharedSingleton;
+    static NetworkService *_sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[self alloc] init];
+    });
+    
+    return _sharedInstance;
 }
 
 - (void)dealloc {
-    
+    NSLog(@"Dealloc");
 }
 
 - (void)setCallBack {
@@ -111,7 +108,7 @@ static NetworkService * sharedSingleton = nil;
 }
 
 - (int)startTask:(CGITask *)task ForUI:(id<UINotifyDelegate>)delegateUI {
-    Task ctask;
+    Task ctask = Task();
     ctask.cmdid = task.cmdid;
     ctask.channel_select = task.channel_select;
     ctask.cgi = std::string(task.cgi.UTF8String);
