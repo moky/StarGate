@@ -1280,7 +1280,7 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C $(PROJECT_DIR)/cmake_build/iOS -f $(PROJECT_DIR)/cmake_build/iOS/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
 		7AFFD11688B743B88B3E0B02 /* CMake Rules */ = {
@@ -1291,7 +1291,7 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C $(PROJECT_DIR)/cmake_build/iOS -f $(PROJECT_DIR)/cmake_build/iOS/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
 		B5A4F3BB4CE24E088299A084 /* CMake PostBuild Rules */ = {
@@ -1302,7 +1302,7 @@
 			name = "CMake PostBuild Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS -f /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			shellScript = "make -C $(PROJECT_DIR)/cmake_build/iOS -f $(PROJECT_DIR)/cmake_build/iOS/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1550,7 +1550,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
 				STRIP_STYLE = all;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/build;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/build";
 			};
 			name = Debug;
 		};
@@ -1572,12 +1572,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/../../..,
+					"$(PROJECT_DIR)/stn/.",
+					"$(PROJECT_DIR)/stn/src",
+					"$(PROJECT_DIR)/stn/..",
+					"$(PROJECT_DIR)/stn/../..",
+					"$(PROJECT_DIR)/stn/../comm",
+					"$(PROJECT_DIR)/stn/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -1625,7 +1625,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/stn;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/stn";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1655,7 +1655,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = install;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1684,12 +1684,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/app/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/../../..,
+					"$(PROJECT_DIR)/app/.",
+					"$(PROJECT_DIR)/app/src",
+					"$(PROJECT_DIR)/app/..",
+					"$(PROJECT_DIR)/app/../..",
+					"$(PROJECT_DIR)/app/../comm",
+					"$(PROJECT_DIR)/app/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -1721,7 +1721,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/app;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/app";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1751,7 +1751,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = install;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1776,7 +1776,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1801,7 +1801,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1826,7 +1826,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1855,14 +1855,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/log/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../../..,
-					"/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt/micro-ecc-master",
+					"$(PROJECT_DIR)/log/.",
+					"$(PROJECT_DIR)/log/src",
+					"$(PROJECT_DIR)/log/..",
+					"$(PROJECT_DIR)/log/../..",
+					"$(PROJECT_DIR)/log/../comm",
+					"$(PROJECT_DIR)/log/../crypt",
+					"$(PROJECT_DIR)/log/../../..",
+					"$(PROJECT_DIR)/log/../crypt/micro-ecc-master",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -1931,7 +1931,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/xlog";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1960,12 +1960,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../../..,
+					"$(PROJECT_DIR)/baseevent/.",
+					"$(PROJECT_DIR)/baseevent/src",
+					"$(PROJECT_DIR)/baseevent/..",
+					"$(PROJECT_DIR)/baseevent/../..",
+					"$(PROJECT_DIR)/baseevent/../comm",
+					"$(PROJECT_DIR)/baseevent/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2001,7 +2001,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/baseevent";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2028,7 +2028,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
 				STRIP_STYLE = all;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/build;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/build";
 			};
 			name = Release;
 		};
@@ -2051,8 +2051,8 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/boost/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/boost/..,
+					"$(PROJECT_DIR)/boost/.",
+					"$(PROJECT_DIR)/boost/..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2080,7 +2080,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/boost;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/boost";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2109,12 +2109,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/baseevent/../../..,
+					"$(PROJECT_DIR)/baseevent/.",
+					"$(PROJECT_DIR)/baseevent/src",
+					"$(PROJECT_DIR)/baseevent/..",
+					"$(PROJECT_DIR)/baseevent/../..",
+					"$(PROJECT_DIR)/baseevent/../comm",
+					"$(PROJECT_DIR)/baseevent/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2219,7 +2219,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/baseevent;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/baseevent";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2244,7 +2244,7 @@
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2273,12 +2273,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/app/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/app/../../..,
+					"$(PROJECT_DIR)/app/.",
+					"$(PROJECT_DIR)/app/src",
+					"$(PROJECT_DIR)/app/..",
+					"$(PROJECT_DIR)/app/../..",
+					"$(PROJECT_DIR)/app/../comm",
+					"$(PROJECT_DIR)/app/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2357,7 +2357,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/app;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/app";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2386,15 +2386,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/tools,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/activecheck,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/checkimpl,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../../..,
+					"$(PROJECT_DIR)/sdt/.",
+					"$(PROJECT_DIR)/sdt/src",
+					"$(PROJECT_DIR)/sdt/tools",
+					"$(PROJECT_DIR)/sdt/activecheck",
+					"$(PROJECT_DIR)/sdt/checkimpl",
+					"$(PROJECT_DIR)/sdt/..",
+					"$(PROJECT_DIR)/sdt/../..",
+					"$(PROJECT_DIR)/sdt/../comm",
+					"$(PROJECT_DIR)/sdt/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2563,7 +2563,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/sdt";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2592,15 +2592,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/tools,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/activecheck,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/checkimpl,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/sdt/../../..,
+					"$(PROJECT_DIR)/sdt/.",
+					"$(PROJECT_DIR)/sdt/src",
+					"$(PROJECT_DIR)/sdt/tools",
+					"$(PROJECT_DIR)/sdt/activecheck",
+					"$(PROJECT_DIR)/sdt/checkimpl",
+					"$(PROJECT_DIR)/sdt/..",
+					"$(PROJECT_DIR)/sdt/../..",
+					"$(PROJECT_DIR)/sdt/../comm",
+					"$(PROJECT_DIR)/sdt/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2644,7 +2644,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/sdt;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/sdt";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2673,19 +2673,19 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/assert,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/crypt,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/debugger,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/dns,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/network,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/socket,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/thread,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger,
+					"$(PROJECT_DIR)/comm/.",
+					"$(PROJECT_DIR)/comm/..",
+					"$(PROJECT_DIR)/comm/../..",
+					"$(PROJECT_DIR)/comm/assert",
+					"$(PROJECT_DIR)/comm/corepattern",
+					"$(PROJECT_DIR)/comm/crypt",
+					"$(PROJECT_DIR)/comm/debugger",
+					"$(PROJECT_DIR)/comm/dns",
+					"$(PROJECT_DIR)/comm/messagequeue",
+					"$(PROJECT_DIR)/comm/network",
+					"$(PROJECT_DIR)/comm/socket",
+					"$(PROJECT_DIR)/comm/thread",
+					"$(PROJECT_DIR)/comm/xlogger",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2738,7 +2738,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/comm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -2767,12 +2767,12 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/stn/../../..,
+					"$(PROJECT_DIR)/stn/.",
+					"$(PROJECT_DIR)/stn/src",
+					"$(PROJECT_DIR)/stn/..",
+					"$(PROJECT_DIR)/stn/../..",
+					"$(PROJECT_DIR)/stn/../comm",
+					"$(PROJECT_DIR)/stn/../../..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -2979,7 +2979,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/stn;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/stn";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -3008,14 +3008,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/log/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/src,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../comm,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt,
-					/Users/john/Documents/workspace/iphone/mars/mars/log/../../..,
-					"/Users/john/Documents/workspace/iphone/mars/mars/log/../crypt/micro-ecc-master",
+					"$(PROJECT_DIR)/log/.",
+					"$(PROJECT_DIR)/log/src",
+					"$(PROJECT_DIR)/log/..",
+					"$(PROJECT_DIR)/log/../..",
+					"$(PROJECT_DIR)/log/../comm",
+					"$(PROJECT_DIR)/log/../crypt",
+					"$(PROJECT_DIR)/log/../../..",
+					"$(PROJECT_DIR)/log/../crypt/micro-ecc-master",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -3181,7 +3181,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/xlog;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/xlog";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -3210,19 +3210,19 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/..,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/../..,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/assert,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/corepattern,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/crypt,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/debugger,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/dns,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/messagequeue,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/network,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/socket,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/thread,
-					/Users/john/Documents/workspace/iphone/mars/mars/comm/xlogger,
+					"$(PROJECT_DIR)/comm/.",
+					"$(PROJECT_DIR)/comm/..",
+					"$(PROJECT_DIR)/comm/../..",
+					"$(PROJECT_DIR)/comm/assert",
+					"$(PROJECT_DIR)/comm/corepattern",
+					"$(PROJECT_DIR)/comm/crypt",
+					"$(PROJECT_DIR)/comm/debugger",
+					"$(PROJECT_DIR)/comm/dns",
+					"$(PROJECT_DIR)/comm/messagequeue",
+					"$(PROJECT_DIR)/comm/network",
+					"$(PROJECT_DIR)/comm/socket",
+					"$(PROJECT_DIR)/comm/thread",
+					"$(PROJECT_DIR)/comm/xlogger",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -3292,7 +3292,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/comm;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/comm";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -3322,8 +3322,8 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/john/Documents/workspace/iphone/mars/mars/boost/.,
-					/Users/john/Documents/workspace/iphone/mars/mars/boost/..,
+					"$(PROJECT_DIR)/boost/.",
+					"$(PROJECT_DIR)/boost/..",
 				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
@@ -3380,7 +3380,7 @@
 				SDKROOT = iphoneos;
 				SECTORDER_FLAGS = "";
 				STRIP_STYLE = debugging;
-				SYMROOT = /Users/john/Documents/workspace/iphone/mars/mars/cmake_build/iOS/boost;
+				SYMROOT = "$(PROJECT_DIR)/cmake_build/iOS/boost";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
