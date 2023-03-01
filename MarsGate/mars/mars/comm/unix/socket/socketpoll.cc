@@ -167,7 +167,7 @@ bool SocketPoll::BreakerIsError() const {
 
 bool SocketPoll::BreakerIsBreak() const {
     PollEvent logic_event;
-    logic_event.poll_event_ = events_[0];;
+    logic_event.poll_event_ = events_[0];
     return logic_event.Readable();
 }
 

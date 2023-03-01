@@ -29,7 +29,7 @@
 - (instancetype)initWithData:(NSData *)data
                      handler:(nullable id<SGStarDelegate>)sender {
     if (self = [super init]) {
-        _data = [data copy];
+        _data = data;
         _handler = sender;
     }
     return self;

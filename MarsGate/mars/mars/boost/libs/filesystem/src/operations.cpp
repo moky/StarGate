@@ -1671,7 +1671,7 @@ namespace detail
           p, error_code(errno, system_category())));
       return fs::file_status(fs::status_error);
     }
-    if (ec != 0) ec->clear();;
+    if (ec != 0) ec->clear();
     if (S_ISDIR(path_stat.st_mode))
       return fs::file_status(fs::directory_file,
         static_cast<perms>(path_stat.st_mode) & fs::perms_mask);

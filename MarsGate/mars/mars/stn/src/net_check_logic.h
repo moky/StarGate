@@ -59,7 +59,7 @@ class NetCheckLogic {
 
     unsigned long long last_netcheck_time_;
 
-    NetTaskStatusItem longlink_taskstatus_item_;;
+    NetTaskStatusItem longlink_taskstatus_item_;
     NetTaskStatusItem shortlink_taskstatus_item_;
 };
 

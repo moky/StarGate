@@ -45,7 +45,7 @@ namespace mars {
             uint64_t start_tickcount;
             uint64_t used_cpu_time; //ms
             
-            int call_id;;
+            int call_id;
             void* extra_info;
             
             bool operator<(const check_content& _ref) const {

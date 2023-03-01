@@ -510,7 +510,7 @@ int PingQuery::__prepareSendAddr(const char* _dest) {
 }
 
 int PingQuery::__initialize(const char* _dest) {
-    if (-1 == __prepareSendAddr(_dest)) return -1;;
+    if (-1 == __prepareSendAddr(_dest)) return -1;
 
     sockfd_ = Socket(sendaddr_.sa_family, SOCK_DGRAM/*SOCK_RAW*/, IPPROTO_ICMP);
 
