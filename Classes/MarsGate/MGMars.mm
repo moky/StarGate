@@ -185,6 +185,9 @@
         [networkEvent setIPList:[ipTable objectForKey:domain] forHost:domain];
     }
     
+    [[NetworkStatus sharedInstance] Stop];
+    [[NetworkService sharedInstance] destroyMars];
+    
     [NetworkService sharedInstance].delegate = networkEvent;
     [[NetworkService sharedInstance] setCallBack];
     [[NetworkService sharedInstance] createMars];
@@ -224,6 +227,8 @@
     [dc removeObserver:self
                   name:kNotificationName_ConnectionStatusChanged
                 object:networkEvent];
+    
+    // FIXME: remove pushHandler from PushObserver?
     
     [[NetworkService sharedInstance] destroyMars];
     appender_close();

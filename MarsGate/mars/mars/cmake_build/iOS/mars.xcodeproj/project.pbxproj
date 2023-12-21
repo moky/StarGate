@@ -1242,7 +1242,6 @@
 		359E8573BF294D758B1B938B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 7790B10164FA4010A77C41E3 /* Build configuration list for PBXProject "mars" */;
@@ -1546,7 +1545,7 @@
 				CLANG_DEBUG_INFORMATION_LEVEL = default;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
 				STRIP_STYLE = all;
@@ -2024,7 +2023,7 @@
 				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk;
 				STRIP_STYLE = all;
