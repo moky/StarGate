@@ -6,3 +6,5 @@ library stargate;
 export 'src/plain.dart';
 export 'src/stream.dart';
 export 'src/gate.dart';
+
+export 'src/ws.dart';
