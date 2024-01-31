@@ -39,7 +39,7 @@ class PlainArrival extends ArrivalShip {
 
   final Uint8List _completed;
 
-  Uint8List get package => _completed;
+  Uint8List get payload => _completed;
 
   @override
   dynamic get sn => null;  // plain ship has no SN
@@ -77,7 +77,7 @@ class PlainDeparture extends DepartureShip {
   final Uint8List _completed;
   final List<Uint8List> _fragments;
 
-  Uint8List get package => _completed;
+  Uint8List get payload => _completed;
 
   @override
   dynamic get sn => null;  // plain ship has no SN
@@ -127,7 +127,7 @@ class PlainDocker extends StarDocker {
   @override
   Arrival? checkArrival(Arrival income) {
     assert(income is PlainArrival, 'arrival ship error: $income');
-    Uint8List data = (income as PlainArrival).package;
+    Uint8List data = (income as PlainArrival).payload;
     if (data.length == 4) {
       if (data == kPing) {
         // PING -> PONG

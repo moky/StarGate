@@ -121,12 +121,19 @@ Future<SocketChannel> _createSocket({required SocketAddress remote, SocketAddres
 
 class _WebSocketChannel extends SocketChannel {
 
+  String? _url;
   WebSocket? _ws;
 
   final List<Uint8List> _caches = [];
 
   SocketAddress? _remoteAddress;
   SocketAddress? _localAddress;
+
+  @override
+  String toString() {
+    Type clazz = runtimeType;
+    return '<$clazz url="$_url" />';
+  }
 
   @override
   Future<SocketChannel?> bind(SocketAddress local) async {
@@ -140,7 +147,7 @@ class _WebSocketChannel extends SocketChannel {
   Future<bool> connect(SocketAddress remote) async {
     if (remote is InetSocketAddress) {
       _remoteAddress = remote;
-      _ws = await WebSocket.connect('ws://${remote.host}:${remote.port}');
+      _ws = await WebSocket.connect(_url = 'ws://${remote.host}:${remote.port}/');
       _caches.clear();
       _ws?.listen((msg) {
         print('<<< received msg: $msg');

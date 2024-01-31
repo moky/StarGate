@@ -30,6 +30,7 @@
  */
 import 'dart:typed_data';
 
+import 'package:stargate/src/plain.dart';
 import 'package:startrek/fsm.dart';
 import 'package:startrek/startrek.dart';
 
@@ -45,6 +46,22 @@ abstract class BaseGate<H extends Hub>
   //
   //  Docker
   //
+
+  Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
+    Docker? docker = getDocker(remote: remote, local: local);
+    if (docker == null) {
+      Connection? conn = await hub?.connect(remote: remote, local: local);
+      if (conn != null) {
+        docker = createDocker(conn, data);
+        if (docker == null) {
+          assert(false, 'failed to create docker: $remote, $local');
+        } else {
+          setDocker(docker, remote: remote, local: local);
+        }
+      }
+    }
+    return docker;
+  }
 
   @override
   Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
@@ -126,5 +143,16 @@ abstract class CommonGate extends BaseGate<StreamHub> implements Runnable {
 
   Future<Channel?> getChannel({SocketAddress? remote, SocketAddress? local}) async =>
       await hub?.open(remote: remote, local: local);
+
+  Future<bool> sendResponse(Uint8List payload, Arrival ship,
+      {required SocketAddress remote, SocketAddress? local}) async {
+    assert(ship is PlainArrival, 'arrival ship error: $ship');
+    // Docker? docker = await fetchDocker([], remote: remote, local: local);
+    Docker? docker = getDocker(remote: remote, local: local);
+    if (docker == null) {
+      return false;
+    }
+    return await docker.sendData(payload);
+  }
 
 }
