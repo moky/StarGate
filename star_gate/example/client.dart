@@ -16,18 +16,34 @@ class Client implements DockerDelegate {
 
   ClientHub get hub => gate.hub as ClientHub;
 
-  void start() {
-    // hub.bind(localAddress);
-    hub.connect(remote: remoteAddress);
-    gate.start();
+  Future<void> start() async {
+    // await hub.bind(localAddress);
+    await hub.connect(remote: remoteAddress);
+    await gate.start();
   }
 
-  void stop() {
-    gate.stop();
+  Future<void> stop() async {
+    await gate.stop();
+  }
+
+  Future<Docker?> getDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
+    Docker? docker = gate.getDocker(remote: remote, local: local);
+    if (docker == null) {
+      Connection? conn = await hub.connect(remote: remote, local: local);
+      if (conn != null) {
+        docker = gate.createDocker(conn, data);
+        if (docker == null) {
+          assert(false, 'failed to create docker: $remote, $local');
+        } else {
+          gate.setDocker(docker, remote: remote, local: local);
+        }
+      }
+    }
+    return docker;
   }
 
   Future<bool> sendData(Uint8List data) async {
-    Docker? docker = await gate.fetchDocker([], remote: remoteAddress);
+    Docker? docker = await getDocker([], remote: remoteAddress);
     if (docker == null || docker.isClosed) {
       return false;
     }
@@ -45,7 +61,7 @@ class Client implements DockerDelegate {
   Future<void> onDockerStatusChanged(DockerStatus previous, DockerStatus current, Docker docker) async {
     SocketAddress? remote = docker.remoteAddress;
     SocketAddress? local = docker.localAddress;
-    print('!!! connection ($remote, $local) state changed: $previous -> $current, docker: $docker');
+    print('!!! connection ($remote, $local) state changed: ${previous.name} -> ${current.name}');
   }
 
   @override

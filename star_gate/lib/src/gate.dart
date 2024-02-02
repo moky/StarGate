@@ -47,22 +47,6 @@ abstract class BaseGate<H extends Hub>
   //  Docker
   //
 
-  Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
-    Docker? docker = getDocker(remote: remote, local: local);
-    if (docker == null) {
-      Connection? conn = await hub?.connect(remote: remote, local: local);
-      if (conn != null) {
-        docker = createDocker(conn, data);
-        if (docker == null) {
-          assert(false, 'failed to create docker: $remote, $local');
-        } else {
-          setDocker(docker, remote: remote, local: local);
-        }
-      }
-    }
-    return docker;
-  }
-
   @override
   Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
       super.getDocker(remote: remote);
@@ -110,14 +94,18 @@ abstract class CommonGate extends BaseGate<StreamHub> implements Runnable {
   bool get isRunning => _running;
 
   Future<void> start() async {
-    _running = true;
-    await run();
+    if (isRunning) {
+      await stop();
+      await idle();
+    }
+    /*await */run();
   }
 
   Future<void> stop() async => _running = false;
 
   @override
   Future<void> run() async {
+    _running = true;
     while (isRunning) {
       if (await process()) {
         // process() return true,
@@ -147,7 +135,6 @@ abstract class CommonGate extends BaseGate<StreamHub> implements Runnable {
   Future<bool> sendResponse(Uint8List payload, Arrival ship,
       {required SocketAddress remote, SocketAddress? local}) async {
     assert(ship is PlainArrival, 'arrival ship error: $ship');
-    // Docker? docker = await fetchDocker([], remote: remote, local: local);
     Docker? docker = getDocker(remote: remote, local: local);
     if (docker == null) {
       return false;

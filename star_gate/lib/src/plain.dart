@@ -131,7 +131,7 @@ class PlainDocker extends StarDocker {
     if (data.length == 4) {
       if (data == kPing) {
         // PING -> PONG
-        send(kPong, DeparturePriority.kSlower);
+        _send(kPong, DeparturePriority.kSlower);
         return null;
       } else if (data == kPong || data == kNoop) {
         // ignore
@@ -145,16 +145,16 @@ class PlainDocker extends StarDocker {
   //  Sending
   //
 
-  Future<bool> send(Uint8List payload, int priority) async =>
+  Future<bool> _send(Uint8List payload, int priority) async =>
       await sendShip(createDeparture(payload, priority));
 
   @override
   Future<bool> sendData(Uint8List payload) async =>
-      await send(payload, DeparturePriority.kNormal);
+      await _send(payload, DeparturePriority.kNormal);
 
   @override
   Future<void> heartbeat() async =>
-    await send(kPing, DeparturePriority.kSlower);
+    await _send(kPing, DeparturePriority.kSlower);
 
   static Uint8List bytes(String text) => Uint8List.fromList(utf8.encode(text));
 
