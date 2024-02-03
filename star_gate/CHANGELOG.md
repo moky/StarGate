@@ -1,3 +1,7 @@
+## 0.1.2
+
+- IO Exception.
+
 ## 0.1.1
 
 - Fetch Docker.

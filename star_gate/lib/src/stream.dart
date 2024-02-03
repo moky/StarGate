@@ -31,6 +31,8 @@
 import 'dart:typed_data';
 
 import 'package:object_key/object_key.dart';
+import 'package:startrek/nio.dart';
+import 'package:startrek/pair.dart';
 import 'package:startrek/startrek.dart';
 
 

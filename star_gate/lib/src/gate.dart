@@ -30,10 +30,10 @@
  */
 import 'dart:typed_data';
 
-import 'package:stargate/src/plain.dart';
-import 'package:startrek/fsm.dart';
+import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 
+import 'plain.dart';
 import 'stream.dart';
 
 
@@ -86,48 +86,35 @@ abstract class BaseGate<H extends Hub>
 
 
 ///  Gate with hub for connection
-abstract class CommonGate extends BaseGate<StreamHub> implements Runnable {
+abstract class CommonGate extends BaseGate<StreamHub> /*implements Runnable */{
   CommonGate(super.keeper);
 
   bool _running = false;
 
   bool get isRunning => _running;
 
-  Future<void> start() async {
-    if (isRunning) {
-      await stop();
-      await idle();
-    }
-    /*await */run();
-  }
+  Future<void> start() async => _running = true;
 
   Future<void> stop() async => _running = false;
 
-  @override
-  Future<void> run() async {
-    _running = true;
-    while (isRunning) {
-      if (await process()) {
-        // process() return true,
-        // means this thread is busy,
-        // so process next task immediately
-      } else {
-        // nothing to do now,
-        // have a rest ^_^
-        await idle();
-      }
-    }
-  }
-
-  @override
-  Future<bool> process() async {
-    bool incoming = await hub!.process();
-    bool outgoing = await super.process();
-    return incoming || outgoing;
-  }
-
-  // protected
-  Future<void> idle() async => await Runner.sleep(128);
+  // @override
+  // Future<void> run() async {
+  //   _running = true;
+  //   while (isRunning) {
+  //     if (await process()) {
+  //       // process() return true,
+  //       // means this thread is busy,
+  //       // so process next task immediately
+  //     } else {
+  //       // nothing to do now,
+  //       // have a rest ^_^
+  //       await idle();
+  //     }
+  //   }
+  // }
+  //
+  // // protected
+  // Future<void> idle() async => await Runner.sleep(128);
 
   Future<Channel?> getChannel({SocketAddress? remote, SocketAddress? local}) async =>
       await hub?.open(remote: remote, local: local);
@@ -140,6 +127,22 @@ abstract class CommonGate extends BaseGate<StreamHub> implements Runnable {
       return false;
     }
     return await docker.sendData(payload);
+  }
+
+  Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
+    Docker? docker = getDocker(remote: remote, local: local);
+    if (docker == null/* && data.isNotEmpty*/) {
+      Connection? conn = await hub?.connect(remote: remote, local: local);
+      if (conn != null) {
+        docker = createDocker(conn, data);
+        if (docker == null) {
+          assert(false, 'failed to create docker: $remote, $local');
+        } else {
+          setDocker(docker, remote: remote, local: local);
+        }
+      }
+    }
+    return docker;
   }
 
 }

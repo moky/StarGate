@@ -32,10 +32,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:stargate/src/plain.dart';
+import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 
 import 'gate.dart';
+import 'plain.dart';
 import 'stream.dart';
 
 
@@ -82,7 +83,7 @@ class ClientHub extends StreamHub {
   Connection? createConnection(Channel channel, {required SocketAddress remote, SocketAddress? local}) {
     ActiveConnection conn = ActiveConnection(this, channel, remote: remote, local: local);
     conn.delegate = delegate;  // gate
-    conn.start();  // start FSM
+    /*await */conn.start();    // start FSM
     return conn;
   }
 
@@ -130,9 +131,35 @@ class _WebSocketChannel extends SocketChannel {
   SocketAddress? _localAddress;
 
   @override
+  bool get isClosed => super.isClosed || _ws?.readyState == WebSocket.closed;
+
+  @override
+  bool get isBound => _localAddress != null;
+
+  @override
+  bool get isConnected => _ws?.readyState == WebSocket.open;
+
+  @override
+  SocketAddress? get remoteAddress => _remoteAddress;
+
+  @override
+  SocketAddress? get localAddress => _localAddress;
+
+  @override
   String toString() {
     Type clazz = runtimeType;
     return '<$clazz url="$_url" />';
+  }
+
+  @override
+  Future<void> implCloseChannel() async {
+    await _ws?.close();
+    _ws = null;
+  }
+
+  @override
+  void implConfigureBlocking(bool block) {
+    // TODO: implement implConfigureBlocking
   }
 
   @override
@@ -146,8 +173,12 @@ class _WebSocketChannel extends SocketChannel {
   @override
   Future<bool> connect(SocketAddress remote) async {
     if (remote is InetSocketAddress) {
+      try {
+        _ws = await WebSocket.connect(_url = 'ws://${remote.host}:${remote.port}/');
+      } catch (e) {
+        throw SocketException('failed to connect: $remote');
+      }
       _remoteAddress = remote;
-      _ws = await WebSocket.connect(_url = 'ws://${remote.host}:${remote.port}/');
       _caches.clear();
       _ws?.listen((msg) {
         print('<<< received msg: $msg');
@@ -157,34 +188,11 @@ class _WebSocketChannel extends SocketChannel {
         assert(msg is Uint8List, 'msg error');
         _caches.add(msg);
       });
-      return true;
+      return _ws != null;
     } else {
       return false;
     }
   }
-
-  @override
-  Future<void> implCloseChannel() async {
-    _ws?.close();
-    _ws = null;
-  }
-
-  @override
-  void implConfigureBlocking(bool block) {
-    // TODO: implement implConfigureBlocking
-  }
-
-  @override
-  bool get isBound => false;
-
-  @override
-  bool get isConnected => _ws?.readyState == WebSocket.open;
-
-  @override
-  SocketAddress? get remoteAddress => _remoteAddress;
-
-  @override
-  SocketAddress? get localAddress => _localAddress;
 
   @override
   Future<Uint8List?> read(int maxLen) async {
@@ -199,7 +207,7 @@ class _WebSocketChannel extends SocketChannel {
   Future<int> write(Uint8List src) async {
     WebSocket? ws = _ws;
     if (ws == null || ws.readyState != WebSocket.open) {
-      return -1;
+      throw SocketException('WebSocket closed: $_url');
     }
     ws.add(src);
     return src.length;
