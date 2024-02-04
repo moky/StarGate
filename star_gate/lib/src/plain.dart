@@ -122,7 +122,7 @@ class PlainDocker extends StarDocker {
   Departure createDeparture(Uint8List pack, int priority) => PlainDeparture(pack, priority);
 
   @override
-  Arrival? getArrival(Uint8List data) => data.isEmpty ? null : createArrival(data);
+  List<Arrival> getArrivals(Uint8List data) => [createArrival(data)];
 
   @override
   Arrival? checkArrival(Arrival income) {
@@ -131,7 +131,7 @@ class PlainDocker extends StarDocker {
     if (data.length == 4) {
       if (data == kPing) {
         // PING -> PONG
-        _send(kPong, DeparturePriority.kSlower);
+        send(kPong, DeparturePriority.kSlower);
         return null;
       } else if (data == kPong || data == kNoop) {
         // ignore
@@ -145,22 +145,22 @@ class PlainDocker extends StarDocker {
   //  Sending
   //
 
-  Future<bool> _send(Uint8List payload, int priority) async =>
+  Future<bool> send(Uint8List payload, int priority) async =>
       await sendShip(createDeparture(payload, priority));
 
   @override
   Future<bool> sendData(Uint8List payload) async =>
-      await _send(payload, DeparturePriority.kNormal);
+      await send(payload, DeparturePriority.kNormal);
 
   @override
   Future<void> heartbeat() async =>
-    await _send(kPing, DeparturePriority.kSlower);
+    await send(kPing, DeparturePriority.kSlower);
 
-  static Uint8List bytes(String text) => Uint8List.fromList(utf8.encode(text));
+  static Uint8List _bytes(String text) => Uint8List.fromList(utf8.encode(text));
 
-  static final Uint8List kPing = bytes('PING');
-  static final Uint8List kPong = bytes('PONG');
-  static final Uint8List kNoop = bytes('NOOP');
-  // static final Uint8List kOK = bytes('OK');
+  static final Uint8List kPing = _bytes('PING');
+  static final Uint8List kPong = _bytes('PONG');
+  static final Uint8List kNoop = _bytes('NOOP');
+  // static final Uint8List kOK = _bytes('OK');
 
 }

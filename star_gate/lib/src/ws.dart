@@ -100,9 +100,14 @@ class ClientHub extends StreamHub {
   }
 
   Future<Channel?> _create({required SocketAddress remote, SocketAddress? local}) async {
-    SocketChannel sock = await _createSocket(remote: remote, local: local);
-    local ??= sock.localAddress;
-    return createChannel(sock, remote: remote, local: local);
+    try {
+      SocketChannel sock = await _createSocket(remote: remote, local: local);
+      local ??= sock.localAddress;
+      return createChannel(sock, remote: remote, local: local);
+    } on IOException catch (e) {
+      print('[WS] cannot create socket: $remote, $local, $e');
+      return null;
+    }
   }
 
 }
@@ -176,12 +181,11 @@ class _WebSocketChannel extends SocketChannel {
       try {
         _ws = await WebSocket.connect(_url = 'ws://${remote.host}:${remote.port}/');
       } catch (e) {
-        throw SocketException('failed to connect: $remote');
+        throw SocketException('failed to connect web socket: $remote, $e');
       }
       _remoteAddress = remote;
       _caches.clear();
       _ws?.listen((msg) {
-        print('<<< received msg: $msg');
         if (msg is String) {
           msg = Uint8List.fromList(utf8.encode(msg));
         }

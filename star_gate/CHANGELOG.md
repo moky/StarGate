@@ -1,3 +1,7 @@
+## 0.2.0
+
+- Get arrival ships.
+
 ## 0.1.2
 
 - IO Exception.

@@ -44,9 +44,9 @@ class StreamChannelReader extends ChannelReader<SocketChannel> {
     SocketAddress? remote = remoteAddress;
     Uint8List? data = await read(maxLen);
     if (data == null/* || data.isEmpty*/) {
-      return Pair(null, null);
-    } else if (remote == null) {
-      assert(false, 'should not happen: ${data.length}');
+      remote = null;
+    } else {
+      assert(remote != null, 'should not happen: ${data.length}');
     }
     return Pair(data, remote);
   }

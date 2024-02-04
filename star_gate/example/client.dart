@@ -27,25 +27,9 @@ class Client implements DockerDelegate {
     await gate.stop();
   }
 
-  Future<Docker?> getDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
-    Docker? docker = gate.getDocker(remote: remote, local: local);
-    if (docker == null) {
-      Connection? conn = await hub.connect(remote: remote, local: local);
-      if (conn != null) {
-        docker = gate.createDocker(conn, data);
-        if (docker == null) {
-          assert(false, 'failed to create docker: $remote, $local');
-        } else {
-          gate.setDocker(docker, remote: remote, local: local);
-        }
-      }
-    }
-    return docker;
-  }
-
   Future<bool> sendData(Uint8List data) async {
-    Docker? docker = await getDocker([], remote: remoteAddress);
-    if (docker == null || docker.isClosed) {
+    Docker? docker = await gate.fetchDocker([], remote: remoteAddress);
+    if (docker == null) {
       return false;
     }
     return await docker.sendData(data);
