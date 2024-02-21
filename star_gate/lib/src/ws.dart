@@ -28,7 +28,6 @@
  * SOFTWARE.
  * =============================================================================
  */
-import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
@@ -38,6 +37,7 @@ import 'package:startrek/startrek.dart';
 import 'gate.dart';
 import 'plain.dart';
 import 'stream.dart';
+import 'ws_html.dart' if (dart.library.io) 'ws_io.dart';
 
 
 class ClientGate extends CommonGate {
@@ -114,7 +114,7 @@ class ClientHub extends StreamHub {
 
 
 Future<SocketChannel> _createSocket({required SocketAddress remote, SocketAddress? local}) async {
-  SocketChannel sock = _WebSocketChannel();
+  SocketChannel sock = WebSocketChannel();
   sock.configureBlocking(true);
   if (local != null) {
     await sock.bind(local);
@@ -122,99 +122,4 @@ Future<SocketChannel> _createSocket({required SocketAddress remote, SocketAddres
   await sock.connect(remote);
   sock.configureBlocking(false);
   return sock;
-}
-
-
-class _WebSocketChannel extends SocketChannel {
-
-  String? _url;
-  WebSocket? _ws;
-
-  final List<Uint8List> _caches = [];
-
-  SocketAddress? _remoteAddress;
-  SocketAddress? _localAddress;
-
-  @override
-  bool get isClosed => super.isClosed || _ws?.readyState == WebSocket.closed;
-
-  @override
-  bool get isBound => _localAddress != null;
-
-  @override
-  bool get isConnected => _ws?.readyState == WebSocket.open;
-
-  @override
-  SocketAddress? get remoteAddress => _remoteAddress;
-
-  @override
-  SocketAddress? get localAddress => _localAddress;
-
-  @override
-  String toString() {
-    Type clazz = runtimeType;
-    return '<$clazz url="$_url" />';
-  }
-
-  @override
-  Future<void> implCloseChannel() async {
-    await _ws?.close();
-    _ws = null;
-  }
-
-  @override
-  void implConfigureBlocking(bool block) {
-    // TODO: implement implConfigureBlocking
-  }
-
-  @override
-  Future<SocketChannel?> bind(SocketAddress local) async {
-    // TODO: implement bind
-    assert(false, 'cannot bind address: $local');
-    _localAddress = local;
-    return null;
-  }
-
-  @override
-  Future<bool> connect(SocketAddress remote) async {
-    if (remote is InetSocketAddress) {
-      try {
-        _ws = await WebSocket.connect(_url = 'ws://${remote.host}:${remote.port}/');
-      } catch (e) {
-        throw SocketException('failed to connect web socket: $remote, $e');
-      }
-      _remoteAddress = remote;
-      _caches.clear();
-      _ws?.listen((msg) {
-        if (msg is String) {
-          msg = Uint8List.fromList(utf8.encode(msg));
-        }
-        assert(msg is Uint8List, 'msg error');
-        _caches.add(msg);
-      });
-      return _ws != null;
-    } else {
-      return false;
-    }
-  }
-
-  @override
-  Future<Uint8List?> read(int maxLen) async {
-    if (_caches.isEmpty) {
-      return null;
-    }
-    // TODO: max length
-    return _caches.removeAt(0);
-  }
-
-  @override
-  Future<int> write(Uint8List src) async {
-    WebSocket? ws = _ws;
-    if (ws == null || ws.readyState != WebSocket.open) {
-      throw SocketException('WebSocket closed: $_url');
-    }
-    ws.add(src);
-    return src.length;
-  }
-
 }

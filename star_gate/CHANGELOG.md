@@ -1,3 +1,7 @@
+## 0.2.1
+
+- WebSocket for html.
+
 ## 0.2.0
 
 - Get arrival ships.

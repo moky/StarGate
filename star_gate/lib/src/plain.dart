@@ -51,7 +51,7 @@ class PlainArrival extends ArrivalShip {
         // same object
         return true;
       }
-      return other._completed == _completed;
+      return _equals(other._completed, _completed);
     } else {
       return false;
     }
@@ -129,11 +129,11 @@ class PlainDocker extends StarDocker {
     assert(income is PlainArrival, 'arrival ship error: $income');
     Uint8List data = (income as PlainArrival).payload;
     if (data.length == 4) {
-      if (data == kPing) {
+      if (_equals(data, kPing)) {
         // PING -> PONG
         send(kPong, DeparturePriority.kSlower);
         return null;
-      } else if (data == kPong || data == kNoop) {
+      } else if (_equals(data, kPong) || _equals(data, kNoop)) {
         // ignore
         return null;
       }
@@ -156,11 +156,25 @@ class PlainDocker extends StarDocker {
   Future<void> heartbeat() async =>
     await send(kPing, DeparturePriority.kSlower);
 
-  static Uint8List _bytes(String text) => Uint8List.fromList(utf8.encode(text));
-
   static final Uint8List kPing = _bytes('PING');
   static final Uint8List kPong = _bytes('PONG');
   static final Uint8List kNoop = _bytes('NOOP');
   // static final Uint8List kOK = _bytes('OK');
 
+}
+
+Uint8List _bytes(String text) => Uint8List.fromList(utf8.encode(text));
+
+bool _equals(Uint8List a, Uint8List b) {
+  if (identical(a, b)) {
+    return true;
+  } else if (a.length != b.length) {
+    return false;
+  }
+  for (int i = a.length - 1; i >= 0; --i) {
+    if (a[i] != b[i]) {
+      return false;
+    }
+  }
+  return true;
 }
