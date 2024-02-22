@@ -114,7 +114,7 @@ class ClientHub extends StreamHub {
 
 
 Future<SocketChannel> _createSocket({required SocketAddress remote, SocketAddress? local}) async {
-  SocketChannel sock = WebSocketChannel();
+  SocketChannel sock = _WebSocketChannel();
   sock.configureBlocking(true);
   if (local != null) {
     await sock.bind(local);
@@ -122,4 +122,92 @@ Future<SocketChannel> _createSocket({required SocketAddress remote, SocketAddres
   await sock.connect(remote);
   sock.configureBlocking(false);
   return sock;
+}
+
+
+class _WebSocketChannel extends SocketChannel {
+
+  final List<Uint8List> _caches = [];
+
+  SocketAddress? _remoteAddress;
+  SocketAddress? _localAddress;
+
+  WebSocketConnector? _socket;
+
+  @override
+  bool get isClosed => super.isClosed || _socket?.readyState == WebSocketConnector.closed;
+
+  @override
+  bool get isBound => _localAddress != null;
+
+  @override
+  bool get isConnected => _socket?.readyState == WebSocketConnector.open;
+
+  @override
+  SocketAddress? get remoteAddress => _remoteAddress;
+
+  @override
+  SocketAddress? get localAddress => _localAddress;
+
+  @override
+  String toString() {
+    Type clazz = runtimeType;
+    return '<$clazz url="${_socket?.url}" state=${_socket?.readyState} />';
+  }
+
+  @override
+  Future<void> implCloseChannel() async {
+    await _socket?.close();
+    _socket = null;
+  }
+
+  @override
+  void implConfigureBlocking(bool block) {
+    // TODO: implement implConfigureBlocking
+  }
+
+  @override
+  Future<SocketChannel?> bind(SocketAddress local) async {
+    // TODO: implement bind
+    _localAddress = local;
+    return null;
+  }
+
+  @override
+  Future<bool> connect(SocketAddress remote) async {
+    if (remote is InetSocketAddress) {} else {
+      assert(false, 'remote address error: $remote');
+      return false;
+    }
+    Uri url = Uri.parse('ws://${remote.host}:${remote.port}/');
+    WebSocketConnector connector = WebSocketConnector(url);
+    bool ok = await connector.connect();
+    if (ok) {
+      _remoteAddress = remote;
+      _caches.clear();
+      _socket = connector;
+      connector.listen((msg) => _caches.add(msg));
+    }
+    return ok;
+  }
+
+  @override
+  Future<Uint8List?> read(int maxLen) async {
+    if (_caches.isEmpty) {
+      return null;
+    }
+    // TODO: max length
+    return _caches.removeAt(0);
+  }
+
+  @override
+  Future<int> write(Uint8List src) async {
+    WebSocketConnector? connector = _socket;
+    if (connector == null) {
+      assert(false, 'socket not connect');
+      return -1;
+    }
+    return await connector.write(src);
+  }
+
 }

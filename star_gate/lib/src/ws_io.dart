@@ -32,97 +32,87 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:startrek/nio.dart';
 
-class WebSocketChannel extends SocketChannel {
+class WebSocketConnector {
+  WebSocketConnector(this.url);
 
-  String? _url;
+  /// Possible states of the connection.
+  static const int connecting = WebSocket.connecting;
+  static const int open       = WebSocket.open;
+  static const int closing    = WebSocket.closing;
+  static const int closed     = WebSocket.closed;
+
+  final Uri url;
   WebSocket? _ws;
 
-  final List<Uint8List> _caches = [];
+  WebSocket? get socket => _ws;
 
-  SocketAddress? _remoteAddress;
-  SocketAddress? _localAddress;
-
-  @override
-  bool get isClosed => super.isClosed || _ws?.readyState == WebSocket.closed;
-
-  @override
-  bool get isBound => _localAddress != null;
-
-  @override
-  bool get isConnected => _ws?.readyState == WebSocket.open;
-
-  @override
-  SocketAddress? get remoteAddress => _remoteAddress;
-
-  @override
-  SocketAddress? get localAddress => _localAddress;
+  int get readyState => _ws?.readyState ?? closed;
 
   @override
   String toString() {
     Type clazz = runtimeType;
-    return '<$clazz url="$_url" />';
+    return '<$clazz url="$url" state=$readyState />';
   }
 
-  @override
-  Future<void> implCloseChannel() async {
-    await _ws?.close();
-    _ws = null;
-  }
-
-  @override
-  void implConfigureBlocking(bool block) {
-    // TODO: implement implConfigureBlocking
-  }
-
-  @override
-  Future<SocketChannel?> bind(SocketAddress local) async {
-    // TODO: implement bind
-    assert(false, 'cannot bind address: $local');
-    _localAddress = local;
-    return null;
-  }
-
-  @override
-  Future<bool> connect(SocketAddress remote) async {
-    if (remote is InetSocketAddress) {} else {
+  Future<bool> connect([int timeout = 32000]) async {
+    var socket = await WebSocket.connect(url.toString());
+    if (await _checkState(timeout, () => socket.readyState != closed)) {
+      _ws = socket;
+      return true;
+    } else {
+      assert(false, 'failed to connect url: $url');
       return false;
     }
-    try {
-      _ws = await WebSocket.connect(_url = 'ws://${remote.host}:${remote.port}/');
-    } catch (e) {
-      throw SocketException('failed to connect web socket: $remote, $e');
-    }
-    _remoteAddress = remote;
-    _caches.clear();
-    _ws?.listen((msg) {
-      if (msg is String) {
-        msg = Uint8List.fromList(utf8.encode(msg));
-      }
+  }
+
+  void listen(void Function(Uint8List data) onData) => _ws?.listen((msg) {
+    if (msg is String) {
+      msg = Uint8List.fromList(utf8.encode(msg));
+    } else {
       assert(msg is Uint8List, 'msg error');
-      _caches.add(msg);
-    });
-    return _ws != null;
-  }
-
-  @override
-  Future<Uint8List?> read(int maxLen) async {
-    if (_caches.isEmpty) {
-      return null;
     }
-    // TODO: max length
-    return _caches.removeAt(0);
-  }
+    onData(msg);
+  });
 
-  @override
   Future<int> write(Uint8List src) async {
     WebSocket? ws = _ws;
-    if (ws == null || ws.readyState != WebSocket.open) {
-      throw SocketException('WebSocket closed: $_url');
+    if (ws == null || ws.readyState != open) {
+      // throw SocketException('WebSocket closed: $url');
+      return -1;
     }
     ws.add(src);
     return src.length;
   }
 
+  Future<bool> close([int timeout = 32000]) async {
+    var socket = _ws;
+    if (socket == null) {
+      assert(false, 'WebSocket closed');
+      return false;
+    } else {
+      await socket.close();
+      _ws = null;
+    }
+    return await _checkState(timeout, () => socket.readyState == closed);
+  }
+
+}
+
+Future<bool> _checkState(int timeout, bool Function() condition) async {
+  if (timeout <= 0) {
+    // non-blocking
+    return true;
+  }
+  DateTime expired = DateTime.now().add(Duration(milliseconds: timeout));
+  while (!condition()) {
+    // condition not true, wait a while to check again
+    await Future.delayed(Duration(milliseconds: 128));
+    if (DateTime.now().isAfter(expired)) {
+      // throw SocketException('WebSocket timeout: $url');
+      return false;
+    }
+  }
+  // condition true now
+  return true;
 }

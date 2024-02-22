@@ -8,3 +8,4 @@ export 'src/stream.dart';
 export 'src/gate.dart';
 
 export 'src/ws.dart';
+export 'src/ws_html.dart' if (dart.library.io) 'src/ws_io.dart';

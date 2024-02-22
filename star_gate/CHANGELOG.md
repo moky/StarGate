@@ -1,3 +1,7 @@
+## 0.2.2
+
+- WebSocket connector.
+
 ## 0.2.1
 
 - WebSocket for html.

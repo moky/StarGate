@@ -1,6 +1,6 @@
 name: stargate
 description: Network Connection Module
-version: 0.2.1
+version: 0.2.2
 homepage: https://github.com/moky/StarGate
 repository: https://github.com/moky/StarGate
 issue_tracker: https://github.com/moky/StarGate/issues
