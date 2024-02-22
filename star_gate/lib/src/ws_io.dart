@@ -55,15 +55,9 @@ class WebSocketConnector {
     return '<$clazz url="$url" state=$readyState />';
   }
 
-  Future<bool> connect([int timeout = 32000]) async {
-    var socket = await WebSocket.connect(url.toString());
-    if (await _checkState(timeout, () => socket.readyState != closed)) {
-      _ws = socket;
-      return true;
-    } else {
-      assert(false, 'failed to connect url: $url');
-      return false;
-    }
+  Future<bool> connect([int timeout = 8000]) async {
+    _ws = await WebSocket.connect(url.toString());
+    return await _checkState(timeout, () => _ws?.readyState == open);
   }
 
   void listen(void Function(Uint8List data) onData) => _ws?.listen((msg) {
@@ -79,16 +73,17 @@ class WebSocketConnector {
     WebSocket? ws = _ws;
     if (ws == null || ws.readyState != open) {
       // throw SocketException('WebSocket closed: $url');
+      assert(false, 'WebSocket closed: $url');
       return -1;
     }
     ws.add(src);
     return src.length;
   }
 
-  Future<bool> close([int timeout = 32000]) async {
+  Future<bool> close([int timeout = 8000]) async {
     var socket = _ws;
     if (socket == null) {
-      assert(false, 'WebSocket closed');
+      assert(false, 'WebSocket not exists: $url');
       return false;
     } else {
       await socket.close();
