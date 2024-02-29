@@ -44,6 +44,18 @@ class ClientGate extends CommonGate {
   ClientGate(super.keeper);
 
   @override
+  Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
+      super.getDocker(remote: remote);
+
+  @override
+  void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
+      super.setDocker(docker, remote: remote);
+
+  @override
+  void removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
+      super.removeDocker(docker, remote: remote);
+
+  @override
   Docker? createDocker(Connection conn, List<Uint8List> data) {
     PlainDocker docker = PlainDocker(conn);
     docker.delegate = delegate;
@@ -54,7 +66,7 @@ class ClientGate extends CommonGate {
   Future<void> heartbeat(Connection connection) async {
     // let the client to do the job
     if (connection is ActiveConnection) {
-      super.heartbeat(connection);
+      await super.heartbeat(connection);
     }
   }
 
@@ -66,6 +78,18 @@ class ClientHub extends StreamHub {
 
   void putChannel(Channel channel) =>
       setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
+
+  @override
+  Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
+      super.getChannel(remote: remote);
+
+  @override
+  void setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
+      super.setChannel(channel, remote: remote);
+
+  @override
+  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
+      super.removeChannel(channel, remote: remote);
 
   @override
   Connection? getConnection({required SocketAddress remote, SocketAddress? local}) =>
@@ -80,7 +104,7 @@ class ClientHub extends StreamHub {
       super.removeConnection(conn, remote: remote);
 
   @override
-  Connection? createConnection(Channel channel, {required SocketAddress remote, SocketAddress? local}) {
+  Connection? createConnection(Channel? channel, {required SocketAddress remote, SocketAddress? local}) {
     ActiveConnection conn = ActiveConnection(this, channel, remote: remote, local: local);
     conn.delegate = delegate;  // gate
     /*await */conn.start();    // start FSM
@@ -91,7 +115,16 @@ class ClientHub extends StreamHub {
   Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {
     Channel? channel = await super.open(remote: remote, local: local);
     if (channel == null && remote != null) {
-      channel = await _create(remote: remote, local: local);
+      // get from socket pool
+      SocketChannel? sock = await _createSocket(remote: remote, local: local);
+      if (sock == null) {
+        // failed to connect remote address
+        return null;
+      // } else if (local == null) {
+      //   local = sock.localAddress;
+      }
+      // create channel with socket
+      channel = createChannel(sock, remote: remote, local: local);
       if (channel != null) {
         setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
       }
@@ -99,29 +132,27 @@ class ClientHub extends StreamHub {
     return channel;
   }
 
-  Future<Channel?> _create({required SocketAddress remote, SocketAddress? local}) async {
-    try {
-      SocketChannel sock = await _createSocket(remote: remote, local: local);
-      local ??= sock.localAddress;
-      return createChannel(sock, remote: remote, local: local);
-    } on IOException catch (e) {
-      print('[WS] cannot create socket: $remote, $local, $e');
-      return null;
-    }
-  }
-
 }
 
-
-Future<SocketChannel> _createSocket({required SocketAddress remote, SocketAddress? local}) async {
-  SocketChannel sock = _WebSocketChannel();
-  sock.configureBlocking(true);
-  if (local != null) {
-    await sock.bind(local);
+Future<SocketChannel?> _createSocket({required SocketAddress remote, SocketAddress? local}) async {
+  try {
+    SocketChannel sock = _WebSocketChannel();
+    sock.configureBlocking(true);
+    if (local != null) {
+      await sock.bind(local);
+    }
+    bool ok = await sock.connect(remote);
+    if (!ok) {
+      // throw SocketException('failed to connect remote address: $remote');
+      print('[WS] failed to connect remote address: $remote');
+      return null;
+    }
+    sock.configureBlocking(false);
+    return sock;
+  } on IOException catch (e) {
+    print('[WS] cannot create socket: $remote, $local, $e');
+    return null;
   }
-  await sock.connect(remote);
-  sock.configureBlocking(false);
-  return sock;
 }
 
 

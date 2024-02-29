@@ -7,7 +7,7 @@ import 'package:startrek/startrek.dart';
 import 'package:stargate/websocket.dart';
 
 class Client extends Runner implements DockerDelegate {
-  Client(this.remoteAddress) {
+  Client(this.remoteAddress, super.millis) {
     gate = ClientGate(this);
     gate.hub = ClientHub(gate);
   }

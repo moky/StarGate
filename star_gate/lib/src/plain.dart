@@ -44,21 +44,21 @@ class PlainArrival extends ArrivalShip {
   @override
   dynamic get sn => null;  // plain ship has no SN
 
-  @override
-  bool operator ==(Object other) {
-    if (other is PlainArrival) {
-      if (identical(this, other)) {
-        // same object
-        return true;
-      }
-      return _equals(other._completed, _completed);
-    } else {
-      return false;
-    }
-  }
-
-  @override
-  int get hashCode => _completed.hashCode;
+  // @override
+  // bool operator ==(Object other) {
+  //   if (other is PlainArrival) {
+  //     if (identical(this, other)) {
+  //       // same object
+  //       return true;
+  //     }
+  //     return _equals(other._completed, _completed);
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  //
+  // @override
+  // int get hashCode => _completed.hashCode;
 
   @override
   Arrival? assemble(Arrival income) {
@@ -82,21 +82,21 @@ class PlainDeparture extends DepartureShip {
   @override
   dynamic get sn => null;  // plain ship has no SN
 
-  @override
-  bool operator ==(Object other) {
-    if (other is PlainDeparture) {
-      if (identical(this, other)) {
-        // same object
-        return true;
-      }
-      return other._completed == _completed;
-    } else {
-      return false;
-    }
-  }
-
-  @override
-  int get hashCode => _completed.hashCode;
+  // @override
+  // bool operator ==(Object other) {
+  //   if (other is PlainDeparture) {
+  //     if (identical(this, other)) {
+  //       // same object
+  //       return true;
+  //     }
+  //     return other._completed == _completed;
+  //   } else {
+  //     return false;
+  //   }
+  // }
+  //
+  // @override
+  // int get hashCode => _completed.hashCode;
 
   @override
   List<Uint8List> get fragments => _fragments;

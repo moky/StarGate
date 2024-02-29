@@ -84,7 +84,7 @@ class ChannelPool extends AddressPairMap<Channel> {
   @override
   void setItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
     Channel? old = getItem(remote: remote, local: local);
-    if (old != null && old != value) {
+    if (old == null || identical(old, value)) {} else {
       removeItem(old, remote: remote, local: local);
     }
     super.setItem(value, remote: remote, local: local);
@@ -94,7 +94,7 @@ class ChannelPool extends AddressPairMap<Channel> {
   Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
     Channel? cached = super.removeItem(value, remote: remote, local: local);
     if (cached == null || cached.isClosed) {} else {
-      cached.close();
+      /*await */cached.close();
     }
     return cached;
   }
@@ -127,7 +127,7 @@ abstract class StreamHub extends BaseHub {
       StreamChannel(sock, remote: remote, local: local);
 
   @override
-  Set<Channel> get allChannels => _channelPool.items;
+  Iterable<Channel> get allChannels => _channelPool.items;
 
   // protected
   Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
@@ -139,7 +139,7 @@ abstract class StreamHub extends BaseHub {
 
   @override
   // protected
-  void removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
+  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
       _channelPool.removeItem(channel, remote: remote, local: local);
 
   @override

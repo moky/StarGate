@@ -11,7 +11,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   object_key: ^0.1.1
-  startrek: ^0.2.3
+  startrek: ^0.3.0
 
 dev_dependencies:
   lints: ^2.0.0

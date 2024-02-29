@@ -47,23 +47,23 @@ abstract class BaseGate<H extends Hub>
   //  Docker
   //
 
-  @override
-  Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
-      super.getDocker(remote: remote);
-
-  @override
-  void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setDocker(docker, remote: remote);
-
-  @override
-  void removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removeDocker(docker, remote: remote);
+  // @override
+  // Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
+  //     super.getDocker(remote: remote);
+  //
+  // @override
+  // void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
+  //     super.setDocker(docker, remote: remote);
+  //
+  // @override
+  // void removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
+  //     super.removeDocker(docker, remote: remote);
 
   // @override
   // Future<void> heartbeat(Connection connection) async {
   //   // let the client to do the job
   //   if (connection is ActiveConnection) {
-  //     super.heartbeat(connection);
+  //     await super.heartbeat(connection);
   //   }
   // }
 
@@ -130,19 +130,19 @@ abstract class CommonGate extends BaseGate<StreamHub> /*implements Runnable */{
   }
 
   Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
-    Docker? docker = getDocker(remote: remote, local: local);
-    if (docker == null/* && data.isNotEmpty*/) {
+    Docker? worker = getDocker(remote: remote, local: local);
+    if (worker == null/* && data.isNotEmpty*/) {
       Connection? conn = await hub?.connect(remote: remote, local: local);
       if (conn != null) {
-        docker = createDocker(conn, data);
-        if (docker == null) {
+        worker = createDocker(conn, data);
+        if (worker == null) {
           assert(false, 'failed to create docker: $remote, $local');
         } else {
-          setDocker(docker, remote: remote, local: local);
+          setDocker(worker, remote: worker.remoteAddress!, local: worker.localAddress);
         }
       }
     }
-    return docker;
+    return worker;
   }
 
 }
