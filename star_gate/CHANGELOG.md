@@ -1,3 +1,7 @@
+## 0.3.0
+
+- Init socket after channel created.
+
 ## 0.2.3
 
 - Ready state.

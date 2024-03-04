@@ -43,6 +43,10 @@ import 'ws_html.dart' if (dart.library.io) 'ws_io.dart';
 class ClientGate extends CommonGate {
   ClientGate(super.keeper);
 
+  //
+  //  Docker
+  //
+
   @override
   Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
       super.getDocker(remote: remote);
@@ -52,7 +56,7 @@ class ClientGate extends CommonGate {
       super.setDocker(docker, remote: remote);
 
   @override
-  void removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
+  Docker? removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
       super.removeDocker(docker, remote: remote);
 
   @override
@@ -61,6 +65,10 @@ class ClientGate extends CommonGate {
     docker.delegate = delegate;
     return docker;
   }
+
+  //
+  //  Keep Active
+  //
 
   @override
   Future<void> heartbeat(Connection connection) async {
@@ -75,6 +83,10 @@ class ClientGate extends CommonGate {
 
 class ClientHub extends StreamHub {
   ClientHub(super.delegate);
+
+  //
+  //  Channel
+  //
 
   void putChannel(Channel channel) =>
       setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
@@ -91,6 +103,10 @@ class ClientHub extends StreamHub {
   Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
       super.removeChannel(channel, remote: remote);
 
+  //
+  //  Connection
+  //
+
   @override
   Connection? getConnection({required SocketAddress remote, SocketAddress? local}) =>
       super.getConnection(remote: remote);
@@ -100,33 +116,39 @@ class ClientHub extends StreamHub {
       super.setConnection(conn, remote: remote);
 
   @override
-  void removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
+  Connection? removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
       super.removeConnection(conn, remote: remote);
 
   @override
-  Connection? createConnection(Channel? channel, {required SocketAddress remote, SocketAddress? local}) {
-    ActiveConnection conn = ActiveConnection(this, channel, remote: remote, local: local);
+  Connection? createConnection({required SocketAddress remote, SocketAddress? local}) {
+    ActiveConnection conn = ActiveConnection(remote: remote, local: local);
     conn.delegate = delegate;  // gate
-    /*await */conn.start();    // start FSM
     return conn;
   }
 
+  //
+  //  Open Socket Channel
+  //
+
   @override
   Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {
-    Channel? channel = await super.open(remote: remote, local: local);
-    if (channel == null && remote != null) {
-      // get from socket pool
-      SocketChannel? sock = await _createSocket(remote: remote, local: local);
-      if (sock == null) {
-        // failed to connect remote address
-        return null;
-      // } else if (local == null) {
-      //   local = sock.localAddress;
-      }
+    if (remote == null) {
+      assert(false, 'remote address empty');
+      return null;
+    }
+    // get channel connected to remote address
+    Channel? channel = getChannel(remote: remote, local: local);
+    if (channel == null) {
       // create channel with socket
+      SocketChannel? sock = _WebSocketChannel();
       channel = createChannel(sock, remote: remote, local: local);
       if (channel != null) {
         setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
+        // initialize socket
+        sock = await _initSocket(sock, remote: remote, local: local);
+        if (sock == null) {
+          removeChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
+        }
       }
     }
     return channel;
@@ -134,9 +156,8 @@ class ClientHub extends StreamHub {
 
 }
 
-Future<SocketChannel?> _createSocket({required SocketAddress remote, SocketAddress? local}) async {
+Future<SocketChannel?> _initSocket(SocketChannel sock, {required SocketAddress remote, SocketAddress? local}) async {
   try {
-    SocketChannel sock = _WebSocketChannel();
     sock.configureBlocking(true);
     if (local != null) {
       await sock.bind(local);
@@ -189,8 +210,9 @@ class _WebSocketChannel extends SocketChannel {
 
   @override
   Future<void> implCloseChannel() async {
-    await _socket?.close();
+    var sock = _socket;
     _socket = null;
+    await sock?.close();
   }
 
   @override
@@ -207,17 +229,21 @@ class _WebSocketChannel extends SocketChannel {
 
   @override
   Future<bool> connect(SocketAddress remote) async {
-    if (remote is InetSocketAddress) {} else {
+    if (remote is! InetSocketAddress) {
       assert(false, 'remote address error: $remote');
+      return false;
+    } else if (_socket != null) {
+      assert(false, 'socket already connected: $_socket');
       return false;
     }
     Uri url = Uri.parse('ws://${remote.host}:${remote.port}/');
     WebSocketConnector connector = WebSocketConnector(url);
+    _socket = connector;
     bool ok = await connector.connect();
     if (ok) {
       _remoteAddress = remote;
       _caches.clear();
-      _socket = connector;
+      // read buffer
       connector.listen((msg) => _caches.add(msg));
     }
     return ok;
@@ -238,6 +264,8 @@ class _WebSocketChannel extends SocketChannel {
     if (connector == null) {
       assert(false, 'socket not connect');
       return -1;
+    } else if (src.isEmpty) {
+      return 0;
     }
     return await connector.write(src);
   }

@@ -18,32 +18,11 @@ class Client extends Runner implements DockerDelegate {
 
   ClientHub get hub => gate.hub as ClientHub;
 
-  @override
-  bool get isRunning => super.isRunning && gate.isRunning;
-
   Future<void> start() async {
     // await hub.bind(localAddress);
     await hub.connect(remote: remoteAddress);
     // start a background thread
     /*await */run();
-  }
-
-  @override
-  Future<void> stop() async {
-    await super.stop();
-    await gate.stop();
-  }
-
-  @override
-  Future<void> setup() async {
-    await super.setup();
-    await gate.start();
-  }
-
-  @override
-  Future<void> finish() async {
-    await gate.stop();
-    await super.finish();
   }
 
   @override

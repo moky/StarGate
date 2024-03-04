@@ -86,8 +86,8 @@ class WebSocketConnector {
       assert(false, 'WebSocket not exists: $url');
       return false;
     } else {
-      await socket.close();
       _ws = null;
+      await socket.close();
     }
     return await _checkState(timeout, () => socket.readyState == closed);
   }

@@ -1,6 +1,6 @@
 name: stargate
 description: Network Connection Module
-version: 0.2.3
+version: 0.3.0
 homepage: https://github.com/moky/StarGate
 repository: https://github.com/moky/StarGate
 issue_tracker: https://github.com/moky/StarGate/issues
@@ -11,7 +11,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   object_key: ^0.1.1
-  startrek: ^0.3.0
+  startrek: ^0.3.2
 
 dev_dependencies:
   lints: ^2.0.0

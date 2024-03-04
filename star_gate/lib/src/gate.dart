@@ -34,100 +34,14 @@ import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 
 import 'plain.dart';
-import 'stream.dart';
-
-
-abstract class BaseGate<H extends Hub>
-    extends StarGate {
-  BaseGate(super.keeper);
-
-  H? hub;
-
-  //
-  //  Docker
-  //
-
-  // @override
-  // Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
-  //     super.getDocker(remote: remote);
-  //
-  // @override
-  // void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
-  //     super.setDocker(docker, remote: remote);
-  //
-  // @override
-  // void removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
-  //     super.removeDocker(docker, remote: remote);
-
-  // @override
-  // Future<void> heartbeat(Connection connection) async {
-  //   // let the client to do the job
-  //   if (connection is ActiveConnection) {
-  //     await super.heartbeat(connection);
-  //   }
-  // }
-
-  @override
-  List<Uint8List> cacheAdvanceParty(Uint8List data, Connection connection) {
-    // TODO: cache the advance party before decide which docker to use
-    List<Uint8List> array = [];
-    if (data.isNotEmpty) {
-      array.add(data);
-    }
-    return array;
-  }
-
-  @override
-  void clearAdvanceParty(Connection connection) {
-    // TODO: remove advance party for this connection
-  }
-
-}
 
 
 ///  Gate with hub for connection
-abstract class CommonGate extends BaseGate<StreamHub> /*implements Runnable */{
+abstract class CommonGate<H extends Hub>
+    extends StarGate {
   CommonGate(super.keeper);
 
-  bool _running = false;
-
-  bool get isRunning => _running;
-
-  Future<void> start() async => _running = true;
-
-  Future<void> stop() async => _running = false;
-
-  // @override
-  // Future<void> run() async {
-  //   _running = true;
-  //   while (isRunning) {
-  //     if (await process()) {
-  //       // process() return true,
-  //       // means this thread is busy,
-  //       // so process next task immediately
-  //     } else {
-  //       // nothing to do now,
-  //       // have a rest ^_^
-  //       await idle();
-  //     }
-  //   }
-  // }
-  //
-  // // protected
-  // Future<void> idle() async => await Runner.sleep(128);
-
-  Future<Channel?> getChannel({SocketAddress? remote, SocketAddress? local}) async =>
-      await hub?.open(remote: remote, local: local);
-
-  Future<bool> sendResponse(Uint8List payload, Arrival ship,
-      {required SocketAddress remote, SocketAddress? local}) async {
-    assert(ship is PlainArrival, 'arrival ship error: $ship');
-    Docker? docker = getDocker(remote: remote, local: local);
-    if (docker == null) {
-      return false;
-    }
-    return await docker.sendData(payload);
-  }
+  H? hub;
 
   Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
     Docker? worker = getDocker(remote: remote, local: local);
@@ -143,6 +57,31 @@ abstract class CommonGate extends BaseGate<StreamHub> /*implements Runnable */{
       }
     }
     return worker;
+  }
+
+  Future<bool> sendResponse(Uint8List payload, Arrival ship,
+      {required SocketAddress remote, SocketAddress? local}) async {
+    assert(ship is PlainArrival, 'arrival ship error: $ship');
+    Docker? docker = getDocker(remote: remote, local: local);
+    if (docker == null) {
+      return false;
+    }
+    return await docker.sendData(payload);
+  }
+
+  @override
+  List<Uint8List> cacheAdvanceParty(Uint8List data, Connection connection) {
+    // TODO: cache the advance party before decide which docker to use
+    List<Uint8List> array = [];
+    if (data.isNotEmpty) {
+      array.add(data);
+    }
+    return array;
+  }
+
+  @override
+  void clearAdvanceParty(Connection connection) {
+    // TODO: remove advance party for this connection
   }
 
 }

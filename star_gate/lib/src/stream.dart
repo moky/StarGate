@@ -93,7 +93,10 @@ class ChannelPool extends AddressPairMap<Channel> {
   @override
   Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
     Channel? cached = super.removeItem(value, remote: remote, local: local);
-    if (cached == null || cached.isClosed) {} else {
+    if (value == null) {} else {
+      /*await */value.close();
+    }
+    if (cached == null || identical(cached, value)) {} else {
       /*await */cached.close();
     }
     return cached;
