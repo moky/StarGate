@@ -1,3 +1,7 @@
+## 0.3.1
+
+- Set connection for docker after created.
+
 ## 0.3.0
 
 - Init socket after channel created.

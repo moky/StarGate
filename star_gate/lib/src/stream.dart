@@ -126,11 +126,16 @@ abstract class StreamHub extends BaseHub {
   /// @param local  - local address
   /// @return null on socket error
   // protected
-  Channel? createChannel(SocketChannel sock, {required SocketAddress remote, SocketAddress? local}) =>
+  Channel createChannel(SocketChannel sock, {required SocketAddress remote, SocketAddress? local}) =>
       StreamChannel(sock, remote: remote, local: local);
 
   @override
   Iterable<Channel> get allChannels => _channelPool.items;
+
+  @override
+  // protected
+  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
+      _channelPool.removeItem(channel, remote: remote, local: local);
 
   // protected
   Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
@@ -139,11 +144,6 @@ abstract class StreamHub extends BaseHub {
   // protected
   void setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
       _channelPool.setItem(channel, remote: remote, local: local);
-
-  @override
-  // protected
-  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
-      _channelPool.removeItem(channel, remote: remote, local: local);
 
   @override
   Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {

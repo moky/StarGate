@@ -81,7 +81,7 @@ class PlainDeparture extends DepartureShip {
 
 
 class PlainDocker extends StarDocker {
-  PlainDocker(super.conn);
+  PlainDocker({super.remote, super.local});
 
   // protected
   Arrival createArrival(Uint8List pack) => PlainArrival(pack);

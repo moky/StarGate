@@ -48,23 +48,23 @@ class ClientGate extends CommonGate {
   //
 
   @override
-  Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
-      super.getDocker(remote: remote);
-
-  @override
-  void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setDocker(docker, remote: remote);
+  Docker createDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) {
+    PlainDocker docker = PlainDocker(remote: remote, local: local);
+    docker.delegate = delegate;
+    return docker;
+  }
 
   @override
   Docker? removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
       super.removeDocker(docker, remote: remote);
 
   @override
-  Docker? createDocker(Connection conn, List<Uint8List> data) {
-    PlainDocker docker = PlainDocker(conn);
-    docker.delegate = delegate;
-    return docker;
-  }
+  Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
+      super.getDocker(remote: remote);
+
+  @override
+  void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
+      super.setDocker(docker, remote: remote);
 
   //
   //  Keep Active
@@ -88,8 +88,9 @@ class ClientHub extends StreamHub {
   //  Channel
   //
 
-  void putChannel(Channel channel) =>
-      setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
+  @override
+  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
+      super.removeChannel(channel, remote: remote);
 
   @override
   Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
@@ -99,13 +100,23 @@ class ClientHub extends StreamHub {
   void setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
       super.setChannel(channel, remote: remote);
 
-  @override
-  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
-      super.removeChannel(channel, remote: remote);
+  void putChannel(Channel channel) =>
+      setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
 
   //
   //  Connection
   //
+
+  @override
+  Connection createConnection({required SocketAddress remote, SocketAddress? local}) {
+    ActiveConnection conn = ActiveConnection(remote: remote, local: local);
+    conn.delegate = delegate;  // gate
+    return conn;
+  }
+
+  @override
+  Connection? removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
+      super.removeConnection(conn, remote: remote);
 
   @override
   Connection? getConnection({required SocketAddress remote, SocketAddress? local}) =>
@@ -114,17 +125,6 @@ class ClientHub extends StreamHub {
   @override
   void setConnection(Connection conn, {required SocketAddress remote, SocketAddress? local}) =>
       super.setConnection(conn, remote: remote);
-
-  @override
-  Connection? removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removeConnection(conn, remote: remote);
-
-  @override
-  Connection? createConnection({required SocketAddress remote, SocketAddress? local}) {
-    ActiveConnection conn = ActiveConnection(remote: remote, local: local);
-    conn.delegate = delegate;  // gate
-    return conn;
-  }
 
   //
   //  Open Socket Channel
@@ -142,13 +142,12 @@ class ClientHub extends StreamHub {
       // create channel with socket
       SocketChannel? sock = _WebSocketChannel();
       channel = createChannel(sock, remote: remote, local: local);
-      if (channel != null) {
-        setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
-        // initialize socket
-        sock = await _initSocket(sock, remote: remote, local: local);
-        if (sock == null) {
-          removeChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
-        }
+      setChannel(channel, remote: remote, local: local);
+      // initialize socket
+      sock = await _initSocket(sock, remote: remote, local: local);
+      if (sock == null) {
+        print('[WS] failed to prepare socket: $local -> $remote');
+        removeChannel(channel, remote: remote, local: local);
       }
     }
     return channel;

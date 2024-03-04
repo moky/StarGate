@@ -46,15 +46,13 @@ abstract class CommonGate<H extends Hub>
   Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
     Docker? worker = getDocker(remote: remote, local: local);
     if (worker == null/* && data.isNotEmpty*/) {
+      // create & cache docker
+      worker = createDocker(data, remote: remote, local: local);
+      setDocker(worker, remote: remote, local: local);
+      // get connection from hub
       Connection? conn = await hub?.connect(remote: remote, local: local);
-      if (conn != null) {
-        worker = createDocker(conn, data);
-        if (worker == null) {
-          assert(false, 'failed to create docker: $remote, $local');
-        } else {
-          setDocker(worker, remote: worker.remoteAddress!, local: worker.localAddress);
-        }
-      }
+      assert(conn != null, 'failed to get connection: $local -> $remote');
+      await worker.setConnection(conn);
     }
     return worker;
   }
@@ -62,11 +60,15 @@ abstract class CommonGate<H extends Hub>
   Future<bool> sendResponse(Uint8List payload, Arrival ship,
       {required SocketAddress remote, SocketAddress? local}) async {
     assert(ship is PlainArrival, 'arrival ship error: $ship');
-    Docker? docker = getDocker(remote: remote, local: local);
-    if (docker == null) {
+    Docker? worker = getDocker(remote: remote, local: local);
+    if (worker == null) {
+      assert(false, 'docker not found: $local -> $remote');
+      return false;
+    } else if (!worker.isAlive) {
+      assert(false, 'docker not alive: $local -> $remote');
       return false;
     }
-    return await docker.sendData(payload);
+    return await worker.sendData(payload);
   }
 
   @override
