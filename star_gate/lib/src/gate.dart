@@ -51,8 +51,14 @@ abstract class CommonGate<H extends Hub>
       setDocker(worker, remote: remote, local: local);
       // get connection from hub
       Connection? conn = await hub?.connect(remote: remote, local: local);
-      assert(conn != null, 'failed to get connection: $local -> $remote');
-      await worker.setConnection(conn);
+      if (conn == null) {
+        assert(false, 'failed to get connection: $local -> $remote');
+        removeDocker(worker, remote: remote, local: local);
+        worker = null;
+      } else {
+        // set connection for this docker
+        await worker.assignConnection(conn);
+      }
     }
     return worker;
   }

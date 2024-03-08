@@ -47,7 +47,7 @@ class WebSocketConnector {
 
   WebSocket? get socket => _ws;
 
-  int get readyState => _ws?.readyState ?? closed;
+  int? get readyState => _ws?.readyState;
 
   @override
   String toString() {
@@ -56,8 +56,14 @@ class WebSocketConnector {
   }
 
   Future<bool> connect([int timeout = 8000]) async {
-    _ws = WebSocket(url.toString());
-    return await _checkState(timeout, () => _ws?.readyState == open);
+    var ws = WebSocket(url.toString());
+    if (await _checkState(timeout, () => ws.readyState == open)) {
+      _ws = ws;
+      return true;
+    } else {
+      assert(false, 'failed to connect: $url');
+      return false;
+    }
   }
 
   void listen(void Function(Uint8List data) onData) => _ws?.onMessage.listen((ev) {
@@ -82,15 +88,15 @@ class WebSocketConnector {
   }
 
   Future<bool> close([int timeout = 8000]) async {
-    var socket = _ws;
-    if (socket == null) {
+    var ws = _ws;
+    if (ws == null) {
       assert(false, 'WebSocket not exists: $url');
       return false;
     } else {
       _ws = null;
-      socket.close();
+      ws.close();
     }
-    return await _checkState(timeout, () => socket.readyState == closed);
+    return await _checkState(timeout, () => ws.readyState == closed);
   }
 
 }

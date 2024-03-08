@@ -68,7 +68,7 @@ class StreamChannelWriter extends ChannelWriter<SocketChannel> {
 
 
 class StreamChannel extends BaseChannel<SocketChannel> {
-  StreamChannel(super.sock, {super.remote, super.local});
+  StreamChannel({super.remote, super.local});
 
   @override
   SocketReader createReader() => StreamChannelReader(this);
@@ -82,22 +82,26 @@ class StreamChannel extends BaseChannel<SocketChannel> {
 class ChannelPool extends AddressPairMap<Channel> {
 
   @override
-  void setItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
-    Channel? old = getItem(remote: remote, local: local);
-    if (old == null || identical(old, value)) {} else {
-      removeItem(old, remote: remote, local: local);
+  Channel? setItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
+    // 1. remove cached item
+    Channel? cached = super.removeItem(value, remote: remote, local: local);
+    if (cached == null || identical(cached, value)) {} else {
+      /*await */cached.close();
     }
-    super.setItem(value, remote: remote, local: local);
+    // 2. set new item
+    Channel? old = super.setItem(value, remote: remote, local: local);
+    assert(old == null, 'should not happen');
+    return cached;
   }
 
   @override
   Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
     Channel? cached = super.removeItem(value, remote: remote, local: local);
-    if (value == null) {} else {
-      /*await */value.close();
-    }
     if (cached == null || identical(cached, value)) {} else {
       /*await */cached.close();
+    }
+    if (value == null) {} else {
+      /*await */value.close();
     }
     return cached;
   }
@@ -126,8 +130,8 @@ abstract class StreamHub extends BaseHub {
   /// @param local  - local address
   /// @return null on socket error
   // protected
-  Channel createChannel(SocketChannel sock, {required SocketAddress remote, SocketAddress? local}) =>
-      StreamChannel(sock, remote: remote, local: local);
+  Channel createChannel({required SocketAddress remote, SocketAddress? local}) =>
+      StreamChannel(remote: remote, local: local);
 
   @override
   Iterable<Channel> get allChannels => _channelPool.items;
@@ -142,17 +146,17 @@ abstract class StreamHub extends BaseHub {
       _channelPool.getItem(remote: remote, local: local);
 
   // protected
-  void setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
+  Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
       _channelPool.setItem(channel, remote: remote, local: local);
 
-  @override
-  Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {
-    if (remote == null) {
-      assert(false, 'remote address empty');
-      return null;
-    }
-    // get channel connected to remote address
-    return getChannel(remote: remote, local: local);
-  }
+  // @override
+  // Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {
+  //   if (remote == null) {
+  //     assert(false, 'remote address empty');
+  //     return null;
+  //   }
+  //   // get channel connected to remote address
+  //   return getChannel(remote: remote, local: local);
+  // }
 
 }

@@ -63,7 +63,7 @@ class ClientGate extends CommonGate {
       super.getDocker(remote: remote);
 
   @override
-  void setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
+  Docker? setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
       super.setDocker(docker, remote: remote);
 
   //
@@ -97,11 +97,11 @@ class ClientHub extends StreamHub {
       super.getChannel(remote: remote);
 
   @override
-  void setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
+  Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
       super.setChannel(channel, remote: remote);
 
-  void putChannel(Channel channel) =>
-      setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
+  // void putChannel(Channel channel) =>
+  //     setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
 
   //
   //  Connection
@@ -123,7 +123,7 @@ class ClientHub extends StreamHub {
       super.getConnection(remote: remote);
 
   @override
-  void setConnection(Connection conn, {required SocketAddress remote, SocketAddress? local}) =>
+  Connection? setConnection(Connection conn, {required SocketAddress remote, SocketAddress? local}) =>
       super.setConnection(conn, remote: remote);
 
   //
@@ -140,14 +140,17 @@ class ClientHub extends StreamHub {
     Channel? channel = getChannel(remote: remote, local: local);
     if (channel == null) {
       // create channel with socket
-      SocketChannel? sock = _WebSocketChannel();
-      channel = createChannel(sock, remote: remote, local: local);
+      channel = createChannel(remote: remote, local: local);
       setChannel(channel, remote: remote, local: local);
       // initialize socket
-      sock = await _initSocket(sock, remote: remote, local: local);
+      SocketChannel? sock = await _createSocket(remote: remote, local: local);
       if (sock == null) {
         print('[WS] failed to prepare socket: $local -> $remote');
         removeChannel(channel, remote: remote, local: local);
+        channel = null;
+      } else {
+        // set socket for this channel
+        channel.assignSocket(sock);
       }
     }
     return channel;
@@ -155,8 +158,9 @@ class ClientHub extends StreamHub {
 
 }
 
-Future<SocketChannel?> _initSocket(SocketChannel sock, {required SocketAddress remote, SocketAddress? local}) async {
+Future<SocketChannel?> _createSocket({required SocketAddress remote, SocketAddress? local}) async {
   try {
+    SocketChannel? sock = _WebSocketChannel();
     sock.configureBlocking(true);
     if (local != null) {
       await sock.bind(local);
@@ -242,6 +246,8 @@ class _WebSocketChannel extends SocketChannel {
     if (ok) {
       _remoteAddress = remote;
       _caches.clear();
+      // add an empty package to update "connection.lastReceivedTime"
+      _caches.add(PlainDocker.kNoop);
       // read buffer
       connector.listen((msg) => _caches.add(msg));
     }
