@@ -190,14 +190,15 @@ class _WebSocketChannel extends SocketChannel {
   WebSocketConnector? _socket;
 
   @override
-  bool get isClosed => super.isClosed || _socket?.readyState == WebSocketConnector.closed;
+  bool get isClosed => super.isClosed || _socket?.isClosed == true;
 
   @override
-  bool get isBound => _localAddress != null;
+  // bool get isBound => _localAddress != null;
+  bool get isBound => false;
 
   @override
   // bool get isConnected => _remoteAddress != null;
-  bool get isConnected => _socket?.readyState == WebSocketConnector.open;
+  bool get isConnected => _socket?.isConnected == true;
 
   @override
   SocketAddress? get remoteAddress => _remoteAddress;

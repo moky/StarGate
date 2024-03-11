@@ -49,6 +49,22 @@ class WebSocketConnector {
 
   int? get readyState => _ws?.readyState;
 
+  bool get isClosed {
+    WebSocket? ws = _ws;
+    if (ws == null) {
+      return false;
+    }
+    return ws.readyState == closed || ws.closeCode != null;
+  }
+
+  bool get isConnected {
+    WebSocket? ws = _ws;
+    if (ws == null) {
+      return false;
+    }
+    return ws.readyState == open && ws.closeCode == null;
+  }
+
   @override
   String toString() {
     Type clazz = runtimeType;
@@ -73,11 +89,14 @@ class WebSocketConnector {
       assert(msg is Uint8List, 'msg error');
     }
     onData(msg);
+  }, onDone: () {
+    print('[WS] socket closed: $url');
+    close();
   });
 
   Future<int> write(Uint8List src) async {
     WebSocket? ws = _ws;
-    if (ws == null || ws.readyState != open) {
+    if (ws == null || !isConnected) {
       // throw SocketException('WebSocket closed: $url');
       assert(false, 'WebSocket closed: $url');
       return -1;
