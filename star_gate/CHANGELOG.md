@@ -1,3 +1,7 @@
+## 0.4.1
+
+- Ready state.
+
 ## 0.4.0
 
 - Assign socket/connection.

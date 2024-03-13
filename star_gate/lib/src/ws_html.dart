@@ -46,12 +46,25 @@ class WebSocketConnector {
   WebSocket? _ws;
 
   WebSocket? get socket => _ws;
-
-  int? get readyState => _ws?.readyState;
+  // protected
+  Future<void> setSocket(WebSocket? ws) async {
+    // 1. replace with new socket
+    WebSocket? old = _ws;
+    if (ws != null) {
+      _ws = ws;
+    // } else {
+    //   _ws = null;
+    }
+    // 2. close old socket
+    if (old == null || identical(old, ws)) {} else {
+      old.close();
+    }
+  }
 
   bool get isClosed {
     WebSocket? ws = _ws;
     if (ws == null) {
+      // initializing
       return false;
     }
     return ws.readyState == closed;
@@ -60,6 +73,7 @@ class WebSocketConnector {
   bool get isConnected {
     WebSocket? ws = _ws;
     if (ws == null) {
+      // initializing
       return false;
     }
     return ws.readyState == open;
@@ -68,13 +82,13 @@ class WebSocketConnector {
   @override
   String toString() {
     Type clazz = runtimeType;
-    return '<$clazz url="$url" state=$readyState />';
+    return '<$clazz url="$url" state=${_ws?.readyState} />';
   }
 
   Future<bool> connect([int timeout = 8000]) async {
     var ws = WebSocket(url.toString());
     if (await _checkState(timeout, () => ws.readyState == open)) {
-      _ws = ws;
+      await setSocket(ws);
       return true;
     } else {
       assert(false, 'failed to connect: $url');
@@ -82,7 +96,7 @@ class WebSocketConnector {
     }
   }
 
-  void listen(void Function(Uint8List data) onData) => _ws?.onMessage.listen((ev) {
+  void listen(void Function(Uint8List data) onData) => socket?.onMessage.listen((ev) {
     var msg = ev.data;
     if (msg is String) {
       msg = Uint8List.fromList(utf8.encode(msg));
@@ -96,7 +110,7 @@ class WebSocketConnector {
   });
 
   Future<int> write(Uint8List src) async {
-    WebSocket? ws = _ws;
+    WebSocket? ws = socket;
     if (ws == null || !isConnected) {
       // throw SocketException('WebSocket closed: $url');
       assert(false, 'WebSocket closed: $url');
@@ -112,8 +126,7 @@ class WebSocketConnector {
       assert(false, 'WebSocket not exists: $url');
       return false;
     } else {
-      _ws = null;
-      ws.close();
+      await setSocket(null);
     }
     return await _checkState(timeout, () => ws.readyState == closed);
   }

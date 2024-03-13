@@ -55,9 +55,11 @@ abstract class CommonGate<H extends Hub>
         assert(false, 'failed to get connection: $local -> $remote');
         removeDocker(worker, remote: remote, local: local);
         worker = null;
-      } else {
+      } else if (worker is StarDocker) {
         // set connection for this docker
-        await worker.assignConnection(conn);
+        await worker.setConnection(conn);
+      } else {
+        assert(false, 'docker error: $remote, $worker');
       }
     }
     return worker;

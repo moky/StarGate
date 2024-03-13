@@ -148,9 +148,11 @@ class ClientHub extends StreamHub {
         print('[WS] failed to prepare socket: $local -> $remote');
         removeChannel(channel, remote: remote, local: local);
         channel = null;
-      } else {
+      } else if (channel is BaseChannel) {
         // set socket for this channel
-        channel.assignSocket(sock);
+        channel.setSocket(sock);
+      } else {
+        assert(false, 'channel error: $remote, $channel');
       }
     }
     return channel;
@@ -209,7 +211,8 @@ class _WebSocketChannel extends SocketChannel {
   @override
   String toString() {
     Type clazz = runtimeType;
-    return '<$clazz url="${_socket?.url}" state=${_socket?.readyState} />';
+    return '<$clazz remote="$remoteAddress" local="$localAddress">\n\t'
+        '$_socket\n</$clazz>';
   }
 
   @override
