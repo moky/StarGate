@@ -28,7 +28,6 @@
  * SOFTWARE.
  * =============================================================================
  */
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:startrek/nio.dart';
@@ -175,7 +174,7 @@ Future<SocketChannel?> _createSocket({required SocketAddress remote, SocketAddre
     }
     sock.configureBlocking(false);
     return sock;
-  } on IOException catch (e) {
+  } on Exception catch (e) {
     print('[WS] cannot create socket: $remote, $local, $e');
     return null;
   }

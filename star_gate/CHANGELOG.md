@@ -1,3 +1,7 @@
+## 0.4.2
+
+- Independent of IO package.
+
 ## 0.4.1
 
 - Ready state.

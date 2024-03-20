@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:startrek/fsm.dart';
+import 'package:startrek/skywalker.dart';
 import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 import 'package:stargate/websocket.dart';
