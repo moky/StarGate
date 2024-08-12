@@ -43,55 +43,57 @@ abstract class CommonGate<H extends Hub>
 
   H? hub;
 
-  Future<Docker?> fetchDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) async {
-    Docker? worker = getDocker(remote: remote, local: local);
-    if (worker == null/* && data.isNotEmpty*/) {
-      // create & cache docker
-      worker = createDocker(data, remote: remote, local: local);
-      setDocker(worker, remote: remote, local: local);
-      // get connection from hub
-      Connection? conn = await hub?.connect(remote: remote, local: local);
-      if (conn == null) {
-        assert(false, 'failed to get connection: $local -> $remote');
-        removeDocker(worker, remote: remote, local: local);
-        worker = null;
-      } else if (worker is StarDocker) {
-        // set connection for this docker
-        await worker.setConnection(conn);
-      } else {
-        assert(false, 'docker error: $remote, $worker');
-      }
+  //
+  //  Docker
+  //
+
+  @override
+  Porter? removePorter(Porter? porter, {required SocketAddress remote, SocketAddress? local}) =>
+      super.removePorter(porter, remote: remote);
+
+  @override
+  Porter? getPorter({required SocketAddress remote, SocketAddress? local}) =>
+      super.getPorter(remote: remote);
+
+  @override
+  Porter? setPorter(Porter porter, {required SocketAddress remote, SocketAddress? local}) =>
+      super.setPorter(porter, remote: remote);
+
+  Future<Porter?> fetchPorter({required SocketAddress remote, SocketAddress? local}) async {
+    // get connection from hub
+    Connection? conn = await hub?.connect(remote: remote, local: local);
+    if (conn != null) {
+      // connected, get docker with this connection
+      return await dock(conn, true);
     }
-    return worker;
+    assert(false, 'failed to get connection: $local -> $remote');
+    return null;
   }
 
   Future<bool> sendResponse(Uint8List payload, Arrival ship,
       {required SocketAddress remote, SocketAddress? local}) async {
     assert(ship is PlainArrival, 'arrival ship error: $ship');
-    Docker? worker = getDocker(remote: remote, local: local);
-    if (worker == null) {
+    Porter? docker = getPorter(remote: remote, local: local);
+    if (docker == null) {
       assert(false, 'docker not found: $local -> $remote');
       return false;
-    } else if (!worker.isAlive) {
+    } else if (!docker.isAlive) {
       assert(false, 'docker not alive: $local -> $remote');
       return false;
     }
-    return await worker.sendData(payload);
+    return await docker.sendData(payload);
   }
 
+  //
+  //  Keep Active
+  //
+
   @override
-  List<Uint8List> cacheAdvanceParty(Uint8List data, Connection connection) {
-    // TODO: cache the advance party before decide which docker to use
-    List<Uint8List> array = [];
-    if (data.isNotEmpty) {
-      array.add(data);
+  Future<void> heartbeat(Connection connection) async {
+    // let the client to do the job
+    if (connection is ActiveConnection) {
+      await super.heartbeat(connection);
     }
-    return array;
-  }
-
-  @override
-  void clearAdvanceParty(Connection connection) {
-    // TODO: remove advance party for this connection
   }
 
 }

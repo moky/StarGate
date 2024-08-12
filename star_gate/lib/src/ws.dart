@@ -42,39 +42,11 @@ import 'ws_html.dart' if (dart.library.io) 'ws_io.dart';
 class ClientGate extends CommonGate {
   ClientGate(super.keeper);
 
-  //
-  //  Docker
-  //
-
   @override
-  Docker createDocker(List<Uint8List> data, {required SocketAddress remote, SocketAddress? local}) {
-    PlainDocker docker = PlainDocker(remote: remote, local: local);
+  Porter createPorter({required SocketAddress remote, SocketAddress? local}) {
+    var docker = PlainPorter(remote: remote, local: local);
     docker.delegate = delegate;
     return docker;
-  }
-
-  @override
-  Docker? removeDocker(Docker? docker, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removeDocker(docker, remote: remote);
-
-  @override
-  Docker? getDocker({required SocketAddress remote, SocketAddress? local}) =>
-      super.getDocker(remote: remote);
-
-  @override
-  Docker? setDocker(Docker docker, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setDocker(docker, remote: remote);
-
-  //
-  //  Keep Active
-  //
-
-  @override
-  Future<void> heartbeat(Connection connection) async {
-    // let the client to do the job
-    if (connection is ActiveConnection) {
-      await super.heartbeat(connection);
-    }
   }
 
 }
@@ -83,47 +55,12 @@ class ClientGate extends CommonGate {
 class ClientHub extends StreamHub {
   ClientHub(super.delegate);
 
-  //
-  //  Channel
-  //
-
-  @override
-  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
-      super.removeChannel(channel, remote: remote);
-
-  @override
-  Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
-      super.getChannel(remote: remote);
-
-  @override
-  Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setChannel(channel, remote: remote);
-
-  // void putChannel(Channel channel) =>
-  //     setChannel(channel, remote: channel.remoteAddress!, local: channel.localAddress);
-
-  //
-  //  Connection
-  //
-
   @override
   Connection createConnection({required SocketAddress remote, SocketAddress? local}) {
     ActiveConnection conn = ActiveConnection(remote: remote, local: local);
     conn.delegate = delegate;  // gate
     return conn;
   }
-
-  @override
-  Connection? removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removeConnection(conn, remote: remote);
-
-  @override
-  Connection? getConnection({required SocketAddress remote, SocketAddress? local}) =>
-      super.getConnection(remote: remote);
-
-  @override
-  Connection? setConnection(Connection conn, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setConnection(conn, remote: remote);
 
   //
   //  Open Socket Channel
@@ -135,23 +72,30 @@ class ClientHub extends StreamHub {
       assert(false, 'remote address empty');
       return null;
     }
-    // get channel connected to remote address
-    Channel? channel = getChannel(remote: remote, local: local);
-    if (channel == null) {
-      // create channel with socket
+    Channel? channel;
+    // try to get channel
+    var old = getChannel(remote: remote, local: local);
+    if (old == null) {
+      // create & cache channel
       channel = createChannel(remote: remote, local: local);
-      setChannel(channel, remote: remote, local: local);
+      var cached = setChannel(channel, remote: remote, local: local);
+      if (cached == null || identical(cached, channel)) {} else {
+        await cached.close();
+      }
+    } else {
+      channel = old;
+    }
+    assert(channel is BaseChannel, 'channel error: $remote, $channel');
+    if (old == null && channel is BaseChannel) {
       // initialize socket
       SocketChannel? sock = await _createSocket(remote: remote, local: local);
       if (sock == null) {
         print('[WS] failed to prepare socket: $local -> $remote');
         removeChannel(channel, remote: remote, local: local);
         channel = null;
-      } else if (channel is BaseChannel) {
-        // set socket for this channel
-        channel.setSocket(sock);
       } else {
-        assert(false, 'channel error: $remote, $channel');
+        // set socket for this channel
+        await channel.setSocket(sock);
       }
     }
     return channel;
@@ -250,7 +194,7 @@ class _WebSocketChannel extends SocketChannel {
       _remoteAddress = remote;
       _caches.clear();
       // add an empty package to update "connection.lastReceivedTime"
-      _caches.add(PlainDocker.kNoop);
+      _caches.add(PlainPorter.kNoop);
       // read buffer
       connector.listen((msg) => _caches.add(msg));
     }

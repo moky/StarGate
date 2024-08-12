@@ -6,7 +6,7 @@ import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 import 'package:stargate/websocket.dart';
 
-class Client extends Runner implements DockerDelegate {
+class Client extends Runner implements PorterDelegate {
   Client(this.remoteAddress, super.millis) {
     gate = ClientGate(this);
     gate.hub = ClientHub(gate);
@@ -33,7 +33,7 @@ class Client extends Runner implements DockerDelegate {
   }
 
   Future<bool> sendData(Uint8List data) async {
-    Docker? docker = await gate.fetchDocker([], remote: remoteAddress);
+    Porter? docker = await gate.fetchPorter(remote: remoteAddress);
     if (docker == null) {
       return false;
     }
@@ -48,42 +48,42 @@ class Client extends Runner implements DockerDelegate {
   //
 
   @override
-  Future<void> onDockerStatusChanged(DockerStatus previous, DockerStatus current, Docker docker) async {
-    SocketAddress? remote = docker.remoteAddress;
-    SocketAddress? local = docker.localAddress;
+  Future<void> onPorterStatusChanged(PorterStatus previous, PorterStatus current, Porter porter) async {
+    SocketAddress? remote = porter.remoteAddress;
+    SocketAddress? local = porter.localAddress;
     print('!!! connection ($remote, $local) state changed: ${previous.name} -> ${current.name}');
   }
 
   @override
-  Future<void> onDockerReceived(Arrival arrival, Docker docker) async {
+  Future<void> onPorterReceived(Arrival arrival, Porter porter) async {
     Uint8List pack = (arrival as PlainArrival).payload;
     int size = pack.length;
     String text = utf8.decode(pack);
-    SocketAddress? source = docker.remoteAddress;
+    SocketAddress? source = porter.remoteAddress;
     print('<<< received $size byte(s) from $source: $text');
   }
 
   @override
-  Future<void> onDockerSent(Departure departure, Docker docker) async {
+  Future<void> onPorterSent(Departure departure, Porter porter) async {
     // ignore event for sending success
     // check it in the gate::onConnectionSent()
-    SocketAddress? remote = docker.remoteAddress;
+    SocketAddress? remote = porter.remoteAddress;
     print('::: departure ship sent: $remote');
   }
 
   @override
-  Future<void> onDockerFailed(IOError error, Departure departure, Docker docker) async {
+  Future<void> onPorterFailed(IOError error, Departure departure, Porter porter) async {
     // ignore event for sending failed
     // check it in the gate::onConnectionFailed()
-    SocketAddress? remote = docker.remoteAddress;
+    SocketAddress? remote = porter.remoteAddress;
     print('::: departure failed: $remote');
   }
 
   @override
-  Future<void> onDockerError(IOError error, Departure departure, Docker docker) async {
+  Future<void> onPorterError(IOError error, Departure departure, Porter porter) async {
     // ignore event for receiving error
     // check it in the gate::onConnectionError()
-    SocketAddress? remote = docker.remoteAddress;
+    SocketAddress? remote = porter.remoteAddress;
     print('::: docker error: $remote');
   }
 

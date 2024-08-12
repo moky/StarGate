@@ -83,28 +83,27 @@ class ChannelPool extends AddressPairMap<Channel> {
 
   @override
   Channel? setItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
-    // 1. remove cached item
+    // remove cached item
     Channel? cached = super.removeItem(value, remote: remote, local: local);
-    if (cached == null || identical(cached, value)) {} else {
-      /*await */cached.close();
-    }
-    // 2. set new item
+    // if (cached == null || identical(cached, value)) {} else {
+    //   /*await */cached.close();
+    // }
     Channel? old = super.setItem(value, remote: remote, local: local);
     assert(old == null, 'should not happen');
     return cached;
   }
 
-  @override
-  Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
-    Channel? cached = super.removeItem(value, remote: remote, local: local);
-    if (cached == null || identical(cached, value)) {} else {
-      /*await */cached.close();
-    }
-    if (value == null) {} else {
-      /*await */value.close();
-    }
-    return cached;
-  }
+  // @override
+  // Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
+  //   Channel? cached = super.removeItem(value, remote: remote, local: local);
+  //   if (cached == null || identical(cached, value)) {} else {
+  //     /*await */cached.close();
+  //   }
+  //   if (value == null) {} else {
+  //     /*await */value.close();
+  //   }
+  //   return cached;
+  // }
 
 }
 
@@ -133,30 +132,35 @@ abstract class StreamHub extends BaseHub {
   Channel createChannel({required SocketAddress remote, SocketAddress? local}) =>
       StreamChannel(remote: remote, local: local);
 
-  @override
+  @override // protected
   Iterable<Channel> get allChannels => _channelPool.items;
 
-  @override
-  // protected
+  @override // protected
   Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
-      _channelPool.removeItem(channel, remote: remote, local: local);
+      _channelPool.removeItem(channel, remote: remote);
 
   // protected
   Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
-      _channelPool.getItem(remote: remote, local: local);
+      _channelPool.getItem(remote: remote);
 
   // protected
   Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
-      _channelPool.setItem(channel, remote: remote, local: local);
+      _channelPool.setItem(channel, remote: remote);
 
-  // @override
-  // Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {
-  //   if (remote == null) {
-  //     assert(false, 'remote address empty');
-  //     return null;
-  //   }
-  //   // get channel connected to remote address
-  //   return getChannel(remote: remote, local: local);
-  // }
+  //
+  //  Connection
+  //
+
+  @override
+  Connection? removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
+      super.removeConnection(conn, remote: remote);
+
+  @override
+  Connection? getConnection({required SocketAddress remote, SocketAddress? local}) =>
+      super.getConnection(remote: remote);
+
+  @override
+  Connection? setConnection(Connection conn, {required SocketAddress remote, SocketAddress? local}) =>
+      super.setConnection(conn, remote: remote);
 
 }

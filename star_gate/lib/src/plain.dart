@@ -80,8 +80,8 @@ class PlainDeparture extends DepartureShip {
 }
 
 
-class PlainDocker extends StarDocker {
-  PlainDocker({super.remote, super.local});
+class PlainPorter extends StarPorter {
+  PlainPorter({super.remote, super.local});
 
   // protected
   Arrival createArrival(Uint8List pack) => PlainArrival(pack);
@@ -93,7 +93,7 @@ class PlainDocker extends StarDocker {
   List<Arrival> getArrivals(Uint8List data) => [createArrival(data)];
 
   @override
-  Arrival? checkArrival(Arrival income) {
+  Future<Arrival?> checkArrival(Arrival income) async {
     assert(income is PlainArrival, 'arrival ship error: $income');
     Uint8List data = (income as PlainArrival).payload;
     if (data.length == 4) {
