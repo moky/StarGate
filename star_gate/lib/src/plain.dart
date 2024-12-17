@@ -97,11 +97,11 @@ class PlainPorter extends StarPorter {
     assert(income is PlainArrival, 'arrival ship error: $income');
     Uint8List data = (income as PlainArrival).payload;
     if (data.length == 4) {
-      if (_equals(data, kPing)) {
+      if (_equals(data, PING)) {
         // PING -> PONG
-        send(kPong, DeparturePriority.kSlower);
+        /*await */send(PONG, DeparturePriority.kSlower);
         return null;
-      } else if (_equals(data, kPong) || _equals(data, kNoop)) {
+      } else if (_equals(data, PONG) || _equals(data, NOOP)) {
         // ignore
         return null;
       }
@@ -122,12 +122,13 @@ class PlainPorter extends StarPorter {
 
   @override
   Future<void> heartbeat() async =>
-    await send(kPing, DeparturePriority.kSlower);
+    await send(PING, DeparturePriority.kSlower);
 
-  static final Uint8List kPing = _bytes('PING');
-  static final Uint8List kPong = _bytes('PONG');
-  static final Uint8List kNoop = _bytes('NOOP');
-  // static final Uint8List kOK = _bytes('OK');
+  // ignore_for_file: non_constant_identifier_names
+  static final Uint8List PING = _bytes('PING');
+  static final Uint8List PONG = _bytes('PONG');
+  static final Uint8List NOOP = _bytes('NOOP');
+  // static final Uint8List OK = _bytes('OK');
 
 }
 

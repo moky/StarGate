@@ -1,3 +1,7 @@
+## 0.5.1
+
+- Prepare socket channel.
+
 ## 0.5.0
 
 - Star Porter.

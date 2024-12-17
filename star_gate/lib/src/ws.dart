@@ -39,7 +39,7 @@ import 'stream.dart';
 import 'ws_html.dart' if (dart.library.io) 'ws_io.dart';
 
 
-class ClientGate extends CommonGate {
+class ClientGate extends CommonGate<ClientHub> {
   ClientGate(super.keeper);
 
   @override
@@ -72,30 +72,42 @@ class ClientHub extends StreamHub {
       assert(false, 'remote address empty');
       return null;
     }
-    Channel? channel;
-    // try to get channel
-    var old = getChannel(remote: remote, local: local);
-    if (old == null) {
-      // create & cache channel
-      channel = createChannel(remote: remote, local: local);
-      var cached = setChannel(channel, remote: remote, local: local);
-      if (cached == null || identical(cached, channel)) {} else {
-        await cached.close();
+    //
+    //  0. pre-checking
+    //
+    Channel? channel = getChannel(remote: remote, local: local);
+    if (channel != null) {
+      // check local address
+      if (local == null) {
+        return channel;
       }
-    } else {
-      channel = old;
+      SocketAddress? address = channel.localAddress;
+      if (address == null || address == local) {
+        return channel;
+      }
     }
-    assert(channel is BaseChannel, 'channel error: $remote, $channel');
-    if (old == null && channel is BaseChannel) {
-      // initialize socket
-      SocketChannel? sock = await _createSocket(remote: remote, local: local);
-      if (sock == null) {
-        print('[WS] failed to prepare socket: $local -> $remote');
+    //
+    //  1. create new channel & cache it
+    //
+    channel = createChannel(remote: remote, local: local);
+    local ??= channel.localAddress;
+    // cache the channel
+    var cached = setChannel(channel, remote: remote, local: local);
+    if (cached == null || identical(cached, channel)) {} else {
+      await cached.close();
+    }
+    //
+    //  2. create socket for this channel
+    //
+    if (channel is BaseChannel) {
+      SocketChannel? socket = await _createSocket(remote: remote, local: local);
+      if (socket == null) {
+        assert(false, 'failed to prepare socket: $local -> $remote');
         removeChannel(channel, remote: remote, local: local);
         channel = null;
       } else {
         // set socket for this channel
-        await channel.setSocket(sock);
+        await StreamHub.setSocket(socket, channel);
       }
     }
     return channel;
@@ -194,7 +206,7 @@ class _WebSocketChannel extends SocketChannel {
       _remoteAddress = remote;
       _caches.clear();
       // add an empty package to update "connection.lastReceivedTime"
-      _caches.add(PlainPorter.kNoop);
+      _caches.add(PlainPorter.NOOP);
       // read buffer
       connector.listen((msg) => _caches.add(msg));
     }

@@ -48,10 +48,6 @@ abstract class CommonGate<H extends Hub>
   //
 
   @override
-  Porter? removePorter(Porter? porter, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removePorter(porter, remote: remote);
-
-  @override
   Porter? getPorter({required SocketAddress remote, SocketAddress? local}) =>
       super.getPorter(remote: remote);
 
@@ -59,15 +55,19 @@ abstract class CommonGate<H extends Hub>
   Porter? setPorter(Porter porter, {required SocketAddress remote, SocketAddress? local}) =>
       super.setPorter(porter, remote: remote);
 
+  @override
+  Porter? removePorter(Porter? porter, {required SocketAddress remote, SocketAddress? local}) =>
+      super.removePorter(porter, remote: remote);
+
   Future<Porter?> fetchPorter({required SocketAddress remote, SocketAddress? local}) async {
     // get connection from hub
     Connection? conn = await hub?.connect(remote: remote, local: local);
-    if (conn != null) {
-      // connected, get docker with this connection
-      return await dock(conn, true);
+    if (conn == null) {
+      assert(false, 'failed to get connection: $local -> $remote');
+      return null;
     }
-    assert(false, 'failed to get connection: $local -> $remote');
-    return null;
+    // connected, get docker with this connection
+    return await dock(conn, true);
   }
 
   Future<bool> sendResponse(Uint8List payload, Arrival ship,

@@ -36,25 +36,48 @@ import 'package:startrek/pair.dart';
 import 'package:startrek/startrek.dart';
 
 
-class StreamChannelReader extends ChannelReader<SocketChannel> {
+class StreamChannelReader extends ChannelController<SocketChannel> implements SocketReader {
   StreamChannelReader(super.channel);
 
   @override
-  Future<Pair<Uint8List?, SocketAddress?>> receive(int maxLen) async {
-    SocketAddress? remote = remoteAddress;
-    Uint8List? data = await read(maxLen);
-    if (data == null/* || data.isEmpty*/) {
-      remote = null;
-    } else {
-      assert(remote != null, 'should not happen: ${data.length}');
+  Future<Uint8List?> read(int maxLen) async {
+    SocketChannel? sock = socket;
+    if (sock == null || sock.isClosed) {
+      throw ClosedChannelException();
     }
+    return await sock.read(maxLen);
+  }
+
+  @override
+  Future<Pair<Uint8List?, SocketAddress?>> receive(int maxLen) async {
+    Uint8List? data = await read(maxLen);
+    if (data == null || data.isEmpty) {
+      return Pair(data, null);
+    }
+    SocketAddress? remote = remoteAddress;
+    assert(remote != null, 'should not happen: ${data.length}');
     return Pair(data, remote);
   }
 
 }
 
-class StreamChannelWriter extends ChannelWriter<SocketChannel> {
+class StreamChannelWriter extends ChannelController<SocketChannel> implements SocketWriter {
   StreamChannelWriter(super.channel);
+
+  // protected
+  Future<int> sendAll(WritableByteChannel sock, Uint8List src) async {
+    /// TODO: override for sending
+    return await sock.write(src);
+  }
+
+  @override
+  Future<int> write(Uint8List src) async {
+    SocketChannel? sock = socket;
+    if (sock == null || sock.isClosed) {
+      throw ClosedChannelException();
+    }
+    return await sendAll(sock, src);
+  }
 
   @override
   Future<int> send(Uint8List src, SocketAddress target) async {
@@ -135,32 +158,26 @@ abstract class StreamHub extends BaseHub {
   @override // protected
   Iterable<Channel> get allChannels => _channelPool.items;
 
-  @override // protected
-  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
-      _channelPool.removeItem(channel, remote: remote);
-
   // protected
   Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
-      _channelPool.getItem(remote: remote);
+      _channelPool.getItem(remote: remote, local: local);
 
   // protected
   Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
-      _channelPool.setItem(channel, remote: remote);
+      _channelPool.setItem(channel, remote: remote, local: local);
 
-  //
-  //  Connection
-  //
+  @override // protected
+  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
+      _channelPool.removeItem(channel, remote: remote, local: local);
 
-  @override
-  Connection? removeConnection(Connection? conn, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removeConnection(conn, remote: remote);
-
-  @override
-  Connection? getConnection({required SocketAddress remote, SocketAddress? local}) =>
-      super.getConnection(remote: remote);
-
-  @override
-  Connection? setConnection(Connection conn, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setConnection(conn, remote: remote);
+  // protected
+  static Future<bool> setSocket(SocketChannel socket, BaseChannel channel) async {
+    try {
+      await channel.setSocket(socket);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 
 }
