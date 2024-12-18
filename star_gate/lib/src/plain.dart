@@ -99,7 +99,7 @@ class PlainPorter extends StarPorter {
     if (data.length == 4) {
       if (_equals(data, PING)) {
         // PING -> PONG
-        /*await */send(PONG, DeparturePriority.kSlower);
+        /*await */send(PONG, DeparturePriority.SLOWER);
         return null;
       } else if (_equals(data, PONG) || _equals(data, NOOP)) {
         // ignore
@@ -118,11 +118,11 @@ class PlainPorter extends StarPorter {
 
   @override
   Future<bool> sendData(Uint8List payload) async =>
-      await send(payload, DeparturePriority.kNormal);
+      await send(payload, DeparturePriority.NORMAL);
 
   @override
   Future<void> heartbeat() async =>
-    await send(PING, DeparturePriority.kSlower);
+    await send(PING, DeparturePriority.SLOWER);
 
   // ignore_for_file: non_constant_identifier_names
   static final Uint8List PING = _bytes('PING');
