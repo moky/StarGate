@@ -55,11 +55,15 @@ class PlainArrival extends ArrivalShip {
 
 
 class PlainDeparture extends DepartureShip {
-  PlainDeparture(Uint8List pack, int prior)
-      : _completed = pack, _fragments = [pack], super(priority: prior, maxTries: 1);
+  PlainDeparture(Uint8List pack, int prior, bool needsRespond)
+      : _completed = pack,
+        _fragments = [pack],
+        _important = needsRespond,
+        super(priority: prior, maxTries: 1);
 
   final Uint8List _completed;
   final List<Uint8List> _fragments;
+  final bool _important;
 
   Uint8List get payload => _completed;
 
@@ -74,8 +78,7 @@ class PlainDeparture extends DepartureShip {
   // plain departure needs no response
 
   @override
-  bool get isImportant => false;
-  // plain departure no needs response
+  bool get isImportant => _important;
 
 }
 
@@ -87,7 +90,8 @@ class PlainPorter extends StarPorter {
   Arrival createArrival(Uint8List pack) => PlainArrival(pack);
 
   // protected
-  Departure createDeparture(Uint8List pack, int priority) => PlainDeparture(pack, priority);
+  Departure createDeparture(Uint8List pack, int priority, bool needsRespond) =>
+      PlainDeparture(pack, priority, needsRespond);
 
   @override
   List<Arrival> getArrivals(Uint8List data) => [createArrival(data)];
@@ -99,7 +103,7 @@ class PlainPorter extends StarPorter {
     if (data.length == 4) {
       if (_equals(data, PING)) {
         // PING -> PONG
-        /*await */send(PONG, DeparturePriority.SLOWER);
+        /*await */respond(PONG);
         return null;
       } else if (_equals(data, PONG) || _equals(data, NOOP)) {
         // ignore
@@ -113,8 +117,13 @@ class PlainPorter extends StarPorter {
   //  Sending
   //
 
+  /// sending response
+  Future<bool> respond(Uint8List payload) async =>
+      await sendShip(createDeparture(payload, DeparturePriority.SLOWER, false));
+
+  /// sending payload with priority
   Future<bool> send(Uint8List payload, int priority) async =>
-      await sendShip(createDeparture(payload, priority));
+      await sendShip(createDeparture(payload, priority, true));
 
   @override
   Future<bool> sendData(Uint8List payload) async =>
@@ -122,7 +131,7 @@ class PlainPorter extends StarPorter {
 
   @override
   Future<void> heartbeat() async =>
-    await send(PING, DeparturePriority.SLOWER);
+    await sendShip(createDeparture(PING, DeparturePriority.SLOWER, false));
 
   // ignore_for_file: non_constant_identifier_names
   static final Uint8List PING = _bytes('PING');
