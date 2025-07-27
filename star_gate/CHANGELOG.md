@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Runtime class name.
+
 ## 1.0.0
 
 - OK released.

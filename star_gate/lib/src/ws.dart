@@ -163,9 +163,11 @@ class _WebSocketChannel extends SocketChannel {
   @override
   SocketAddress? get localAddress => _localAddress;
 
+  String get className => '_WebSocketChannel';
+
   @override
   String toString() {
-    Type clazz = runtimeType;
+    String clazz = className;
     return '<$clazz remote="$remoteAddress" local="$localAddress">\n\t'
         '$_socket\n</$clazz>';
   }

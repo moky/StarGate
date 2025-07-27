@@ -79,9 +79,11 @@ class WebSocketConnector {
     return ws.readyState == open;
   }
 
+  String get className => 'WebSocketConnector';
+
   @override
   String toString() {
-    Type clazz = runtimeType;
+    String clazz = className;
     return '<$clazz url="$url" state=${_ws?.readyState} />';
   }
 
