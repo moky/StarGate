@@ -8,8 +8,14 @@ import 'package:stargate/websocket.dart';
 
 class Client extends Runner implements PorterDelegate {
   Client(this.remoteAddress, super.millis) {
-    gate = ClientGate(this);
-    gate.hub = ClientHub(gate);
+    // create gate
+    ClientGate gate = ClientGate();
+    gate.delegate = this;
+    this.gate = gate;
+    // create hub
+    ClientHub hub = ClientHub();
+    hub.delegate = gate;
+    gate.hub = hub;
   }
 
   final SocketAddress remoteAddress;

@@ -1,3 +1,7 @@
+## 1.1.2
+
+- Common Hub.
+
 ## 1.1.1
 
 - Last Received Time.

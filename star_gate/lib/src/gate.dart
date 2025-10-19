@@ -39,25 +39,9 @@ import 'plain.dart';
 ///  Gate with hub for connection
 abstract class CommonGate<H extends Hub>
     extends StarGate {
-  CommonGate(super.keeper);
+  CommonGate();
 
   H? hub;
-
-  //
-  //  Docker
-  //
-
-  @override
-  Porter? getPorter({required SocketAddress remote, SocketAddress? local}) =>
-      super.getPorter(remote: remote);
-
-  @override
-  Porter? setPorter(Porter porter, {required SocketAddress remote, SocketAddress? local}) =>
-      super.setPorter(porter, remote: remote);
-
-  @override
-  Porter? removePorter(Porter? porter, {required SocketAddress remote, SocketAddress? local}) =>
-      super.removePorter(porter, remote: remote);
 
   Future<Porter?> fetchPorter({required SocketAddress remote, SocketAddress? local}) async {
     // get connection from hub

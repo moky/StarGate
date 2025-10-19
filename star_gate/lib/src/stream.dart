@@ -32,7 +32,6 @@ import 'dart:typed_data';
 
 import 'package:object_key/object_key.dart';
 import 'package:startrek/nio.dart';
-import 'package:startrek/pair.dart';
 import 'package:startrek/startrek.dart';
 
 
@@ -98,86 +97,5 @@ class StreamChannel extends BaseChannel<SocketChannel> {
 
   @override
   SocketWriter createWriter() => StreamChannelWriter(this);
-
-}
-
-
-class ChannelPool extends AddressPairMap<Channel> {
-
-  @override
-  Channel? setItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
-    // remove cached item
-    Channel? cached = super.removeItem(value, remote: remote, local: local);
-    // if (cached == null || identical(cached, value)) {} else {
-    //   /*await */cached.close();
-    // }
-    Channel? old = super.setItem(value, remote: remote, local: local);
-    assert(old == null, 'should not happen');
-    return cached;
-  }
-
-  // @override
-  // Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
-  //   Channel? cached = super.removeItem(value, remote: remote, local: local);
-  //   if (cached == null || identical(cached, value)) {} else {
-  //     /*await */cached.close();
-  //   }
-  //   if (value == null) {} else {
-  //     /*await */value.close();
-  //   }
-  //   return cached;
-  // }
-
-}
-
-
-abstract class StreamHub extends BaseHub {
-  StreamHub(super.delegate) {
-    _channelPool = createChannelPool();
-  }
-
-  late final AddressPairMap<Channel> _channelPool;
-
-  // protected
-  AddressPairMap<Channel> createChannelPool() => ChannelPool();
-
-  //
-  //  Channel
-  //
-
-  ///  Create channel with socket & addresses
-  ///
-  /// @param sock   - socket
-  /// @param remote - remote address
-  /// @param local  - local address
-  /// @return null on socket error
-  // protected
-  Channel createChannel({required SocketAddress remote, SocketAddress? local}) =>
-      StreamChannel(remote: remote, local: local);
-
-  @override // protected
-  Iterable<Channel> get allChannels => _channelPool.items;
-
-  // protected
-  Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
-      _channelPool.getItem(remote: remote, local: local);
-
-  // protected
-  Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
-      _channelPool.setItem(channel, remote: remote, local: local);
-
-  @override // protected
-  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
-      _channelPool.removeItem(channel, remote: remote, local: local);
-
-  // protected
-  static Future<bool> setSocket(SocketChannel socket, BaseChannel channel) async {
-    try {
-      await channel.setSocket(socket);
-      return true;
-    } catch (e) {
-      return false;
-    }
-  }
 
 }

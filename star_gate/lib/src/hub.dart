@@ -1,0 +1,180 @@
+/* license: https://mit-license.org
+ *
+ *  Star Gate: Network Connection Module
+ *
+ *                               Written in 2024 by Moky <albert.moky@gmail.com>
+ *
+ * =============================================================================
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2024 Albert Moky
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * =============================================================================
+ */
+import 'package:startrek/nio.dart';
+import 'package:startrek/pair.dart';
+import 'package:startrek/startrek.dart';
+
+
+class ChannelPool extends AddressPairMap<Channel> {
+
+  @override
+  Channel? setItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
+    // remove cached item
+    Channel? cached = super.removeItem(value, remote: remote, local: local);
+    // if (cached == null || identical(cached, value)) {} else {
+    //   /*await */cached.close();
+    // }
+    Channel? old = super.setItem(value, remote: remote, local: local);
+    assert(old == null, 'should not happen');
+    return cached;
+  }
+
+  // @override
+  // Channel? removeItem(Channel? value, {SocketAddress? remote, SocketAddress? local}) {
+  //   Channel? cached = super.removeItem(value, remote: remote, local: local);
+  //   if (cached == null || identical(cached, value)) {} else {
+  //     /*await */cached.close();
+  //   }
+  //   if (value == null) {} else {
+  //     /*await */value.close();
+  //   }
+  //   return cached;
+  // }
+
+}
+
+
+abstract class CommonHub extends BaseHub {
+  CommonHub() {
+    _channelPool = createChannelPool();
+  }
+
+  late final AddressPairMap<Channel> _channelPool;
+
+  // protected
+  AddressPairMap<Channel> createChannelPool() => ChannelPool();
+
+  //
+  //  Channel
+  //
+
+  ///  Create channel with socket & addresses
+  ///
+  /// @param sock   - socket
+  /// @param remote - remote address
+  /// @param local  - local address
+  /// @return null on socket error
+  // protected
+  Channel createChannel({required SocketAddress remote, SocketAddress? local});
+
+  @override // protected
+  Iterable<Channel> get allChannels => _channelPool.items;
+
+  // protected
+  Channel? getChannel({required SocketAddress remote, SocketAddress? local}) =>
+      _channelPool.getItem(remote: remote, local: local);
+
+  // protected
+  Channel? setChannel(Channel channel, {required SocketAddress remote, SocketAddress? local}) =>
+      _channelPool.setItem(channel, remote: remote, local: local);
+
+  @override // protected
+  Channel? removeChannel(Channel? channel, {SocketAddress? remote, SocketAddress? local}) =>
+      _channelPool.removeItem(channel, remote: remote, local: local);
+
+  //
+  //  Open Socket Channel
+  //
+
+  @override
+  Future<Channel?> open({SocketAddress? remote, SocketAddress? local}) async {
+    if (remote == null) {
+      assert(false, 'remote address empty');
+      return null;
+    }
+    //
+    //  0. pre-checking
+    //
+    Channel? channel = getChannel(remote: remote, local: local);
+    if (channel == null/* || channel.isClosed*/) {
+      logInfo('channel not open: $remote -> $local, $channel');
+    } else {
+      // check local address
+      if (local == null) {
+        logInfo('reuse channel: $remote');
+        return channel;
+      }
+      SocketAddress? address = channel.localAddress;
+      if (address == null || address == local) {
+        logInfo('reuse channel: $remote -> $address');
+        return channel;
+      }
+    }
+    //
+    //  1. create new channel & cache it
+    //
+    channel = createChannel(remote: remote, local: local);
+    local ??= channel.localAddress;
+    // cache the channel
+    var cached = setChannel(channel, remote: remote, local: local);
+    if (cached == null || identical(cached, channel)) {} else {
+      await cached.close();
+    }
+    //
+    //  2. create socket for this channel
+    //
+    if (channel is BaseChannel) {
+      SocketChannel? socket = await createSocketChannel(remote: remote, local: local);
+      if (socket == null) {
+        assert(false, 'failed to prepare socket: $local -> $remote');
+        removeChannel(channel, remote: remote, local: local);
+        channel = null;
+      } else {
+        // set socket for this channel
+        logInfo('set socket to channel: $remote -> $local, $socket');
+        await CommonHub.setSocket(socket, channel);
+      }
+    }
+    return channel;
+  }
+
+  //
+  //  Socket
+  //
+
+  Future<SocketChannel?> createSocketChannel({required SocketAddress remote, SocketAddress? local});
+
+  // protected
+  static Future<bool> setSocket(SocketChannel socket, BaseChannel channel) async {
+    try {
+      await channel.setSocket(socket);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // protected
+  void logInfo(String msg) {
+    print('[WS]         | $msg');
+  }
+
+}
