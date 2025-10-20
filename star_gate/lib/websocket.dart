@@ -6,6 +6,7 @@ library stargate;
 // export 'package:startrek/skywalker.dart';
 // export 'package:startrek/startrek.dart';
 
+export 'src/active.dart';
 export 'src/plain.dart';
 export 'src/stream.dart';
 export 'src/gate.dart';

@@ -33,6 +33,7 @@ import 'dart:typed_data';
 import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 
+import 'active.dart';
 import 'gate.dart';
 import 'hub.dart';
 import 'plain.dart';

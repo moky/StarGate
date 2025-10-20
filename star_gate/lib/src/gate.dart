@@ -33,12 +33,12 @@ import 'dart:typed_data';
 import 'package:startrek/nio.dart';
 import 'package:startrek/startrek.dart';
 
+import 'active.dart';
 import 'plain.dart';
 
 
 ///  Gate with hub for connection
-abstract class CommonGate<H extends Hub>
-    extends StarGate {
+abstract class CommonGate<H extends Hub> extends StarGate {
   CommonGate();
 
   H? hub;

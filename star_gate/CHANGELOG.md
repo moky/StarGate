@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Active Connection.
+
 ## 1.1.2
 
 - Common Hub.
